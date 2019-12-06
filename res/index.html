@@ -13,34 +13,43 @@
         </script>
     </head>
     <body style="background-color:#eee">
-        <div class="mdui-container">
-            <br>
-            <div class="mdui-toolbar">
+        <div id="noscript" style="width:100%;height:1500px;position:fixed;left:0px;top:0px;background-color:#ca4242;z-index:99"><div class="mdui-container">
+            <p style="color:white;font-size:80px">NoScript!</p>
+            <h1 style="color:white;word-break:normal;white-space:pre-warp;word-wrap:break-word;">This site need javascript to run!<br><br>您的浏览器没有JavaScript功能或已被禁用，因此您无法使用此网站，请您检查设置或更换浏览器后重新打开此网站</h1>
+            <script>
 
-                    <button class="mdui-btn mdui-btn-icon mdui-hidden-xs"><i class="mdui-icon material-icons">&#xe2be;</i></button>
-                    <span class="mdui-typo-title">Resource Library</span>
+            </script>
+        </div></div>
+        <script>
+            var parent=document.getElementById("noscript");
+            parent.style.display="none";
+        </script>
+        <div class="mdui-color-deep-purple mdui-shadow-8 mdui-collapse mdui-toolbar" style="width:100%;left:0px;height:auto;" mdui-collapse>
+            
+                    <div class="mdui-typo-title" style="line-height:50px;height:50px">SourLib</div>
                     <div class="mdui-toolbar-spacer"></div>
-                    <a href="./index.html" class="mdui-btn mdui-btn-icon mdui-hidden-xs"><i class="mdui-icon material-icons">refresh</i></a>
-                    <a href="https://lakphy.cf/" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe88f;</i></a>
-            </div>
-            <div class="mdui-progress mdui-color-white">
-                <div class="mdui-progress-indeterminate mdui-color-black"></div>
-            </div>
-            <br><!--
-            <div class="mdui-typo">
-                <blockquote>
-                    <p>Awesome! 这是我独享的Moment!</p>
-                    <footer>王自如 -----《Samsung Galaxy Fold 开箱评测》</footer>
-                </blockquote>
-            </div>
-            <div class="mdui-typo-body-2">正如这句名言所说的，这是网页的资源非常全，并且在不断更新中，欢迎向开发者提供新的资源站，点右上角的info标志即可获得联系方式。          如果觉得我做的好，您可以向我捐赠，捐赠方法点击右上角info标志进入我的主页后点“support me”即可显示捐赠二维码</div>
-          --><br>
-            <div class="mdui-typo-body-2" style="width:100%;text-align:center">Designed by <a href="https://lakphy.cf/">Lakphy</a></div>
+                        <div class="mdui-collapse-item mdui-text-right" style="">
+                            <div class="mdui-collapse-item-header"><p><a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white mdui-ripple"><i class="mdui-icon material-icons">&#xe3e2;</i></a></p></div>
+                            <div class="mdui-collapse-item-body">
+                                <p style="display: inline">隐藏大陆非法内容</p>
+                                <label class="mdui-switch" style="">
+                                        <input type="checkbox" checked/>
+                                        <i class="mdui-switch-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </label>
+                              <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io">关于开发者</a></p>
+                              <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io">贡献优质网站</a></p>
+                        </div>
+                    </div>
+            
+        </div>
+        <div class="mdui-container">
             <!--search-->
             <div class="mdui-textfield mdui-textfield-floating-label">
                 <label class="mdui-textfield-label">Search</label>
                 <input class="mdui-textfield-input" id="searchbox"/>
             </div>
+
+
             <div style="width:100%;text-align:center;"><button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="sear()">Search</button></div>
 
 
