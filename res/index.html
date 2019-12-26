@@ -37,7 +37,7 @@
                                         <i class="mdui-switch-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                               <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io">关于开发者</a></p>
-                              <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io">贡献优质网站</a></p>
+                              <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" mdui-dialog="{target: '#exampleDialog'}">内容贡献及反馈</a></p>
                               <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io/donate.html">支持开发者</a></p>
                         </div>
                     </div>
@@ -83,8 +83,15 @@
             
             </div>
         </div>
-	<br>
-	<div class="mdui-typo-title" style="width:100%;text-align:center">Haven't found the site you want?<br><a href="https://lakphy.github.io/">Tell me just now!</a></div>
+	    <br>
+        <div class="mdui-dialog" id="exampleDialog">
+            <div class="mdui-dialog-title">网站内容反馈</div>
+            <div class="mdui-dialog-content">将您需要上传的网站发送到邮箱lakphy@outlook.com等待开发者回应即可<br><br>另外，如果您对已有网站有任何疑义（包括网站404，内容不优质等问题），也可以发送到此邮箱<br><br>注：开发者恕不解决智商问题</div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple">我明白了</button>
+            </div>
+        </div>
+	    <div class="mdui-typo-title" style="width:100%;text-align:center">Haven't found the site you want?<br><a href="https://lakphy.github.io/">Tell me just now!</a></div>
         <br><div style="text-align:center;width:100%;height:100px"><div class="mdui-spinner"></div></div>
         <script type="text/javascript" src="main.js"></script>
         <script src="../js/mdui.min.js"></script>
