@@ -14,6 +14,7 @@ names = [
 "网易开源镜像站",
 "腾讯开源软件镜像站",
 "浙江大学开源镜像站",
+"中国科学技术大学开源镜像站"
 "iData",
 "爱资料工具",
 "秘迹搜索",
@@ -233,6 +234,7 @@ links = [
 "https://mirrors.163.com/",
 "https://mirrors.cloud.tencent.com/",
 "http://mirrors.zju.edu.cn/",
+"https://mirrors.ustc.edu.cn/"
 "https://www.cn-ki.net",
 "https://www.toolnb.com",
 "https://www.mijisou.com",
@@ -446,6 +448,7 @@ describe = [
 "谷歌大法镇楼",
 "网易云音乐下载，QQ音乐下载，各平台音乐下载，每日更新身份证",
 "电影资源",
+"",
 "",
 "",
 "",
