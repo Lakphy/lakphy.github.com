@@ -234,7 +234,7 @@ links = [
 "https://mirrors.163.com/",
 "https://mirrors.cloud.tencent.com/",
 "http://mirrors.zju.edu.cn/",
-"https://mirrors.ustc.edu.cn/"
+"https://mirrors.ustc.edu.cn/",
 "https://www.cn-ki.net",
 "https://www.toolnb.com",
 "https://www.mijisou.com",
