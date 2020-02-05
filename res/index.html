@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>res</title>
+        <title>SourLib</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="auther" content="Lakphy">
@@ -16,9 +16,6 @@
         <div id="noscript" style="width:100%;height:1500px;position:fixed;left:0px;top:0px;background-color:#ca4242;z-index:99"><div class="mdui-container">
             <p style="color:white;font-size:80px">NoScript!</p>
             <h1 style="color:white;word-break:normal;white-space:pre-warp;word-wrap:break-word;">This site need javascript to run!<br><br>您的浏览器没有JavaScript功能或已被禁用，因此您无法使用此网站，请您检查设置或更换浏览器后重新打开此网站</h1>
-            <script>
-
-            </script>
         </div></div>
         <script>
             var parent=document.getElementById("noscript");
@@ -37,18 +34,27 @@
                                         <i class="mdui-switch-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                               <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io">关于开发者</a></p>
-                              <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" mdui-dialog="{target: '#exampleDialog'}">内容贡献及反馈</a></p>
+                              <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" style="text-decoration：underline;" mdui-dialog="{target: '#exampleDialog'}"><u>内容贡献及反馈</u></a></p>
                               <p style=""><a class="mdui-typo-body-1 mdui-text-color-white" href="https://lakphy.github.io/donate.html">支持开发者</a></p>
                         </div>
                     </div>
             
         </div>
+        <!--flower-->
+        <a href="javascript:window.scrollTo( 0, 0 );" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-mini" style="position:fixed;z-index:99;right:5px;bottom:20px"><i class="mdui-icon material-icons">&#xe5d8;</i></a>
+
+
+
+
         <div class="mdui-container">
-            <div class="mdui-typo-headline" style="width:100%;text-align:cwenter">All Developed by Lakphy</div>
+            <br>
+            <div class="mdui-typo-title" style="width:100%;text-align:center">Powered by <a href="../index.html" style="color:black">Lakphy</a></div>
+            <br><br>
+            <div class="mdui-typo-caption" style="width:100%;text-align:center">本站内容仅供学习交流使用，严禁作为商业用途使用<br>站内包含内容仅用于学习交流，不代表开发者的观点或立场，与开发者没有任何利益关系</div>
             <!--search-->
             <div class="mdui-textfield mdui-textfield-floating-label">
                 <label class="mdui-textfield-label">Search</label>
-                <input class="mdui-textfield-input" id="searchbox"/>
+                <input class="mdui-textfield-input" id="searchbox" onKeyDown="sear();"/>
             </div>
 
 
@@ -68,15 +74,131 @@
                     <ul class="mdui-list">
                         <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
                             <div class="mdui-list-item-content">
-                                <div class="mdui-list-item-titl mdui-list-item-one-line">Google</div>
-                                <div class="mdui-list-item-text">谷歌大法镇楼</div>
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <!--end-->
-                <script type="text/javascript" src="main.js"></script>
-
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
+                <!--repeat begin-->
+                <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+                    <ul class="mdui-list">
+                        <li class="mdui-list-item mdui-ripple" onclick="location.href='https://google.com'">
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-titl mdui-list-item-one-line" style="background-color: #9e9e9e"></div>
+                                <div style="height:8px"></div>
+                                <div class="mdui-list-item-text" style="background-color: #9e9e9e">&nbsp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end-->
 
 
 
@@ -89,13 +211,13 @@
             <div class="mdui-dialog-title">网站内容反馈</div>
             <div class="mdui-dialog-content">将您需要上传的网站发送到邮箱lakphy@outlook.com等待开发者回应即可<br><br>另外，如果您对已有网站有任何疑义（包括网站404，内容不优质等问题），也可以发送到此邮箱<br><br>注：开发者恕不解决智商问题</div>
             <div class="mdui-dialog-actions">
-                <button class="mdui-btn mdui-ripple">我明白了</button>
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>我明白了</button>
             </div>
         </div>
-	    <div class="mdui-typo-title" style="width:100%;text-align:center">Haven't found the site you want?<br><a href="https://lakphy.github.io/">Tell me just now!</a></div>
+	    <div class="mdui-typo-title" style="width:100%;text-align:center">Haven't found the site you want?<br><p style=""><a class="" style="text-decoration：underline;" mdui-dialog="{target: '#exampleDialog'}"><u>Tell me just now!</u></a></p></div>
         <br><div style="text-align:center;width:100%;height:100px"><div class="mdui-spinner"></div></div>
-        <script type="text/javascript" src="main.js"></script>
         <script src="../js/mdui.min.js"></script>
+        <script type="text/javascript" src="main.js" async></script>
     </body>
 </html>
 
