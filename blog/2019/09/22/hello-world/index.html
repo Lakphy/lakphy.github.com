@@ -17,16 +17,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Github踩坑记录 | Lakphy's Blog</title>
+	<title>Hello World | Lakphy's Blog</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Lakphy">
-	<meta name="description" content="我在第一次上传git过程中遇到的问题及解决方法">
+	<meta name="description" content>
 
 	
-	<meta name="keywords" content="Github,踩坑记录">
+	<meta name="keywords" content>
 	
 
 	
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="Lakphy's Blog">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Github踩坑记录 | Lakphy's Blog">
-	<meta property="og:description" content="我在第一次上传git过程中遇到的问题及解决方法">
-	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2019/06/09/Github踩坑记录/">
+	<meta property="og:title" content="Hello World | Lakphy's Blog">
+	<meta property="og:description" content>
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2019/09/22/hello-world/">
 
 	
-	<meta property="article:published_time" content="2019-06-09T19:06:00+08:00"> 
+	<meta property="article:published_time" content="2019-09-22T22:09:38+08:00"> 
 	<meta property="article:author" content="Lakphy">
-	<meta property="article:published_first" content="Lakphy's Blog, /blog/2019/06/09/Github踩坑记录/">
+	<meta property="article:published_first" content="Lakphy's Blog, /blog/2019/09/22/hello-world/">
 	
 </head>
 <body class="post-template">
@@ -128,68 +128,33 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-06-09T11:09:26.000Z" itemprop="datePublished">
-                    2019-06-9
+                <time class="post-full-meta-date" datetime="2019-09-22T14:59:49.381Z" itemprop="datePublished">
+                    2019-09-22
                 </time>
                 
                 <span class="date-divider">/</span>
                 
                 
             </section>
-            <h1 class="post-full-title">Github踩坑记录</h1>
+            <h1 class="post-full-title">Hello World</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>我在手机上使用github的时候遇到了不少坑，当然最后都使用搜索引擎解决了，为了免得自己遗忘，特作此博文。</p>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>我的手机没有root（主力机不敢root），所以我的git在sd卡目录中，并专门设立一个叫1024的文件夹放git，如果你们的目录不一样，可以随意修改。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install git</span><br><span class="line">apt install vim</span><br><span class="line">apt install openssh</span><br></pre></td></tr></table></figure>
+                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<p>以上代码用于安装所需基本工具。</p>
-<h2 id="建立git目录"><a href="#建立git目录" class="headerlink" title="建立git目录"></a>建立git目录</h2><p>首先要设置你的邮箱和名字，应该是要和GitHub上设置的相同。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>上面的命令引号内替换为自己的名字和邮箱 下一步建立git仓库的目录</p>
-<p>先cd到想要放git的目录</p>
-<p>我的目录是/sdcard/1024，所以要用命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /sdcard/1024</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>使用下面的指令，让这个文件夹变为git可以管理的仓库（这个文件夹一定要是空的）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>这个指令使用成功后，文件夹下会多出来一个.git的文件夹</p>
-<h2 id="上传文件到仓库"><a href="#上传文件到仓库" class="headerlink" title="上传文件到仓库"></a>上传文件到仓库</h2><p>下面我们上传文件到仓库 第一步，</p>
-<p>使用git add 如果只添加某个文件，</p>
-<p>如example.txt，则使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add example.txt</span><br></pre></td></tr></table></figure>
-
-<p>如果想把文件夹内文件全部添加（包括子文件夹），则使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<p>第二步，上传到本地仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;这里写日志&quot;</span><br></pre></td></tr></table></figure>
-
-<p>引号内写日志，不可省略或不写！！！</p>
-<p>至此，关于git的大部分内容已讲完，如想了解更多git工作的教程，请访问网站：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743858312764dca7ad6d0754f76aa562e3789478044000" target="_blank" rel="noopener">廖雪峰的网站</a>，这是我找到的介绍比较全的网站</p>
-<h2 id="上传到远程仓库"><a href="#上传到远程仓库" class="headerlink" title="上传到远程仓库"></a>上传到远程仓库</h2><p>首先通过ssh连接远程仓库，以GitHub为例。 </p>
-<p>我们已经安装了openssh，所以可以通过以下指令获取ssh代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>同样，引号内写邮箱 </p>
-<p>然后根据它的提示，找到id_rsa.pub文件所在目录，用vim打开</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim //后面加id_rsa.pub的文件地址</span><br></pre></td></tr></table></figure>
-
-<p>vim会打开这个文件，将里面所有代码复制出来即可。<br>退出vim：确保自己没瞎jb按，然后输:q退出。</p>
-<p>然后打开GitHub，新建仓库，进入设置，打开ssh keys，新建，然后随便写一个标题，复制代码进去，点确认，OK。</p>
-<p>然后使用指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/lakphy/text.git</span><br></pre></td></tr></table></figure>
-
-<p>其中，lakphy是我的github名，text是仓库名，自己根据自己实际情况作修改。</p>
-<p>然后使用指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>打开github即可看到代码已经上传成功了！</p>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
                 </div>
             </section>
@@ -200,14 +165,14 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="Hexo博客框架踩坑记录" href="/blog/2019/06/09/Hexo博客框架踩坑记录/">
-            ← Hexo博客框架踩坑记录
+        <a class="prev-post" title="技术杂谈---几个月没更博客发生了什么" href="/blog/2020/02/11/技术杂谈-几个月没更博客发生了什么/">
+            ← 技术杂谈---几个月没更博客发生了什么
         </a>
         
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="第一篇博文" href="/blog/2019/06/09/第一篇博文/">
-            第一篇博文 →
+        <a class="next-post" title="Hexo博客框架踩坑记录" href="/blog/2019/06/09/Hexo博客框架踩坑记录/">
+            Hexo博客框架踩坑记录 →
         </a>
         
     </nav>
@@ -229,7 +194,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开始使用"><span class="toc-text">开始使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立git目录"><span class="toc-text">建立git目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传文件到仓库"><span class="toc-text">上传文件到仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到远程仓库"><span class="toc-text">上传到远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完成"><span class="toc-text">完成</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -371,7 +336,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Github踩坑记录</div>
+    <div class="floating-header-title">Hello World</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
