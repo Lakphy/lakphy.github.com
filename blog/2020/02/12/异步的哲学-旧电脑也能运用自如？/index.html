@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="Chinese">
+
+
+
+
+
+
+
+<head>
+	
+	
+	<link rel="stylesheet" href="/blog/css/allinone.min.css">
+
+	
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>异步的哲学---旧电脑也能运用自如？ | Lakphy's Blog</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="Lakphy">
+	<meta name="description" content>
+
+	
+	<meta name="keywords" content>
+	
+
+	
+	<link rel="shortcut icon" href="https://lakphy.gitee.io/logo.jpg">
+	<link rel="apple-touch-icon" href="https://lakphy.gitee.io/logo.jpg">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+
+	<meta property="og:site_name" content="Lakphy's Blog">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="异步的哲学---旧电脑也能运用自如？ | Lakphy's Blog">
+	<meta property="og:description" content>
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2020/02/12/异步的哲学-旧电脑也能运用自如？/">
+
+	
+	<meta property="article:published_time" content="2020-02-12T10:02:00+08:00"> 
+	<meta property="article:author" content="Lakphy">
+	<meta property="article:published_first" content="Lakphy's Blog, /blog/2020/02/12/异步的哲学-旧电脑也能运用自如？/">
+	
+</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header outer" style="z-index: 999">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        <ul class="nav">
+            <li>
+                
+                
+                <a class="site-nav-logo" href="/blog/" title="Lakphy's Blog">
+                    <img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+                </a>
+                
+                
+            </li>
+            
+            
+            <li>
+                <a href="https://lakphy.github.io/" title="ABOUT">ABOUT</a>
+            </li>
+            
+            
+        </ul> 
+    </div>
+    
+    <div class="search-button">
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/lakphy" target="_blank" rel="noopener">
+        <svg viewbox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
+    </a>
+    
+    
+    
+    <a class="social-link" title="twitter" href="https://twitter.com/lakphy?s=09" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+    </a>
+    
+    
+    <a class="social-link" title="telegram" href="https://t.me/lakphy" target="_blank" rel="noopener">
+        <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M679.428571 746.857143l84-396q5.142857-25.142857-6-36t-29.428571-4L234.285714 501.142857q-16.571429 6.285714-22.571428 14.285714t-1.428572 15.142858 18.285715 11.142857l126.285714 39.428571 293.142857-184.571428q12-8 18.285714-3.428572 4 2.857143-2.285714 8.571429l-237.142857 214.285714-9.142857 130.285714q13.142857 0 25.714285-12.571428l61.714286-59.428572 128 94.285715q36.571429 20.571429 46.285714-21.714286z m344.571429-234.857143q0 104-40.571429 198.857143t-109.142857 163.428571-163.428571 109.142857-198.857143 40.571429-198.857143-40.571429-163.428571-109.142857-109.142857-163.428571T0 512t40.571429-198.857143 109.142857-163.428571T313.142857 40.571429 512 0t198.857143 40.571429 163.428571 109.142857 109.142857 163.428571 40.571429 198.857143z"/></svg>
+    </a>
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2020-02-12T02:27:14.000Z" itemprop="datePublished">
+                    2020-02-12
+                </time>
+                
+                <span class="date-divider">/</span>
+                
+                
+            </section>
+            <h1 class="post-full-title">异步的哲学---旧电脑也能运用自如？</h1>
+        </header>
+        <article class="post-full no-image">
+            
+            <section class="post-full-content">
+                <div id="lightgallery" class="markdown-body">
+                    <p>先说一句，这篇博文是瞎讨论哲学用的（</p>
+<h1 id="什么是异步"><a href="#什么是异步" class="headerlink" title="什么是异步"></a>什么是异步</h1><h3 id="来自Wikipedia的解释（异步IO）"><a href="#来自Wikipedia的解释（异步IO）" class="headerlink" title="来自Wikipedia的解释（异步IO）"></a>来自Wikipedia的解释（异步IO）</h3><p>[<a href="https://zh.wikipedia.org/wiki/%E5%BC%82%E6%AD%A5IO" target="_blank" rel="noopener">原文链接</a>]</p>
+<p><strong>异步IO</strong>是计算机操作系统对<a href="https://zh.wikipedia.org/wiki/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA" target="_blank" rel="noopener">输入输出</a>的一种处理方式：发起IO请求的线程不等IO操作完成，就继续执行随后的代码，IO结果用其他方式通知发起IO请求的程序。与异步IO相对的是更为常见的“同步（阻塞）IO”：发起IO请求的线程不从正在调用的IO操作函数返回（即被阻塞），直至IO操作完成。</p>
+<h4 id="类Unix操作系统与POSIX-编辑"><a href="#类Unix操作系统与POSIX-编辑" class="headerlink" title="类Unix操作系统与POSIX[编辑]"></a>类Unix操作系统与POSIX[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=1" target="_blank" rel="noopener">编辑</a>]</h4><p>POSIX提供下述API函数：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>阻塞</th>
+<th>非阻塞</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>同步</td>
+<td>write, read</td>
+<td>write, read + poll / select</td>
+</tr>
+<tr>
+<td>异步</td>
+<td>-</td>
+<td>aio_write, aio_read</td>
+</tr>
+</tbody></table>
+<h4 id="Windows操作系统的异步IO-编辑"><a href="#Windows操作系统的异步IO-编辑" class="headerlink" title="Windows操作系统的异步IO[编辑]"></a>Windows操作系统的异步IO[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=2" target="_blank" rel="noopener">编辑</a>]</h4><p>Windows提供多种异步IO（也称<a href="https://zh.wikipedia.org/wiki/%E9%87%8D%E5%8F%A0I/O" target="_blank" rel="noopener">重叠IO</a>）方式：<a href="https://zh.wikipedia.org/wiki/%E5%BC%82%E6%AD%A5IO#cite_note-1" target="_blank" rel="noopener">[1]</a></p>
+<h5 id="设备内核对象-编辑"><a href="#设备内核对象-编辑" class="headerlink" title="设备内核对象[编辑]"></a>设备内核对象[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=3" target="_blank" rel="noopener">编辑</a>]</h5><p>IO设备在操作系统内核中表示为<a href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8%E5%AF%B9%E8%B1%A1" target="_blank" rel="noopener">内核对象</a>，因此具有可等待（waitable）内核对象状态。例如：文件<a href="https://zh.wikipedia.org/wiki/%E5%8F%A5%E6%9F%84" target="_blank" rel="noopener">句柄</a>，线程句柄等等。对于文件内核对象，当一个异步IO完成后，该文件句柄被置为触发态。使用这种方式获取异步IO完成的通知，缺点是如果在一个文件内核对象上同时有多个异步IO操作，只通过文件句柄的触发无法辨识哪个异步IO操作完成了。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">HANDLE hFile = CreateFileW(L&quot;d:\\a.txt&quot;, GENERIC_WRITE, 0, 0, CREATE_ALWAYS, FILE_FLAG_OVERLAPPED, 0); //设置异步IO的标志FILE_FLAG_OVERLAPPED</span><br><span class="line">char buffer[10] = &#123;&quot;abcd&quot;&#125;;</span><br><span class="line">OVERLAPPED ol = &#123; 0 &#125;;//用0初始化OVERLAPPED的结构</span><br><span class="line">ol.Offset = 2;/从文件的第三个字节开始IO</span><br><span class="line">BOOL rt = WriteFile(hFile, buffer, 5, NULL, &amp;ol);//发起一个异步写操作</span><br><span class="line">//SetFileCompletionNotificationModes(hFile, FILE_SKIP_SET_EVENT_ON_HANDLE);//如此设置则文件内核对象就不会被触发</span><br><span class="line">if (rt == FALSE &amp;&amp; GetLastError() == ERROR_IO_PENDING)//检查异步IO是否完成 </span><br><span class="line">&#123;</span><br><span class="line">	WaitForSingleObject(hFile, INFINITE);//等待设备内核对象（文件）被触发。</span><br><span class="line">&#125;</span><br><span class="line">CloseHandle(hFile);</span><br></pre></td></tr></table></figure>
+
+<h5 id="GetOverlappedResult函数-编辑"><a href="#GetOverlappedResult函数-编辑" class="headerlink" title="GetOverlappedResult函数[编辑]"></a>GetOverlappedResult函数[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=4" target="_blank" rel="noopener">编辑</a>]</h5><p>也可以使用<a href="https://zh.wikipedia.org/wiki/Windows_API" target="_blank" rel="noopener">Windows API</a>函数GetOverlappedResult直接阻塞/非阻塞等待指定的异步IO操作是否完成。<a href="https://zh.wikipedia.org/wiki/%E5%BC%82%E6%AD%A5IO#cite_note-2" target="_blank" rel="noopener">[2]</a>该函数检查OVERLAPPED结构中的Internal成员的值是否为STATUS_PENDING来判断异步IO是否完成。</p>
+<h5 id="异步IO操作的完成通知用事件内核对象-编辑"><a href="#异步IO操作的完成通知用事件内核对象-编辑" class="headerlink" title="异步IO操作的完成通知用事件内核对象[编辑]"></a>异步IO操作的完成通知用<a href="https://zh.wikipedia.org/wiki/%E4%BA%8B%E4%BB%B6_(%E5%90%8C%E6%AD%A5%E5%8E%9F%E8%AF%AD)" target="_blank" rel="noopener">事件</a>内核对象[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=5" target="_blank" rel="noopener">编辑</a>]</h5><p>在异步IO操作的read/write函数调用中给出的OVERLAPPED类型的参数中，可以指定一个内核<a href="https://zh.wikipedia.org/wiki/%E4%BA%8B%E4%BB%B6_(%E5%90%8C%E6%AD%A5%E5%8E%9F%E8%AF%AD)" target="_blank" rel="noopener">事件</a>对象。这个异步IO操作完成时，这个内核<a href="https://zh.wikipedia.org/wiki/%E4%BA%8B%E4%BB%B6_(%E5%90%8C%E6%AD%A5%E5%8E%9F%E8%AF%AD)" target="_blank" rel="noopener">事件</a>对象会被触发。从而，等待在这个事件对象上的程序就会知道这个异步IO操作完成。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">HANDLE hFile = CreateFileW(L&quot;d:\\a.txt&quot;, GENERIC_WRITE, 0, 0, CREATE_ALWAYS, FILE_FLAG_OVERLAPPED, 0); //设置异步IO的标志FILE_FLAG_OVERLAPPED</span><br><span class="line">char buffer[10] = &#123;&quot;abcd&quot;&#125;;</span><br><span class="line">OVERLAPPED ol = &#123; 0 &#125;;//用0初始化OVERLAPPED的结构</span><br><span class="line">ol.Offset = 2;/从文件的第三个字节开始IO</span><br><span class="line">HANDLE hEvent = CreateEvent(0, FALSE, FALSE, NULL);  </span><br><span class="line">ol.hEvent = hEvent;//传递一个事件对象。  </span><br><span class="line"></span><br><span class="line">BOOL rt = WriteFile(hFile, buffer, 5, NULL, &amp;ol);//发起一个异步写操作 </span><br><span class="line"></span><br><span class="line">if (rt == FALSE &amp;&amp; GetLastError() == ERROR_IO_PENDING)//检查异步IO是否完成 </span><br><span class="line">&#123;</span><br><span class="line">	WaitForSingleObject(ol.hEvent, INFINITE);//等待设备内核对象（文件）被触发。</span><br><span class="line">&#125;</span><br><span class="line">CloseHandle(hEvent); </span><br><span class="line">CloseHandle(hFile);</span><br></pre></td></tr></table></figure>
+
+<h5 id="可唤醒I-O-编辑"><a href="#可唤醒I-O-编辑" class="headerlink" title="可唤醒I/O[编辑]"></a><a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%94%A4%E9%86%92I/O" target="_blank" rel="noopener">可唤醒I/O</a>[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=6" target="_blank" rel="noopener">编辑</a>]</h5><p>异步<a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%94%A4%E9%86%92I/O" target="_blank" rel="noopener">可唤醒I/O</a>操作通过ReadFileEx/WriteFileEx函数指出完成过程回调函数。回调函数在该线程的可唤醒等待（alertable wait）中被执行。</p>
+<h5 id="完成端口-编辑"><a href="#完成端口-编辑" class="headerlink" title="完成端口[编辑]"></a><a href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E6%88%90%E7%AB%AF%E5%8F%A3" target="_blank" rel="noopener">完成端口</a>[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=7" target="_blank" rel="noopener">编辑</a>]</h5><p>使用CreateIoCompletionPort函数创建一个<a href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E6%88%90%E7%AB%AF%E5%8F%A3" target="_blank" rel="noopener">完成端口</a>。然后把文件句柄绑定到这个完成端口（通过CreateIoCompletionPort函数)。这个文件句柄上的异步IO操作完成时，会自动向这个完成完成端口发通知。线程通过GetQueuedCompletionStatus函数等待这个完成端口上的完成通知，然后从GetQueuedCompletionStatus的调用返回处恢复线程执行。</p>
+<h5 id="线程池I-O完成对象-编辑"><a href="#线程池I-O完成对象-编辑" class="headerlink" title="线程池I/O完成对象[编辑]"></a><a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E7%A8%8B%E6%B1%A0" target="_blank" rel="noopener">线程池</a>I/O完成对象[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=8" target="_blank" rel="noopener">编辑</a>]</h5><p>使用CreateThreadpoolIo函数创建一个I/O完成对象，绑定了要执行异步I/O操作的文件句柄与待执行的回调函数。通过StartThreadpoolIo函数开始I/O完成对象的工作。每当绑定的文件句柄上的异步I/O操作完成，自动调用<a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E7%A8%8B%E6%B1%A0" target="_blank" rel="noopener">线程池</a>上的线程执行指定的回调函数。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">VOID CALLBACK OverlappedCompletionRoutine(PTP_CALLBACK_INSTANCE pInstance,  </span><br><span class="line">                                          PVOID pvContext,  </span><br><span class="line">                                          PVOID pOverlapped,  </span><br><span class="line">                                          ULONG IoResult,  </span><br><span class="line">                                          ULONG_PTR NumberOfBytesTransferred,  </span><br><span class="line">                                          PTP_IO pIo)  </span><br><span class="line">&#123;  </span><br><span class="line">    printf(&quot;OverlappedCompletionRoutine, transferred: %d bytes\n&quot;, NumberOfBytesTransferred);  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">HANDLE hFile = CreateFileW(L&quot;d:\\a.txt&quot;, GENERIC_WRITE, 0, 0, CREATE_ALWAYS, FILE_FLAG_OVERLAPPED, 0); //设置异步IO的标志FILE_FLAG_OVERLAPPED</span><br><span class="line"></span><br><span class="line">PTP_IO pio = CreateThreadpoolIo(hFile, OverlappedCompletionRoutine, NULL, NULL);//将设备对象和线程池的IO完成端口关联起来。  </span><br><span class="line">StartThreadpoolIo(pio);</span><br><span class="line">char buffer[10] = &#123;&quot;abcd&quot;&#125;;</span><br><span class="line">OVERLAPPED ol = &#123; 0 &#125;;//用0初始化OVERLAPPED的结构</span><br><span class="line">ol.Offset = 2;/从文件的第三个字节开始IO   </span><br><span class="line"></span><br><span class="line">BOOL rt = WriteFile(hFile, buffer, 5, NULL, &amp;ol);//发起一个异步写操作 </span><br><span class="line">if(rt==FALSE &amp;&amp; GetLastError()==ERROR_IO_PENDING))</span><br><span class="line">&#123;  </span><br><span class="line">   ::Sleep(4000); </span><br><span class="line">   //do somethings... </span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">   CancelThreadpoolIo(pio); </span><br><span class="line">&#125;</span><br><span class="line">WaitForThreadpoolIoCallbacks(pio,false);</span><br><span class="line">CloseHandle(hFile); </span><br><span class="line">CloseThreadpoolIo(pio);//关闭线程池io完成对象</span><br></pre></td></tr></table></figure>
+
+<h4 id="参见-编辑"><a href="#参见-编辑" class="headerlink" title="参见[编辑]"></a>参见[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=9" target="_blank" rel="noopener">编辑</a>]</h4><ul>
+<li><a href="https://zh.wikipedia.org/wiki/IOCP" target="_blank" rel="noopener">IOCP</a></li>
+</ul>
+<h4 id="参考文献-编辑"><a href="#参考文献-编辑" class="headerlink" title="参考文献[编辑]"></a>参考文献[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=10" target="_blank" rel="noopener">编辑</a>]</h4><ol>
+<li><strong>^</strong> <a href="http://msdn.microsoft.com/en-US/library/kztecsys%28v=vs.100%29.aspx" target="_blank" rel="noopener">Description from .NET Framework Developer’s Guide</a></li>
+<li><strong>^</strong> <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms683209(v=vs.85).aspx" target="_blank" rel="noopener">MSDN:GetOverlappedResult function</a></li>
+</ol>
+<h4 id="外部链接-编辑"><a href="#外部链接-编辑" class="headerlink" title="外部链接[编辑]"></a>外部链接[<a href="https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%AD%A5IO&action=edit&section=11" target="_blank" rel="noopener">编辑</a>]</h4><ul>
+<li><a href="https://www.webcitation.org/6ICibHuyd?url=http://www.kegel.com/c10k.html" target="_blank" rel="noopener">The C10K Problem</a>; a survey of asynchronous I/O methods with emphasis on scaling – by Dan Kegel</li>
+<li>Article “<a href="http://www.ibm.com/developerworks/library/l-async" target="_blank" rel="noopener">Boost application performance using asynchronous I/O</a>“ by <a href="https://zh.wikipedia.org/w/index.php?title=M._Tim_Jones&action=edit&redlink=1" target="_blank" rel="noopener">M. Tim Jones</a></li>
+<li>Article “<a href="http://www.usenix.org/event/usenix04/tech/general/full_papers/elmeleegy/elmeleegy_html/html.html" target="_blank" rel="noopener">Lazy Asynchronous I/O For Event-Driven Servers</a>“ by <a href="https://zh.wikipedia.org/w/index.php?title=Willy_Zwaenepoel&action=edit&redlink=1" target="_blank" rel="noopener">Willy Zwaenepoel</a>, <a href="https://zh.wikipedia.org/w/index.php?title=Khaled_Elmeleegy&action=edit&redlink=1" target="_blank" rel="noopener">Khaled Elmeleegy</a>, <a href="https://zh.wikipedia.org/w/index.php?title=Anupam_Chanda&action=edit&redlink=1" target="_blank" rel="noopener">Anupam Chanda</a> and <a href="https://zh.wikipedia.org/w/index.php?title=Alan_L._Cox&action=edit&redlink=1" target="_blank" rel="noopener">Alan L. Cox</a></li>
+<li><a href="https://www.gnu.org/software/libc/manual/html_node/Asynchronous-I_002fO.html" target="_blank" rel="noopener">Perform I/O Operations in Parallel</a></li>
+<li><a href="http://opengroup.org/onlinepubs/009695399/basedefs/aio.h.html" target="_blank" rel="noopener">Description from POSIX standard</a></li>
+<li><a href="https://web.archive.org/web/20101101112358/http://doc.sch130.nsc.ru/www.sysinternals.com/ntw2k/info/comport.shtml" target="_blank" rel="noopener">Inside I/O Completion Ports</a> by <a href="https://zh.wikipedia.org/w/index.php?title=Mark_Russinovich&action=edit&redlink=1" target="_blank" rel="noopener">Mark Russinovich</a></li>
+<li><a href="http://www.flounder.com/asynchexplorer.htm" target="_blank" rel="noopener">Asynchronous I/O and The Asynchronous Disk I/O Explorer</a></li>
+<li><a href="http://software.schmorp.de/pkg/IO-AIO.html" target="_blank" rel="noopener">IO::AIO is a Perl module offering an asynchronous interface for most I/O operations</a></li>
+<li><a href="https://web.archive.org/web/20170623060116/http://www.cs.wustl.edu/~schmidt/PDF/proactor.pdf" target="_blank" rel="noopener">ACE Proactor</a></li>
+</ul>
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>从上面文献可以看出，异步IO大概就是发起IO的程序一直发起IO，不需要等待IO做出相应。</p>
+<h1 id="有什么用"><a href="#有什么用" class="headerlink" title="有什么用"></a>有什么用</h1><h3 id="从爬虫说起"><a href="#从爬虫说起" class="headerlink" title="从爬虫说起"></a>从爬虫说起</h3><p>异步IO是我学习Python爬虫时候接触到的，所以先从爬虫说起。<br>随着计算机性能的不断提升，程序运行速度不断提高，而限制程序运行速度的不再是计算机性能，而是IO速度，比如一个爬虫处理数据要20ms，而网络延迟60ms（这也是比较理想的速度了），这段时间Python闲的没事干，只能等待IO响应，计算机的性能没法发挥到极致。而异步IO只需程序一直发起IO，等响应来了再处理响应，大大提升了爬虫速度</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>促进了爬虫事业发展，发挥了计算机应有性能</p>
+<h1 id="什么哲学"><a href="#什么哲学" class="headerlink" title="什么哲学"></a>什么哲学</h1><h3 id="老电脑-手机卡顿表现在哪里"><a href="#老电脑-手机卡顿表现在哪里" class="headerlink" title="老电脑/手机卡顿表现在哪里"></a>老电脑/手机卡顿表现在哪里</h3><p>大多数老旧设备卡顿是性能不够，CPU无法处理大量程序造成的</p>
+<h3 id="怎么解决"><a href="#怎么解决" class="headerlink" title="怎么解决"></a>怎么解决</h3><p>解决方法就是让老旧设备的性能发挥到极致，发挥到极致的方法除了超频以外还有一个妙法，这就是我要说的内容，这个方法就是充分利用老旧设备的IO等待时间，让老旧设备一直保持高频运转</p>
+<h3 id="怎么操作"><a href="#怎么操作" class="headerlink" title="怎么操作"></a>怎么操作</h3><p>这要说你是怎么判断你的设备卡顿了，你判断的依据一定是看到设备IO的output反应迟缓，但你没看到的是input正闲的没事干，此时你可以用脑子预测你将会需要按什么键，或者什么输入操作，给设备input，此时设备卡顿，所以你的input处于已接收未处理状态，因为CPU累的要死所以暂时不会处理input。而等待CPU处理完卡顿后刚准备歇会，就发现了你的input，于是就开始处理input，发挥到CPU的性能极致。<br>这个实际上并不是CPU的异步，而是你脑子的异步，因为设备卡顿你并没有接收到设备给你的output，但你不等待output，直接进行下一个input，省去设备output然后你脑子处理再input给设备的时间，大大提升设备运行效率。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>提升老旧设备效率只是一个简单的异步哲学应用，生活中有很多异步哲学的应用，只要你能“运用自如”，工作效率提升的不是一点半点。</p>
+
+                </div>
+            </section>
+        </article>
+    </div>
+
+    
+    <div style="height: 4vw;width: 100%"></div>
+    <nav id="gobottom" class="pagination">
+        
+        <span class="prev-next-post">•</span>
+        
+        <a class="next-post" title="优酸乳味的资源站" href="/blog/2020/02/11/优酸乳味的资源站/">
+            优酸乳味的资源站 →
+        </a>
+        
+    </nav>
+
+    
+</main>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
+            <svg class="toc-close hide" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是异步"><span class="toc-text">什么是异步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#来自Wikipedia的解释（异步IO）"><span class="toc-text">来自Wikipedia的解释（异步IO）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#类Unix操作系统与POSIX-编辑"><span class="toc-text">类Unix操作系统与POSIX[编辑]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows操作系统的异步IO-编辑"><span class="toc-text">Windows操作系统的异步IO[编辑]</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#设备内核对象-编辑"><span class="toc-text">设备内核对象[编辑]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GetOverlappedResult函数-编辑"><span class="toc-text">GetOverlappedResult函数[编辑]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#异步IO操作的完成通知用事件内核对象-编辑"><span class="toc-text">异步IO操作的完成通知用事件内核对象[编辑]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#可唤醒I-O-编辑"><span class="toc-text">可唤醒I/O[编辑]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#完成端口-编辑"><span class="toc-text">完成端口[编辑]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#线程池I-O完成对象-编辑"><span class="toc-text">线程池I/O完成对象[编辑]</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参见-编辑"><span class="toc-text">参见[编辑]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考文献-编辑"><span class="toc-text">参考文献[编辑]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#外部链接-编辑"><span class="toc-text">外部链接[编辑]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解释"><span class="toc-text">解释</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#有什么用"><span class="toc-text">有什么用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从爬虫说起"><span class="toc-text">从爬虫说起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用"><span class="toc-text">作用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么哲学"><span class="toc-text">什么哲学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#老电脑-手机卡顿表现在哪里"><span class="toc-text">老电脑/手机卡顿表现在哪里</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#怎么解决"><span class="toc-text">怎么解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#怎么操作"><span class="toc-text">怎么操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-text">最后</span></a></li>
+    </div>
+</div>
+
+
+
+	</div>
+	
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
+  <header class="read-next-card-header">
+    <small class="read-next-card-header-sitetitle">&mdash; Lakphy's Blog &mdash;</small>
+    <h3 class="read-next-card-header-title">Recent Posts</h3>
+  </header>
+  <div class="read-next-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/>
+    </svg>
+  </div>
+  <div class="read-next-card-content">
+    <ul>
+      
+      
+      
+      <li>
+        <a href="/blog/2020/02/12/异步的哲学-旧电脑也能运用自如？/">异步的哲学---旧电脑也能运用自如？</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/blog/2020/02/11/优酸乳味的资源站/">优酸乳味的资源站</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/blog/2020/02/11/技术杂谈-几个月没更博客发生了什么/">技术杂谈---几个月没更博客发生了什么</a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+  <footer class="read-next-card-footer">
+    <a href="/blog/archives">  MORE  → </a>
+  </footer>
+</article>
+
+            
+            
+            
+
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
+	<header class="read-next-card-header" style="padding-bottom: 20px">
+		<h3 class="read-next-card-header-title">Tag Cloud</h3>
+	</header>
+	<div class="read-next-card-content-ext">
+		<a href="/blog/tags/哲学/" style="font-size: 14px;">哲学</a> <a href="/blog/tags/技术杂谈/" style="font-size: 14px;">技术杂谈</a> <a href="/blog/tags/水博文/" style="font-size: 14px;">水博文</a> <a href="/blog/tags/资源站/" style="font-size: 14px;">资源站</a> <a href="/blog/tags/踩坑记录/" style="font-size: 24px;">踩坑记录</a>
+	</div>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+	
+
+
+
+
+<div id="search" class="search-overlay subscribe-overlay">
+    <div class="search-form">
+        
+        <img class="search-overlay-logo" src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<section class="copyright">
+			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog</a>
+			&copy; 2020
+		</section>
+		<nav class="site-footer-nav">
+			
+            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+        </nav>
+    </div>
+</footer>
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<div class="floating-header">
+	<div class="floating-header-logo">
+        <a href="/blog/" title="Lakphy's Blog">
+			
+                <img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog icon">
+			
+            <span>Lakphy's Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">异步的哲学---旧电脑也能运用自如？</div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+
+<script src="/blog/js/mix/post-lazy-local.min.js"></script>
+
+<script>;(function() {var bLazy = new Blazy()})();</script>
+
+
+
+
+<script src="/blog/js/lightgallery.min.js"></script>
+<link rel="stylesheet" href="/blog/css/lightgallery.min.css">
+<script>
+    lightGallery(document.getElementById('lightgallery'), {
+        selector: '.post-img'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+<script>searchFunc("/blog/")</script>
+
+
+
+
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    console.log("this theme is from https://github.com/xzhih/hexo-theme-casper")
+</script>
+
+</body>
+</html>
