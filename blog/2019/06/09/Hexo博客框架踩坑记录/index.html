@@ -8,14 +8,17 @@
 
 
 <head>
-	
-	
-	<link rel="stylesheet" href="/blog/css/allinone.min.css">
-
-	
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn1.lncld.net">
+	<link rel="preconnect" href="//unpkg.com">
+	<link rel="preconnect" href="//app-router.leancloud.cn">
+	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
+	<link rel="preconnect" href="//gravatar.loli.net">
 
 	<title>Hexo博客框架踩坑记录 | Lakphy's Blog</title>
 
@@ -54,6 +57,14 @@
 	<meta property="article:author" content="Lakphy">
 	<meta property="article:published_first" content="Lakphy's Blog, /blog/2019/06/09/Hexo博客框架踩坑记录/">
 	
+
+	
+	
+	<link rel="stylesheet" href="/blog/css/allinonecss.min.css">
+
+	
+	
+	
 </head>
 <body class="post-template">
 	<div class="site-wrapper">
@@ -62,7 +73,7 @@
 
 
 
-<header class="site-header outer" style="z-index: 999">
+<header class="site-header post-site-header outer">
     <div class="inner">
         
 <nav class="site-nav"> 
@@ -80,20 +91,24 @@
             
             
             <li>
-                <a href="https://lakphy.github.io/" title="ABOUT">ABOUT</a>
+                <a href="https://lakphy.github.io/blog/" title="blog">blog</a>
+            </li>
+            
+            <li>
+                <a href="https://lakphy.github.io" title="Lakphy">Lakphy</a>
             </li>
             
             
         </ul> 
     </div>
     
-    <div class="search-button">
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
     </div>
      
     <div class="site-nav-right">
         
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+        <a href="#search" class="search-button">Search ...</a>
          
         
 <div class="social-links">
@@ -124,24 +139,24 @@
 </header>
 
 
-<main id="site-main" class="site-main outer" role="main">
+<div id="site-main" class="site-main outer" role="main">
     <div class="inner">
         <header class="post-full-header">
-            <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-06-09T11:34:09.000Z" itemprop="datePublished">
+            <div class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2019-06-09T11:34:09.000Z">
                     2019-06-9
                 </time>
                 
                 <span class="date-divider">/</span>
                 
                 
-            </section>
+            </div>
             <h1 class="post-full-title">Hexo博客框架踩坑记录</h1>
         </header>
-        <article class="post-full no-image">
+        <div class="post-full no-image">
             
-            <section class="post-full-content">
-                <div id="lightgallery" class="markdown-body">
+            <div class="post-full-content">
+                <article id="photoswipe" class="markdown-body">
                     <h1 id="开始创建你的博客"><a href="#开始创建你的博客" class="headerlink" title="开始创建你的博客"></a>开始创建你的博客</h1><p>先为你的博客创建一个文件夹，这里不建议使用你的git文件夹，因为最终导出文件和这里要用的源文件不一样。</p>
 <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><p>确保你的设备上有以下几个软件包</p>
 <p>nodejs</p>
@@ -242,20 +257,26 @@
 <p>使用方法在文档中将会有呈现</p>
 <h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p>至此，您已完成博客构建，感谢观看。</p>
 
-                </div>
-            </section>
-        </article>
+                </article>
+                <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/blog/tags/踩坑记录/" rel="tag"># 踩坑记录</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
     </div>
 
     
-    <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
         <a class="prev-post" title="Hello World" href="/blog/2019/09/22/hello-world/">
             ← Hello World
         </a>
         
-        <span class="prev-next-post">•</span>
+        <span class="prev-next-post">·</span>
         
         <a class="next-post" title="Github踩坑记录" href="/blog/2019/06/09/Github踩坑记录/">
             Github踩坑记录 →
@@ -264,7 +285,7 @@
     </nav>
 
     
-</main>
+</div>
 
 <div class="toc-bar">
     <div class="toc-btn-bar">
@@ -286,6 +307,9 @@
 
 
 
+
+
+
 	</div>
 	
 
@@ -296,7 +320,7 @@
             
             
 
-<article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
   <header class="read-next-card-header">
     <small class="read-next-card-header-sitetitle">&mdash; Lakphy's Blog &mdash;</small>
     <h3 class="read-next-card-header-title">Recent Posts</h3>
@@ -352,8 +376,8 @@
             
             
 
-<article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
-	<header class="read-next-card-header" style="padding-bottom: 20px">
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
+	<header class="read-next-card-header tagcloud-card">
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
@@ -371,10 +395,12 @@
 
 
 
-<div id="search" class="search-overlay subscribe-overlay">
+<div id="search" class="search-overlay">
     <div class="search-form">
         
-        <img class="search-overlay-logo" src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+        <div class="search-overlay-logo">
+        	<img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+        </div>
         
         <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
         <a class="search-overlay-close" href="#"></a>
@@ -382,75 +408,55 @@
     <div id="local-search-result"></div>
 </div>
 
-
 <footer class="site-footer outer">
 	<div class="site-footer-content inner">
-		<section class="copyright">
-			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog</a>
-			&copy; 2020
-		</section>
+		<div class="copyright">
+			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog &copy; 2020</a>
+			
+				
+    		
+		</div>
 		<nav class="site-footer-nav">
 			
-            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
-        </nav>
-    </div>
+			<a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+		</nav>
+	</div>
 </footer>
 	
 
 
 <script>
     if(window.navigator && navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations()
-        .then(function(registrations) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
             for(let registration of registrations) {
-                registration.unregister();
+                registration.unregister()
             }
-        });
+        })
     }
 </script>
 
 
+<script id="scriptLoad" src="/blog/js/allinone.min.js" async></script>
 
 
-
-
-
-<div class="floating-header">
-	<div class="floating-header-logo">
-        <a href="/blog/" title="Lakphy's Blog">
-			
-                <img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog icon">
-			
-            <span>Lakphy's Blog</span>
-        </a>
-    </div>
-    <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Hexo博客框架踩坑记录</div>
-    <progress class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
-        </div>
-    </progress>
-</div>
-
-
-
-
-
-<script src="/blog/js/mix/post-lazy-local.min.js"></script>
-
-<script>;(function() {var bLazy = new Blazy()})();</script>
-
-
-
-
-<script src="/blog/js/lightgallery.min.js"></script>
-<link rel="stylesheet" href="/blog/css/lightgallery.min.css">
 <script>
-    lightGallery(document.getElementById('lightgallery'), {
-        selector: '.post-img'
-    });
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        
+        
+            var bLazy = new Blazy();
+        
+
+        
+        
+
+        
+        
+        
+            searchFunc("/blog/");
+        
+        
+    })
 </script>
 
 
@@ -461,14 +467,8 @@
 
 
 
-<script>searchFunc("/blog/")</script>
-
-
-
-
-
 <script>
-    (function(){
+    document.addEventListener('DOMContentLoaded',function(){
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https') {
@@ -479,9 +479,9 @@
         }
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
-    })();
-    console.log("this theme is from https://github.com/xzhih/hexo-theme-casper")
+    });
 </script>
+
 
 </body>
 </html>

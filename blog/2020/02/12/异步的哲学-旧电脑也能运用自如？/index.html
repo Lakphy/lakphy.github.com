@@ -8,14 +8,17 @@
 
 
 <head>
-	
-	
-	<link rel="stylesheet" href="/blog/css/allinone.min.css">
-
-	
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn1.lncld.net">
+	<link rel="preconnect" href="//unpkg.com">
+	<link rel="preconnect" href="//app-router.leancloud.cn">
+	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
+	<link rel="preconnect" href="//gravatar.loli.net">
 
 	<title>异步的哲学---旧电脑也能运用自如？ | Lakphy's Blog</title>
 
@@ -54,6 +57,14 @@
 	<meta property="article:author" content="Lakphy">
 	<meta property="article:published_first" content="Lakphy's Blog, /blog/2020/02/12/异步的哲学-旧电脑也能运用自如？/">
 	
+
+	
+	
+	<link rel="stylesheet" href="/blog/css/allinonecss.min.css">
+
+	
+	
+	
 </head>
 <body class="post-template">
 	<div class="site-wrapper">
@@ -62,7 +73,7 @@
 
 
 
-<header class="site-header outer" style="z-index: 999">
+<header class="site-header post-site-header outer">
     <div class="inner">
         
 <nav class="site-nav"> 
@@ -80,20 +91,24 @@
             
             
             <li>
-                <a href="https://lakphy.github.io/" title="ABOUT">ABOUT</a>
+                <a href="https://lakphy.github.io/blog/" title="blog">blog</a>
+            </li>
+            
+            <li>
+                <a href="https://lakphy.github.io" title="Lakphy">Lakphy</a>
             </li>
             
             
         </ul> 
     </div>
     
-    <div class="search-button">
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
     </div>
      
     <div class="site-nav-right">
         
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+        <a href="#search" class="search-button">Search ...</a>
          
         
 <div class="social-links">
@@ -124,24 +139,24 @@
 </header>
 
 
-<main id="site-main" class="site-main outer" role="main">
+<div id="site-main" class="site-main outer" role="main">
     <div class="inner">
         <header class="post-full-header">
-            <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2020-02-12T02:27:14.000Z" itemprop="datePublished">
+            <div class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2020-02-12T02:27:14.000Z">
                     2020-02-12
                 </time>
                 
                 <span class="date-divider">/</span>
                 
                 
-            </section>
+            </div>
             <h1 class="post-full-title">异步的哲学---旧电脑也能运用自如？</h1>
         </header>
-        <article class="post-full no-image">
+        <div class="post-full no-image">
             
-            <section class="post-full-content">
-                <div id="lightgallery" class="markdown-body">
+            <div class="post-full-content">
+                <article id="photoswipe" class="markdown-body">
                     <p>先说一句，这篇博文是瞎讨论哲学用的（</p>
 <h1 id="什么是异步"><a href="#什么是异步" class="headerlink" title="什么是异步"></a>什么是异步</h1><h3 id="来自Wikipedia的解释（异步IO）"><a href="#来自Wikipedia的解释（异步IO）" class="headerlink" title="来自Wikipedia的解释（异步IO）"></a>来自Wikipedia的解释（异步IO）</h3><p>[<a href="https://zh.wikipedia.org/wiki/%E5%BC%82%E6%AD%A5IO" target="_blank" rel="noopener">原文链接</a>]</p>
 <p><strong>异步IO</strong>是计算机操作系统对<a href="https://zh.wikipedia.org/wiki/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA" target="_blank" rel="noopener">输入输出</a>的一种处理方式：发起IO请求的线程不等IO操作完成，就继续执行随后的代码，IO结果用其他方式通知发起IO请求的程序。与异步IO相对的是更为常见的“同步（阻塞）IO”：发起IO请求的线程不从正在调用的IO操作函数返回（即被阻塞），直至IO操作完成。</p>
@@ -207,16 +222,22 @@
 <h3 id="怎么操作"><a href="#怎么操作" class="headerlink" title="怎么操作"></a>怎么操作</h3><p>这要说你是怎么判断你的设备卡顿了，你判断的依据一定是看到设备IO的output反应迟缓，但你没看到的是input正闲的没事干，此时你可以用脑子预测你将会需要按什么键，或者什么输入操作，给设备input，此时设备卡顿，所以你的input处于已接收未处理状态，因为CPU累的要死所以暂时不会处理input。而等待CPU处理完卡顿后刚准备歇会，就发现了你的input，于是就开始处理input，发挥到CPU的性能极致。<br>这个实际上并不是CPU的异步，而是你脑子的异步，因为设备卡顿你并没有接收到设备给你的output，但你不等待output，直接进行下一个input，省去设备output然后你脑子处理再input给设备的时间，大大提升设备运行效率。</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>提升老旧设备效率只是一个简单的异步哲学应用，生活中有很多异步哲学的应用，只要你能“运用自如”，工作效率提升的不是一点半点。</p>
 
-                </div>
-            </section>
-        </article>
+                </article>
+                <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/blog/tags/哲学/" rel="tag"># 哲学</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
     </div>
 
     
-    <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <span class="prev-next-post">•</span>
+        <span class="prev-next-post">·</span>
         
         <a class="next-post" title="优酸乳味的资源站" href="/blog/2020/02/11/优酸乳味的资源站/">
             优酸乳味的资源站 →
@@ -225,7 +246,7 @@
     </nav>
 
     
-</main>
+</div>
 
 <div class="toc-bar">
     <div class="toc-btn-bar">
@@ -247,6 +268,9 @@
 
 
 
+
+
+
 	</div>
 	
 
@@ -257,7 +281,7 @@
             
             
 
-<article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
   <header class="read-next-card-header">
     <small class="read-next-card-header-sitetitle">&mdash; Lakphy's Blog &mdash;</small>
     <h3 class="read-next-card-header-title">Recent Posts</h3>
@@ -313,8 +337,8 @@
             
             
 
-<article class="read-next-card" style="background-image: url(https://i.loli.net/2017/11/26/5a19c56faa29f.jpg)">
-	<header class="read-next-card-header" style="padding-bottom: 20px">
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
+	<header class="read-next-card-header tagcloud-card">
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
@@ -332,10 +356,12 @@
 
 
 
-<div id="search" class="search-overlay subscribe-overlay">
+<div id="search" class="search-overlay">
     <div class="search-form">
         
-        <img class="search-overlay-logo" src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+        <div class="search-overlay-logo">
+        	<img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+        </div>
         
         <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
         <a class="search-overlay-close" href="#"></a>
@@ -343,75 +369,55 @@
     <div id="local-search-result"></div>
 </div>
 
-
 <footer class="site-footer outer">
 	<div class="site-footer-content inner">
-		<section class="copyright">
-			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog</a>
-			&copy; 2020
-		</section>
+		<div class="copyright">
+			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog &copy; 2020</a>
+			
+				
+    		
+		</div>
 		<nav class="site-footer-nav">
 			
-            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
-        </nav>
-    </div>
+			<a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+		</nav>
+	</div>
 </footer>
 	
 
 
 <script>
     if(window.navigator && navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations()
-        .then(function(registrations) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
             for(let registration of registrations) {
-                registration.unregister();
+                registration.unregister()
             }
-        });
+        })
     }
 </script>
 
 
+<script id="scriptLoad" src="/blog/js/allinone.min.js" async></script>
 
 
-
-
-
-<div class="floating-header">
-	<div class="floating-header-logo">
-        <a href="/blog/" title="Lakphy's Blog">
-			
-                <img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog icon">
-			
-            <span>Lakphy's Blog</span>
-        </a>
-    </div>
-    <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">异步的哲学---旧电脑也能运用自如？</div>
-    <progress class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
-        </div>
-    </progress>
-</div>
-
-
-
-
-
-<script src="/blog/js/mix/post-lazy-local.min.js"></script>
-
-<script>;(function() {var bLazy = new Blazy()})();</script>
-
-
-
-
-<script src="/blog/js/lightgallery.min.js"></script>
-<link rel="stylesheet" href="/blog/css/lightgallery.min.css">
 <script>
-    lightGallery(document.getElementById('lightgallery'), {
-        selector: '.post-img'
-    });
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        
+        
+            var bLazy = new Blazy();
+        
+
+        
+        
+
+        
+        
+        
+            searchFunc("/blog/");
+        
+        
+    })
 </script>
 
 
@@ -422,14 +428,8 @@
 
 
 
-<script>searchFunc("/blog/")</script>
-
-
-
-
-
 <script>
-    (function(){
+    document.addEventListener('DOMContentLoaded',function(){
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https') {
@@ -440,9 +440,9 @@
         }
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
-    })();
-    console.log("this theme is from https://github.com/xzhih/hexo-theme-casper")
+    });
 </script>
+
 
 </body>
 </html>
