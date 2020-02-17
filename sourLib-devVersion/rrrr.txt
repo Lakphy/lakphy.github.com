@@ -1,0 +1,666 @@
+#网站分享#
+
+1.Microsoft 使用技巧
+
+https://www.microsoft.com/zh-cn/tips/home 
+
+Microsoft 使用技巧是一个聚合各种 Microsoft 使用技巧的微软官方网站，让你更好的使用你的 Windows 电脑。
+
+它提供的使用技巧包括：对电脑进行个性化设置、照片基础知识、热门 Offices 技巧、你的手机和 Windows 使用技巧、快速查找、整理、保护你的电脑、创建并编辑视频、节电模式、手写手势、对 Web 进行个性化设置、Cortana 和 Mircosoft Edge。
+
+它的每个分类里面还包括了多个使用技巧，例如对 Web 进行个性化设置，就包括了 15 个实用技巧，包括：在网页上做笔记、突出显示文本或向电子书添加注释、为你大声朗读 Web 内容、使用扩展阻止广告、使用扩展管理密码、翻译网页、排列收藏夹、减少网页上的干扰、打印重要内容、将网站静音、阻止视频自动播放、使用主题自定义 Microsoft Edge 等；每个使用技巧都是非常实用。
+
+2.MyEnglishPages
+
+https://www.myenglishpages.com/ 
+
+MyEnglishPages 是一个免费提供各种精美英语课程，让你提升自我英语的网站。
+
+它提供的免费英语课程包括很多方面：语法、写作、听力、词汇、成语、动词短语，它提供测试和练习，包括：语法练习、词汇练习、读写练习，它提供歌词和笑话等，让你更有趣的学习英语，它也提供很多免费学习技巧。
+
+它提供的英语课程进行了详细的分类，英语语法参考课程就进行了详细的分类，让你全面学习英语语法；它提供了英语时态、词性、不定式的使用方法，其中词性包括了：形容词和副词、名词、代词、动词、介词、连词和插词的使用方法。
+
+3.奇异书屋
+
+https://www.talebook.org/ 
+
+奇异书屋是一个简洁清新并且不可不多的高质量电子书籍网站。
+
+它提供将近 2W 本电子书籍，并且按照作者和标签详细分类，其中书籍标签包括：小说、文学、历史、散文、青春、旅行、计算机、励志、法律、摄影、饮食、语言、创业、文艺、成长等 1W 多个标签。
+
+你可以利用这个网站的搜索功能、电子书评分功能、热度榜单功能、最近更新功能轻松找到你需要的电子书籍，
+
+最后，网站支持在线阅读、上传、下载、推送电子书籍功能。
+ 
+
+4.Convertio
+
+https://convertio.co/zh/ 
+
+Convertio 是一个功能丰富的综合文件转换工具。
+
+它支持的文件转换类型非常丰富，包括：字体文件转换、视频文件转换、音频文件转换、演示文件转换、压缩文件转换、文档文件转换、图像文件转换、电子书文件转换。
+
+5.渐变文件夹
+
+https://una.im/gradient-folders/ 
+
+渐变文件夹是一个汇集 38 个精美渐变文件夹图标的网站。
+
+首先它提供可以帮助你记住和识别文件夹里面文件内容的渐变文件夹图标，你可以将你的音乐文件夹、视频文件夹、图片文件夹、下载文件文件夹分别使用对应的渐变文件夹图标，让你轻松识别文件夹里面的文件内容。
+
+它也分别提供下载适用于 Mac 的图标文件夹集和适用于 Windows 的图标文件夹集，让你在 Mac 和 Windows 上都可以使用这些精美图标。
+
+6.书栈网
+
+https://www.bookstack.cn/ 
+
+书栈网是一个功能强大并且十分良心的计算机电子书籍在线阅读和下载网站，它也提供了各种开发文档和使用手册，是一个非常适合程序员在线学习的一个网站。
+
+它支持的计算机电子书籍非常全面，包括：前端、后端、移动端、数据库、云数据&大数据、网络&系统&运维、UI&美工&设计、游戏开发、硬件&物联网、产品&运营&IDE。
+
+其中每个种类还进行了详细分类，例如前端包括：小程序、Angular 、Bootstrap 、Chart.js 、CSS3 、HTML5 、JQuery 、React 、Vue.js 、Webpack 。
+
+7.Picdiet
+
+https://www.picdiet.com/zh-cn 
+
+Picdiet 是一个完全免费的在线批量压缩图片的神器网站。
+
+它支持批量压缩图片，并且无文件大小限制、无图像尺寸限制，支持多种图片格式压缩；它仅通过你的浏览器来压缩图片，不需要后端服务器或者 API 的支持，从而可以很好的保护你的隐私，不会让你的图片泄露。
+
+它还利用强大的 JavaScript 算法，可以在不损害你的图片质量的前提下，极速压缩你的图片的大小。
+
+(搬运自木子琪公 众 号，有删改〉
+
+
+下载工具迅雷，来源吾爱破解 https://www.52pojie.cn/forum.php?mod=viewthread&tid=944208 
+
+知识搜索
+https://www.cn-ki.net/ 
+
+文件分享
+Firefox Send火狐分享 https://send.firefox.com/ 
+奶牛快传 https://cowtransfer.com/ 
+
+盘连接
+盘多多 http://www.panduoduo.net/ 
+盘搜搜 http://www.pansoso.com/ 
+pandownload网页版 https://pan.baiduwp.com/ 
+
+BT磁力种子
+BT天堂 https://www.bttiantang.la/ 
+BT蚂蚁 http://www.btmayi.xyz/ 
+磁力社区 https://www.cilisql.com/ 
+磁力福利 http://cilifuliba.xyz/ 
+BT磁力链 https://www.bturl.tv/ 
+茶杯狐 https://www.cupfox.com/ 
+
+电影网站
+LOL电影天堂 https://www.loldytt.tv/ 
+迅雷电影天堂 https://www.xl720.com/ 
+梦幻天堂龙网 http://www.321n.net/ 
+Neet搜索站s https://neets.cc/ 
+嘎嘎影视 http://www.gagays.xyz/site/index 
+
+#资源分享#
+
+
+
+                <p><a href="https://sb.ioinn.cn/web-nav-01.html">自用网址收藏记录-01</a></p><h3>插播一个广告</h3><h3><a href="http://sb.ioinn.cn/tg.html">在网购中，如何去寻找天猫和淘宝的漏洞单？</a> 可点击</h3><h3>褥羊毛 上豪车 扫码进群 备注 天宫  直链</h3><p>点击链接加入群聊【价格敏感型消费者】：<a href="https://jq.qq.com/?_wv=1027&k=5qs2RqD">https://jq.qq.com/?_wv=1027&k=5qs2RqD</a><br><img src="https://i.loli.net/2019/05/23/5ce68027dd8eb85032.png" alt="褥羊毛 上豪车 扫码进群 备注 天宫" title="褥羊毛 上豪车 扫码进群 备注 天宫"></p><h2>素材 图库</h2><p><strong>Designers Pics</strong>  <a href="http://designerspics.com/">Designers Pics</a> &gt; 提供了种类丰富的高质量的实物摄影图片。从饮食起居、人文科技到自然风光等等一应俱全。</p><p><strong>FoodiesFeed</strong> <a href="https://foodiesfeed.com/">FoodiesFeed</a><br>站如其名,网站主打饮食、蔬果等，吃货设计师的最佳站点。如果你需要各种各样的美食图片，那么  一定是你最好的选择，除了提供的免费图片之外你还可以根据自己的需要购买各个类别食物的高级合集包。</p><p><strong>Pixabay</strong> <a href="https://pixabay.com/">Pixabay</a> 共有约 600000 张免费的图片、插画以及矢量图，除此之外 Pixabay 还提供了免费的视频素材供你随意使用。</p><p><strong>Pexels</strong> <a href="https://www.pexels.com/">Pexels</a> 是一个专注提供高品质图片的下载网站，这里提供的图片质量很高并且都是高清图，同时分类功能也很清晰。</p><p><strong>Pixel Mob</strong> <a href="https://pixelmob.co/">Pixel Mob</a> 是一个免费高清图片网站，除了搜索之外没有任何额外的功能，界面也非常清爽。</p><p><strong>Freepik</strong> <a href="https://www.freepik.com/">Freepik</a> 是一个矢量素材网站，同时也包含照片和图标等资源。里面有许多素材支持 CC0 协议，注册后可免费下载使用。</p><p><strong>Colorhub</strong> <a href="https://colorhub.me/">Colorhub</a> 是一个国人制作的高清无版权图片搜索引擎，支持中文关键词检索，还可以按颜色进行检索。</p><p><strong>Zerospace</strong>  <a href="http://zerospace.asika.tw/">Zerospace</a> 是一个来自宝岛台湾的 CC0 高质量图片库，自由下载使用，没有版权问题。</p><p><strong>Travel Coffee Book</strong> <a href="http://travelcoffeebook.com/">Travel Coffee Book</a> 是一个分享旅行时各种美好的瞬间的图片站，高质量的城市建筑到自然风光高清风景图一应俱全。还有订阅渠道定期为你发送新的图片。</p><p><strong>Mazwai</strong> <a href="http://mazwai.com/">Mazwai</a> 是基于 Creative Commons 协议的高清视频片段和视频的网站，做产品素材和网站动态背景都是不错的选择。</p><p><strong>Unsplash</strong>  <a href="http://www.unsplash.com/">Unsplash</a> 已经成为最为流行的无版权高清图片站了，丰富的 API 让你能够更好的二次创作。</p><p><strong>Cupcake</strong>   <a href="http://cupcake.nilssonlee.se/">CupCake</a> 无版权高清图片站</p><p><strong>Movest</strong>  <a href="http://moveast.me/">Movest</a> 是一个在旅途中的西班牙人拍摄的图片库，他认为这些图片都应该免费被使用。</p><p><strong>MMT</strong>   <a href="http://jeffreybetts.me/">Jeffrey Betts</a> 所创建名为 <a href="http://mmtstock.com/">MMT</a> 的免费图片库 ，其中 Apple 产品的摄影图质量很高。</p><p><strong>泼辣有图</strong>  <a href="http://www.polayoutu.com/">泼辣修图</a> 推出的免费开源摄影分享网站。采取网友自传原创图片的方式，全部图片均为 CC0 版权，每周会由用户投票数最高的 10 张图片。<br><strong>Sketch App Sources</strong>  <a href="https://www.sketchappsources.com/">Sketch App Sources</a> 下载 Sketch 素材的网站，由于 Sketch 更擅长设计 icon 和网页及手机 UI，素材一般多为 icon 和网站及手机界面设计素材为主</p><h2>设计 配色</h2><p>Colordot & Colourcode  <a href="https://color.hailpixel.com/"><strong>Colordot</strong></a> 和 <a href="http://www.colourco.de/"><strong>Colourcode</strong></a> 在网页区域内随意移动鼠标来生产色卡，在不断生成的色卡的同时用户可以产生自己灵感，看看能不能随机出一个自己满意的配色。</p><p>Awwwards 一个好的配色，不只是可以从专门的配色网站中获取，有时我们也可以直接浏览一些优秀的设计案例。<strong><a href="https://www.awwwards.com/sites/qed-group">Awwwards</a> </strong>上收集了众多非常优秀的网页设计案例，我们在鉴赏他们的设计作品时，不妨也可以看看人家是如何给项目配色的。</p><p>它的搜索分类非常的齐全，你可以根据颜色、类型、标签、地理位置等多个方面去塞选出你需要的项目。并且网站也会对项目进行一个评分，分别从「Design、Usability、Creativity、Content、Developer」 五个方面评价，所以用户也可以直接根据分数更快的找到最好的作品。</p><p>colr.org   很多优秀的电影或者照片，时常会在后期进行调色，就是「银翼杀手」的色调风格在那段时间可以说是非常的火热了。其实这些调色方案，我们也可以用于你自己的项目，<strong><a href="http://colr.org/">colr.org</a> </strong>就是来帮助你完成这项任务的一个工具网站。<br><strong><a href="https://sspai.com/post/40824">Alembic</a> </strong>这款插件，它用起来会更加的简单。</p><p>Material Colors   在 <a href="http://materialuicolors.co/?ref=flatuicolors.com"><strong>materialuicolors</strong></a> 和 <strong><a href="http://flatuicolors.com/">Flat UI Colors</a> </strong>上你可以快速获得多种颜色的搭配。</p><p>Hex Color   <a href="http://www.colorhexa.com/"><strong>Hex Color</strong></a> 这个网址会给你更好的答案，它会将你的色彩的所有详细信息展示出来。不仅是不同色值的情况，还有这些颜色所应用在哪些颜色主题中比较合适，以及相应的颜色又有哪些，可以说是颜色的百科全书了。</p><p>Cute Color   <a href="http://colorhunt.co/"><strong>Color Hunt</strong></a> 和 <strong><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOL Colors</a> </strong>是两个既「直接」又「可爱」的色彩网站。</p><p>传统の色彩   除了现代的流行配色以外，传统的色彩搭配也是一个非常不错的选择。不论是介绍一个传统文化项目，又或者现在的种种，都是可以采用一下最为经典的颜色的，或许会给你带来一些意想不到的效果。<strong><a href="http://zhongguose.com/">中国色</a> </strong>和 <strong><a href="http://nipponcolors.com/">日本の伝統色</a> </strong>这两个网站里，就为你展现了完整的传统色彩，不在单单只是数字的化的符号，还有那些充满韵味的古风名称。</p><h2>设计 字体</h2><h3>免费字体</h3><ul><li><a href="https://www.dafont.com/">https://www.dafont.com/</a> 使用前查看<code>license</code>许可证</li></ul><h3>开源字体</h3><ol><li><p>中文开源字体</p><ul><li><a href="https://github.com/adobe-fonts/source-han-sans">思源黑体</a></li><li><a href="https://github.com/adobe-fonts/source-han-serif">思源宋体</a></li><li><a href="https://www.zhihu.com/question/58100950">「biang」字彩蛋</a></li><li><a href="http://wenq.org/wqy2/index.cgi?%E9%A6%96%E9%A1%B5">文泉驿系列</a></li><li><a href="https://wiki.ubuntu.com.cn/%E5%85%8D%E8%B4%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93">更多中文开源字体</a></li></ul></li><li><p>西文开源字体</p><ul><li><a href="https://fontlibrary.org/">Font Library</a></li><li><a href="https://fonts.google.com/">Google Fonts</a></li><li><a href="https://www.theleagueofmoveabletype.com/">The League of Movable Type</a></li><li><a href="https://dejavu-fonts.github.io/">DejaVu</a></li><li><a href="https://wiki.ubuntu.com/Ubuntu%20Font%20Family">Ubuntu</a></li><li><a href="https://fedorahosted.org/liberation-fonts/">Liberation</a></li><li><a href="https://en.wikipedia.org/wiki/Open-source_Unicode_typefaces">维基百科「开源 Unicode 字型」词条</a></li><li><a href="https://github.com/topics/fonts">GitHub 的「字体」专题</a></li></ul></li><li><p>开源字体许可证</p><ul><li><a href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81">GPL 许可证</a></li><li><a href="https://en.wikipedia.org/wiki/SIL_Open_Font_License">SIL 许可证</a></li><li>使用开源字体前 请认真检查许可证</li></ul></li></ol><h3>免费商用字体</h3><ol><li><p>方正免费商用字体</p><ul><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=131">方正黑体</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=151">方正书宋</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=128">方正仿宋</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=137">方正楷体</a></li></ul></li><li><p>酷站字体</p><ul><li><a href="http://www.zcool.com.cn/special/zcoolfonts/">酷站字库</a></li><li>站酷庆科黄油体</li><li>站酷文艺体</li><li>站酷小薇LOGO体</li><li>站酷酷黑体</li><li>站酷意大利体</li><li>站酷快乐体</li><li>站酷高端黑体</li></ul></li><li><p>华康字体（限用于阿里巴巴旗下网站）</p><ul><li><p>阿里巴巴旗下平台运营的商家可以免费使用华康的 <a href="https://service.tmall.com/support/tmall/knowledge-13481414.htm?from=groupmessage">45 款字体</a></p><ul><li>下载 授权 参阅“<a href="http://www.dynacw.com.cn/news/news_detail.aspx?s=7">华康官网</a>”</li></ul></li></ul></li></ol><h2>免费非商用字体</h2><ol><li><p>方正字体</p><ul><li>设计师群体免费开放所有 GB 字符集字体的非商用下载  <a href="http://www.foundertype.com/index.php/Register/index.html">注册地址</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=199">清刻本悦宋</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=198">宋刻本秀楷</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index/id/244.html">方正悠黑</a></li><li><a href="http://www.foundertype.com/index.php/FontInfo/index.html?id=249">博雅宋</a></li></ul></li><li><p>汉仪字体</p><ul><li><a href="http://hanyi.com.cn/productList.php">汉仪字库</a></li><li><a href="http://www.hanyi.com.cn/productdetail.php?id=832">旗黑</a></li><li><a href="http://www.hanyi.com.cn/productdetail.php?id=758">新人文宋</a></li><li><a href="http://sentyfont.com/download.htm">新蒂字体</a></li></ul></li><li><p>文悦字体</p><ul><li><a href="http://wytype.com/typeface/earlier/">康熙字典体</a> 终止销售</li><li><a href="http://wytype.com/typeface/WenYue-GuDianMingChaoTi/">古典明朝体</a></li><li><a href="http://wytype.com/typeface/WenYue-XinQingNianTi/">新青年体</a></li><li><a href="http://wytype.com/typeface/WyueGutiFangsong/">古体仿宋</a></li></ul></li><li><p>造字工房字体</p><ul><li><a href="http://www.makefont.com/font.html?MFTheGoldenEra_Noncommercial_Light">黄金时代体</a></li><li><a href="http://www.makefont.com/font.html?MFYingHua_Noncommercial_Regular">映画体</a></li></ul></li><li><p>独立设计师字体</p><ul><li><a href="https://www.behance.net/">Behance</a>、<a href="https://dribbble.com/">Dribbble</a> 内搜索<code>free font</code>或<code>free typeface</code> 可以找到很多免费字体</li></ul></li></ol><h3>字体版权</h3><p><strong>Windows</strong><a href="https://www.microsoft.com/typography/RedistributionFAQ.mspx">「字体限制常见问答」（Font Redistribution FAQ）</a><br><strong>macOS</strong> <a href="https://images.apple.com/legal/sla/docs/macOS1013.pdf">macOS 许可协议</a></p><h2>设计 图标</h2><ul><li><a href="https://www.iconfinder.com/">iconfinder</a>  这个网站有将近 200 万的 icon 素材，有免费和收费的 icon</li><li><a href="http://www.iconfont.cn/">阿里巴巴矢量图标库</a>   支持中文搜索</li><li><a href="http://www.graphberry.com/category/icons">GRAPHBERRY</a> 完全免费的素材网站</li><li><a href="https://logoeps.com/">LogoEPS</a>专门来寻找各类品牌 Logo 的矢量素材网站</li><li><a href="https://iconmonstr.com/">iconmonstr</a>提供黑白图标的素材网站</li><li><a href="https://thenounproject.com/">Noun Project</a> 素材范围广 可以更换图标颜色</li><li><a href="https://www.iconfinder.com/">ICONFINDER</a> 由简单的在线编辑  提供八种图标格式下载</li><li><a href="https://fontawesome.com/">Font Awesome</a> 面向开发人员的图标网站</li><li><a href="http://pictogram2.com/">Human Pictogram</a> 提供大量人体图标 通过日语或者英语的关键词进行搜索</li></ul><h2>设计 灵感</h2><ul><li><a href="https://www.lapa.ninja/">lapa</a>查看优秀网页设计的网站</li><li><a href="http://reeoo.com/">Reeoo</a> 集合了网页、App、设计师、icon 等优秀设计的网站</li><li><a href="https://www.behance.net/">Behance</a></li><li><a href="https://dribbble.com/">Dribbble</a></li></ul><h2>视频&音频 素材</h2><ul><li><p>音乐</p><ul><li><a href="https://soundcloud.com/">SoundCloud</a> 有一些小众</li><li><a href="http://www.jewelbeat.com/free/free-production-music.htm">JEWELBEAT</a> 的音乐为 WAV 格式</li><li><a href="http://freemusicarchive.org/">Free Music Archive</a> 是一个免费&优质音乐收集计划</li><li><a href="https://freesound.org/">FreeSound</a> 下载需注册 注意版权</li><li><a href="https://musopen.org/music/">MUSOPEN</a> 免费古典乐 注意版权</li><li><a href="https://cctrax.com/">CC TRAX</a>   打不开了</li></ul></li><li><p>视频</p><ul><li><a href="https://videos.pexels.com/">Pexels</a> 上面说过 这里也有视频素材HD 高清格式</li><li><a href="https://pixabay.com/">Pixabay</a> 和上面的类似 全面</li><li><a href="http://www.wedistill.io/videos">Distill</a> 精致 每10天更新一次，每次10个视频</li><li><a href="http://www.videvo.net/">Videvo</a> 除了视频 还有很多 MG动画的素材 需要注意版权</li><li><a href="http://vidlery.com/">Vidlery</a> 专注动画 风格多样 画风简单</li><li><a href="http://www.vidsplay.com/">vidsplay</a> 类似上面的</li><li><a href="https://www.openfootage.net/">OpenFootage</a> 科幻 爆炸元素</li></ul></li></ul><h3>插播一个广告</h3><h3><a href="http://sb.ioinn.cn/tg.html">在网购中，如何去寻找天猫和淘宝的漏洞单？</a> 可点击</h3><h3>褥羊毛 上豪车 扫码进群 备注 天宫  直链</h3><p>点击链接加入群聊【价格敏感型消费者】：<a href="https://jq.qq.com/?_wv=1027&k=5qs2RqD">https://jq.qq.com/?_wv=1027&k=5qs2RqD</a><br><img src="https://i.loli.net/2019/05/23/5ce68027dd8eb85032.png" alt="褥羊毛 上豪车 扫码进群 备注 天宫" title="褥羊毛 上豪车 扫码进群 备注 天宫"></p><blockquote><p>转载请保留出处  <a href="http://sb.ioinn.cn/Design-material.html">还在为素材抓狂？不如去这些网站寻找资源</a><br>部分参考 少数派</p>
+
+个人之前用过的一些自媒体工具
+
+整理一下给大家一块分享
+## H5
+1. MAKA http://maka.im 
+2. 易企秀 http://www.eqxiu.com 
+3. 兔展 https://www.rabbitpre.com 
+4. iH5 https://www.ih5.cn 
+5. 人人秀 https://www.rrxiu.net 
+6. 初页 http://www.ichuye.cn 
+7. 微页 http://www.zhichiwangluo.com 
+
+## 图文编辑
+1. 96微信编辑器 http://bj.96weixin.com 
+2. 新媒体排版 https://canvas.xmt.cn 
+3. 秀米 https://xiumi.us 
+4. i排版 http://www.ipaiban.com 
+5. 135编辑器 https://www.135editor.com 
+6. 构思编辑器 http://www.gorse.com 
+
+## 二维码
+1. 二维工坊 http://www.2weima.com 
+2. 指纹生成器 http://tools.xmt.cn/fastAttention 
+3. 草料二维码 https://cli.im 
+4. Q码 http://www.qmacode.com 
+5. 联图二维码 http://www.liantu.com 
+
+## 知识获取
+1. 知乎微信话题 https://www.zhihu.com/topic/19554470/hot 
+2. V2EX微信话题 https://www.v2ex.com/go/wechat 
+3. 腾讯大学微信学院 https://daxue.qq.com/wechat 
+4. 微果酱 http://wpweixin.com 
+5. 插座学院 http://www.chazuomba.com 
+
+## 公众号工具
+1. 微小宝 http://www.wxb.com 
+2. 水滴微信平台 https://drip.im 
+3. 候斯特 http://www.weixinhost.com 
+4. WeChator http://wechator.com 
+5. 微软小冰 https://e.msxiaobing.com 
+
+## 运营学习
+1. 运营喵 https://www.yymiao.cn 
+2. 爱运营 http://www.iyunying.org 
+3. 姑婆那点事 http://www.gupowang.com 
+4. 人人都是产品经理 http://www.woshipm.com 
+5. 运营派 https://www.yunyingpai.com 
+6. 鸟哥笔记 http://www.niaogebiji.com 
+
+## 其他工具
+1. 微信素材库 https://fzn.cc 
+
+## 小程序
+1. 微信小程序 https://developers.weixin.qq.com/miniprogram/introduction 
+2. 小程序开发资源 https://github.com/justjavac/awesome-wechat-weapp 
+3. 91du https://www.91ud.com 
+4. 知晓程序 https://minapp.com/miniapp 
+5. 微动天下 http://www.vdongchina.com 
+6. 极速应用 http://www.jisuapp.cn 
+
+## 表单
+1. 表单大师 https://www.jsform.com 
+2. 腾讯问卷 https://wj.qq.com 
+3. 问卷星 https://www.wjx.cn 
+4. 问卷网 https://www.wenjuan.com 
+5. 金数据 https://jinshuju.net 
+
+## 在线协作
+1. 腾讯文档 https://docs.qq.com 
+2. 石墨文档 https://shimo.im 
+3. 一起写 https://yiqixie.com 
+4. Tower https://tower.im 
+5. 百度脑图 http://naotu.baidu.com 
+6. processon https://www.processon.com 
+7. mindmeister https://www.mindmeister.com/zh 
+8. 慕客 iDoc https://idoc.mockplus.cn 
+
+## 营销
+1. 微商潮 http://www.s754.com 
+2. 微运营 http://www.weiqudao.net 
+
+## 可视化
+1. BDP https://me.bdp.cn/home.html 
+2. HTML5 UP https://html5up.net 
+3. 易词云 http://yciyun.com 
+4. ColorDrop https://colordrop.io 
+
+## 微信数据
+1. 新榜 https://www.newrank.cn 
+2. 清博指数 http://www.gsdata.cn 
+3. 微盟 http://www.weimob.com 
+更新时间：2019/1/19/16/56
+需要排版整理的可以看下面的博客 
+by_末日 转载请注明来源： https://sb.ioinn.cn/5.html 
+
+
+
+https://rarbgprx.org/index70.php 一般只有国外电影，国内也有，但是少，老资源下不动日常，有4k接近原盘的资源，一般迅雷下不了用比特彗星用飞机去米国下载
+还有一个 http://alicilibt.pw/ 国内电影多，可惜被墙，怎么上自己想办法
+
+
+
+#网站分享# #网站集合# #软件推荐# 资源对大家很重要，在这个信息大爆炸的时代，大家想找一些资源，通过百度搜索并不能精准的找到想要的某个东西，且可能找到一些不相关的文件，在真正需要的时候找不到想要的，如果想到的某个资源急用的话，那么的确挺心急
+
+网站介绍:
+
+国外免费高清图片库
+
+网址： https://www.pexels.com/ 
+
+顾名思义，这个网站可以免费在线下载高清无水印图片，看中某个图片点击即可下载原图，网站采用高端大气上档次的全屏瀑布流效果，去任何弹窗方式的广告，且图片质量很好，唯一在国内使用的缺点就是搜索图片只能用英文
+
+大疯狂影视搜索
+
+网址:www.ifkdy.com
+
+能免费看很多热门电影资源，在自己不知道想看什么的时候，可以有热门推荐，首页的右上角有一个“疯狂音乐搜索”，点击便会进入如下界面。这个网址主要是下载音乐的，我们以王菲的红豆为例，输入后点击搜索，便可以直接获取下载页面，也就是说音乐随便下！可以说是非常强了！
+
+创客贴
+
+网址:www.chuangkit.com
+
+创客贴是一款极简的平面设计工具，通过托拉拽就能轻松做出精美的图片。比如：名片、宣传海报、邀请函、易拉宝、公众号首图、宣传单/册、banner、网页广告、信息图表、折页/三折页、PPT模板、简历、台历、封面图、贺卡等平面设计图片，虽然该网站有会员机制，但是免费的模板足以满足大部分人的需求了，所以也是很值得使用的。
+
+TinyPNG国外图片在线压缩网站
+
+网址： https://tinypng.com/ 
+
+小编推荐，无广告无套路不收费无损压缩，保证了图片质量，支持多文件同时压缩，JPG/PNG均可同时存在、直接把要压缩优化的图片图片拖曳进来，或点击虚线框区域选择你要压缩的图片。
+
+一次性可批量压缩最多20张不超过5M的JPG或者PNG图片！完成后，你可以点击后方「 download」对图片进行下载，如果图片较多，则可以点击压缩框下方的「 Download all 」按钮，进行全部下载，会将所有图片生成一个.ZIP压缩包
+
+在线抠图
+
+网址： https://www.gaoding.com/koutu 
+
+这是一款在线 AI 人工智能抠图工具，为不会使用 PS 又迫切需要抠图的人群，提供操作简单、功能强大的在线服务，抠图从此变得简单高效，绿色小巧、无需安装！
+
+PDF文档转换
+
+网址： https://app.xunjiepdf.com/ 
+
+迅捷在线pdf转word转换器免费版为您提供将PDF转换成WORD,word转换成pdf,ppt转换成pdf的免费在线转换服务；是一款完全免费的在线转换工具，在线免费完成PDF与word的转换体验，绿色小巧、无需安装！
+除此之外，还有各种文档互转操作功能，如PDF转图片，图片文字识别，CAD转PDF，PDF密码接触等等
+最后，原创不易，感谢大家支持[doge][doge][doge]关注我一下，不定期带来各种实用教程！
+
+
+
+初级：
+除了官方视频网站，一般的热门电影（除了正在影院上映的电影），A、B站上基本都有。
+A站（AcFun）： http://www.acfun.cn/ 
+B站（bilibili）： http://www.bilibili.com/ 
+
+中级：
+人人字幕组： http://www.zimuzu.tv/ 
+天天美剧： http://www.ttmeiju.com/ 
+美剧天堂 http://www.meijutt.com/ 
+电影天堂： http://www.xiaopian.com/ 
+飘花电影： http://www.piaohua.com/ 
+6V电影： http://www.6vdy.com/ 
+圣城家园： http://www.cnscg.org/ 
+电影FM： http://dianying.fm/category/ 
+资源片： http://ziyuanpian.com/ 
+丽丽影院： http://www.liliyy.com/ 
+看看屋： http://www.kankanwu.com/ 
+迅雷好： http://xunleihao.com/ 
+Mp4吧： http://www.mp4ba.com/ 
+搬运工： http://banyungong.net/ 
+嘎嘎影视： http://www.gagays.com/ 
+小浣熊： http://www.xiaohx.com/ 
+乐搜： http://www.lesou.org/ 
+电影小二网： http://movie002.com/ 
+我爱P2P: http://www.byhh.org/ 
+电影首发站： http://www.dysfz.cc/ 
+阳光电影： http://www.ygdy8.com 
+SimpleCD： http://www.simplecd.me/ 
+迅播： http://www.2tu.cc 
+琪琪影院： http://www.77kp.com/ 
+BT天堂： http://www.bttiantang.cc 
+BT之家： http://bbs.1lou.com/ 
+RARBG： http://www.rarbg.com/torrents.php 
+ed2000资源共享： http://www.ed2000.com 
+光棍影院： http://www.yy111111.co/ 
+碟调网： http://www.kb20.cc/SouthKorea/Doctorshanju/ 
+有了这几个网站，以后找资源不用求人啦！
+赶紧收藏吧，推荐使用迅雷下载。
+
+高级：
+网盘007：: https://wangpan007.com/share/kw （这个真的超级棒！我想把它带进棺材里。）
+西林街： http://www.xilinjie.com/ 
+盘搜搜： http://www.pansou.com/ 
+盘易搜： http://www.panyisou.com/search/ 
+OA巴士： http://115.oa84.com/ 
+56网盘： http://www.56wangpan.com 
+如果这些还不够你用的，那我要好好跟你聊聊关于人生的问题。
+
+神级：
+下面给你们说一些好用的BT种子搜索引擎： 
+BT177： http://www.bt177.org/ （BT搜索中的战斗机）
+BT Kitty： http://btkitty.org/ 
+海盗湾： http://thepiratebay.ee/ 
+ulozto： http://www.ulozto.net/ 
+rutracker： http://rutracker.org/forum/index.php 
+Btbook： http://t.cn/8sgPF9Q 
+BT樱桃： http://t.cn/8sh3oB3 
+RunBT： http://t.cn/Rvn5wDB 
+@梨子 [微笑][微笑][微笑]
+#电影资源# #网站分享# #影视app#
+
+
+
+酷安里面的酷图虽然充满了各种好看的壁纸[哼唧]但是好看的壁纸谁会嫌多呢，今天给大家推荐一波图片网站…[墨镜滑稽][墨镜滑稽]
+
+1、花瓣
+
+网址： https://huaban.com/ 
+这个网站是国内的，通过图片上的小姐姐就能看出来[滑稽][滑稽]里面的图片大部分是网友自己拍照修图以后上传的，是个找壁纸的好地方，在该网站采集原图，好像要登录的哦~
+
+2、泼辣有图
+
+网址： http://www.polayoutu.com/collections 
+泼辣有图是摄影人发起的公开创源活动。泼辣有图的贡献者将他们的作品, 即允许任何人免费将图片用于任何用途。不会出现XX中国的那种情况，大家可以放心使用。
+
+3、WALLPAPE ABYSS
+
+网址： https://wall.alphacoders.com/?lang=Chinese 
+ 从上图就可以看出来这绝对是一个很优秀的壁纸网站，提供的壁纸还根据类别和分辨率做了分类，有动物、动漫、漫画、自然等等。分辨率也比较优秀，除了高清壁纸，还提供了4K，5K、8K壁纸，另外除了电脑壁纸还有iPhone壁纸。
+
+4、Unsplash
+
+网址： https://unsplash.com/ 
+ Unsplash是一个提供免费、美丽的照片的社区，里面的照片有全世界的摄影师免费提供的，真是太棒了。网站还提供了搜索功能，需要找素材的同学可以去上面试试。
+
+        从上图也可以看出来，社区提供的照片也挺适合做手机壁纸的，喜欢用这种照片的同学可以去瞅瞅，就是社区是英文的[表面开心][表面开心]
+
+5、pexels
+
+网址： https://www.pexels.com/zh-cn/ 
+看得出来，这和上面那个网站很像，都是摄影师提供照片的免费社区，不过这个把语言变成中文的，简直就是美滋滋~对我们这些英语不好的人来说，太友好了。至于两个社区有啥不同，我还没发现，大家自己去探索一下啊...[哼唧][哼唧]
+
+6、
+wallhaven
+
+网址： https://alpha.wallhaven.cc/ 
+说出来你可能不信，这个网站翻译过来就是网上最好的壁纸，里面的壁纸确实挺好看，你看看这些好看的动漫小姐姐……[表面哭泣][表面哭泣]
+
+不知道广大酷友们都在哪里找壁纸啊[哼唧][哼唧]
+
+
+
+凑个热闹[嘿哈][嘿哈][嘿哈]手机，电脑等各个软件的资源网站合集 https://adzhp.cn/ruan-jian-lun-tan.html 
+#安卓日常# #电脑好软# #软件破解#
+
+
+#好电影# 
+【以下提供的网站 请不要只在酷安收藏 请点开后进入浏览器里保存书签 切记!】
+胖鸟的关闭，切断了我们最简捷找资源的途径。也让大家记住了“小生”这个当代的普罗米修斯。在国内的环境下，入正无门，高墙蒙蔽，正规视频站对视频的阉割字幕乱入下，当大家想再去寻找更高更高画质，最好字幕的视频时又该去哪？
+没了胖鸟，真的一切都变得没了那么简捷……
+找资源顺序:
+【网站搜索(视频或者bt)→网盘搜索→下载】
+1.两大导航
+两大导航都是针对一些视频资源站做个汇总，每个站都没有也都不会像当年的胖鸟一样做到实时更新，也不会特别的全面，比如一些的老电影 一家没有后去另一家找 实在没有就去 导航 里面的网盘或者bt站去搜 总会有的……
+(1)龙轩导航
+http://m.ilxdh.com/ys.html 
+(网站有的已经不能进了 作为早期的导航也挺方便)
+
+(2)【推荐】小森林导航
+http://hao.xsldh.com/ 
+简捷 网站汇总的多
+
+2.国外的bt站
+这个就不一一放连接了 小森林导航 里的最末端有许多
+
+大多早配合比特彗星 115网盘等下载
+
+Bt影视资源汇总站 http://torrentzwealmisr.onion.ly/ 
+【这里大多都是国外的生肉 要加字幕的话需要一些国内的网站下载 https://www.coolapk.com/feed/10427926?shareKey=Y2VhN2IxMzNiNjc5NWM4MjA1ZTA~&shareUid=1389702&shareFrom=com.coolapk.market_9.0.4 我这条图文里有基本是这些】
+3.再推荐几个 【无任何盈利的影视博主】
+本人没有为他们打任何广告!!!
+
+推荐电影传送门 他会给大家推荐外网bt站的使用方法
+
+其他的app里:人人影视 neets 鲸影视……太多了 
+两大导航里汇总的网站太多了 哪个好用 大家自己寻找吧 请千万把网站保存 国内的资源站越来越少 且用且珍惜……
+没胖鸟的一个星期，有点怀念……
+
+
+
+#好电影# 
+懒小白老哥找资源必用 
+前天在酷安发了一条关于《蜘蛛侠 平行宇宙》webrib版更出的动态 附上了网站和站长的微博与公众号 也被小编py上了头条 随后因为某些原因被举报删除了 也有不少老哥关注了我，有点惶恐，我只是个沙雕网友 平时酷安就发些游戏牢骚和瞎拍的照片，炸出了许多资源小白的老哥 。下面，我给大家推荐国内最好用的视频资源站！
+1.胖鸟与爱追剧(没有搜不到只有想不到)
+首先先科普一下 胖鸟的前身———首发资源站
+首发站是一个影迷网友创建加上众网友众筹一并创建的 其中站长的朋友独占了很大的投资与掌握了网站的大权。不料，这朋友看网站逐渐盈利，广告越加越多，“澳门新葡京”之类的视频也越来越多，站长与其发生了分歧。随后，也被这朋友“开除”网站一度沦为垃圾视频站，tc版的资源 广告横飞……
+随后，在众网友的众筹与站长的支持下 胖鸟 应运而生！随后就是以电视剧为主的爱追剧。
+【随后 因为要避风头在18年11月份关闭注册 内部用户 有30的积分就能看资源】
+本网站的资源都来自光大的字幕组与外网搬运 视频内绿色无污染 除了字幕组的宣传外 视频能有4k的放4k ……把最好的视频最优的字幕也一并回合整理【TC版绝对不会出 出现TC资源要被站长关小黑屋处理】 后续添加了自建的字幕库与豆瓣链接 促成了最好用 最舒服的资源站！
+胖鸟: http://www.pniao.com/ 
+爱追剧: http://www.aizhuiju.com/ 
+Ps:胖鸟开放注册的时间请关注站长的公众号(绝不是营销号 没有事的话站长绝不更新)与站长的微博:肥啾电影(当时是 影视资源小生 因为换成当前的名字会被认为是营销号 躲避某些……)
+
+2.龙轩导航的复合页: http://m.ilxdh.com/ys.html 
+里面xx版的非法电影 什么的都能搜到
+
+其他页的度云搜索链接也都有
+附个导航首页: http://m.ilxdh.com/ 
+
+3.上面的几个都能满足各位懒汉小白的的要求
+再放一些好用的字幕站:
+1.sub: http://subhd.com/ 
+2.字幕库: https://www.zimuku.cn/ 
+3.字幕组(主人人美剧): http://www.zimuzu.io/ 
+4.胖鸟字幕站: http://www.zmjun.com/ 
+手机视频播放加字幕应用推荐:MX player potplayer 
+Pc端:射手影音 potplayer
+要是期待某些资源 胖鸟有资源预告
+
+或者跟我一样 进浏览器没事就爱刷资源站今天又更了什么好电影
+
+
+人嘛生来就是互相竞争，干啥也都追究个排名，微博有微博热搜、知乎有知乎热榜、音乐有音乐榜单、网站有网站流量排行、富豪有富豪身价排名、手机有销量榜，所以在这个处处都是排行竞争的社会，多多了解这些排名靠前的东西也是很有意思和收获的。
+
+可这么多排行，要是有一个网站来汇总起来，该有多好啊，而今天小编说的这个网站就做了这件事。
+
+「网站概览」
+
+今天的这个网站叫做：果汁排行榜，这个网站的主营业务应该是学英语，然后可能捎带着把热点导航做了起来，如下全是各种排行榜，而且分类明确，涉猎广泛。
+
+「深度体验」
+
+其实要想把这些榜单汇集起来，也是需要广泛的爱好了，从网站汇集的60大榜单种类来看，开发者的网络阅历确实不少，不管是娱乐，还是学习，都将其一一囊括。
+
+比如小编经常看的知乎热榜：
+
+又比如程序员交流小众站V2EX最热讨论：
+
+再又如各类网站排行榜？
+
+APP下载排行榜：
+「小结」
+
+总之，这个网站汇总的还是比较齐全，60个榜单背后的60个网站个个都是精品站，仔细去看，收获肯定不会少哈。
+[万能搜吧] 说:果汁排行榜： http://guozhivip.com/rank/ 
+
+
+
+#今日热点# #网站分享# 
+1.默沙东诊疗手册网页版（有APP但有时不好使[受虐滑稽]）
+https://www.msdmanuals.com/zh/ 
+
+默沙东诊疗手册是世界使用使用最广泛的医学信息资源之一，它支持专业版和大众版(家庭版)，专业版提供更精深的内容，更适合医学专业人士，而家庭版提供通俗易懂的内容，更适合我们大众。
+由于我们大多数人不是医学专业人士，所以这里主要介绍一下默沙东诊疗手册大众版。
+
+它提供各种医学主题，各种症状的原因，评估，治疗方法，各种紧急情况的的治疗方法，它还以动画和视频的形式让你了解各种医学知识，它还提供各种医学资源：医学术语，常见的医疗检查，血液检查结果，医学图片，健康手册，医学缩写词等等。
+你还可以利用网站强大的搜索功能，轻松搜索到你想查询的疾病和对应症状的原因，评估，治疗方法。
+
+2.EasyPDF
+https://easypdf.com/cn 
+EasyPDF 是一个质量很高的 PDF 编辑导航网站，功能非常强大。
+它支持的功能非常全面，支持 PDF 转换为 Word、PPT、Excel、Txt、JPG、PNG、GIF，支持 Word、JPG 转换为 PDF，支持拆分 PDF，合并 PDF，压缩 PDF 等等操作。
+它还有几个非常良心的特点，它不需要注册登录账号，直接就可以使用，你可以实现匿名转换 PDF，转换操作十分安全；它支持 OCR 扫描 PDF 文档；它转换 PDF 文档没有数量限制，也没有大小限制，你可以轻松转换大体积 PDF 文档，并且转换速度完全取决于你的网速。
+
+3.周读（建议PC打开）
+http://www.ireadweek.com 
+周读是一个备受好评的高质量免费电子书网站，整体体验非常不错。
+它的界面简洁唯美，拥有强大的分类功能：人物传记，世界名著，旅行游记，哲学与人生，励志职场，运动健身，科普，科学互联网计算机技术，沟通演讲口才，管理创业，家庭教育，青春成长，自我管理，美食厨房，法律，财务，逻辑学，时尚；它还拥有强大的搜索功能，相信这个网站可以让你轻松找到你想要看的电子书。
+
+4.AnyKnew
+https://www.anyknew.com/ 
+
+AnyKnew 是一个实时热搜新闻聚合网站，如果你不想花费太多时间到新闻软件上面，但是又想知道每天的热点事件，这个网站肯定是非常适合你的。
+它聚合了综合，科技，娱乐加起来 13 个主流平台，并且网站也是非常简洁的把这些网站排列出来，点击网站上面的任意平台图标或者点击「展开分类」，你可以轻松阅读多个平台的每日热搜。
+
+5.很酷的背景
+https://coolbackgrounds.io/ 
+很酷的背景是一个高质量背景图片生成网站，我们可以看到网站提供 5 种不同的背景模板，每一个背景模板的质量都很高，你可以自定义背景模板的颜色，然后背景图片会实时生成展现，然后你就可以把生成好的背景图片直接下载下来。
+
+#玩机技巧# #安卓日常# #电脑玩家# 
+格式转换、图片下载、图片处理、GIF 图处理。
+工作中经常会遇到一些需要紧急处理的事情，文件改个格式、给 GIF 图缩小尺寸、裁剪一下图片...... 临时再去找专业的软件处理可能会来不及，这时候一些好用的在线工具就派上了用场。即使是那些每天都要重复做的工作，用专业软件处理也显得效率很低，很多在线工具已经能完美满足需求，你需要的只是一个浏览器。
+这期的极客荐，我们就向大家介绍几款实用的在线工具，可以满足格式转换、图片下载、图片处理、GIF 图处理等需求，在浏览器中就能完美解决，不需要再去下载专业的软件。
+格式转换
+http://cn.office-converter.com/ 
+http://www.online-convert.com/ 
+以前给文件转格式都是用「格式工厂」，即使只是改一张图片的格式也要去专门下载软件。日常我们需求最多的，无非就是音频、视频、图片这几样，其实利用这两个在线工具就能解决。
+以 PNG 转 JPG 为例，这两个在线工具都能直接进行转换，不需要登录注册，使用也没那么复杂。你还可以自定义图片的尺寸，达到压缩的目的。
+
+这两个在线工具支持音频、视频、图片、文档、电子书等文件的转换，几十 M 内的文件用它们就够了，如果是大的视频文件还是更推荐格式工厂。
+YouTube 视频下载
+http://www.clipconverter.cc/ 
+国内的四大视频网站都在转型做原创内容，用户分享的这个属性反而少了。因为要保护版权，你想下载这些视频也几乎不可能，有的要会员资格，有的需要进行转码，而且大多视频都没有了 2K、4K 画质，都是压缩后的 1080P。好在国外还有全球最大的视频网站 YouTube，不光是国外创作者，很多国内节目也会将自己的视频同步到 YouTube。你在其他视频网站看到的一些官方视频，在 YouTube 也几乎都能找到源头。
+YouTube 的下载功能需要开通高级会员才能用，你也可以用这个在线工具来下载 YouTube 视频。只要把视频链接复制进去，就可以得到文件的下载链接。这个工具也是 YouTube 下载器中最好用的一个，只要网速没问题，2K、4K 的视频都能下载。
+
+（下载和使用 YouTube 视频需要注意版权问题）
+APK 下载
+http://apkpure.com/cn/ 
+由于一些特殊的原因，我们有时在国内的应用市场中找不到想要的应用，有的限制了地区，有的要求有 Google 套件，Android 用户可以直接下载 APK 来绕过这些限制。Apkpure 就是一个不错的 Google Play 镜像网站，只要是 Google Play 中免费的应用都可以在这里直接下载安装包。
+Apkpure 有自己的应用市场软件，不过它也支持直接在线下载，不用安装、不用注册。Apkpure 的更新很快，几乎和 Google Play 同步，并且还支持历史版本下载。在首页更该地区，你还可以看到其他国家应用市场中上架的应用。
+
+当然，Apkpure 只能解决安装包的问题，如果是游戏锁区、需要连接 Google Play 等问题，你还需要其他的应对方法，我们这里不展开讲。
+图片抓取
+http://imagecyborg.com/ 
+想要在网站扒一些图，最直接的方法是「右键-图片存储为」。如果没有这个选项，进阶的方法是「右键-检查」，在 Sources 中找。这种方法比较麻烦，需要打开很多子选项才能找到想要的图片。如果遇到无法直接保存图片的网页，或者图片太多批量下载麻烦，可以尝试一下这个在线工具。
+
+你只要在网址栏中输入图片所在网页的链接，就可以直接一键下载网页中的所有图片，然后直接选择想要的就可以了。以 App Store 为例，在手机和网页都无法直接下载 logo 图、宣传图，用这个工具就可以将这些图片打包下载。
+
+图片处理
+http://xiuxiu.web.meitu.com/puzzle/ 
+专业的图片处理要用 Photoshop，不过如果只是简单地改个尺寸、加马赛克，用美图秀秀网页版就能解决。可别以为美图秀秀只能美颜，实际上它最早就是做图片处理的。网页版的美图秀秀功能也十分强大，可以说是类似工具中最好用的。
+
+相比起 Photoshop，网页版美图秀秀的使用成本要低得多，功能也简单明了。如果不是专业设计人员，美图秀秀网页版就能满足大部分需求。
+图片压缩
+http://www.picdiet.com/zh-cn 
+现在手机拍照的像素也越来越高，文件也跟着变大，很多时候我们根本不需要使用原图尺寸，比如在发微博的时候，几 M 以上的图片很容易上传失败，更别说用相比拍的照片，一般都是 10M 以上。想要压缩图片，直接裁剪尺寸其实没必要，在 Photoshop 中就能选择降低图片质量来导出，不过就像上面说的，这样的小需求用 Photoshop 解决实在是没必要。
+你可以使用这个在线工具来压缩图片，没有尺寸、大小、数量的限制，只需要上传原图，就可以重新选择图像的输出质量，下面会显示出原始文件的大小、压缩后文件的大小、压缩百分比等信息，你可以根据自己的需要来选择。这个工具胜在简单直接，不用进行复杂的参数设置，一步到位。当然它有一个缺点，就是只支持 JPG 格式的图片，如果你想压缩的是其他格式的图片，可以配合上面的格式转换工具使用。
+
+GIF 图处理
+http://www.soogif.com/crop 
+微信公众号火起来后形成了很多特有的规则，比如 GIF 图不能超过 2M，但我们自己制作或者下载的动图很多都超过了这个限制，你可以用这个在线工具来处理 GIF 图。它支持 GIF 图的裁剪还有压缩等功能，可以一键生成 2M 以下，微信公众号可用的动图。
+
+当然这个工具也有限制，比如不能将本地视频转成 GIF，不能旋转 GIF 图等。如果有更复杂的需求，我们更推荐大家使用软件，Mac 上推荐 GIF Brewery 3，这家公司已经被 Gfycat 收购，现在完全免费。Windows 上可以用我们之前推荐过的 Free Video to GIF Converter，它可以完成视频转 GIF 的工作，速度快，画质高。
+以上推荐的所有在线工具都是无需注册、完全免费的，最大的优点就是方便。
+
+
+
+#Kindle# #告别书荒# 【分享】我自己常用的是鸠摩搜书~
+30个高质量免费电子书下载网站
+
+1.ePUBee http://t.cn/RV7t6G1 
+应该是全球最大的免 费电子书库，超过10万本书籍，50万个文件版本，总能找到你喜欢的适合阅读器的电子书文件。品类齐全，搜索功能强大，图书管理方便。
+
+2.鸠摩搜书 http://t.cn/RG07GHI 
+一个强大的搜书神站，无论是什么类型的书籍，只要你知道书名，就可以轻松的搜到。页面简洁到没朋友。
+
+3.Owllook http://t.cn/RoVRyCH 
+一个免 费下载各类小说的搜索引擎， 页面清新简洁，无广告。直接输入书名即可搜索
+
+4.我的小书屋 http://t.cn/RJA5USm 
+提供各类畅销小说，网络小说，以及一些原版书籍下载。不仅如此还支持kindle漫画书下载。
+
+5.西林街 http://t.cn/RXnrXtr 
+垂直专注于网 盘、视频、文库（文档、古籍、专业书籍、电子书[PDF、ePub、Mobi等格式]）、学术（各种期刊、论文、学报等）和Mooc（在线课程、学习、视频教程）等资源的搜索。
+
+6.书伴（kindle必备） http://t.cn/R9t9wDH 
+书伴，原名“Kindle伴侣”，能让你更加深入地使用手中的Kindle阅读器，让读书成为生命的一部分，让灵魂永远行走在路上。
+
+7.盘搜搜 http://t.cn/R0HoKpI 
+一个老牌网 盘搜索工具，功能非常强大。非常简洁的界面。每天都有更新，不同达人分享自己的“盘中资源”！盘搜不存储任何网盘内容，无论是工作还是学习都必备。
+
+8.众人搜索网 http://t.cn/RkZw0z6 
+一个电子书搜索功能的网站，可以同时搜索各类电子书、电子小说等。
+
+9.计算机书籍控 http://t.cn/zR03zzO 
+这个网站可谓是计算机专业的福音，这里包含许多优秀的计算机书籍下载。无论是英文原版还是中文这里都有。
+
+10.走读派 http://t.cn/zQDUssJ 
+走读派提供一站式免费Kindle电子书下载与推送服务，是最方便的Kindle电子书网站，为您的Kindle提供免费电子书资源。算是kindle必备的一个网站。
+
+11.苦瓜书盘 http://t.cn/ROe1pLk 
+苦瓜书盘是供网友交流适合电纸书阅读的6寸pdf及mobi格式电子书制作技术的网站，这里提供电子书上传及下载。
+
+12.书语者 http://t.cn/RKwcwDq 
+书语者电子图书馆，一个搜书网站，让你快速找到想要的书籍！
+
+13.知轩藏书 http://t.cn/RvukMXT 
+这是一个小说网站，在这里你可以找到你想要的小说。
+
+14.书享家电子书下载导航 http://t.cn/EhLaW9G 
+整合数十个相关网站，目前仍不断更新中。
+
+15.集思会 http://t.cn/RoZWLBe 
+集思会是一个kindle推送网站，你可以把本地和在线的kindle图书推送到你的kindle中进行阅读，也可以分享你的kindle图书给更多需要看的人
+
+16.万千集合站 http://t.cn/R3FVezU 
+包含非常多的教材类相关电子书籍，搜索后直接显示下载链接。搜索结果基本涵盖了所有版本的电子教材、习题详解等。
+
+17.蚂蚁搜书 http://t.cn/EhLaW9y 
+IT书更多的资源网站，支持下载，不支持kindle推送。注册需要加微信索要邀请码，也是管理很严格了
+
+18.影印古籍资料 http://t.cn/RTQSO8w 
+提供7000+种古籍资料的网上阅读和PDF格式下载服务。
+
+19.书格 http://t.cn/RhxO8ot 
+书格是一个自由开放的在线古籍图书馆，致力于开放式分享、介绍、推荐古本（四九以前的影像本）PDF；网站致力于为古籍的保护与数字化传播贡献。
+
+20.图灵社区 http://t.cn/R6tu1k7 
+图灵社区很出名了，尤其是IT相关的书籍。
+
+21.云海电子书 http://t.cn/RxAwXin 
+分类比较多，也可以自定义搜索，下载走的是国内城通网盘通道，还是比较快的。
+
+22.Freebooks http://t.cn/RAVSgrO 
+Free-eBooks是一个提供免 费电子书下载，电子书资源，电子书作者介绍的网站，你可以免 费下载你喜欢的电子书，也可以上传你自己的电子书分享
+
+23.古登堡计划 http://t.cn/hnhhU 
+古登堡计划（Project Gutenberg）是一个以自由的和电子化的形式，基于互联网，大量提供版权过期而进入公有领域书籍的一项协作计划。
+
+24.Free Book Spot http://t.cn/SwB354 
+Free Book Spot是一个免 费英文电子书大全网站，它提供有4485本免 费电子书，分为96个分类，高达71.97GB 。
+
+25.Freetechbook
+http:www.freetechbooks.com/
+Free Tech Books 也是一个提供科技类免 费电子书下载的网站，该网站提供的电子书都是符合法律要求或是版权协议，许可免 费的。
+
+26.Bookboon http://t.cn/RujLAHM 这也是国外一个比较有名的网站，收录了成千上万英文原著。
+
+27.Manybooks http://t.cn/heT1k 同样是国外出色的电子书下载网站，包含各类英文原版书籍下载阅读。
+
+28.古籍图书馆 http://t.cn/zO5uVMj 这个网站上都是一些比较古老的书籍，提供下载和阅读
+
+29.汉川草庐 http://t.cn/hHM9G 是一个喜欢文史哲，住在台湾的中国人所建造的后花园。
+
+30.国学网 http://t.cn/hVE7v 一家在国学传播领域独具特色的文化创意企业，主要从事古籍数字化研究、网络文献检索开发和网站建设，是中国最大的专业古籍电子文献数据公司之一。
+[小嘴滑稽]
+
+给大家整理了10个接收手机验证码的免费网站免费接收验证码网站：
+1、 https://www.freeonlinephone.org 
+
+2、 https://helloliuliu.top 
+
+3、 https://receive-a-sms.com/ 
+
+4、 https://www.pdflibr.com/ 
+
+5、 http://receivefreesms.com/ 
+
+6、 https://www.receivesmsonline.net/ 
+
+7、 https://smsnumbersonline.com/ 
+
+8、 http://receive-sms-online.com/ 
+
+9、 https://www.becmd.com/ 
+
+10、 http://sms.sellaite.com/ 
+
+Ps.大牛和程序员[滑稽]自己拿走，拿走的记得吖个声留下你的爪子
+
+——————————接码的解释————————————
+
+接码是指接收验证码，也可以理解为验证码接收/代收；
+
+业内称呼为接码平台，是接码验证码接收平台的统称；
+
+这是近年来时兴的一款网络工具，下面附上用途：
+
+1.	多用于注册方面，可重复；
+
+2.	代替自身手机收发短信；
+
+3.	可用于解封、解绑；
+
+4.	也可用于绑定；
+
+
