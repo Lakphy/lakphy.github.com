@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>正在前往</title>
+        <link rel="icon" href="logo.png" type="image/x-icon">
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="auther" content="Lakphy">
+        <link rel="stylesheet" href="../css/mdui.min.css">
+        <meta name="description=" content="SourLib">
+        <meta name="Keywords" content="Lakphy">
+        <!--<link rel="stylesheet" href="../css/font-awesome.min.css">-->
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body style="background-color:#eee">
+        <div class="mdui-container">
+            <br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="mdui-row" style="text-align:center;">
+				<div class="mdui-col-offset-xs-1 mdui-col-xs-10 mdui-col-sm-6 mdui-col-offset-sm-3 mdui-col-md-4 mdui-col-offset-md-4">
+                    <div style="background-color:rgba(255,255,255,0.9);height:auto;width:100%;border-radius:20px;box-shadow:0px 0px 10px grey;padding:0px">
+                        <br><div style="margin-left:10px;margin-right:10px;margin-top:0px;margin-bottom:0px"><div class="mdui-typo-title">您正在前往该网站：</div>
+                        <div class="mdui-typo">
+                            <blockquote id="innerHref" style="color:pink">
+                            </blockquote>
+                        </div>
+                        <div class="mdui-typo-title">点击链接即可继续前往</div>
+                        <div class="mdui-typo-body-1"><b>请阅读下面的用户协议，点击链接即代表您遵从该用户协议</b></div>
+                        <div class="mdui-typo-body-1"><br><b>用户协议</b><br>您即将前往的网站不属于本站开发者管辖，您即将前往的网站中的任何内容与本站开发者没有任何关系，不代表本站开发者的观点或立场，本站仅供学习交流使用。</div>
+					<br></div></div>
+				</div>
+            </div>
+        </div>
+        <script>
+var sear=window.location.href.split('?');
+var sear1=sear[1];
+if(sear.length>2){
+    for(var i=2;i<sear.length;i++){
+        sear1+='?'+sear[i];
+    }
+}
+//console.log(sear1);
+var insertText='<u><a onclick=\'window.history.back(-1)\' target=\"_blank\" href=\''+sear1+'\'>'+sear1+'</a></u>'
+document.getElementById("innerHref").innerHTML=insertText;
+        </script>
+    </body>
+</html>

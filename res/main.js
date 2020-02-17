@@ -1,5 +1,5 @@
-var x = "<!--repeat begin--><div class=\"mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6\"><ul class=\"mdui-list\"><li class=\"mdui-list-item mdui-ripple\" onclick=\"location.href=\'";
-var y = "\'\"><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item-titl mdui-list-item-one-line\">";
+var x = "<!--repeat begin--><div class=\"mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6\"><ul class=\"mdui-list\"><li class=\"mdui-list-item mdui-ripple\" onclick=\"openLink(\'";
+var y = "\')\"><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item-titl mdui-list-item-one-line\">";
 var z = "</div><div class=\"mdui-list-item-text\">";
 var w = "</div></div></li></ul></div><!--end-->";
 //
