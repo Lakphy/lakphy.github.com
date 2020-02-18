@@ -35,16 +35,16 @@ var _hmt = _hmt || [];
 </script>
 
 
-	<title>linux如何快速备份 | Lakphy's Blog</title>
+	<title>SourLib | Lakphy's Blog</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Lakphy">
-	<meta name="description" content="linux备份方法">
+	<meta name="description" content="优酸乳味的资源科">
 
 	
-	<meta name="keywords" content>
+	<meta name="keywords" content="SourLib">
 	
 
 	
@@ -63,14 +63,14 @@ var _hmt = _hmt || [];
 
 	<meta property="og:site_name" content="Lakphy's Blog">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="linux如何快速备份 | Lakphy's Blog">
-	<meta property="og:description" content="linux备份方法">
-	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2020/02/13/linux如何快速备份/">
+	<meta property="og:title" content="SourLib | Lakphy's Blog">
+	<meta property="og:description" content="优酸乳味的资源科">
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2020/02/18/SourLib/">
 
 	
-	<meta property="article:published_time" content="2020-02-13T15:02:00+08:00"> 
+	<meta property="article:published_time" content="2020-02-18T15:02:00+08:00"> 
 	<meta property="article:author" content="Lakphy">
-	<meta property="article:published_first" content="Lakphy's Blog, /blog/2020/02/13/linux如何快速备份/">
+	<meta property="article:published_first" content="Lakphy's Blog, /blog/2020/02/18/SourLib/">
 	
 
 	
@@ -166,80 +166,39 @@ var _hmt = _hmt || [];
     <div class="inner">
         <header class="post-full-header">
             <div class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2020-02-13T07:46:49.000Z">
-                    2020-02-13
+                <time class="post-full-meta-date" datetime="2020-02-18T07:07:29.000Z">
+                    2020-02-18
                 </time>
                 
                 <span class="date-divider">/</span>
                 
                 
             </div>
-            <h1 class="post-full-title">linux如何快速备份</h1>
+            <h1 class="post-full-title">SourLib</h1>
         </header>
         <div class="post-full ">
             
-            <figure class="post-full-image" style="background-image: url(1.png)">
+            <figure class="post-full-image" style="background-image: url(1.jpg)">
             </figure>
             
             <div class="post-full-content">
                 <article id="photoswipe" class="markdown-body">
-                    <p>我现在使用的是deepin linux，自带备份功能，但总感觉这个备份有点。。。。</p>
-<blockquote>
-<p>Talk is cheap,show me the screenshot。</p>
-</blockquote>
-<p>直接看图吧，备注现在时间2020-02-13（</p>
-<p><img alt="看这时间多悠久" class="post-img b-lazy" data-img="2.png" data-index="0" data-src="2.png"></p>
-<p>好像从第一次注册完账号开启自动备份后就没开过。。。</p>
-<p>我这还算好的，最起码有个界面，那些用其他发行版的大牛们怎么办啊，全盘备份？没这必要吧，只要备份重要配置文件就够了，再说全盘备份要是碰上Linus那种只用固态硬盘的硬盘就遭殃了。</p>
-<p>突然想起来Linux有批处理功能，于是打开vim和Google，开工！</p>
-<h1 id="编写程序"><a href="#编写程序" class="headerlink" title="编写程序"></a>编写程序</h1><h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><p>这里说一下备份思路</p>
-<ol>
-<li>把重要文件（夹）复制到临时目录（因为是机械硬盘无所谓寿命）</li>
-<li>打包成zip</li>
-<li>移动到u盘里</li>
-</ol>
-<h2 id="第一个功能：计时"><a href="#第一个功能：计时" class="headerlink" title="第一个功能：计时"></a>第一个功能：计时</h2><p>这功能真的是强迫症福音啊，废话少说放码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">start=$(date &quot;+%s&quot;)	#记录开始时间</span><br><span class="line">#这里运行代码</span><br><span class="line">now=$(date &quot;+%s&quot;)	#记录结束时间</span><br><span class="line">time=$((now-start))	#计算用时</span><br><span class="line">echo &quot;time used:$time seconds&quot;	#输出时间</span><br><span class="line">#echo $date</span><br></pre></td></tr></table></figure>
-
-<p>就这样一个计时功能出来了，果然比某某些编程语言简单，像某语言还要引用time（逃</p>
-<p>对了，科普一下，shell里输出是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;exampleString&quot;	#输出文字</span><br><span class="line">echo $someVar	#输出变量</span><br></pre></td></tr></table></figure>
-
-<p>我测试了一下，没有代码时候输出0s，还是挺准的  :D</p>
-<h2 id="建立备份临时文件夹"><a href="#建立备份临时文件夹" class="headerlink" title="建立备份临时文件夹"></a>建立备份临时文件夹</h2><p>此步在硬盘中建立临时备份文件夹，命名为当前时间</p>
-<p>建立文件夹应该都会吧，所以直接上代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date=$(date +%Y%m%d%H%m%s)	#获取时间</span><br><span class="line">mkdir /media/lakphy/DATA/baks/$date	#建立文件夹</span><br></pre></td></tr></table></figure>
-
-<h2 id="建立重要文件夹名单"><a href="#建立重要文件夹名单" class="headerlink" title="建立重要文件夹名单"></a>建立重要文件夹名单</h2><p>此步建立一个数组（我习惯将列表说成数组，意义相同，以后不做解释），里面放有重要文件（夹）通报（划掉）名单</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">copyPath=(	#这是建立数组的代码</span><br><span class="line">	&apos;/home/lakphy/lakphy/golang&apos;</span><br><span class="line">	&apos;/home/lakphy/lakphy/py&apos;</span><br><span class="line">	&apos;/home/lakphy/lakphy/nodejs&apos;</span><br><span class="line">	&apos;/home/lakphy/Downloads&apos;</span><br><span class="line">	&apos;/media/lakphy/DATA/downloads&apos;</span><br><span class="line">	&apos;/home/lakphy/Desktop&apos;</span><br><span class="line">	)	#这是我的重要文件目录，仅示例使用</span><br></pre></td></tr></table></figure>
-
-<h2 id="复制内容到临时备份文件夹"><a href="#复制内容到临时备份文件夹" class="headerlink" title="复制内容到临时备份文件夹"></a>复制内容到临时备份文件夹</h2><p>这里利用循环遍历重要文件（夹）名单复制，这个操作我们在学习Python时候应该都学过</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for p in $&#123;copyPath[@]&#125;	#for循环</span><br><span class="line">do	#循环开始符</span><br><span class="line">	echo &apos;copying &apos;$p	#输出复制信息</span><br><span class="line">	cp -r $p /media/lakphy/DATA/baks/$date	#Linux cp命令玄学复制，速度贼快</span><br><span class="line">done	#循环结束符</span><br></pre></td></tr></table></figure>
-
-<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pathname=&apos;/media/lakphy/DATA/baks/&apos;$date	#备份文件夹路径  date是我们之前定义的时间</span><br><span class="line">zipname=&apos;/media/lakphy/DATA/baks/&apos;$date		#压缩文件路径和名字</span><br><span class="line">zip -r $zipname $pathname					#压缩命令</span><br></pre></td></tr></table></figure>
-
-<h2 id="移动到批处理程序所在目录"><a href="#移动到批处理程序所在目录" class="headerlink" title="移动到批处理程序所在目录"></a>移动到批处理程序所在目录</h2><p>mv命令，这个比较简单，不解释</p>
-<h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p>来看下完整代码</p>
-<h2 id="codes"><a href="#codes" class="headerlink" title="codes"></a>codes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>保存为backup.sh</p>
-<p>如果程序在电脑上的话，直接双击或者命令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./backup.sh</span><br></pre></td></tr></table></figure>
-
-<p>如果在外部存储器上，只能在命令行运行，命令只能是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash backup.sh</span><br></pre></td></tr></table></figure>
-
-<p>bash意思是解释器为bash，至于为什么是bash不是shell，这个我也不懂，我谷歌的时候写的shell啊。。。但shell真的运行不了，不信试试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell backup.sh</span><br></pre></td></tr></table></figure>
-
-<p>至于内部外部存储器区别，我觉得可能是外部存储器文件系统不是ext4不能加可执行权限问题</p>
-<p>我运行了一下，速度不错，比直接复制快，毕竟cp命令玄学复制，430s完成。</p>
+                    <p>打开网站–&gt;搜索资源–&gt;获取资源<br>找资源，从未像这样自然过</p>
+<p><a href="https://lakphy.github.io/res">SourLib</a> / <a href="https://lakphy.gitee.io/res" target="_blank" rel="noopener">国内线路</a></p>
+<p><img alt class="post-img b-lazy" data-img="1-1Q0112004410-L.jpg" data-index="0" data-src="1-1Q0112004410-L.jpg"></p>
+<p>想看某个电影，或是，某部电视剧<br>但始终找不到资源？<br>在这里，资源触手可得<br><img alt class="post-img b-lazy" data-img="th1.jpg" data-index="1" data-src="th1.jpg"></p>
+<p>仅仅是资源？No<br>海量在线小工具，等你来发现<br>用不完的工具，让您的工作学习生活事半功倍<br><img alt class="post-img b-lazy" data-img="th.jpg" data-index="2" data-src="th.jpg"></p>
+<p>基于优秀的MDUI前端技术，与这取之不尽的资源浑然天成<br>只有像Material Design这样优秀的设计规范才能与这优秀的资源相匹配<br><img alt class="post-img b-lazy" data-img="pic2-mob-1107.png" data-index="3" data-src="pic2-mob-1107.png"></p>
+<p>基于CSS3采用先进的响应式布局，不管是在手机，还是平板，还是电脑，甚至是，电视？我们都能自如地适应您的屏幕，让您享受最棒的观感和最高的效率！<br><img alt class="post-img b-lazy" data-img="e3d90e31589b4c1aa7641d16ef0be890_th.jpg" data-index="4" data-src="e3d90e31589b4c1aa7641d16ef0be890_th.jpg"></p>
+<p>我们优秀的前端工程师为您打磨了最优秀站内搜索引擎算法，使您在这浩如烟海的资源中，总能最快找到您需要的资源</p>
+<p><a href="https://lakphy.github.io/res">SourLib</a> / <a href="https://lakphy.gitee.io/res" target="_blank" rel="noopener">国内线路</a></p>
+<p>我们仍需努力，您如何有任何想要加入的资源，请联系我们</p>
 
                 </article>
                 <ul class="tags-postTags">
                     
                     <li>
-                        <a href="/blog/tags/bash/" rel="tag"># bash</a>
+                        <a href="/blog/tags/资源库/" rel="tag"># 资源库</a>
                     </li>
                     
                 </ul>
@@ -250,14 +209,10 @@ var _hmt = _hmt || [];
     
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="deepin长期使用评测" href="/blog/2020/02/15/deepin长期使用评测/">
-            ← deepin长期使用评测
-        </a>
-        
         <span class="prev-next-post">·</span>
         
-        <a class="next-post" title="异步的哲学---旧电脑也能运用自如？" href="/blog/2020/02/12/异步的哲学-旧电脑也能运用自如？/">
-            异步的哲学---旧电脑也能运用自如？ →
+        <a class="next-post" title="deepin长期使用评测" href="/blog/2020/02/15/deepin长期使用评测/">
+            deepin长期使用评测 →
         </a>
         
     </nav>
@@ -279,7 +234,7 @@ var _hmt = _hmt || [];
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#编写程序"><span class="toc-text">编写程序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本思路"><span class="toc-text">基本思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个功能：计时"><span class="toc-text">第一个功能：计时</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立备份临时文件夹"><span class="toc-text">建立备份临时文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立重要文件夹名单"><span class="toc-text">建立重要文件夹名单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复制内容到临时备份文件夹"><span class="toc-text">复制内容到临时备份文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#压缩"><span class="toc-text">压缩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动到批处理程序所在目录"><span class="toc-text">移动到批处理程序所在目录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#完整代码"><span class="toc-text">完整代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#codes"><span class="toc-text">codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li></ol>
+        
     </div>
 </div>
 
