@@ -162,8 +162,47 @@ var _hmt = _hmt || [];
             <h1 class="site-title">
                 Tag: 技术杂谈
             </h1>
-            <h2 class="site-description">The people who are crazy enough to think that they can 
-change the world, are the ones who do.&nbsp&nbsp&nbsp;-----Steve Jobs</h2>
+            <h2 class="site-description" id="zones"></h2>
+            <script>
+            function randomNum(minNum,maxNum){ 
+                switch(arguments.length){
+                    case 1: 
+                        return parseInt(Math.random()*minNum+1,10); 
+                        break; 
+                    case 2: 
+                        return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+                        break; 
+                    default: 
+                        return 0; 
+                        break; 
+                }
+            }
+            var a=randomNum(1,8);
+            if(a==1){
+                document.getElementById("zones").innerHTML="The people who are crazy enough to think that they can change the world, are the ones who do.&nbsp&nbsp&nbsp;-----Steve Jobs"
+            }
+            if(a==2){
+                document.getElementById("zones").innerHTML="Talk is cheap,show me your code.&nbsp&nbsp&nbsp;-----Linus"
+            }
+            if(a==3){
+                document.getElementById("zones").innerHTML="In order to understand recursion, one must first understand recursion.&nbsp&nbsp&nbsp;-----Author Unknown"
+            }
+            if(a==4){
+                document.getElementById("zones").innerHTML="Premature optimization is the root of all evil!&nbsp&nbsp&nbsp;-----Donald Knuth"
+            }
+            if(a==5){
+                document.getElementById("zones").innerHTML="When in doubt, use brute force.&nbsp&nbsp&nbsp;-----Ken Thompson"
+            }
+            if(a==6){
+                document.getElementById("zones").innerHTML="The fastest IO is no IO.&nbsp&nbsp&nbsp;-----Nils-Peter Nelson"
+            }
+            if(a==7){
+                document.getElementById("zones").innerHTML="Don't write a new program if one already does moie or less what you want. And if you must write a program, use existing code to do as much of the work as possible.&nbsp&nbsp&nbsp;-----Richard Hill"
+            }
+            if(a==8){
+                document.getElementById("zones").innerHTML="            never trust a computer you can’t throw out a window.&nbsp&nbsp&nbsp;-----Nils-Peter Nelson"
+            }
+            </script>
         </div>
         
         
