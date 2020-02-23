@@ -65,7 +65,7 @@
 							</div>
 							<br><br>
 							<div>
-								<a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-red-600" href="http://qm.qq.com/cgi-bin/qm/qr?k=R4bKF9PUueKuWh-QF8eP58KPFmxCkE0p"><i class="fa fa-qq" style="position:relative;left:0px;top:3px"></i></a>
+								<a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-red-600" mdui-dialog="{target: '#exampleDialog'}"><i class="fa fa-envelope" style="position:relative;left:0px;top:3px"></i></a>
 
 								<a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://t.me/lakphy"><i class="fa fa-paper-plane" style="position:relative;left:-2px;top:3px"></i></a>
 
@@ -102,7 +102,41 @@
 				</div>
 			</div>
 		</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class="mdui-dialog" id="exampleDialog">
+			<div class="mdui-dialog-title">My emails</div>
+			<div class="mdui-dialog-content mdui-table-fluid mdui-shadow-0">
+				<table class="mdui-table mdui-table-hoverable mdui-shadow-0">
+						<thead>
+								<tr>
+								  <th>#</th>
+								  <th>MailBox</th>
+								  <th>Email</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td>1</td>
+								  <td>Lakphy</td>
+								  <td>i@lakphy.me</td>
+								</tr>
+								<tr>
+								  <td>2</td>
+								  <td>Outlook</td>
+								  <td>lakphy@outlook.com</td>
+								</tr>
+								<tr>
+								  <td>3</td>
+								  <td>Gmail</td>
+								  <td>lakphycn@gmail.com</td>
+								</tr>
+							  </tbody>
+				</table>
+			</div>
+			<div class="mdui-dialog-actions">
+			  <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+			</div>
+		</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 		<script src="js/mdui.min.js"></script>
 <script type="text/javascript">
 	var $$ = mdui.JQ;
