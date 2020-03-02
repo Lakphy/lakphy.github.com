@@ -3,6 +3,10 @@ var y = "\')\"><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item
 var z = "</div><div class=\"mdui-list-item-text\">";
 var w = "</div></div></li></ul></div><!--end-->";
 //
+var banned = new Array();
+banned = [
+"love2.io"
+]
 var names = new Array();
 names = [
 "Google",
@@ -951,6 +955,15 @@ describe = [
 var leng = names.length;
 var insertText = "";
 for(var i=0;i<leng;i++){
+	var con=0;
+	for(var j=0;j<banned.length;j++){
+		reg=banned[j];
+		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
+			con=1;
+			break;
+		}
+	}
+	if(con) continue;
 	var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
 	insertText += insertT;
 }
@@ -964,10 +977,19 @@ function sear(){
 	var reg=new RegExp(cont,"gi");
 	for(var i=0;i<leng;i++){
 		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
-		var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
-		//alert(x);
-		insertText += insertT;
-	}
+			var con=0;
+			for(var j=0;j<banned.length;j++){
+				reg2=banned[j];
+				if(String(describe[i]).search(reg2)!=-1 || String(names[i]).search(reg2)!=-1 || String(links[i]).search(reg2)!=-1){
+					con=1;
+					break;
+				}
+			}
+			if(con) continue;
+			var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
+			//alert(x);
+			insertText += insertT;
+		}
 	}
 	//alert(insertText);
 	document.getElementById("insert").innerHTML=insertText;
