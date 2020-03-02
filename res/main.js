@@ -314,9 +314,10 @@ names = [
 "碟调网",
 "光棍影院",
 "ed2000资源共享",
-"RARBG"
+"RARBG",
+"本站开发者个人网站"
 ];
-//
+//nameEnd
 var links = new Array();
 links = [
 "https://google.com",
@@ -628,9 +629,10 @@ links = [
 "http://www.kb20.cc/SouthKorea/Doctorshanju",
 "http://www.yy111111.co",
 "http://www.ed2000.com",
-"http://www.rarbg.com/torrents.php"
+"http://www.rarbg.com/torrents.php",
+"https://lakphy.me/"
 ];
-//
+//linkEnd
 var describe = new Array();
 describe = [
 "谷歌大法镇楼",
@@ -942,8 +944,10 @@ describe = [
 "电影资源站",
 "电影资源站",
 "电影资源站",
-"电影资源站"
+"电影资源站",
+"欢迎访问"
 ];
+//describEnd
 var leng = names.length;
 var insertText = "";
 for(var i=0;i<leng;i++){
@@ -959,7 +963,7 @@ function sear(){
 	var insertText = "";
 	var reg=new RegExp(cont,"gi");
 	for(var i=0;i<leng;i++){
-		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1){
+		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
 		var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
 		//alert(x);
 		insertText += insertT;
