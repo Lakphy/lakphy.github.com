@@ -5,7 +5,13 @@ var w = "</div></div></li></ul></div><!--end-->";
 //
 var banned = new Array();
 banned = [
-"love2.io"
+"love2.io",
+"ssr",
+"v2ray",
+"成人",
+"AV",
+"av",
+"黄片"
 ]
 var names = new Array();
 names = [
@@ -319,7 +325,11 @@ names = [
 "光棍影院",
 "ed2000资源共享",
 "RARBG",
-"本站开发者个人网站"
+"本站开发者个人网站",
+"禽兽云鸡场",
+"百度统计",
+"MDUI轻量css前端框架",
+"猫咪成人网"
 ];
 //nameEnd
 var links = new Array();
@@ -634,7 +644,11 @@ links = [
 "http://www.yy111111.co",
 "http://www.ed2000.com",
 "http://www.rarbg.com/torrents.php",
-"https://lakphy.me/"
+"https://lakphy.me/",
+"https://qsyjc.com/",
+"https://tongji.baidu.com",
+"https://mdui.org",
+"https://www.maomiav.com/"
 ];
 //linkEnd
 var describe = new Array();
@@ -949,19 +963,25 @@ describe = [
 "电影资源站",
 "电影资源站",
 "电影资源站",
-"欢迎访问"
+"欢迎访问",
+"SSR、V2ray飞机场，翻墙必备",
+"专业的站长统计工具",
+"基于MaterialDesign的前端框架",
+"AV网站"
 ];
 //describEnd
 var leng = names.length;
 var insertText = "";
 for(var i=0;i<leng;i++){
 	var con=0;
+	if(document.getElementById("ban").checked){
 	for(var j=0;j<banned.length;j++){
 		reg=banned[j];
 		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
 			con=1;
 			break;
 		}
+	}
 	}
 	if(con) continue;
 	var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
@@ -978,12 +998,14 @@ function sear(){
 	for(var i=0;i<leng;i++){
 		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
 			var con=0;
+			if(document.getElementById("ban").checked){
 			for(var j=0;j<banned.length;j++){
 				reg2=banned[j];
 				if(String(describe[i]).search(reg2)!=-1 || String(names[i]).search(reg2)!=-1 || String(links[i]).search(reg2)!=-1){
 					con=1;
 					break;
 				}
+			}
 			}
 			if(con) continue;
 			var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
@@ -995,3 +1017,8 @@ function sear(){
 	document.getElementById("insert").innerHTML=insertText;
 	return;
 }
+//function ch(){
+//	if(document.getElementById("ban").checked){
+//    	alert("checkbox is checked");
+//	}
+//}
