@@ -329,7 +329,16 @@ names = [
 "禽兽云鸡场",
 "百度统计",
 "MDUI轻量css前端框架",
-"猫咪成人网"
+"猫咪成人网",
+"萌娘资源站",
+"小米手机查询生产日期",
+"腾讯文档",
+"石墨文档",
+"一起写",
+"Tower",
+"百度脑图",
+"processon",
+"mindmeister"
 ];
 //nameEnd
 var links = new Array();
@@ -648,7 +657,16 @@ links = [
 "https://qsyjc.com/",
 "https://tongji.baidu.com",
 "https://mdui.org",
-"https://www.maomiav.com/"
+"https://www.maomiav.com/",
+"http://moe.005.tv/",
+"http://m.buy.mi.com/hk/registration",
+"https://docs.qq.com",
+"https://shimo.im",
+"https://yiqixie.com",
+"https://tower.im",
+"http://naotu.baidu.com",
+"https://www.processon.com",
+"https://www.mindmeister.com/zh"
 ];
 //linkEnd
 var describe = new Array();
@@ -967,7 +985,16 @@ describe = [
 "SSR、V2ray飞机场，翻墙必备",
 "专业的站长统计工具",
 "基于MaterialDesign的前端框架",
-"AV网站"
+"AV网站",
+"动漫壁纸动漫资源",
+"小米手机查询生产日期",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作"
 ];
 //describEnd
 var leng = names.length;
