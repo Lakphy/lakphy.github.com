@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-import requests
 def geturl(url):
     res = requests.head(url)
     return res.headers.get('location')
@@ -94,9 +93,8 @@ def typeIn():
         InComeDescription=input("介绍：")
         if InComeDescription=="dd":
             InComeDescription=inComeName
-        testUrl=inComeLink.find("t.cn")
-        if testUrl!=-1:
-            inComeLink=geturl(inComeLink)
+        elif InComeDescription=="up":
+            InComeDescription=typer[len(typer)-1].description
         a = contents(inComeLink,inComeName,InComeDescription)
         typer.append(a)
 print("欢迎来到录入界面")
