@@ -12,6 +12,21 @@
 		<link rel="apple-touch-icon" href="logo.jpg">
 		<link rel="preconnect" href="https://api.dujin.org/bing/1366.php">
 		<style>
+			#main { border: none; background: none; }
+			.blog:hover { color: red; }
+			#tagscloud { width: 100%; height: 160px; position: absolute; font-size: 18px; color: #333; margin: 20px auto 0; text-align: center; }
+			#tagscloud a { position: absolute; top: 0px; left: 0px; color: #333; font-family: Arial; text-decoration: none; margin: 0 10px 15px 0; line-height: 18px; text-align: center; font-size: 12px; padding: 1px 5px; display: inline-block; border-radius: 3px; }
+			#tagscloud a.tagc1 { background: #666; color: #fff; }
+			#tagscloud a.tagc2 { background: #F16E50; color: #fff; }
+			#tagscloud a.tagc3 { background: red; color: #fff; }
+			#tagscloud a.tagc4 { background: #F60; color: #fff; }
+			#tagscloud a.tagc5 { background: #006633; color: #fff; }
+			#tagscloud a:hover { color: #fff; background: #0099ff; }
+		</style>
+		<script>
+			var radius=90;var d=200;var dtr=Math.PI/180;var mcList=[];var lasta=1;var lastb=1;var distr=true;var tspeed=11;var size=200;var mouseX=0;var mouseY=10;var howElliptical=1;var aA=null;var oDiv=null;window.onload=function(){var b=0;var a=null;oDiv=document.getElementById("tagscloud");aA=oDiv.getElementsByTagName("a");for(b=0;b<aA.length;b++){a={};aA[b].onmouseover=(function(c){return function(){c.on=true;this.style.zIndex=9999;this.style.color="#fff";this.style.padding="5px 5px";this.style.filter="alpha(opacity=100)";this.style.opacity=1}})(a);aA[b].onmouseout=(function(c){return function(){c.on=false;this.style.zIndex=c.zIndex;this.style.color="#fff";this.style.padding="5px";this.style.filter="alpha(opacity="+100*c.alpha+")";this.style.opacity=c.alpha;this.style.zIndex=c.zIndex}})(a);a.offsetWidth=aA[b].offsetWidth;a.offsetHeight=aA[b].offsetHeight;mcList.push(a)}sineCosine(0,0,0);positionAll();(function(){update();setTimeout(arguments.callee,40)})()};function update(){var p,o,n=0;p=(Math.min(Math.max(-mouseY,-size),size)/radius)*tspeed;o=(-Math.min(Math.max(-mouseX,-size),size)/radius)*tspeed;lasta=p;lastb=o;if(Math.abs(p)<=0.01&&Math.abs(o)<=0.01){return}sineCosine(p,o,n);for(var j=0;j<mcList.length;j++){if(mcList[j].on){continue}var s=mcList[j].cx;var m=mcList[j].cy*ca+mcList[j].cz*(-sa);var g=mcList[j].cy*sa+mcList[j].cz*ca;var r=s*cb+g*sb;var l=m;var f=s*(-sb)+g*cb;var q=r*cc+l*(-sc);var k=r*sc+l*cc;var e=f;mcList[j].cx=q;mcList[j].cy=k;mcList[j].cz=e;per=d/(d+e);mcList[j].x=(howElliptical*q*per)-(howElliptical*2);mcList[j].y=k*per;mcList[j].scale=per;var h=per;h=(h-0.6)*(10/6);mcList[j].alpha=h*h*h-0.2;mcList[j].zIndex=Math.ceil(100-Math.floor(mcList[j].cz))}doPosition()}function positionAll(){var e=0;var c=0;var a=mcList.length;for(var b=0;b<a;b++){if(distr){e=Math.acos(-1+(2*(b+1)-1)/a);c=Math.sqrt(a*Math.PI)*e}else{e=Math.random()*(Math.PI);c=Math.random()*(2*Math.PI)}mcList[b].cx=radius*Math.cos(c)*Math.sin(e);mcList[b].cy=radius*Math.sin(c)*Math.sin(e);mcList[b].cz=radius*Math.cos(e);aA[b].style.left=mcList[b].cx+oDiv.offsetWidth/2-mcList[b].offsetWidth/2+"px";aA[b].style.top=mcList[b].cy+oDiv.offsetHeight/2-mcList[b].offsetHeight/2+"px"}}function doPosition(){var b=oDiv.offsetWidth/2;var e=oDiv.offsetHeight/2;for(var c=0;c<mcList.length;c++){if(mcList[c].on){continue}var a=aA[c].style;if(mcList[c].alpha>0.1){if(a.display!=""){a.display=""}}else{if(a.display!="none"){a.display="none"}continue}a.left=mcList[c].cx+b-mcList[c].offsetWidth/2+"px";a.top=mcList[c].cy+e-mcList[c].offsetHeight/2+"px";a.filter="alpha(opacity="+100*mcList[c].alpha+")";a.zIndex=mcList[c].zIndex;a.opacity=mcList[c].alpha}}function sineCosine(f,e,g){sa=Math.sin(f*dtr);ca=Math.cos(f*dtr);sb=Math.sin(e*dtr);cb=Math.cos(e*dtr);sc=Math.sin(g*dtr);cc=Math.cos(g*dtr)};
+		</script>
+		<style>
 			.later{
 				background:#FFF url(https://api.dujin.org/bing/1366.php) repeat-x 0;background-size:auto 100%;background-position:center top;background-attachment:fixed;
 			}
@@ -49,16 +64,17 @@
 
   gtag('config', 'UA-158678644-1');
 </script>
+<script>
+	function skill(){
+
+	}
+</script>
 
 	</head>
 	<body style="background-color:black;background:#FFF url(https://api.dujin.org/bing/1920.php) repeat-x 0;background-size:auto 100%;background-position:center top;background-attachment:fixed">
 
 		<div class="mdui-container" style="text-align:center;">
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+			<div style="height:50px"></div>
 			<div class="mdui-row" style="text-align:center;">
 				<div class="mdui-col-offset-xs-1 mdui-col-xs-10 mdui-col-sm-6 mdui-col-offset-sm-3 mdui-col-md-4 mdui-col-offset-md-4">
 					<div style="background-color:rgba(255,255,255,0.9);height:auto;width:100%;border-radius:20px;box-shadow:0px 0px 10px #FFFFFF;">
@@ -70,17 +86,46 @@
 							<div class="mdui-typo-subheading-opacity">/'la:kfi/&nbsp;&nbsp;<i class="fa fa-mars mdui-text-color-blue"></i></div>
 							<br>
 							<div class="mdui-typo-body-1">China&nbsp;<i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Google&nbsp;Fan&nbsp;&nbsp;&nbsp;Age:17</div>
-							<br>
-							<div class="mdui-typo-body-1">Programmer&nbsp;&nbsp;retired NOI IOer</div>
-							<br>
-							<div class="mdui-chip">
-								<span class="mdui-chip-title">C++</span>
-							</div>
-							<div class="mdui-chip">
-								<span class="mdui-chip-title">Python</span>
-							</div>
-							<div class="mdui-chip">
-								<span class="mdui-chip-title">Javascript</span>
+							<div style="width: 100%;height:175px;position: relative">
+								<div id="tagscloud" style="">
+
+									<a class="tagc4" onclick="mdui.snackbar({message: 'js是万能的！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">JavaScript</a>
+									
+									<a class="tagc3" onclick="mdui.snackbar({message: 'C++性能即是生命！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">C++</a>
+									
+									<a class="tagc5" onclick="mdui.snackbar({message: '动态规划瞎爆搜，数论只会GCD（拓展欧几里得,非政隐）',buttonText: '了解水平',onButtonClick: function(){skill()}});">NOIp退役选手</a>
+									
+									<a class="tagc2" onclick="mdui.snackbar({message: '人生苦短,我用Python',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Python<a>
+									
+									<a class="tagc4" onclick="mdui.snackbar({message: 'Talk is cheap,show me your code!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});" >Linux</a>
+									
+									<a class="tagc1" onclick="mdui.snackbar({message: '我知道HTML不是编程语言，，，',buttonText: '了解我的水平',onButtonClick: function(){skill()}});" >HTML 5</a>
+									
+									<a class="tagc2" onclick="mdui.snackbar({message: '听说这个能替代js？反正我不会',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">CSS 3</a>
+									
+									<a class="tagc5" onclick="mdui.snackbar({message: 'js真tm万能，啥也能干',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Node.js</a>
+									
+									<a class="tagc2" onclick="mdui.snackbar({message: '自动化你的手机，犹如开挂',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Auto.js</a>
+									
+									<a class="tagc2" onclick="mdui.snackbar({message: '物联网nb！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Arduino</a>
+									
+									<a class="tagc3" onclick="mdui.snackbar({message: '物联网nb！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">嵌入式开发</a>
+									
+									<a class="tagc2" onclick="mdui.snackbar({message: 'Where there is a shell, there is the world!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Shell</a>
+									
+									<a class="tagc1" onclick="mdui.snackbar({message: '用户体验高于一切！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">交互设计</a>
+									
+									<a class="tagc2" onclick="mdui.snackbar({message: '拟物是什么玩意，平面才是主流！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">平面设计</a>
+									
+									<a class="tagc5" onclick="mdui.snackbar({message: 'PHP是世界上最好的语言！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">PHP</a>
+
+									<a class="tagc4" onclick="mdui.snackbar({message: '来喝杯咖啡吧',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Java</a>
+									
+									<a class="tagc3" onclick="mdui.snackbar({message: '“这个特性真的真的很难实现啊”',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Programmer</a>
+									
+									<a class="tagc5" onclick="mdui.snackbar({message: 'User experience is above all else！',buttonText: 'Learn about',onButtonClick: function(){skill()}});">Designer</a>
+								</div>
+								<div style="height:175px;width:100%;position:relative;line-height: 175px;font-size:100px;color:rgba(0,0,0,0.2)"><i>Skills</i></div>
 							</div>
 							<br><br>
 							<div>
@@ -93,7 +138,7 @@
 								<a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700"href="https://twitter.com/lakphy?s=09"><i class="fa fa-twitter" style="position:relative;left:0.5px;top:4px"></i></a>
 							</div>
 							<br>
-							<a class="mdui-btn mdui-btn-raised mdui-ripple" href="blog/index.html" style="border-radius:20px">Enter My Blog <i class="mdui-icon material-icons">&#xe5c8;</i></a>
+							<a class="mdui-btn mdui-btn-raised mdui-ripple blog" href="blog/index.html" style="border-radius:20px">Enter My Blog <i class="mdui-icon material-icons">&#xe5c8;</i></a>
 							<br>
 							<div class="mdui-collapse" mdui-collapse style="height:auto;width:100%;">
 								<div class="mdui-collapse-item" style="transform: translate(0px,8px);-ms-transform: translate(0px,8px);-webkit-transform: translate(0px,8px);/* Safari and Chrome */">
@@ -105,7 +150,7 @@
 								</div>
 							</div>
 							<br>
-							<div class="mdui-typo-caption-opacity">by Lakphy<br>first edited: 2019.4.16<br>last edited: 2020.3.1</div>
+							<div class="mdui-typo-caption-opacity">by Lakphy<br>first edited: 2019.4.16<br>last edited: 2020.3.6</div>
 						</div>
 					</div>
 					<br>
@@ -195,6 +240,80 @@
 			  <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
 			</div>
 		</div>
+		<div class="mdui-dialog" id="skillShower">
+				<div class="mdui-dialog-title">我的技术水平（按水平大小排序）</div>
+				<div class="mdui-dialog-content mdui-table-fluid mdui-shadow-0">
+					<table class="mdui-table mdui-table-hoverable mdui-shadow-0">
+							<thead>
+									<tr>
+									  <th>排名</th>
+									  <th>语言</th>
+									  <th>水平</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>1</td>
+									  <td>Python</td>
+									  <td>我学的最好的语言，能灵活运用，透彻理解面向对象编程</td>
+									</tr>
+									<tr>
+									  <td>2</td>
+									  <td>JavaScript</td>
+									  <td>主要经常写网页熟能生巧么</td>
+									</tr>
+									<tr>
+									  <td>3</td>
+									  <td>OI</td>
+									  <td>高二时候打OI，对各种算法都比较了解</td>
+									</tr>
+									<tr>
+									  <td>4</td>
+									  <td>C++</td>
+									  <td>我NOIp选的是C++组，顺势学了C++</td>
+									</tr>
+									<tr>
+									  <td>5</td>
+									  <td>Arduino</td>
+									  <td>这东西不难吧，一天就通了</td>
+									</tr>
+									<tr>
+									  <td>6</td>
+									  <td>HTML5</td>
+									  <td>这玩意不难，所以往后放，别以为我不会。。</td>
+									</tr>
+									<tr>
+									  <td>7</td>
+									  <td>CSS3</td>
+									  <td>同上。。。</td>
+									</tr>
+									<tr>
+									  <td>8</td>
+									  <td>指针？</td>
+									  <td>能够理解，但打完OI后一直没怎么用过C++，不确定我的指针怎么样</td>
+									</tr>
+									<tr>
+									  <td>9</td>
+									  <td>设计类技能</td>
+									  <td>我自认为不错，至于具体怎么样，看我的网页设计吧</td>
+									</tr>
+									<tr>
+									  <td>10</td>
+									  <td>Linux</td>
+									  <td>不怎么熟，没深入学习，但基本满足使用了</td>
+									</tr>
+									<tr>
+									  <td>11</td>
+									  <td>Shell</td>
+									  <td>同上</td>
+									</tr>
+								  </tbody>
+					</table>
+				</div>
+				<div class="mdui-dialog-actions">
+				  <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+				</div>
+			</div>
 <br><br><br><br>
 		<script src="js/mdui.min.js"></script>
 <script type="text/javascript">
