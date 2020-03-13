@@ -12,6 +12,19 @@
 		<link rel="apple-touch-icon" href="logo.jpg">
 		<link rel="preconnect" href="https://api.dujin.org/bing/1366.php">
 		<style>
+			.roll{
+    			-webkit-transition: -webkit-transform 1s ease-out;
+    			-moz-transition: -moz-transform 1.5s ease-out;
+    			-o-transition: -o-transform 1.5s ease-out;
+    			-ms-transition: -ms-transform 1.5s ease-out;
+			}
+			.roll:hover {
+    			-webkit-transform: rotateZ(720deg);
+    			-moz-transform: rotateZ(720deg);
+    			-o-transform: rotateZ(720deg);
+    			-ms-transform: rotateZ(720deg);
+    			transform: rotateZ(720deg);
+			}
 			#main { border: none; background: none; }
 			.blog:hover { color: red; }
 			#tagscloud { width: 100%; height: 160px; position: absolute; font-size: 18px; color: #333; margin: 20px auto 0; text-align: center; }
@@ -73,14 +86,18 @@
 
 	</head>
 	<body style="background-color:black;background:#FFF url(https://api.dujin.org/bing/1920.php) repeat-x 0;background-size:auto 100%;background-position:center top;background-attachment:fixed">
-
+		<noscript>
+			<div style="box-shadow:0px 0px 100px #000000;z-index:999;padding:10px;color:white;font-size:20px;background-color:red;position: fixed;height:auto;width:100%">
+				为了保证您的使用体验，本站必须使用JavaScript，我们承诺不会盗取您的隐私，不会浪费CPU资源，也不会浪费内存。请您打开浏览器的JavaScript以获得更好的服务，如果您无法启用JavaScript，请前往<a href="https://www.google.cn/chrome/">chrome官网</a>下载chrome浏览器打开本站
+			</div>
+		</noscript>
 		<div class="mdui-container" style="text-align:center;">
 			<div style="height:50px"></div>
 			<div class="mdui-row" style="text-align:center;">
 				<div class="mdui-col-offset-xs-1 mdui-col-xs-10 mdui-col-sm-6 mdui-col-offset-sm-3 mdui-col-md-4 mdui-col-offset-md-4">
 					<div style="background-color:rgba(255,255,255,0.9);height:auto;width:100%;border-radius:20px;box-shadow:0px 0px 10px #FFFFFF;">
 						<div style="transform: translate(0px,-40px);-ms-transform: translate(0px,-40px);-webkit-transform: translate(0px,-40px);/* Safari and Chrome */" class="">
-							<div id="count" style="height:85px;width:85px;background: -webkit-linear-gradient(left top, #03e1f6 , #fb1eff); /* Safari 5.1 - 6.0 */  background: -o-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Opera 11.1 - 12.0 */  background: -moz-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Firefox 3.6 - 15 */  background: linear-gradient(to bottom right, #03e1f6 , #fb1eff);;margin-left:auto;margin-right:auto;border-radius:85px;line-height:85px" onclick="count()">
+							<div class="roll" id="count" style="height:85px;width:85px;background: -webkit-linear-gradient(left top, #03e1f6 , #fb1eff); /* Safari 5.1 - 6.0 */  background: -o-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Opera 11.1 - 12.0 */  background: -moz-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Firefox 3.6 - 15 */  background: linear-gradient(to bottom right, #03e1f6 , #fb1eff);;margin-left:auto;margin-right:auto;border-radius:85px;line-height:85px" onclick="count()">
 								<img class="mdui-img-circle" src="logo.jpg" style="width:80px;vertical-align:middle;"/>
 							</div>
 							<div class="mdui-typo-title">Lakphy</div>
@@ -159,7 +176,7 @@
 						<br>Honored Projects<br>
 						<a href='res/index.html' style="color: black" class="mdui-text-color-black">
 						<li class="mdui-list-item mdui-ripple" style="text-align: left">
-							<div class="mdui-list-item-avatar"><img src="res/logo.png"/></div>
+							<div class="mdui-list-item-avatar"><img class="roll" src="res/logo.png"/></div>
 							<div class="mdui-list-item-content">
 							  <div class="mdui-list-item-title">SourLib</div>
 							  <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text">优酸乳味的资源库</span>--the best resource library</div>
@@ -172,7 +189,7 @@
 						<!--repeat-->
 						<a href='https://twznow.com/' style="color: black" class="mdui-text-color-black">
 						<li class="mdui-list-item mdui-ripple" style="text-align: left">
-							<div class="mdui-list-item-avatar"><img src="https://www.twznow.com/avatar.png"/></div>
+							<div class="mdui-list-item-avatar"><img class="roll" src="https://www.twznow.com/avatar.png"/></div>
 							<div class="mdui-list-item-content">
 							  <div class="mdui-list-item-title">Jimmy T</div>
 							  <div class="mdui-list-item-text mdui-list-item-one-line">肥宅</div>
@@ -181,7 +198,7 @@
 						<!--end-->
 						<a href='https://blog.npofsi.pro/' style="color: black" class="mdui-text-color-black">
 						<li class="mdui-list-item mdui-ripple" style="text-align: left">
-							<div class="mdui-list-item-avatar"><img src="https://blog.npofsi.pro/avatar.png"/></div>
+							<div class="mdui-list-item-avatar"><img class="roll" src="https://blog.npofsi.pro/avatar.png"/></div>
 							<div class="mdui-list-item-content">
 							  <div class="mdui-list-item-title">NPofSi</div>
 							  <div class="mdui-list-item-text mdui-list-item-one-line">东方铃奈庵</div>
@@ -189,7 +206,7 @@
 						</li></a>
 						<a href='https://xiaoyou66.com/' style="color: black" class="mdui-text-color-black">
 						<li class="mdui-list-item mdui-ripple" style="text-align: left">
-							<div class="mdui-list-item-avatar"><img src="https://xiaoyou66.com/static/images/avatar.jpg"/></div>
+							<div class="mdui-list-item-avatar"><img class="roll" src="https://xiaoyou66.com/static/images/avatar.jpg"/></div>
 							<div class="mdui-list-item-content">
 							  <div class="mdui-list-item-title">小游</div>
 							  <div class="mdui-list-item-text mdui-list-item-one-line">二次元技术宅</div>
@@ -197,7 +214,7 @@
 						</li></a>
 						<a href='https://blog.yuuta.moe/' style="color: black" class="mdui-text-color-black">
 						<li class="mdui-list-item mdui-ripple" style="text-align: left">
-							<div class="mdui-list-item-avatar"><img src="https://i.loli.net/2017/09/17/59be75c136a7f.jpg"/></div>
+							<div class="mdui-list-item-avatar"><img class="roll" src="https://i.loli.net/2017/09/17/59be75c136a7f.jpg"/></div>
 							<div class="mdui-list-item-content">
 							  <div class="mdui-list-item-title">Yuuta</div>
 							  <div class="mdui-list-item-text mdui-list-item-one-line">Yuuta的折腾</div>
