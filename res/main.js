@@ -3,6 +3,16 @@ var y = "\')\"><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item
 var z = "</div><div class=\"mdui-list-item-text\">";
 var w = "</div></div></li></ul></div><!--end-->";
 //
+var banned = new Array();
+banned = [
+"love2.io",
+"ssr",
+"v2ray",
+"成人",
+"AV",
+"av",
+"黄片"
+]
 var names = new Array();
 names = [
 "Google",
@@ -314,9 +324,23 @@ names = [
 "碟调网",
 "光棍影院",
 "ed2000资源共享",
-"RARBG"
+"RARBG",
+"本站开发者个人网站",
+"禽兽云鸡场",
+"百度统计",
+"MDUI轻量css前端框架",
+"猫咪成人网",
+"萌娘资源站",
+"小米手机查询生产日期",
+"腾讯文档",
+"石墨文档",
+"一起写",
+"Tower",
+"百度脑图",
+"processon",
+"mindmeister"
 ];
-//
+//nameEnd
 var links = new Array();
 links = [
 "https://google.com",
@@ -628,9 +652,23 @@ links = [
 "http://www.kb20.cc/SouthKorea/Doctorshanju",
 "http://www.yy111111.co",
 "http://www.ed2000.com",
-"http://www.rarbg.com/torrents.php"
+"http://www.rarbg.com/torrents.php",
+"https://lakphy.me/",
+"https://qsyjc.com/",
+"https://tongji.baidu.com",
+"https://mdui.org",
+"https://www.maomiav.com/",
+"http://moe.005.tv/",
+"http://m.buy.mi.com/hk/registration",
+"https://docs.qq.com",
+"https://shimo.im",
+"https://yiqixie.com",
+"https://tower.im",
+"http://naotu.baidu.com",
+"https://www.processon.com",
+"https://www.mindmeister.com/zh"
 ];
-//
+//linkEnd
 var describe = new Array();
 describe = [
 "谷歌大法镇楼",
@@ -942,11 +980,37 @@ describe = [
 "电影资源站",
 "电影资源站",
 "电影资源站",
-"电影资源站"
+"电影资源站",
+"欢迎访问",
+"SSR、V2ray飞机场，翻墙必备",
+"专业的站长统计工具",
+"基于MaterialDesign的前端框架",
+"AV网站",
+"动漫壁纸动漫资源",
+"小米手机查询生产日期",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作",
+"在线协作"
 ];
+//describEnd
 var leng = names.length;
 var insertText = "";
 for(var i=0;i<leng;i++){
+	var con=0;
+	if(document.getElementById("ban").checked){
+	for(var j=0;j<banned.length;j++){
+		reg=banned[j];
+		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
+			con=1;
+			break;
+		}
+	}
+	}
+	if(con) continue;
 	var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
 	insertText += insertT;
 }
@@ -959,13 +1023,29 @@ function sear(){
 	var insertText = "";
 	var reg=new RegExp(cont,"gi");
 	for(var i=0;i<leng;i++){
-		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1){
-		var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
-		//alert(x);
-		insertText += insertT;
-	}
+		if(String(describe[i]).search(reg)!=-1 || String(names[i]).search(reg)!=-1 || String(links[i]).search(reg)!=-1){
+			var con=0;
+			if(document.getElementById("ban").checked){
+			for(var j=0;j<banned.length;j++){
+				reg2=banned[j];
+				if(String(describe[i]).search(reg2)!=-1 || String(names[i]).search(reg2)!=-1 || String(links[i]).search(reg2)!=-1){
+					con=1;
+					break;
+				}
+			}
+			}
+			if(con) continue;
+			var insertT = x + links[i] + y + names[i] + z + describe[i] + w;
+			//alert(x);
+			insertText += insertT;
+		}
 	}
 	//alert(insertText);
 	document.getElementById("insert").innerHTML=insertText;
 	return;
 }
+//function ch(){
+//	if(document.getElementById("ban").checked){
+//    	alert("checkbox is checked");
+//	}
+//}
