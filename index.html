@@ -37,7 +37,10 @@
 			#tagscloud a:hover { color: #fff; background: #0099ff; }
 		</style>
 		<script>
+		function ani(){
 			var radius=90;var d=200;var dtr=Math.PI/180;var mcList=[];var lasta=1;var lastb=1;var distr=true;var tspeed=11;var size=200;var mouseX=0;var mouseY=10;var howElliptical=1;var aA=null;var oDiv=null;window.onload=function(){var b=0;var a=null;oDiv=document.getElementById("tagscloud");aA=oDiv.getElementsByTagName("a");for(b=0;b<aA.length;b++){a={};aA[b].onmouseover=(function(c){return function(){c.on=true;this.style.zIndex=9999;this.style.color="#fff";this.style.padding="5px 5px";this.style.filter="alpha(opacity=100)";this.style.opacity=1}})(a);aA[b].onmouseout=(function(c){return function(){c.on=false;this.style.zIndex=c.zIndex;this.style.color="#fff";this.style.padding="5px";this.style.filter="alpha(opacity="+100*c.alpha+")";this.style.opacity=c.alpha;this.style.zIndex=c.zIndex}})(a);a.offsetWidth=aA[b].offsetWidth;a.offsetHeight=aA[b].offsetHeight;mcList.push(a)}sineCosine(0,0,0);positionAll();(function(){update();setTimeout(arguments.callee,40)})()};function update(){var p,o,n=0;p=(Math.min(Math.max(-mouseY,-size),size)/radius)*tspeed;o=(-Math.min(Math.max(-mouseX,-size),size)/radius)*tspeed;lasta=p;lastb=o;if(Math.abs(p)<=0.01&&Math.abs(o)<=0.01){return}sineCosine(p,o,n);for(var j=0;j<mcList.length;j++){if(mcList[j].on){continue}var s=mcList[j].cx;var m=mcList[j].cy*ca+mcList[j].cz*(-sa);var g=mcList[j].cy*sa+mcList[j].cz*ca;var r=s*cb+g*sb;var l=m;var f=s*(-sb)+g*cb;var q=r*cc+l*(-sc);var k=r*sc+l*cc;var e=f;mcList[j].cx=q;mcList[j].cy=k;mcList[j].cz=e;per=d/(d+e);mcList[j].x=(howElliptical*q*per)-(howElliptical*2);mcList[j].y=k*per;mcList[j].scale=per;var h=per;h=(h-0.6)*(10/6);mcList[j].alpha=h*h*h-0.2;mcList[j].zIndex=Math.ceil(100-Math.floor(mcList[j].cz))}doPosition()}function positionAll(){var e=0;var c=0;var a=mcList.length;for(var b=0;b<a;b++){if(distr){e=Math.acos(-1+(2*(b+1)-1)/a);c=Math.sqrt(a*Math.PI)*e}else{e=Math.random()*(Math.PI);c=Math.random()*(2*Math.PI)}mcList[b].cx=radius*Math.cos(c)*Math.sin(e);mcList[b].cy=radius*Math.sin(c)*Math.sin(e);mcList[b].cz=radius*Math.cos(e);aA[b].style.left=mcList[b].cx+oDiv.offsetWidth/2-mcList[b].offsetWidth/2+"px";aA[b].style.top=mcList[b].cy+oDiv.offsetHeight/2-mcList[b].offsetHeight/2+"px"}}function doPosition(){var b=oDiv.offsetWidth/2;var e=oDiv.offsetHeight/2;for(var c=0;c<mcList.length;c++){if(mcList[c].on){continue}var a=aA[c].style;if(mcList[c].alpha>0.1){if(a.display!=""){a.display=""}}else{if(a.display!="none"){a.display="none"}continue}a.left=mcList[c].cx+b-mcList[c].offsetWidth/2+"px";a.top=mcList[c].cy+e-mcList[c].offsetHeight/2+"px";a.filter="alpha(opacity="+100*mcList[c].alpha+")";a.zIndex=mcList[c].zIndex;a.opacity=mcList[c].alpha}}function sineCosine(f,e,g){sa=Math.sin(f*dtr);ca=Math.cos(f*dtr);sb=Math.sin(e*dtr);cb=Math.cos(e*dtr);sc=Math.sin(g*dtr);cc=Math.cos(g*dtr)};
+			}
+		ani()
 		</script>
 		<style>
 			.later{
@@ -145,6 +148,7 @@
 								</div>
 								<div style="height:175px;width:100%;position:relative;line-height: 175px;font-size:100px;color:rgba(0,0,0,0.2)"><i>Skills</i></div>
 							</div>
+							<script>ani()</script>
 							<br><br>
 							<div>
 								<a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-red-600" mdui-dialog="{target: '#exampleDialog'}"><i class="fa fa-envelope" style="position:relative;left:0px;top:3px"></i></a>
