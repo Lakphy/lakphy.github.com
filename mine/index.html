@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>扫雷</title>
+    <link type="text/css" rel="styleSheet" href="Mine.css" />
+    <script>
+        document.oncontextmenu = function(event) {
+            event.preventDefault();
+        };
+    </script>
+</head>
+
+<div id='bar'>
+    <span class='bar'>剩余雷数：<label id='count'>0</label></span>
+    <span class='bar'>计时：<label id='time'>0</label>s</span>
+    <button id="start">开始游戏</button>
+    <button id="customize">自定义游戏</button>
+</div>
+<table id='grid'></table>
+
+</html>
+<script type="text/javascript" src="Mine.js"></script>
