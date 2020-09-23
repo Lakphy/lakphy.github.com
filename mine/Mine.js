@@ -11,7 +11,20 @@ var time = document.getElementById('time'); //计时器显示对象
 var timer;
 var timecount;
 var grid = init_grid(10, 10, 10); //调用函数，并返回一个二维数组，用于储存地图中每个格子的对象
-var gaming = true;
+var gaming = false;
+
+function changeStart() {
+    gaming = true;
+    start.onclick = function() {
+        location.reload(); //重启游戏
+    }
+    start.innerHTML = "重启游戏";
+    customize.onclick = function() {
+        alert("我军宣布投降认输！您已失败，点击确定重启游戏。");
+        location.reload(); //重启游戏
+    }
+    customize.innerHTML = "投降";
+}
 start.onclick = function() {
     document.getElementById('grid').style.display = "table";
     //在这里添加计时功能
@@ -20,11 +33,16 @@ start.onclick = function() {
             time.innerHTML = seconds;
             timecount = seconds;
         }, 100) //设置计时器
+    changeStart();
 }
 customize.onclick = function() {
     var a = parseInt(prompt("请输入地图长度", "10"));
     var b = parseInt(prompt("请输入地图宽度", "10"));
     var c = parseInt(prompt("请输入地图雷数", "10"));
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("请输入正确内容！");
+        return;
+    }
     grid = init_grid(a, b, c);
     row = a;
     col = b;
@@ -37,6 +55,7 @@ customize.onclick = function() {
             time.innerHTML = seconds;
             timecount = seconds;
         }, 100) //设置计时器
+    changeStart();
 }
 
 function upgradeCount() {
