@@ -1,6 +1,6 @@
-const row = 10; //宽
-const col = 10; //长
-const maxCount = 10; //最大雷数
+var row = 10; //宽
+var col = 10; //长
+var maxCount = 10; //最大雷数
 let marked = 0; //已被标记的格子数量
 let isFirstOpen = true, //定义为第一次打开
     end = false;
@@ -26,6 +26,10 @@ customize.onclick = function() {
     var b = parseInt(prompt("请输入地图宽度", "10"));
     var c = parseInt(prompt("请输入地图雷数", "10"));
     grid = init_grid(a, b, c);
+    row = a;
+    col = b;
+    maxCount = c;
+    upgradeCount();
     document.getElementById('grid').style.display = "table";
     //在这里添加计时功能
     var timer = setInterval(function() {
