@@ -15,8 +15,8 @@
         .box {
             position: relative;
             overflow: hidden;
-            height: 300px;
-            width: 300px;
+            height: auto;
+            width: 100%;
         }
         
         .box img {
@@ -51,15 +51,15 @@
 
     </div>
     <script>
-        var show_img = document.querySelector('.show_img'),
+        var show_img = document.querySelector('.show_img');
 
-            /*图片加载完成*/
+        /*图片加载完成*/
 
-            show_img.onload = function() {
+        show_img.onload = function() {
 
-                show_img.style.opacity = "1";
+            show_img.style.opacity = "1";
 
-            };
+        };
     </script>
 </body>
 
