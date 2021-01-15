@@ -41,14 +41,25 @@
             left: 0;
             transition: opacity 1s linear;
         }
+        
+        .block {
+            position: absolute;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px #FFFFFF;
+            margin: 16px;
+            padding: 16px;
+        }
     </style>
 </head>
 
-<body>
+<body style="overflow: hidden;">
     <div class="box">
         <img src="bg_min.jpg" class="bg" id="bg_min" />
         <img src="bg.jpg" class="show_img" id="bg" />
     </div>
+    <div class="block" style="width: 100px;height: auto;">a<br>sf</div>
     <script>
         var show_img = document.querySelector('.show_img');
         var device_width = window.screen.width;
@@ -62,7 +73,16 @@
             bg_min_obj.width = "auto";
             bg_min_obj.height = "100vh";
             bg_min_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
-        } else {}
+        } else {
+            bg_obj = document.getElementById("bg").style;
+            bg_obj.width = "100vw";
+            bg_obj.height = "auto";
+            bg_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+            bg_min_obj = document.getElementById("bg_min").style;
+            bg_min_obj.width = "100vw";
+            bg_min_obj.height = "auto";
+            bg_min_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+        }
         /*图片加载完成*/
         show_img.onload = function() {
             show_img.style.opacity = "1";
