@@ -11,7 +11,23 @@
     <meta name="Keywords" content="Lakphy">
     <link rel="shortcut icon" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
+        .roll {
+            -webkit-transition: -webkit-transform 1s ease-out;
+            -moz-transition: -moz-transform 1.5s ease-out;
+            -o-transition: -o-transform 1.5s ease-out;
+            -ms-transition: -ms-transform 1.5s ease-out;
+        }
+        
+        .roll:hover {
+            -webkit-transform: rotateZ(720deg);
+            -moz-transform: rotateZ(720deg);
+            -o-transform: rotateZ(720deg);
+            -ms-transform: rotateZ(720deg);
+            transform: rotateZ(720deg);
+        }
+        
         .box {
             position: absolute;
             overflow: hidden;
@@ -48,8 +64,8 @@
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             box-shadow: 0px 0px 10px #FFFFFF;
-            margin: 16px;
-            padding: 16px;
+            margin: 8px;
+            padding: 8px;
         }
     </style>
 </head>
@@ -59,30 +75,51 @@
         <img src="bg_min.jpg" class="bg" id="bg_min" />
         <img src="bg.jpg" class="show_img" id="bg" />
     </div>
-    <div class="block" style="width: 100px;height: auto;">a<br>sf</div>
+    <div class="block" style="width: 10vw;height: auto;position: absolute;top: 50%;transform: translate(0, -50%);text-align: center;">
+        <div class="roll" id="count" style="text-align:center;width:100%;height:auto;background: -webkit-linear-gradient(left top, #03e1f6 , #fb1eff); /* Safari 5.1 - 6.0 */  background: -o-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Opera 11.1 - 12.0 */  background: -moz-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Firefox 3.6 - 15 */  background: linear-gradient(to bottom right, #03e1f6 , #fb1eff);;margin-left:auto;margin-right:auto;border-radius:1000px;line-height:10vw;">
+            <img class="mdui-img-circle" src="logo.jpg" style="width:90%;vertical-align:middle;" />
+        </div>
+        <h1 style="font-size: 3vw;">Lakphy</h1>
+        <h2 style="font-size: 2vw;">/'la:kfi/&nbsp;<i class="fa fa-mars mdui-text-color-blue"></i></h2>
+    </div>
     <script>
         var show_img = document.querySelector('.show_img');
-        var device_width = window.screen.width;
-        var device_height = window.screen.height;
-        if (device_height / device_width > 3810 / 2176) {
-            bg_obj = document.getElementById("bg").style;
-            bg_obj.width = "auto";
-            bg_obj.height = "100vh";
-            bg_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
-            bg_min_obj = document.getElementById("bg_min").style;
-            bg_min_obj.width = "auto";
-            bg_min_obj.height = "100vh";
-            bg_min_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
-        } else {
-            bg_obj = document.getElementById("bg").style;
-            bg_obj.width = "100vw";
-            bg_obj.height = "auto";
-            bg_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
-            bg_min_obj = document.getElementById("bg_min").style;
-            bg_min_obj.width = "100vw";
-            bg_min_obj.height = "auto";
-            bg_min_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+
+        function refreshWindows() {
+            var device_width, device_height;
+            if (window.innerHeight) device_height = window.innerHeight;
+            else if ((document.body) && (document.body.clientHeight)) device_height = document.body.clientHeight;
+            if (window.innerWidth) device_width = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth)) device_width = document.body.clientWidth;
+            if (device_height / device_width > 3810 / 2176) {
+                bg_obj = document.getElementById("bg").style;
+                bg_obj.width = "auto";
+                bg_obj.height = "100vh";
+                bg_obj.top = "0";
+                bg_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
+                bg_min_obj = document.getElementById("bg_min").style;
+                bg_min_obj.width = "auto";
+                bg_min_obj.height = "100vh";
+                bg_min_obj.top = "0";
+                bg_min_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
+            } else {
+                bg_obj = document.getElementById("bg").style;
+                bg_obj.width = "100vw";
+                bg_obj.height = "auto";
+                bg_obj.left = "0";
+                bg_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+                bg_min_obj = document.getElementById("bg_min").style;
+                bg_min_obj.width = "100vw";
+                bg_min_obj.height = "auto";
+                bg_min_obj.left = "0";
+                bg_min_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+            }
+            show_img.onload = function() {
+                show_img.style.opacity = "1";
+            };
         }
+        refreshWindows();
+        setInterval(refreshWindows, 100);
         /*图片加载完成*/
         show_img.onload = function() {
             show_img.style.opacity = "1";
