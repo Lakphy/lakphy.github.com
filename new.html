@@ -3,10 +3,64 @@
 
 <head>
     <title>Lakphy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="auther" content="Lakphy">
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <meta name="description=" content="Lakphy">
+    <meta name="Keywords" content="Lakphy">
+    <link rel="shortcut icon" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    <style>
+        .box {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            width: 300px;
+        }
+        
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .box .bg {
+            /*缩略图*/
+            display: block;
+            filter: blur(15px);
+            transform: scale(1);
+        }
+        
+        .box .show_img {
+            /*加载完成显示的实际图*/
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            transition: opacity 1s linear;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="box">
 
+        <img src="bg_min.jpg" class="bg" />
+
+        <img src="bg.jpg" class="show_img" />
+
+    </div>
+    <script>
+        var show_img = document.querySelector('.show_img'),
+
+            /*图片加载完成*/
+
+            show_img.onload = function() {
+
+                show_img.style.opacity = "1";
+
+            };
+    </script>
 </body>
 
 </html>
