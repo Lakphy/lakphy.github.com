@@ -15,10 +15,10 @@
         .box {
             position: absolute;
             overflow: hidden;
-            height: 120vh;
+            height: 100vh;
             width: 100vw;
-            top: -20vh;
             overflow: hidden;
+            z-index: -1;
         }
         
         .box img {
@@ -46,21 +46,26 @@
 
 <body>
     <div class="box">
-
-        <img src="bg_min.jpg" class="bg" />
-
-        <img src="bg.jpg" class="show_img" />
-
+        <img src="bg_min.jpg" class="bg" id="bg_min" />
+        <img src="bg.jpg" class="show_img" id="bg" />
     </div>
     <script>
         var show_img = document.querySelector('.show_img');
-
+        var device_width = window.screen.width;
+        var device_height = window.screen.height;
+        if (device_height / device_width > 3810 / 2176) {
+            bg_obj = document.getElementById("bg").style;
+            bg_obj.width = "auto";
+            bg_obj.height = "100vh";
+            bg_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
+            bg_min_obj = document.getElementById("bg_min").style;
+            bg_min_obj.width = "auto";
+            bg_min_obj.height = "100vh";
+            bg_min_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
+        } else {}
         /*图片加载完成*/
-
         show_img.onload = function() {
-
             show_img.style.opacity = "1";
-
         };
     </script>
 </body>
