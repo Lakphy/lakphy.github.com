@@ -340,7 +340,7 @@
 
                                 <a class="tagc3" onclick="mdui.snackbar({message: '“这个特性真的真的很难实现啊”',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Programmer</a>
                             </div>
-                            <div style="height:175px;width:100%;position:relative;line-height: 175px;font-size:100px;color:rgba(0,0,0,0.2)"><i>Skills</i></div>
+                            <div style="height:175px;width:100%;position:relative;line-height: 175px;font-size:100px;color:rgba(0,0,0,0.2)" id="skills"></div>
                         </div>
                         <script>
                             ani()
@@ -550,6 +550,7 @@
             document.getElementById("friends").innerHTML = inserts;
         }
         insertFunc();
+        document.getElementById("skills").innerHTML = "<i>Skills</i>";
         //window.setTimeout(insertFunc, 1000);
     </script>
 </body>
