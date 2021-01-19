@@ -28,6 +28,36 @@
             transform: rotateZ(720deg);
         }
         
+        .box {
+            position: fixed;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            z-index: -99;
+        }
+        
+        .box img {
+            position: relative;
+            width: 100%;
+        }
+        
+        .box .bg {
+            /*缩略图*/
+            display: block;
+            filter: blur(15px);
+            transform: scale(1);
+        }
+        
+        .box .show_img {
+            /*加载完成显示的实际图*/
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            transition: opacity 1s linear;
+        }
+        
         #main {
             border: none;
             background: none;
@@ -281,12 +311,18 @@
 
 </head>
 
-<body style="background-color:black;background:#FFF url(https://api.dujin.org/bing/1920.php) repeat-x 0;background-size:cover;background-position:center top;background-attachment:fixed">
+<!--body style="background-color:black;background:#FFF url(https://api.dujin.org/bing/1920.php) repeat-x 0;background-size:cover;background-position:center top;background-attachment:fixed"-->
+
+<body>
+    <div class="box">
+        <img src="bg_min.jpg" class="bg" id="bg_min" />
+        <img src="bg.jpg" class="show_img" id="bg" />
+    </div>
     <noscript>
-			<div style="box-shadow:0px 0px 100px #000000;z-index:999;padding:10px;color:white;font-size:20px;background-color:red;position: fixed;height:auto;width:100%">
-				为了保证您的使用体验，本站必须使用JavaScript，我们不会盗取您的隐私，不会浪费CPU资源，也不会浪费内存。请您打开浏览器的JavaScript以获得更好的服务，如果您无法启用JavaScript，请前往<a href="https://www.google.cn/chrome/">chrome官网</a>下载chrome浏览器打开本站
-			</div>
-		</noscript>
+		<div style="box-shadow:0px 0px 100px #000000;z-index:999;padding:10px;color:white;font-size:20px;background-color:red;position: fixed;height:auto;width:100%">
+			为了保证您的使用体验，本站必须使用JavaScript，我们不会盗取您的隐私，不会浪费CPU资源，也不会浪费内存。请您打开浏览器的JavaScript以获得更好的服务，如果您无法启用JavaScript，请前往<a href="https://www.google.cn/chrome/">chrome官网</a>下载chrome浏览器打开本站
+		</div>
+	</noscript>
     <div class="mdui-container" style="text-align:center;">
         <div style="height:50px"></div>
         <div class="mdui-row" style="text-align:center;">
@@ -552,6 +588,61 @@
         insertFunc();
         document.getElementById("skills").innerHTML = "<i>Skills</i>";
         //window.setTimeout(insertFunc, 1000);
+    </script>
+    <script>
+        var show_img = document.querySelector('.show_img');
+        var show_img = document.getElementsByClassName('show_img')[0];
+
+        function refreshWindows() {
+            var device_width, device_height;
+            if (window.innerHeight) device_height = window.innerHeight;
+            else if ((document.body) && (document.body.clientHeight)) device_height = document.body.clientHeight;
+            if (window.innerWidth) device_width = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth)) device_width = document.body.clientWidth;
+            if (device_height / device_width > 3810 / 2176) {
+                bg_obj = document.getElementById("bg").style;
+                bg_obj.width = "auto";
+                bg_obj.height = "100vh";
+                bg_obj.top = "0px";
+                bg_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
+                bg_min_obj = document.getElementById("bg_min").style;
+                bg_min_obj.width = "auto";
+                bg_min_obj.height = "100vh";
+                bg_min_obj.top = "0px";
+                bg_min_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
+            } else {
+                bg_obj = document.getElementById("bg").style;
+                bg_obj.width = "100vw";
+                bg_obj.height = "auto";
+                bg_obj.left = "0px";
+                bg_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+                bg_min_obj = document.getElementById("bg_min").style;
+                bg_min_obj.width = "100vw";
+                bg_min_obj.height = "auto";
+                bg_min_obj.left = "0px";
+                bg_min_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
+            }
+            show_img.onload = function() {
+                show_img.style.opacity = "1";
+            };
+        }
+        refreshWindows();
+        setInterval(refreshWindows, 100);
+        /*图片加载完成
+        show_img.onload = function() {
+            show_img.style.opacity = "1";
+        };*/
+        function imgLoad(img, callback) {
+            var timer = setInterval(function() {
+                if (img.complete) {
+                    callback(img);
+                    clearInterval(timer);
+                }
+            }, 50)
+        }
+        imgLoad(show_img, function() {
+            show_img.style.opacity = "1";
+        })
     </script>
 </body>
 
