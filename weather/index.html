@@ -130,7 +130,7 @@
                         }
                     );
                     $.get(
-                        'http://wthrcdn.etouch.cn/weather_mini?city=' + city,
+                        'https://wthrcdn.etouch.cn/weather_mini?city=' + city,
                         function(html) {
                             weather = JSON.parse(html);
                             console.log(weather);
@@ -247,7 +247,7 @@
                             }
 
                             $.get(
-                                'http://wthrcdn.etouch.cn/weather_mini?city=' + document.getElementById("province").innerHTML,
+                                'https://wthrcdn.etouch.cn/weather_mini?city=' + document.getElementById("province").innerHTML,
                                 function(html) {
                                     weather = JSON.parse(html);
                                     console.log(weather);
