@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="auther" content="Lakphy">
+    <meta name="description=" content="Lakphy">
+    <meta name="Keywords" content="Lakphy">
+    <title>选择城市/地区</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mdui.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--body-->
+    <div id="bg">
+        <!--background-->
+    </div>
+    <div class="mdui-container">
+        <div class="mdui-toolbar mdui-color-theme" id="topbar">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="fa fa-cloud fa-lg mdui-icon material-icons" aria-hidden="true"></i></a>
+            <span class="mdui-typo-title mdui-hidden-xs" id="province">Lakphy的天气预报</span>
+            <span class="mdui-typo-title" id="city">选择您的城市/地区</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="fa fa-search fa-lg mdui-icon material-icons" aria-hidden="true"></i></a>
+        </div>
+        <br><br><br>
+        <div class="mdui-col-offset-xs-1 mdui-col-xs-10 mdui-col-sm-6 mdui-col-offset-sm-3 mdui-col-md-4 mdui-col-offset-md-4 board">
+
+            <label for="addr-show02">您选择的是：
+                        <input type="text" id="addr-show02" disabled>
+                    </label>
+            <div id="addr-choice">
+                <ul id="title-wrap">
+                    <li value="0">省份</li>
+                    <li value="1">城市</li>
+                    <li value="2">县区</li>
+                </ul>
+                <div id="show-panel">
+                    <ul id="addr-wrap">
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn met2">确定</button>
+        </div>
+        <script src="../js/jquery-3.5.1.min.js"></script>
+        <script src="city.js"></script>
+        <script src="city02.js"></script>
+        <script src="city03.js"></script>
+        <script src="method02.js"></script>
+        <script src="method04.js"></script>
+</body>
+
+</html>

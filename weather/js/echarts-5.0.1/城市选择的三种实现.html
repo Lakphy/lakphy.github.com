@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0120)https://visugar.github.io/FrontEnd-examples/01%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8/index.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>城市选择的三种实现</title>
+    <link rel="stylesheet" href="./城市选择的三种实现_files/style.css">
+</head>
+
+<body>
+    <div>
+        <fieldset>
+            <legend>方法一：下拉选择框实现省市区（县）三级联动</legend>
+            <form action="https://visugar.github.io/FrontEnd-examples/01%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8/index.html#">
+                <label for="addr-show">您选择的是：
+                    <input type="text" value="" id="addr-show">
+                </label>
+                <br>
+
+                <!--省份选择-->
+                <select id="prov" onchange="showCity(this)">
+                    <option value="">=请选择省份=</option>
+                <option value="北京市">北京市</option><option value="天津市">天津市</option><option value="上海市">上海市</option><option value="重庆市">重庆市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西">广西</option><option value="海南省">海南省</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾省">台湾省</option></select>
+
+                <!--城市选择-->
+                <select id="city" onchange="showCountry(this)">
+                    <option value="">=请选择城市=</option>
+                <option value="哈尔滨市">哈尔滨市</option><option value="齐齐哈尔市">齐齐哈尔市</option><option value="七台河市">七台河市</option><option value="黑河市">黑河市</option><option value="大庆市">大庆市</option><option value="鹤岗市">鹤岗市</option><option value="伊春市">伊春市</option><option value="佳木斯市">佳木斯市</option><option value="双鸭山市">双鸭山市</option><option value="鸡西市">鸡西市</option><option value="牡丹江市">牡丹江市</option><option value="绥化市">绥化市</option><option value="大兴安岭地区">大兴安岭地区</option></select>
+
+                <!--县区选择-->
+                <select id="country" onchange="selecCountry(this)">
+                    <option value="">=请选择县区=</option>
+                <option value="兴山区">兴山区</option><option value="向阳区">向阳区</option><option value="工农区">工农区</option><option value="南山区">南山区</option><option value="兴安区">兴安区</option><option value="东山区">东山区</option><option value="萝北县">萝北县</option><option value="凤翔镇">凤翔镇</option><option value="绥滨县">绥滨县</option><option value="绥滨镇">绥滨镇</option></select>
+                <button type="button" class="btn met1" onclick="showAddr()">确定</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>下拉选择框实现省市区（县）三级联动以及获得地区行政编码</legend>
+            <form action="https://visugar.github.io/FrontEnd-examples/01%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8/index.html#">
+                <label for="addr-show-number">您选择的是：
+                    <input type="text" value="" id="addr-show-number">
+                </label>
+                <br>
+
+                <!--省份选择-->
+                <select id="prov-number" onchange="showCity04(this)">
+                    <option value="">=请选择省份=</option>
+                <option value="上海市">上海市</option><option value="云南省">云南省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="北京市">北京市</option><option value="台湾省">台湾省</option><option value="吉林省">吉林省</option><option value="四川省">四川省</option><option value="天津市">天津市</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="安徽省">安徽省</option><option value="山东省">山东省</option><option value="山西省">山西省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="江苏省">江苏省</option><option value="江西省">江西省</option><option value="河北省">河北省</option><option value="河南省">河南省</option><option value="浙江省">浙江省</option><option value="海南省">海南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="澳门特别行政区">澳门特别行政区</option><option value="甘肃省">甘肃省</option><option value="福建省">福建省</option><option value="西藏自治区">西藏自治区</option><option value="贵州省">贵州省</option><option value="辽宁省">辽宁省</option><option value="重庆市">重庆市</option><option value="陕西省">陕西省</option><option value="青海省">青海省</option><option value="香港特别行政区">香港特别行政区</option><option value="黑龙江省">黑龙江省</option></select>
+
+                <!--城市选择-->
+                <select id="city-number" onchange="showCountry04(this)">
+                    <option value="">=请选择城市=</option>
+                </select>
+
+                <!--县区选择-->
+                <select id="country-number" onchange="selecCountry04(this)">
+                    <option value="">=请选择县区=</option>
+                </select>
+                <button type="button" class="btn met04" onclick="showAddr04()" disabled="">确定</button>
+            </form>
+        </fieldset>
+    </div>
+    <!--**********************************华丽丽*************************************-->
+
+    <div>
+        <fieldset>
+            <legend>方法二：按级选中省市县/区</legend>
+            <label for="addr-show02">您选择的是：
+                <input type="text" id="addr-show02">
+            </label>
+            <div id="addr-choice">
+                <ul id="title-wrap">
+                    <li value="0" class="">省份</li>
+                    <li value="1" class="">城市</li>
+                    <li value="2" class="titleSel">县区</li>
+                </ul>
+                <div id="show-panel">
+                    <ul id="addr-wrap">
+                        <li>船营区</li>
+                        <li>龙潭区</li>
+                        <li>昌邑区</li>
+                        <li>丰满区</li>
+                        <li style="">磐石市</li>
+                        <li>蛟河市</li>
+                        <li>桦甸市</li>
+                        <li>舒兰市</li>
+                        <li>永吉县</li>
+                        <li>口前镇</li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn met2">确定</button>
+        </fieldset>
+    </div>
+    <!--**********************************华丽丽*************************************-->
+    <div>
+        <fieldset>
+            <legend>方法三：按字母顺序选中城市</legend>
+            <label for="addr-show03">您选择的是：
+                <input type="text" id="addr-show03">
+            </label>
+            <div id="data-wrap">
+                <ul id="data-order">
+                    <li value="0" class="cityOn">热门</li>
+                    <li value="1">ABCD</li>
+                    <li value="2">EFGH</li>
+                    <li value="3">JKLM</li>
+                    <li value="4">NPQR</li>
+                    <li value="5">STWX</li>
+                    <li value="6">YZ</li>
+                </ul>
+                <div id="data-show">
+                    <dl><dt>hot</dt>
+                        <dd><a>北京</a><a>上海</a><a>广州</a><a>深圳</a><a>杭州</a><a>南京</a><a>成都</a><a>重庆</a><a>武汉</a><a>长沙</a><a>昆明</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <script src="./城市选择的三种实现_files/city.js"></script>
+    <script src="./城市选择的三种实现_files/city02.js"></script>
+    <script src="./城市选择的三种实现_files/city03.js"></script>
+    <script src="./城市选择的三种实现_files/method01.js"></script>
+    <script src="./城市选择的三种实现_files/method02.js"></script>
+    <script src="./城市选择的三种实现_files/method03.js"></script>
+    <script src="./城市选择的三种实现_files/method04.js"></script>
+
+
+</body>
+
+</html>
