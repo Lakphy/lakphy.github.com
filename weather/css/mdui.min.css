@@ -12956,7 +12956,8 @@ body.mdui-loaded .mdui-drawer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
     border-radius: 16px;
     -webkit-transition: -webkit-box-shadow .25s cubic-bezier(.4, 0, .2, 1);
     transition: -webkit-box-shadow .25s cubic-bezier(.4, 0, .2, 1);
