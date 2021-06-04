@@ -293,7 +293,7 @@
     <script>
         function skill() {
             var inst = new mdui.Dialog('#skillShower');
-            inst.open();
+            // inst.open();
         }
     </script>
 
@@ -306,10 +306,12 @@
         <img src="bg_min.webp" class="bg" id="bg_min" />
     </div>
     <noscript>
-		<div style="box-shadow:0px 0px 100px #000000;z-index:999;padding:10px;color:white;font-size:20px;background-color:red;position: fixed;height:auto;width:100%">
-			为了保证您的使用体验，本站必须使用JavaScript，我们不会盗取您的隐私，不会浪费CPU资源，也不会浪费内存。请您打开浏览器的JavaScript以获得更好的服务，如果您无法启用JavaScript，请前往<a href="https://www.google.cn/chrome/">chrome官网</a>下载chrome浏览器打开本站
-		</div>
-	</noscript>
+        <div
+            style="box-shadow:0px 0px 100px #000000;z-index:999;padding:10px;color:white;font-size:20px;background-color:red;position: fixed;height:auto;width:100%">
+            为了保证您的使用体验，本站必须使用JavaScript，我们不会盗取您的隐私，不会浪费CPU资源，也不会浪费内存。请您打开浏览器的JavaScript以获得更好的服务，如果您无法启用JavaScript，请前往<a
+                href="https://www.google.cn/chrome/">chrome官网</a>下载chrome浏览器打开本站
+        </div>
+    </noscript>
     <div class="mdui-container" style="text-align:center;">
         <div style="height:50px"></div>
         <div class="mdui-row" style="text-align:center;">
@@ -335,14 +337,17 @@
                                 <a class="tagc5" onclick="mdui.snackbar({message: '动态规划瞎爆搜，数论只会GCD（拓展欧几里得,非政隐）',buttonText: '了解水平',onButtonClick: function(){skill()}});">NOIp退役选手</a>
 
                                 <a class="tagc2" onclick="mdui.snackbar({message: '人生苦短,我用Python',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Python<a>
-									
-								<a class="tagc4" onclick="mdui.snackbar({message: 'Talk is cheap,show me your code!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});" >Linux</a>
 
-                                <a class="tagc1" onclick="mdui.snackbar({message: '我知道HTML不是编程语言，，，',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">HTML 5</a>
+                                        <a class="tagc4"
+                                            onclick="mdui.snackbar({message: 'Talk is cheap,show me your code!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Linux</a>
 
-                                <a class="tagc2" onclick="mdui.snackbar({message: '听说这个能替代js？反正我不会',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">CSS 3</a>
+                                <a class="tagc1" onclick="mdui.snackbar({message: '我知道HTML不是编程语言，，，',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">HTML
+                                            5</a>
 
-                                <a class="tagc5" onclick="mdui.snackbar({message: 'js真tm万能，啥也能干',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Node.js</a>
+                                <a class="tagc2" onclick="mdui.snackbar({message: '听说这个能替代js？反正我不会',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">CSS
+                                            3</a>
+
+                                <a class="tagc5" onclick="mdui.snackbar({message: '请问您说的这个东西叫网页吗',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">微信小程序</a>
 
                                 <a class="tagc2" onclick="mdui.snackbar({message: '自动化你的手机，犹如开挂',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Auto.js</a>
 
@@ -352,15 +357,15 @@
 
                                 <a class="tagc2" onclick="mdui.snackbar({message: 'Where there is a shell, there is the world!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Shell</a>
 
-                                <a class="tagc1" onclick="mdui.snackbar({message: '用户体验高于一切！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">交互设计</a>
+                                <a class="tagc1" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">树莓派</a>
 
-                                <a class="tagc2" onclick="mdui.snackbar({message: '拟物是什么玩意，平面才是主流！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">平面设计</a>
+                                <a class="tagc2" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">React</a>
 
-                                <a class="tagc5" onclick="mdui.snackbar({message: 'PHP是世界上最好的语言！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">PHP</a>
+                                <a class="tagc5" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Vue.js</a>
 
-                                <a class="tagc4" onclick="mdui.snackbar({message: '来喝杯咖啡吧',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Java</a>
+                                <a class="tagc4" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">TypeScript</a>
 
-                                <a class="tagc5" onclick="mdui.snackbar({message: 'User experience is above all else！',buttonText: 'Learn about',onButtonClick: function(){skill()}});">Designer</a>
+                                <a class="tagc4" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Tensorflow</a>
 
                                 <a class="tagc3" onclick="mdui.snackbar({message: '“这个特性真的真的很难实现啊”',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Programmer</a>
                             </div>
@@ -371,16 +376,21 @@
                         </script>
                         <br><br>
                         <div>
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-red-600" mdui-dialog="{target: '#exampleDialog'}"><i class="fa fa-envelope" style="position:relative;left:0px;top:3px"></i></a>
+                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-red-600" mdui-dialog="{target: '#exampleDialog'}"><i class="fa fa-envelope"
+                                    style="position:relative;left:0px;top:3px"></i></a>
 
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://t.me/lakphy"><i class="fa fa-paper-plane" style="position:relative;left:-2px;top:3px"></i></a>
+                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://t.me/lakphy"><i class="fa fa-paper-plane"
+                                    style="position:relative;left:-2px;top:3px"></i></a>
 
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-black" href="https://github.com/lakphy"><i class="fa fa-github" style="position:relative;left:0.5px;top:4px"></i></a>
+                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-black" href="https://github.com/lakphy"><i class="fa fa-github"
+                                    style="position:relative;left:0.5px;top:4px"></i></a>
 
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://twitter.com/lakphy?s=09"><i class="fa fa-twitter" style="position:relative;left:0.5px;top:4px"></i></a>
+                            <!-- <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://twitter.com/lakphy?s=09"><i class="fa fa-twitter"
+                                    style="position:relative;left:0.5px;top:4px"></i></a> -->
                         </div>
                         <br>
-                        <a class="mdui-btn mdui-btn-raised mdui-ripple blog" href="blog/index.html" style="border-radius:20px">Lakphy's Blog <i class="mdui-icon material-icons">&#xe5c8;</i></a>
+                        <a class="mdui-btn mdui-btn-raised mdui-ripple blog" href="blog/index.html" style="border-radius:20px">Lakphy's Blog <i
+                                class="mdui-icon material-icons">&#xe5c8;</i></a>
                         <br>
                         <div class="mdui-collapse" mdui-collapse style="height:auto;width:100%;">
                             <div class="mdui-collapse-item" style="transform: translate(0px,8px);-ms-transform: translate(0px,8px);-webkit-transform: translate(0px,8px);/* Safari and Chrome */">
@@ -393,7 +403,8 @@
                             </div>
                         </div>
                         <br>
-                        <div class="mdui-typo-caption-opacity">by Lakphy<br>first edited: 2019.4.16<br>last edited: 2021.1.19</div>
+                        <div class="mdui-typo-caption-opacity">by Lakphy<br>first edited: 2019.4.16<br>last edited: 2021.1.19
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -404,7 +415,8 @@
                             <div class="mdui-list-item-avatar"><img class="roll" src="res/logo.webp" /></div>
                             <div class="mdui-list-item-content">
                                 <div class="mdui-list-item-title">SourLib</div>
-                                <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text">优酸乳味的资源库</span>--the best resource library</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text">优酸乳味的资源库</span>--the best resource library
+                                </div>
                             </div>
                         </li>
                     </a>
@@ -580,7 +592,11 @@
             ]
             inserts = "<br>Lakphy's Friends<br>";
             for (i = 0; i < names.length; i++) {
-                repeatBody = "<a href='" + links[i] + "' style=\"color: black\" class=\"mdui-text-color-black\"><li class=\"mdui-list-item mdui-ripple\" style=\"text-align: left\"><div class=\"mdui-list-item-avatar\"><img class=\"roll\" src=\"" + avas[i] + "\" /></div><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item-title\">" + names[i] + "</div><div class=\"mdui-list-item-text mdui-list-item-one-line\">" + introductions[i] + "</div></div></li></a>";
+                repeatBody = "<a href='" + links[i] +
+                    "' style=\"color: black\" class=\"mdui-text-color-black\"><li class=\"mdui-list-item mdui-ripple\" style=\"text-align: left\"><div class=\"mdui-list-item-avatar\"><img class=\"roll\" src=\"" +
+                    avas[i] + "\" /></div><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item-title\">" +
+                    names[i] + "</div><div class=\"mdui-list-item-text mdui-list-item-one-line\">" + introductions[i] +
+                    "</div></div></li></a>";
                 inserts += repeatBody;
             }
             document.getElementById("friends").innerHTML = inserts;
@@ -590,7 +606,8 @@
         //window.setTimeout(insertFunc, 1000);
     </script>
     <script>
-        document.getElementById("bg_box").innerHTML = "<img src=\"bg_min.webp\" class=\"bg\" id=\"bg_min\" /><img src=\"bg.webp\" class=\"show_img\" id=\"bg\" />";
+        document.getElementById("bg_box").innerHTML =
+            "<img src=\"bg_min.webp\" class=\"bg\" id=\"bg_min\" /><img src=\"bg.webp\" class=\"show_img\" id=\"bg\" />";
 
         var show_img = document.querySelector('.show_img');
         var show_img = document.getElementsByClassName('show_img')[0];
