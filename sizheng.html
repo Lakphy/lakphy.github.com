@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Lakphy</title>
+    <title>懂的都懂搜题工具</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="auther" content="Lakphy">
@@ -86,7 +86,7 @@
             </div>
         </form>
         <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-shadow-1" style="float: left;" onclick="addSpace()">加括号</button>
-        <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-pink" style="float: right;" onclick="typeIn(event)">搜索</button>
+        <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-pink mdui-shadow-1" style="float: right;" onclick="typeIn(event)">搜索</button>
         <br>
         <br>
         <br>
@@ -149,6 +149,11 @@
         }
 
         function searchRes(key, course) {
+            if (key == "" || key == undefined) {
+                document.getElementById("result").innerHTML =
+                    "<br><div>开发不易，请您尽已所能为我捐赠. </div><br><img src=\"alipay.jpg\" style=\"width:99%\" class=\"mdui-img-rounded\">";
+                return;
+            }
             let res = [];
             searchTarget = data[course];
             for (let i = 0; i < searchTarget["chapter"].length; i++) {
@@ -210,7 +215,6 @@
         function typeIn(e) {
             let val = document.getElementById("searchInput").value;
             console.log(val);
-            if (val == "" || val == undefined) return;
             searchRes(val, document.getElementById("searchBoard").group1.value);
         }
     </script>
