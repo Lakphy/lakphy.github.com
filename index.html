@@ -293,7 +293,7 @@
     <script>
         function skill() {
             var inst = new mdui.Dialog('#skillShower');
-            // inst.open();
+            inst.open();
         }
     </script>
 
@@ -332,7 +332,7 @@
 
                                 <a class="tagc4" onclick="mdui.snackbar({message: 'js是万能的！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">JavaScript</a>
 
-                                <a class="tagc3" onclick="mdui.snackbar({message: 'C++性能即是生命！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">C++</a>
+                                <a class="tagc3" onclick="mdui.snackbar({message: '性能即是生命！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">C/C++</a>
 
                                 <a class="tagc5" onclick="mdui.snackbar({message: '动态规划瞎爆搜，数论只会GCD（拓展欧几里得,非政隐）',buttonText: '了解水平',onButtonClick: function(){skill()}});">NOIp退役选手</a>
 
@@ -347,25 +347,26 @@
                                 <a class="tagc2" onclick="mdui.snackbar({message: '听说这个能替代js？反正我不会',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">CSS
                                             3</a>
 
-                                <a class="tagc5" onclick="mdui.snackbar({message: '请问您说的这个东西叫网页吗',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">微信小程序</a>
+                                <a class="tagc5" onclick="mdui.snackbar({message: '请问您说的这个东西叫网页吗',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">MiniProgram</a>
 
                                 <a class="tagc2" onclick="mdui.snackbar({message: '自动化你的手机，犹如开挂',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Auto.js</a>
 
-                                <a class="tagc2" onclick="mdui.snackbar({message: '物联网nb！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Arduino</a>
+                                <a class="tagc2" onclick="mdui.snackbar({message: '物联网',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Arduino</a>
 
-                                <a class="tagc3" onclick="mdui.snackbar({message: '物联网nb！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">单片机</a>
+                                <a class="tagc3" onclick="mdui.snackbar({message: '物联网！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">单片机</a>
 
-                                <a class="tagc2" onclick="mdui.snackbar({message: 'Where there is a shell, there is the world!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Shell</a>
+                                <a class="tagc2" onclick="mdui.snackbar({message: 'Where there is a shell, there is the world!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">shell</a>
 
-                                <a class="tagc1" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">树莓派</a>
+                                <a class="tagc1" onclick="mdui.snackbar({message: '当服务器玩',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">树莓派</a>
 
-                                <a class="tagc2" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">React</a>
+                                <a class="tagc2" onclick="mdui.snackbar({message: 'React真香！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">React</a>
 
-                                <a class="tagc5" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Vue.js</a>
+                                <a class="tagc5" onclick="mdui.snackbar({message: '什么玩意？我选React！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Vue.js</a>
 
-                                <a class="tagc4" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">TypeScript</a>
+                                <a class="tagc4" onclick="mdui.snackbar({message: '类型限定，好！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">TypeScript</a>
 
-                                <a class="tagc4" onclick="mdui.snackbar({message: '',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Tensorflow</a>
+                                <a class="tagc4" onclick="mdui.snackbar({message: '万物皆可炼丹',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Tensorflow</a>
+                                <a class="tagc4" onclick="mdui.snackbar({message: '函数式真香',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Lambda</a>
 
                                 <a class="tagc3" onclick="mdui.snackbar({message: '“这个特性真的真的很难实现啊”',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Programmer</a>
                             </div>
@@ -463,61 +464,59 @@
         </div>
     </div>
     <div class="mdui-dialog" id="skillShower">
-        <div class="mdui-dialog-title">我的技术水平（按水平大小排序）</div>
+        <div class="mdui-dialog-title">我的技术栈</div>
         <div class="mdui-dialog-content mdui-table-fluid mdui-shadow-0">
             <table class="mdui-table mdui-table-hoverable mdui-shadow-0">
                 <thead>
                     <tr>
-                        <th>排名</th>
                         <th>技术</th>
-                        <th>水平</th>
+                        <th>初学时间</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>Python</td>
-                        <td>我学的最好的语言，能灵活运用，透彻理解面向对象编程</td>
+                        <td>HTML & CSS</td>
+                        <td>2016_age.14</td>
                     </tr>
                     <tr>
-                        <td>2</td>
                         <td>JavaScript</td>
-                        <td>主要经常写网页熟能生巧么</td>
+                        <td>2017_age.15</td>
                     </tr>
                     <tr>
-                        <td>3</td>
+                        <td>C/C++</td>
+                        <td>2018_age.15</td>
+                    </tr>
+                    <tr>
                         <td>算法竞赛（OI）</td>
-                        <td>高二时候打OI，对各种算法都比较了解</td>
+                        <td>2018_age.15</td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>C</td>
-                        <td>工科大学生基本技能么</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>C++</td>
-                        <td>我NOIp选的是C++组，顺势学了C++</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Arduino</td>
-                        <td>这东西不难吧，一天就通了</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>HTML5</td>
-                        <td>这算编程语言么，写出来是怕有人以为我连这都不会</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>CSS3</td>
-                        <td>同上。。。</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
                         <td>Linux</td>
-                        <td>没深入学习，仅基本满足使用</td>
+                        <td>2018_age.16</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>2019_age.16</td>
+                    </tr>
+                    <tr>
+                        <td>Arduino/STM32等电子小技术</td>
+                        <td>2020_age.17</td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript</td>
+                        <td>2021_age.18</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>2021_age.18</td>
+                    </tr>
+                    <tr>
+                        <td>Taro</td>
+                        <td>2021_age.18</td>
+                    </tr>
+                    <tr>
+                        <td>Antd</td>
+                        <td>2021_age.19</td>
                     </tr>
                 </tbody>
             </table>
@@ -550,9 +549,10 @@
                 "https://xjzsq.ren/",
                 "https://www.punkginger.top",
                 "https://fengye404.github.io/",
-		"https://sun482.github.io",
-		"https://yiling.xyz",
-		"https://lenjon.top"
+                "https://sun482.github.io",
+                "https://yiling.xyz",
+                "https://lenjon.top",
+                "https://whz11.github.io"
             ]
             names = [
                 "Jimmy T",
@@ -566,9 +566,10 @@
                 "青い記憶",
                 "punkginger",
                 "風楪fy",
-		"SunBoy482",
-		"Zero Huang",
-		"Len"
+                "SunBoy482",
+                "Zero Huang",
+                "Len",
+                "whz11"
             ]
             avas = [
                 "./friends/JimmyT.webp",
@@ -582,9 +583,10 @@
                 "https://xjzsq.gitee.io/blog/xjzsq.png",
                 "./spike.jpg",
                 "./fengye404.jpg",
-		"./sunboy482.jpg",
-		"https://yiling.xyz/images/tree_small.png",
-		"https://lenjon.top/images/avatar.gif"
+                "./sunboy482.jpg",
+                "https://yiling.xyz/images/tree_small.png",
+                "https://lenjon.top/images/avatar.gif",
+                "https://whz11.github.io/images/avatar1.png"
             ]
             introductions = [
                 "肥宅",
@@ -598,9 +600,10 @@
                 "珂学家的代码日常",
                 "后端开发",
                 "正在学java",
-		"编曲、前端、吉他、头发护理专家、养生大师",
-		"Life is like a see of bitterness.",
-		"头发收集屋"
+                "编曲、前端、吉他、头发护理专家、养生大师",
+                "Life is like a see of bitterness.",
+                "头发收集屋",
+                "后端开发"
             ]
             inserts = "<br>Lakphy's Friends<br>";
             for (i = 0; i < names.length; i++) {
