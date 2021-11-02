@@ -82,13 +82,16 @@
                 <input class="mdui-textfield-input" type="text" oninput="typeIn(event)" id="searchInput" autocomplete="off" />
             </div>
         </form>
-        <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-shadow-1" style="float: left;" onclick="addSpace()">加括号</button>
+        <!-- <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-shadow-1" style="float: left;" onclick="addSpace()">加括号</button> -->
         <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-pink mdui-shadow-1" style="float: right;" onclick="typeIn(event)">搜索</button>
         <br>
         <br>
         <br>
         <div id="result">
 
+        </div>
+        <div style="width: 100%; height: 200px;text-align: center;line-height: 200px;display: none;" id="loading">
+            <div class="mdui-spinner mdui-spinner-colorful"></div>
         </div>
 
     </div>
@@ -97,7 +100,12 @@
     </script>
     <script>
         var data;
+        var debounceStamp = null;
+        var courseChecked = localStorage.getItem("checkedCourse");
+        document.getElementById("searchBoard").group1.value = courseChecked;
+
         window.onload = function() {
+
             var url = "./test.json" /*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
             var request = new XMLHttpRequest();
             request.open("get", url); /*设置请求方法与路径*/
@@ -118,8 +126,8 @@
                         "<i class=\"mdui-icon material-icons\" style=\"margin: 50% auto;width: 20vw;height: 20vw;\">&#xe000;</i><br><div style=\"width: 100%;text-align: center;font-size: 5vw;\">加载失败，请重新刷新网页</div>"
                 }
             }
+            document.getElementById("loading").style.display = "none"
         }
-        var courseChecked;
 
         function addSpace() {
             document.getElementById("searchInput").value = document.getElementById("searchInput").value + "（）"
@@ -127,6 +135,7 @@
 
         function ratioCheck(e) {
             console.log(document.getElementById("searchBoard").group1.value);
+            localStorage.setItem("checkedCourse", document.getElementById("searchBoard").group1.value)
             courseChecked = document.getElementById("searchBoard").group1.value;
         }
 
@@ -178,7 +187,7 @@
                     // "                        <li class=\"mdui-list-item mdui-ripple\">C, Send mail</li>\n" +
                     // "                        <li class=\"mdui-list-item mdui-ripple\">D, Send mail</li>\n" +
                     generateOptions(res[i]["options"], res[i]["questionTypeName"]) +
-                    "                        <li class=\"mdui-list-item mdui-ripple\">\n" +
+                    "                        <li class=\"mdui-list-item mdui-ripple mdui-color-red\">\n" +
                     "                            <i class=\"mdui-list-item-icon mdui-icon material-icons\">&#xe0da;</i>\n" +
                     "                            <div class=\"mdui-list-item-content\">正确答案：" + res[i]["answer"] +
                     "</div>\n" +
@@ -208,13 +217,21 @@
                 insert += model;
             }
             document.getElementById("result").innerHTML = insert;
+
+            document.getElementById("loading").style.display = "none"
         }
 
         function typeIn(e) {
-            let val = document.getElementById("searchInput").value;
-            console.log(val);
-            searchRes(val, document.getElementById("searchBoard").group1.value);
+            document.getElementById("loading").style.display = "block"
+            if (debounceStamp) clearTimeout(debounceStamp)
+            debounceStamp = setTimeout(() => {
+                debounceStamp = null;
+                let val = document.getElementById("searchInput").value;
+                console.log(val);
+                searchRes(val, document.getElementById("searchBoard").group1.value);
+            }, 400)
         }
+        document.getElementById("loading").style.display = "none"
     </script>
 </body>
 
