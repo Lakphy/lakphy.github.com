@@ -7963,7 +7963,7 @@ var WebScheme = {
       "FullscreenButtonVisible",
       !0
     );
-    bookConfig.hideMiniFullscreen = getConfigValue("hideMiniFullscreen", !1);
+    bookConfig.hideMiniFullscreen = getConfigValue("hideMiniFullscreen", !0);
     bookConfig.leastSearchChar = getConfigValue("leastSearchChar", 0);
     bookConfig.PrintButtonVisible = getConfigValue("PrintButtonVisible", !1);
     bookConfig.printWatermarkFile = getConfigValue("printWatermarkFile", "");
