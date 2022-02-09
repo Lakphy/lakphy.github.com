@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="monitor-signature" content="monitor:player:html5">
+    <meta property="og:title" content="DOLCE & GABBANA" />
+    <meta property="og:description" content="DOLCE & GABBANA" />
+    <meta name="Description" content="">
+    <title>电子相册</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="style/scrollbar.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/player.css" />
+    <link rel="stylesheet" href="style/phoneTemplate.css" />
+    <script type="text/javascript" src="javascript/jquery.reveal.js"></script>
+    <script src="javascript/jquery-1.9.1.min.js"></script>
+
+    <script type="text/javascript">
+        function clickHandler() {
+            $("#list").show();
+            $("#add").hide();
+            $("#books").show();
+        }
+
+        function closes() {
+            $("#list").hide();
+            $("#books").hide();
+        }
+
+        function clickadd() {
+            $("#list").show();
+            $("#books").hide();
+            $("#add").show();
+        }
+
+        function closeadd() {
+            $("#list").hide();
+            $("#add").hide();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="list" style=" z-index:100; display:none; position:relative; width:100%; height:100%; background:rgba(0,0,0,0.6); color:#FFFFFF;">
+        <div id="list_nei">
+            <div id="book">
+                <!--电子目录-->
+                <div id="books" style="display:none;">
+                    <div id="book_top">华东游乐产品电子画册
+                        <div id="book-line"></div>
+                    </div>
+                    <div id="book_list">
+                        <li><a href="?id=1">户外滑梯系列</a></li>
+                        <li><a href="?id=3">万能健身系列</a></li>
+                        <li><a href="?id=2">网绳攀爬系列</a></li>
+                        <li><a href="?id=4">游乐设备系列</a></li>
+                        <li><a href="?id=5">体育设备系列</a></li>
+                        <li><a href="?id=6">构造积木系列</a></li>
+                        <li><a href="?id=7">木制乐园系列</a></li>
+                        <li><a href="?id=8">玻璃钢系列</a></li>
+                        <li><a href="?id=9">小型全塑料系列</a></li>
+                        <li><a href="?id=17">华东软体系列</a></li>
+                        <li><a href="?id=10">健身器秋千系列</a></li>
+                        <li><a href="?id=11">幼儿园设备系列</a></li>
+                        <li><a href="?id=12">淘气堡蹦床系列</a></li>
+                        <li><a href="?id=13">小区辅助设备</a></li>
+                        <li><a href="?id=15">地毯草坪备系列</a></li>
+                        <li><a href="?id=16">大熊猫主题乐园</a></li>
+                        <li><a href="?id=14">景观主题系列</a></li>
+                    </div>
+                    <div id="book_loop">
+                        <div id="book_btn" onClick="closes()">关闭目录</div>
+                    </div>
+                </div>
+                <!--电子目录结束-->
+
+                <!--联系我们-->
+                <div id="add" style="display:none;">
+                    <div id="book_top">联系我们
+                        <div id="book-line"></div>
+                    </div>
+                    <div id="book_list">
+                        <ul id="name">网络科技公司</ul>
+                        <ul id="tel"><a href="tel:0577-67417777">0577-67417777</a></ul>
+                        <ul id="email">15167781266@163.com</ul>
+                        <ul id="web"><a href="http://www.moyublog.com/">http://www.moyublog.com/</a></ul>
+                        <ul id="adds">17素材网</ul>
+                        <div id="code"><img src="style/icon/code.png"><br>官方微信公众号</div>
+                    </div>
+                    <div id="book_loop">
+                        <div id="book_btn" onClick="closes()">关闭窗口</div>
+                    </div>
+                </div>
+            </div>
+            <!--联系我们结束-->
+            <!--<div id="list_top"><p>产品分类目录</p><span><img src="style/icon/close.png" class="closes" onClick="closes()" width="30px" height="30px"></span></div>-->
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+    <script src="javascript/config.js"></script>
+    <script src="javascript/LoadingJS.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/editor.js"></script>
+    <script src="javascript/icon.js"></script>
+    <script src="files/search/book_config.js"></script>
+    <link rel="stylesheet" href="style/template.css" />
+    <script type="text/javascript">
+        var sendvisitinfo = function(type, page) {};
+    </script>
+
+    <script src="javascript/MovingBackgrounds.min.js"></script>
+    <link rel="stylesheet" href="style/MovingBackgrounds.min.css" />
+    <script src="javascript/FlipBookPlugins.min.js"></script>
+    <link rel="stylesheet" href="style/FlipBookPlugins.min.css" />
+    <script src="javascript/flipHtml5.hiSlider2.min.js"></script>
+    <link rel="stylesheet" href="style/hiSlider2.min.css" />
+    <script src="slide_javascript/slideJS.js"></script>
+</body>
+
+</html>
