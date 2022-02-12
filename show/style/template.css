@@ -1760,7 +1760,7 @@ transform:rotate(360deg);
     bottom: 0;
     left: 0;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.7) !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
 .phoneBottomBar .button {
