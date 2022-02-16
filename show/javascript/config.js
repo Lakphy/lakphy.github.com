@@ -170,9 +170,9 @@ var bookConfig = {
   AboutAuthor: "Mobissue",
   SlideshowAutoPlay: false,
   SlideshowPlayInterval: 5,
-  totalPageCount: 14,
-  largePageWidth: 450,
-  largePageHeight: 800,
+  totalPageCount: 8,
+  largePageWidth: 750,
+  largePageHeight: 1624,
   normalPath: "files/page/",
   largePath: "files/large/",
   thumbPath: "files/thumb/",
@@ -298,19 +298,44 @@ var flipByAudio = { audioType: 0, audioFile: "", showPlayer: false, items: [] };
 var phoneNumber = [];
 var bookPlugin = null;
 var fliphtml5_pages = [
-  { l: "files/page/p1.jpg", n: "files/page/p1.jpg", t: "files/page/p1.jpg" },
-  { l: "files/page/p3.jpg", n: "files/page/p3.jpg", t: "files/page/p3.jpg" },
-  { l: "files/page/p4.jpg", n: "files/page/p4.jpg", t: "files/page/p4.jpg" },
-  { l: "files/page/p5.jpg", n: "files/page/p5.jpg", t: "files/page/p5.jpg" },
-  { l: "files/page/p6.jpg", n: "files/page/p6.jpg", t: "files/page/p6.jpg" },
-  { l: "files/page/p8.png", n: "files/page/p8.png", t: "files/page/p8.png" },
-  { l: "files/page/p9.png", n: "files/page/p9.png", t: "files/page/p9.png" },
-  { l: "files/page/p11.jpg", n: "files/page/p11.jpg", t: "files/page/p11.jpg" },
-  { l: "files/page/p12.jpg", n: "files/page/p12.jpg", t: "files/page/p12.jpg" },
-  { l: "files/page/p14.png", n: "files/page/p14.png", t: "files/page/p14.png" },
-  { l: "files/page/p15.png", n: "files/page/p15.png", t: "files/page/p15.png" },
-  { l: "files/page/p16.png", n: "files/page/p16.png", t: "files/page/p16.png" },
-  { l: "files/page/p17.png", n: "files/page/p17.png", t: "files/page/p17.png" },
-  { l: "files/page/p18.png", n: "files/page/p18.png", t: "files/page/p18.png" },
-  { l: "files/page/p19.jpg", n: "files/page/p19.jpg", t: "files/page/p19.jpg" },
+  {
+    l: "files/page/page0.png",
+    n: "files/page/page0.png",
+    t: "files/page/page0.png",
+  },
+  {
+    l: "files/page/page1.png",
+    n: "files/page/page1.png",
+    t: "files/page/page1.png",
+  },
+  {
+    l: "files/page/page2.png",
+    n: "files/page/page2.png",
+    t: "files/page/page2.png",
+  },
+  {
+    l: "files/page/page3.png",
+    n: "files/page/page3.png",
+    t: "files/page/page3.png",
+  },
+  {
+    l: "files/page/page4.png",
+    n: "files/page/page4.png",
+    t: "files/page/page4.png",
+  },
+  {
+    l: "files/page/page5.png",
+    n: "files/page/page5.png",
+    t: "files/page/page5.png",
+  },
+  {
+    l: "files/page/page6.png",
+    n: "files/page/page6.png",
+    t: "files/page/page6.png",
+  },
+  {
+    l: "files/page/page7.png",
+    n: "files/page/page7.png",
+    t: "files/page/page7.png",
+  },
 ];
