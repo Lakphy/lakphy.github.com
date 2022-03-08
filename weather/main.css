@@ -447,6 +447,18 @@ body {
     box-sizing: border-box;
 }
 
+#daily-weather-more-pc {
+    width: 90%;
+    font-size: 15px;
+    text-align: center;
+    color: #666;
+    height: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+}
+
 @media (min-width: 1000px) {
     #daily-weather {
         width: calc(35% - 15px);
@@ -461,6 +473,9 @@ body {
     }
     #daily-weather-more {
         display: none;
+    }
+    #daily-weather-more-pc {
+        display: block;
     }
 }
 
@@ -479,6 +494,10 @@ body {
     #daily-weather-more {
         display: none;
     }
+    #daily-weather-more-pc {
+        display: block;
+        bottom: 5px;
+    }
 }
 
 @media (max-width: 699.9px) {
@@ -496,6 +515,9 @@ body {
     }
     .daily-weather-container.more {
         max-height: 350px;
+    }
+    #daily-weather-more-pc {
+        display: none;
     }
 }
 

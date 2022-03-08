@@ -311,7 +311,8 @@ class dailyweatherObject extends Component {
       <div class="daily-weather-container">
       ${listItem}
       </div>
-      <div id="daily-weather-more">查看更多</div>
+      <div id="daily-weather-more">点击查看更多</div>
+      <div id="daily-weather-more-pc">滚动查看更多</div>
     `;
       document.getElementById("daily-weather-more").onclick = (e) => {
         const target = document.querySelectorAll(".daily-weather-container")[0];
@@ -471,6 +472,30 @@ class LocationObject {
     });
     window.dispatchEvent(event);
   };
+  // IP定位_ 还是有点偏差_ 弃用
+  getLocationIp = () => {
+    return new Promise(async (resolve) => {
+      console.log("尝试进行IP定位");
+      const ipdata = await Ip2Location();
+      let { rectangle } = ipdata;
+      rectangle = rectangle
+        .split(";")
+        .reduce((previousValue, currentValue) => {
+          return [...previousValue, ...currentValue.split(",")];
+        }, [])
+        .map((item, index) => {
+          return parseFloat(item);
+        });
+      this.location = {
+        type: "position",
+        latitude: (rectangle[1] + rectangle[3]) / 2,
+        longitude: (rectangle[0] + rectangle[2]) / 2,
+        locationID: null,
+      };
+      this.handleLocateSuccess(this);
+      resolve();
+    });
+  };
   // 高德地图定位_ 也就那样_ 比IP稍微准点
   amapLocation = () => {
     const map = new AMap.Map("amap-container", {
@@ -513,10 +538,11 @@ class LocationObject {
       this.handleLocateSuccess(this);
     };
     //解析定位错误信息
-    function onError(data) {
+    const onError = (data) => {
       console.log("定位失败");
       console.log("失败原因排查信息:" + data.message);
-    }
+      this.getLocationIp();
+    };
   };
   // 位置信息格式化为字符串
   locationString = () => {
@@ -594,29 +620,6 @@ class LocationObject {
       };
       console.log("尝试进行浏览器定位");
       navigator.geolocation.getCurrentPosition(locationDevice, locationIp);
-    });
-  };
-  // IP定位_ 还是有点偏差_ 弃用
-  getLocationIp = () => {
-    return new Promise(async (resolve) => {
-      console.log("尝试进行IP定位");
-      const ipdata = await Ip2Location();
-      let { rectangle } = ipdata;
-      rectangle = rectangle
-        .split(";")
-        .reduce((previousValue, currentValue) => {
-          return [...previousValue, ...currentValue.split(",")];
-        }, [])
-        .map((item, index) => {
-          return parseFloat(item);
-        });
-      this.location = {
-        type: "position",
-        latitude: (rectangle[1] + rectangle[3]) / 2,
-        longitude: (rectangle[0] + rectangle[2]) / 2,
-      };
-      //   console.log(rectangle);
-      resolve();
     });
   };
   // 获取天气_ 这部分内容计划解耦合到各个组件_ 已解耦_ 弃用
