@@ -170,7 +170,7 @@ var bookConfig = {
   AboutAuthor: "Mobissue",
   SlideshowAutoPlay: false,
   SlideshowPlayInterval: 5,
-  totalPageCount: 8,
+  totalPageCount: 9,
   largePageWidth: 750,
   largePageHeight: 1624,
   normalPath: "files/page/",
@@ -337,5 +337,10 @@ var fliphtml5_pages = [
     l: "files/page/page7.png",
     n: "files/page/page7.png",
     t: "files/page/page7.png",
+  },
+  {
+    l: "files/page/page8.png",
+    n: "files/page/page8.png",
+    t: "files/page/page8.png",
   },
 ];
