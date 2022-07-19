@@ -1,0 +1,939 @@
+<!DOCTYPE html><html lang="Chinese"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn1.lncld.net">
+	<link rel="preconnect" href="//unpkg.com">
+	<link rel="preconnect" href="//app-router.leancloud.cn">
+	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
+	<link rel="preconnect" href="//gravatar.loli.net">
+	<style>
+	.toc-child{
+	margin-left:20px
+	}
+	</style>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?adb566a88b1a652452c595c7a93fd3c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+	<title>C语言常见文件处理 | Lakphy's Blog</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="Lakphy">
+	<meta name="description" content="">
+
+	
+	<meta name="keywords" content="">
+	
+
+	
+	<link rel="shortcut icon" href="https://lakphy.gitee.io/logo.jpg">
+	<link rel="apple-touch-icon" href="https://lakphy.gitee.io/logo.jpg">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+
+	<meta property="og:site_name" content="Lakphy's Blog">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="C语言常见文件处理 | Lakphy's Blog">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2020/12/20/C%E8%AF%AD%E8%A8%80%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+
+	
+	<meta property="article:published_time" content="2020-12-20T12:12:00+08:00"> 
+	<meta property="article:author" content="Lakphy">
+	<meta property="article:published_first" content="Lakphy's Blog, /blog/2020/12/20/C%E8%AF%AD%E8%A8%80%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+	
+
+	
+	
+	
+<link rel="stylesheet" href="/blog/css/allinonecss.min.css">
+
+
+	
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-158678644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-158678644-1');
+	</script>
+	
+	
+	
+</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header post-site-header outer">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        <ul class="nav">
+            <li>
+                
+                
+                <a class="site-nav-logo" href="/blog/" title="Lakphy's Blog">
+                    <img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+                </a>
+                
+                
+            </li>
+            
+            
+            <li>
+                <a href="https://lakphy.github.io/blog/" title="blog">blog</a>
+            </li>
+            
+            <li>
+                <a href="https://lakphy.github.io" title="Lakphy">Lakphy</a>
+            </li>
+            
+            
+        </ul> 
+    </div>
+    
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="search-button">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/lakphy" target="_blank" rel="noopener">
+        <svg viewBox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"></path></svg>
+    </a>
+    
+    
+    
+    <a class="social-link" title="twitter" href="https://twitter.com/lakphy?s=09" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+
+    </a>
+    
+    
+    <a class="social-link" title="telegram" href="https://t.me/lakphy" target="_blank" rel="noopener">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M679.428571 746.857143l84-396q5.142857-25.142857-6-36t-29.428571-4L234.285714 501.142857q-16.571429 6.285714-22.571428 14.285714t-1.428572 15.142858 18.285715 11.142857l126.285714 39.428571 293.142857-184.571428q12-8 18.285714-3.428572 4 2.857143-2.285714 8.571429l-237.142857 214.285714-9.142857 130.285714q13.142857 0 25.714285-12.571428l61.714286-59.428572 128 94.285715q36.571429 20.571429 46.285714-21.714286z m344.571429-234.857143q0 104-40.571429 198.857143t-109.142857 163.428571-163.428571 109.142857-198.857143 40.571429-198.857143-40.571429-163.428571-109.142857-109.142857-163.428571T0 512t40.571429-198.857143 109.142857-163.428571T313.142857 40.571429 512 0t198.857143 40.571429 163.428571 109.142857 109.142857 163.428571 40.571429 198.857143z"></path></svg>
+    </a>
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<div id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <div class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2020-12-20T04:50:22.000Z">
+                    2020-12-20
+                </time>
+                
+                <span class="date-divider">/</span>
+                
+                
+            </div>
+            <h1 class="post-full-title">C语言常见文件处理</h1>
+        </header>
+        <div class="post-full no-image">
+            
+            <div class="post-full-content">
+                <article id="photoswipe" class="markdown-body">
+                    <p>每个编程语言学到文件操作、字符串操作、网络连接什么什么的就开始有各种各样的库函数需要记忆，有的比较常用还比较好记，有的遇到了却没记住，那就只能请教Google了。但考试时候不能Google，本篇旨在总结C语言中常见的文件处理操作，便于查阅和记忆。</p>
+<ul>
+<li><a href="#file%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B">FILE文件类型</a></li>
+<li><a href="#fopen-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6">fopen() 打开文件</a></li>
+<li><a href="#fclose-%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6">fclose() 关闭文件</a></li>
+<li><a href="#fputc-%E5%B0%86%E5%AD%97%E7%AC%A6%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6">fputc() 将字符写入文件</a></li>
+<li><a href="#fputs-%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6">fputs() 将字符串写入文件</a></li>
+<li><a href="#fprintf-%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%86%99%E5%85%A5">fprintf() 格式化写入</a></li>
+<li><a href="#fgetc-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6">fgetc() 从文件中读取字符</a></li>
+<li><a href="#fgets-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2">fgets() 从文件中读取字符串</a></li>
+<li><a href="#fscanf-%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%AF%BB%E5%8F%96">fscanf() 格式化读取</a></li>
+<li><a href="#fwrite-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%86%99%E5%85%A5">fwrite() 二进制写入</a></li>
+<li><a href="#fread-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AF%BB%E5%8F%96">fread() 二进制读取</a></li>
+<li><a href="#rewind-%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%87%E4%BB%B6%E5%A4%B4">rewind() 位置指针指向文件头</a></li>
+<li><a href="#fseek-%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88">fseek() 改变文件位置指针</a></li>
+<li><a href="#ftell-%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88%E7%9B%B8%E5%AF%B9%E4%BA%8E%E6%96%87%E4%BB%B6%E5%A4%B4%E7%9A%84%E4%BD%8D%E7%BD%AE">ftell() 获取文件位置指针相对于文件头的位置</a></li>
+<li><a href="#fflush-%E5%88%B7%E6%96%B0%E6%B5%81-stream-%E7%9A%84%E8%BE%93%E5%87%BA%E7%BC%93%E5%86%B2%E5%8C%BA">fflush() 刷新流 stream 的输出缓冲区</a></li>
+<li><a href="#feof-%E6%B5%8B%E8%AF%95%E7%BB%99%E5%AE%9A%E6%B5%81-stream-%E7%9A%84%E6%96%87%E4%BB%B6%E7%BB%93%E6%9D%9F%E6%A0%87%E8%AF%86%E7%AC%A6">feof() 测试给定流 stream 的文件结束标识符</a></li>
+<li><a href="#freopen">freopen()</a></li>
+<li><a href="#remove-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6">remove() 删除文件</a></li>
+<li><a href="#rename-%E9%87%8D%E5%91%BD%E5%90%8D%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6">rename() 重命名/移动文件</a></li>
+</ul>
+<h2 id="FILE文件类型"><a href="#FILE文件类型" class="headerlink" title="FILE文件类型"></a>FILE文件类型</h2><p>FILE类型是一个用来表示文件的结构体</p>
+<p>其在TC2.0编译器中的原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>  {</span></span><br><span class="line">        <span class="keyword">short</span>           level;          <span class="comment">/* fill/empty level of buffer */</span></span><br><span class="line">        <span class="keyword">unsigned</span>        flags;          <span class="comment">/* File status flags    */</span></span><br><span class="line">        <span class="keyword">char</span>            fd;             <span class="comment">/* File descriptor      */</span></span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">char</span>   hold;           <span class="comment">/* Ungetc char if no buffer */</span></span><br><span class="line">        <span class="keyword">short</span>           bsize;          <span class="comment">/* Buffer size          */</span></span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">char</span>   *buffer;        <span class="comment">/* Data transfer buffer */</span></span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">char</span>   *curp;          <span class="comment">/* Current active pointer */</span></span><br><span class="line">        <span class="keyword">unsigned</span>        istemp;         <span class="comment">/* Temporary file indicator */</span></span><br><span class="line">        <span class="keyword">short</span>           token;          <span class="comment">/* Used for validity checking */</span></span><br><span class="line">}       FILE;                           <span class="comment">/* This is the FILE object */</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其在VC6.0编译器中的原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> _<span class="title">iobuf</span> {</span></span><br><span class="line">　　　　<span class="keyword">char</span> *_ptr; <span class="comment">//文件输入的下一个位置</span></span><br><span class="line">　　　　<span class="keyword">int</span> _cnt; <span class="comment">//当前缓冲区的相对位置</span></span><br><span class="line">　　　　<span class="keyword">char</span> *_base; <span class="comment">//指基础位置(即是文件的起始位置)</span></span><br><span class="line">　　　　<span class="keyword">int</span> _flag; <span class="comment">//文件标志</span></span><br><span class="line">　　　　<span class="keyword">int</span> _file; <span class="comment">//文件的有效性验证</span></span><br><span class="line">　　　　<span class="keyword">int</span> _charbuf; <span class="comment">//检查缓冲区状况,如果无缓冲区则不读取</span></span><br><span class="line">　　　　<span class="keyword">int</span> _bufsiz; <span class="comment">//</span></span><br><span class="line">　　　　<span class="keyword">char</span> *_tmpfname; <span class="comment">//临时文件名</span></span><br><span class="line">        };</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">iobuf</span> <span class="title">FILE</span>;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>在日常使用中，FILE类型常以指针形式使用。</p>
+<h2 id="fopen-打开文件"><a href="#fopen-打开文件" class="headerlink" title="fopen() 打开文件"></a>fopen() 打开文件</h2><p>该函数用于打开一个文件，函数原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">FILE *<span class="title">fopen</span><span class="params">( <span class="keyword">const</span> <span class="keyword">char</span> * filename, <span class="keyword">const</span> <span class="keyword">char</span> * mode )</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接收两个字符串类型参数，函数将会打开一个文件，并将建立这个文件的FILE类型变量，并且返回一个指向该变量的FILE类型指针。</p>
+<p>其中，</p>
+<p><code>filename</code>表示文件地址，数据类型为字符串，允许使用相对地址或绝对地址。例如在Windows系统下<code>"D:\\data\\file.txt"</code>可以用来表示地址，在Linux系统下<code>"/mnt/test.txt"</code>可以用来表示地址；</p>
+<p><code>mode</code>表示访问模式，数据类型为字符串，它的值可以为下列几种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">模式</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">r</td>
+<td align="left">打开一个已有的文本文件，允许读取文件。</td>
+</tr>
+<tr>
+<td align="left">w</td>
+<td align="left">打开一个文本文件，允许写入文件。如果文件不存在，则会创建一个新文件。在这里，您的程序会从文件的开头写入内容。如果文件存在，则该会被截断为零长度，重新写入。</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">打开一个文本文件，以追加模式写入文件。如果文件不存在，则会创建一个新文件。在这里，您的程序会在已有的文件内容中追加内容。</td>
+</tr>
+<tr>
+<td align="left">r+</td>
+<td align="left">打开一个文本文件，允许读写文件。</td>
+</tr>
+<tr>
+<td align="left">w+</td>
+<td align="left">打开一个文本文件，允许读写文件。如果文件已存在，则文件会被截断为零长度，如果文件不存在，则会创建一个新文件。</td>
+</tr>
+<tr>
+<td align="left">a+</td>
+<td align="left">打开一个文本文件，允许读写文件。如果文件不存在，则会创建一个新文件。读取会从文件的开头开始，写入则只能是追加模式。</td>
+</tr>
+<tr>
+<td align="left">rb</td>
+<td align="left">打开一个已有的二进制文件，允许读取文件。</td>
+</tr>
+<tr>
+<td align="left">wb</td>
+<td align="left">打开一个二进制文件，允许写入文件。如果文件不存在，则会创建一个新文件。在这里，您的程序会从文件的开头写入内容。如果文件存在，则该会被截断为零长度，重新写入。</td>
+</tr>
+<tr>
+<td align="left">ab</td>
+<td align="left">打开一个二进制文件，以追加模式写入文件。如果文件不存在，则会创建一个新文件。在这里，您的程序会在已有的文件内容中追加内容。</td>
+</tr>
+<tr>
+<td align="left">rb+</td>
+<td align="left">打开一个二进制文件，允许读写文件。</td>
+</tr>
+<tr>
+<td align="left">wb+</td>
+<td align="left">打开一个二进制文件，允许读写文件。如果文件已存在，则文件会被截断为零长度，如果文件不存在，则会创建一个新文件。</td>
+</tr>
+<tr>
+<td align="left">ab+</td>
+<td align="left">打开一个二进制文件，允许读写文件。如果文件不存在，则会创建一个新文件。读取会从文件的开头开始，写入则只能是追加模式。</td>
+</tr>
+</tbody></table>
+<p>Example:</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp = fopen(<span class="string">"/tmp/test.txt"</span>, <span class="string">"w+"</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="fclose-关闭文件"><a href="#fclose-关闭文件" class="headerlink" title="fclose() 关闭文件"></a>fclose() 关闭文件</h2><p>该函数用于关闭一个文件，函数原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fclose</span><span class="params">( FILE *fp )</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接收一个FILE类型指针变量，将会关闭这个FILE类型指针变量指向的文件，并且返回一个int类型的值。</p>
+<p>其中</p>
+<p><code>fp</code>为一个指向所要关闭文件的FILE类型指针；</p>
+<p>如果成功关闭文件，<code>fclose( )</code> 函数返回零，如果关闭文件时发生错误，函数返回 <code>EOF</code>。这个函数实际上，会清空缓冲区中的数据，关闭文件，并释放用于该文件的所有内存。<code>EOF</code> 是一个定义在头文件 <code>stdio.h</code> 中的常量。</p>
+<p>Example:</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fclose(fp);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="fputc-将字符写入文件"><a href="#fputc-将字符写入文件" class="headerlink" title="fputc() 将字符写入文件"></a>fputc() 将字符写入文件</h2><p>该函数用于将字符输出/写入到文件中，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fputc</span><span class="params">( <span class="keyword">int</span> c, FILE *fp )</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接收一个int类型参数<code>c</code>和一个FILE类型指针<code>fp</code>，会将ASCII码为<code>c</code>的单个字符写入到<code>fp</code>指针所指向的文件中。如果写入成功，位置指针会自动后移一个字节的位置，并且返回<code>c</code>作为函数的返回值。如果写入失败，则返回<code>EOF</code>。</p>
+<p>其中，</p>
+<p><code>c</code>为要写入字符的ASCII码；</p>
+<p><code>fp</code>为指向要写入文件的FILE类型指针。</p>
+<p>Example:</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fputc(<span class="number">48</span>,fp);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="fputs-将字符串写入文件"><a href="#fputs-将字符串写入文件" class="headerlink" title="fputs() 将字符串写入文件"></a>fputs() 将字符串写入文件</h2><p>该函数用于将字符串输出/写入到文件中，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fputs</span><span class="params">( <span class="keyword">const</span> <span class="keyword">char</span> *s, FILE *fp )</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接收一个char类型指针变量<code>s</code>和一个FILE类型指针变量fp，可以将指针s指向的字符串写入到fp所指向的文件中，如果写入成功，位置指针自动后移相应字节数，并且返回一个非负整数；否则，返回<code>EOF</code>。</p>
+<p><strong>注意：</strong>指针s指向的字符串需以<code>\0</code>结束，但写入字符串时不会写入<code>\0</code>。</p>
+<p>其中，</p>
+<p><code>s</code>为char类型指针变量，指向要写入的字符串的首地址；</p>
+<p><code>fp</code>为FILE类型指针变量，指向要写入的文件。</p>
+<p>Example：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fputs</span>(<span class="string">"hello"</span>,fp);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="fprintf-格式化写入"><a href="#fprintf-格式化写入" class="headerlink" title="fprintf() 格式化写入"></a>fprintf() 格式化写入</h2><p>该函数用于格式化写入文件，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fprintf</span><span class="params">(FILE *stream, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>基本用法与<code>printf()</code>函数类似，接收若干个参数，第一个参数为文件指针，剩余参数与<code>printf()</code>函数类似，如果写入成功，则返回写入的字符总数，否则返回一个负数。</p>
+<p>其中，</p>
+<p><code>stream</code>为指向输出文件的FILE类型指针。当该参数为<code>stdout</code>时该函数功能与<code>printf()</code>函数相同。</p>
+<p><code>format</code>是 C 字符串，包含了要被写入到流 stream 中的文本。它可以包含嵌入的 format 标签，format 标签可被随后的附加参数中指定的值替换，并按需求进行格式化。format 标签属性是 <code>%[flags][width][.precision][length]specifier</code>，具体讲解如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">specifier（说明符）</th>
+<th align="left">输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">c</td>
+<td align="left">字符</td>
+</tr>
+<tr>
+<td align="left">d 或 i</td>
+<td align="left">有符号十进制整数</td>
+</tr>
+<tr>
+<td align="left">e</td>
+<td align="left">使用 e 字符的科学科学记数法（尾数和指数）</td>
+</tr>
+<tr>
+<td align="left">E</td>
+<td align="left">使用 E 字符的科学科学记数法（尾数和指数）</td>
+</tr>
+<tr>
+<td align="left">f</td>
+<td align="left">十进制浮点数</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">自动选择 %e 或 %f 中合适的表示法</td>
+</tr>
+<tr>
+<td align="left">G</td>
+<td align="left">自动选择 %E 或 %f 中合适的表示法</td>
+</tr>
+<tr>
+<td align="left">o</td>
+<td align="left">有符号八进制</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">字符的字符串</td>
+</tr>
+<tr>
+<td align="left">u</td>
+<td align="left">无符号十进制整数</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="left">无符号十六进制整数</td>
+</tr>
+<tr>
+<td align="left">X</td>
+<td align="left">无符号十六进制整数（大写字母）</td>
+</tr>
+<tr>
+<td align="left">p</td>
+<td align="left">指针地址</td>
+</tr>
+<tr>
+<td align="left">n</td>
+<td align="left">无输出</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">字符</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">flags（标识）</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-</td>
+<td align="left">在给定的字段宽度内左对齐，默认是右对齐（参见 width 子说明符）。</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">强制在结果之前显示加号或减号（+ 或 -），即正数前面会显示 + 号。默认情况下，只有负数前面会显示一个 - 号。</td>
+</tr>
+<tr>
+<td align="left">(space)</td>
+<td align="left">如果没有写入任何符号，则在该值前面插入一个空格。</td>
+</tr>
+<tr>
+<td align="left">#</td>
+<td align="left">与 o、x 或 X 说明符一起使用时，非零值前面会分别显示 0、0x 或 0X。 与 e、E 和 f 一起使用时，会强制输出包含一个小数点，即使后边没有数字时也会显示小数点。默认情况下，如果后边没有数字时候，不会显示显示小数点。 与 g 或 G 一起使用时，结果与使用 e 或 E 时相同，但是尾部的零不会被移除。</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">在指定填充 padding 的数字左边放置零（0），而不是空格（参见 width 子说明符）。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">width（宽度）</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">(number)</td>
+<td align="left">要输出的字符的最小数目。如果输出的值短于该数，结果会用空格填充。如果输出的值长于该数，结果不会被截断。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">宽度在 format 字符串中未指定，但是会作为附加整数值参数放置于要被格式化的参数之前。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">.precision（精度）</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.number</td>
+<td align="left">对于整数说明符（d、i、o、u、x、X）：precision 指定了要写入的数字的最小位数。如果写入的值短于该数，结果会用前导零来填充。如果写入的值长于该数，结果不会被截断。精度为 0 意味着不写入任何字符。 对于 e、E 和 f 说明符：要在小数点后输出的小数位数。 对于 g 和 G 说明符：要输出的最大有效位数。 对于 s: 要输出的最大字符数。默认情况下，所有字符都会被输出，直到遇到末尾的空字符。 对于 c 类型：没有任何影响。 当未指定任何精度时，默认为 1。如果指定时不带有一个显式值，则假定为 0。</td>
+</tr>
+<tr>
+<td align="left">.*</td>
+<td align="left">精度在 format 字符串中未指定，但是会作为附加整数值参数放置于要被格式化的参数之前。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">length（长度）</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">h</td>
+<td align="left">参数被解释为短整型或无符号短整型（仅适用于整数说明符：i、d、o、u、x 和 X）。</td>
+</tr>
+<tr>
+<td align="left">l</td>
+<td align="left">参数被解释为长整型或无符号长整型，适用于整数说明符（i、d、o、u、x 和 X）及说明符 c（表示一个宽字符）和 s（表示宽字符字符串）。</td>
+</tr>
+<tr>
+<td align="left">L</td>
+<td align="left">参数被解释为长双精度型（仅适用于浮点数说明符：e、E、f、g 和 G）。</td>
+</tr>
+</tbody></table>
+<h2 id="fgetc-从文件中读取字符"><a href="#fgetc-从文件中读取字符" class="headerlink" title="fgetc() 从文件中读取字符"></a>fgetc() 从文件中读取字符</h2><p>该函数用于从文件中读取一个字符，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fgetc</span><span class="params">( FILE * fp )</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接收一个指向所要读取的文件的FILE类型指针，函数从<code>fp</code>所指向的输入文件中读取一个字符。如果读取成功，返回值是所读取的字符的ASCII码值，并且位置指针向后移动一个字节；如果发生错误则返回 EOF。</p>
+<p>Example：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch=fgetc(fp);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="fgets-从文件中读取字符串"><a href="#fgets-从文件中读取字符串" class="headerlink" title="fgets() 从文件中读取字符串"></a>fgets() 从文件中读取字符串</h2><p>该函数用于从文件中读取一个字符串，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span><span class="params">( <span class="keyword">char</span> *buf, <span class="keyword">int</span> n, FILE *fp )</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接收一个char类型指针<code>buf</code>，一个int类型变量<code>n</code>，一个FILE类型指针<code>fp</code>。</p>
+<p>函数从<code>fp</code>所指向的文件中读取 n - 1 个字符。它会把读取的字符串复制到<code>buf</code>所指向的字符串，并在最后追加一个<code>NULL</code>字符来终止字符串。如果这个函数在读取最后一个字符之前就遇到一个换行符 ‘\n’ 或文件的末尾 EOF，则只会返回读取到的字符，包括换行符。读取成功后位置指针自动向后移动 n - 1 个字节位置。</p>
+<p>函数返回值为char类型指针<code>buf</code>。</p>
+<p>其中，</p>
+<p><code>buf</code>为cahr类型指针变量，指向将要储存字符串的首地址；</p>
+<p><code>n</code>为int类型变量，表示要读取字符串长度(包括<code>\0</code>)；</p>
+<p><code>fp</code>为FILE类型指针变量，指向要读取的文件。</p>
+<h2 id="fscanf-格式化读取"><a href="#fscanf-格式化读取" class="headerlink" title="fscanf() 格式化读取"></a>fscanf() 格式化读取</h2><p>该函数用于格式化读取文件，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fscanf</span><span class="params">(FILE *stream, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>基本用法与<code>scanf()</code>函数类似，接收若干个参数，第一个参数为文件指针，剩余参数与<code>scacnf()</code>函数类似，如果读取成功，该函数返回成功匹配和赋值的个数。如果到达文件末尾或发生读错误，则返回 EOF。</p>
+<p>其中，</p>
+<p><code>stream</code>为指向输出文件的FILE类型指针。当该参数为<code>stdin</code>时该函数功能与<code>printf()</code>函数相同。</p>
+<p><code>format</code>是 C 字符串，包含了以下各项中的一个或多个：<em>空格字符、非空格字符</em> 和 <em>format 说明符</em>。<br>format 说明符形式为 <code>[=%[*][width][modifiers]type=]</code>，具体讲解如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">*</td>
+<td align="left">这是一个可选的星号，表示数据是从流 stream 中读取的，但是可以被忽视，即它不存储在对应的参数中。</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">这指定了在当前读取操作中读取的最大字符数。</td>
+</tr>
+<tr>
+<td align="left">modifiers</td>
+<td align="left">为对应的附加参数所指向的数据指定一个不同于整型（针对 d、i 和 n）、无符号整型（针对 o、u 和 x）或浮点型（针对 e、f 和 g）的大小： h ：短整型（针对 d、i 和 n），或无符号短整型（针对 o、u 和 x） l ：长整型（针对 d、i 和 n），或无符号长整型（针对 o、u 和 x），或双精度型（针对 e、f 和 g） L ：长双精度型（针对 e、f 和 g）</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">一个字符，指定了要被读取的数据类型以及数据读取方式。具体参见下一个表格。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">类型说明符</th>
+<th align="left">合格的输入</th>
+<th align="left">参数的类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">c</td>
+<td align="left">单个字符：读取下一个字符。如果指定了一个不为 1 的宽度 width，函数会读取 width 个字符，并通过参数传递，把它们存储在数组中连续位置。在末尾不会追加空字符。</td>
+<td align="left">char *</td>
+</tr>
+<tr>
+<td align="left">d</td>
+<td align="left">十进制整数：数字前面的 + 或 - 号是可选的。</td>
+<td align="left">int *</td>
+</tr>
+<tr>
+<td align="left">e,E,f,g,G</td>
+<td align="left">浮点数：包含了一个小数点、一个可选的前置符号 + 或 -、一个可选的后置字符 e 或 E，以及一个十进制数字。两个有效的实例 -732.103 和 7.12e4</td>
+<td align="left">float *</td>
+</tr>
+<tr>
+<td align="left">o</td>
+<td align="left">八进制整数。</td>
+<td align="left">int *</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">字符串。这将读取连续字符，直到遇到一个空格字符（空格字符可以是空白、换行和制表符）。</td>
+<td align="left">char *</td>
+</tr>
+<tr>
+<td align="left">u</td>
+<td align="left">无符号的十进制整数。</td>
+<td align="left">unsigned int *</td>
+</tr>
+<tr>
+<td align="left">x,X</td>
+<td align="left">十六进制整数。</td>
+<td align="left">int *</td>
+</tr>
+</tbody></table>
+<h2 id="fwrite-二进制写入"><a href="#fwrite-二进制写入" class="headerlink" title="fwrite() 二进制写入"></a>fwrite() 二进制写入</h2><p>该函数用于将指定位置开始的指定字节数的内容写入到文件中，函数原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fwrite</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> n, FILE *fp)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>（size_t 是在 stdio.h 和 stdlib.h 头文件中使用 typedef 定义的数据类型，表示无符号整数，也即非负数，常用来表示数量。）</p>
+<p>该函数接受4个参数，用于从内存的<code>ptr</code>地址开始，将连续<code>n*size</code>个字节的内容原样复制到<code>fp</code>所指向的文件中。并返回实际写入的数据块个数。</p>
+<p>其中，</p>
+<p><code>ptr</code>为无类型指针变量，表示要输出数据在内存中的首地址；</p>
+<p><code>size</code>为一个数据块的字节数；</p>
+<p><code>n</code>为数据块的个数；</p>
+<p><code>fp</code>为FILE类型的指针，指向要写入的文件。</p>
+<p>Example:</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>{</span><br><span class="line">   FILE *fp;</span><br><span class="line">   <span class="keyword">char</span> str[] = <span class="string">"Lakphy YES!"</span>;</span><br><span class="line">   fp = fopen( <span class="string">"file.txt"</span> , <span class="string">"w"</span> );</span><br><span class="line">   fwrite(str, <span class="keyword">sizeof</span>(str) , <span class="number">1</span>, fp );</span><br><span class="line">   fclose(fp);</span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="fread-二进制读取"><a href="#fread-二进制读取" class="headerlink" title="fread() 二进制读取"></a>fread() 二进制读取</h2><p>该函数用于读取文件中从当前位置开始的指定字节数内容，然后直接存储到内存中指定起始地址的内存空间中。其函数原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fread</span><span class="params">(<span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> n, FILE *fp)</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数接受四个参数，从<code>fp</code>打开的文件的当前位置开始，连续读取<code>n*size</code>个字节的内容，存储到<code>ptr</code>为首地址的内存中，返回值为实际读取到内存中的数据块个数。</p>
+<p>其中，</p>
+<p><code>ptr</code>为无类型指针，表示要输入数据在内存中的首地址；</p>
+<p><code>size</code>表示一个数据块的字节数；</p>
+<p><code>n</code>为数据块的个数；</p>
+<p><code>fp</code>为FILE类型的指针，指向要读取的文件。</p>
+<p>Example：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">   FILE *fp;</span><br><span class="line">   <span class="keyword">char</span> c[] = <span class="string">"Lakphy YES!"</span>;</span><br><span class="line">   <span class="keyword">char</span> buffer[<span class="number">20</span>];</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 打开文件用于读写 */</span></span><br><span class="line">   fp = fopen(<span class="string">"file.txt"</span>, <span class="string">"w+"</span>);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 写入数据到文件 */</span></span><br><span class="line">   fwrite(c, <span class="built_in">strlen</span>(c) + <span class="number">1</span>, <span class="number">1</span>, fp);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 查找文件的开头 */</span></span><br><span class="line">   fseek(fp, <span class="number">0</span>, SEEK_SET);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 读取并显示数据 */</span></span><br><span class="line">   fread(buffer, <span class="built_in">strlen</span>(c)+<span class="number">1</span>, <span class="number">1</span>, fp);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, buffer);</span><br><span class="line">   fclose(fp);</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="rewind-位置指针指向文件头"><a href="#rewind-位置指针指向文件头" class="headerlink" title="rewind() 位置指针指向文件头"></a>rewind() 位置指针指向文件头</h2><p>该函数可以使位置指针指向文件头，函数原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewind</span><span class="params">(FILE *fp)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使<code>fp</code>指针指向的文件的位置指针指向文件头，同时清除和文件流相关的错误和EOF标记，无返回值。</p>
+<h2 id="fseek-改变文件位置指针"><a href="#fseek-改变文件位置指针" class="headerlink" title="fseek() 改变文件位置指针"></a>fseek() 改变文件位置指针</h2><p>该函数可以改变位置指针，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fseek</span><span class="params">(FILE *fp, <span class="keyword">long</span> <span class="keyword">int</span> offset, <span class="keyword">int</span> from)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>该函数可以将文件位置从<code>from</code>开始移动<code>offset</code>个字节。执行成功返回<code>0</code>，不成功返回非零值。</p>
+<p>其中，</p>
+<p><code>fp</code>为文件指针；</p>
+<p><code>offset</code>为移动的字节数，当其为正数时表示向末尾移动，负数表示向前移动，且必须为长整形数；</p>
+<p><code>from</code>为起始位置，他的取值如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">常量</th>
+<th>等效数字</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">SEEK_SET</td>
+<td>0</td>
+<td align="left">文件的开头</td>
+</tr>
+<tr>
+<td align="left">SEEK_CUR</td>
+<td>1</td>
+<td align="left">文件指针的当前位置</td>
+</tr>
+<tr>
+<td align="left">SEEK_END</td>
+<td>2</td>
+<td align="left">文件的末尾</td>
+</tr>
+</tbody></table>
+<p>Example：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">   FILE *fp;</span><br><span class="line">   fp = fopen(<span class="string">"file.txt"</span>,<span class="string">"w+"</span>);</span><br><span class="line">   <span class="built_in">fputs</span>(<span class="string">"Lakphy YES!"</span>, fp);</span><br><span class="line">   fseek( fp, <span class="number">7</span>, SEEK_SET );</span><br><span class="line">   <span class="built_in">fputs</span>(<span class="string">" C Programming Langauge"</span>, fp);</span><br><span class="line">   fclose(fp);</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="ftell-获取文件位置指针相对于文件头的位置"><a href="#ftell-获取文件位置指针相对于文件头的位置" class="headerlink" title="ftell() 获取文件位置指针相对于文件头的位置"></a>ftell() 获取文件位置指针相对于文件头的位置</h2><p>该函数用于获取文件位置指针相对于文件头的位置，原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">int</span> <span class="title">ftell</span><span class="params">(FILE *fp)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>fp</code>为文件指针，返回位置指针相对于文件头的偏移字节数，如果出错则返回<code>-1L</code>。</p>
+<h2 id="fflush-刷新流-stream-的输出缓冲区"><a href="#fflush-刷新流-stream-的输出缓冲区" class="headerlink" title="fflush() 刷新流 stream 的输出缓冲区"></a>fflush() 刷新流 stream 的输出缓冲区</h2><p>通俗讲就是更新对文件的修改，其函数原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fflush</span><span class="params">(FILE *fp)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>fp</code>为文件指针。如果成功，该函数返回零值。如果发生错误，则返回 EOF，且设置错误标识符（即 feof）。</p>
+<h2 id="feof-测试给定流-stream-的文件结束标识符"><a href="#feof-测试给定流-stream-的文件结束标识符" class="headerlink" title="feof() 测试给定流 stream 的文件结束标识符"></a>feof() 测试给定流 stream 的文件结束标识符</h2><p>该函数用于检测文件的位置指针是否到达文件末尾，其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">feof</span><span class="params">(FILE *stream)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>fp</code>为文件指针。到达文件末尾时返回非零值，否则返回0。</p>
+<h2 id="freopen"><a href="#freopen" class="headerlink" title="freopen()"></a>freopen()</h2><p>该函数用于把一个新的文件名 filename 与给定的打开的流 stream 关联，同时关闭流中的旧文件。通常用于将输入输出重定向到文件。其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">FILE *<span class="title">freopen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *filename, <span class="keyword">const</span> <span class="keyword">char</span> *mode, FILE *stream)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>filename</code>字符串包含了要打开文件的名称；</p>
+<p><code>stream</code>是指向 FILE 对象的指针，该 FILE 对象标识了要被重新打开的流。当其为<code>stdout</code>时为将输出重定向到文件，当其为<code>stdin</code>时为重定向输入到文件。</p>
+<p><code>mode</code>为字符串，表示文件访问模式，与<code>fopen</code>用法一样。</p>
+<p>返回值：如果文件成功打开，则函数返回一个指针，指向用于标识流的对象。否则，返回空指针。</p>
+<p>Example:</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fp = freopen(<span class="string">"file.txt"</span>, <span class="string">"w+"</span>, <span class="built_in">stdout</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="remove-删除文件"><a href="#remove-删除文件" class="headerlink" title="remove() 删除文件"></a>remove() 删除文件</h2><p>该函数用于删除给定的文件名 <code>filename</code>，以便它不再被访问。其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">remove</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *filename)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>filename</code>表示文件地址，数据类型为字符串，允许使用相对地址或绝对地址。例如在Windows系统下<code>"D:\\data\\file.txt"</code>可以用来表示地址，在Linux系统下<code>"/mnt/test.txt"</code>可以用来表示地址.</p>
+<p>如果成功，则返回零。如果错误，则返回 -1，并设置 errno。</p>
+<h2 id="rename-重命名-移动文件"><a href="#rename-重命名-移动文件" class="headerlink" title="rename() 重命名/移动文件"></a>rename() 重命名/移动文件</h2><p>该函数用于把 <code>old_filename</code> 所指向的文件名改为 <code>new_filename</code>。可以实现文件重命名/移动。其原型如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">rename</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *old_filename, <span class="keyword">const</span> <span class="keyword">char</span> *new_filename)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中，</p>
+<p><code>old_filename</code>为要重命名的文件名；</p>
+<p><code>new_filename</code>为新的文件名。</p>
+<p>如果成功，则返回零。如果错误，则返回 -1，并设置 errno。</p>
+
+                </article>
+                <div style="height:auto;width:100%;text-align:center;"><a href="/donate.html"><img src="/donate.png" style="height:50px;width:auto"><br>您的鼓励是我努力的动力，欢迎前来打赏<br>点击“赏”或文字打赏</a></div>
+                <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/blog/tags/C%E8%AF%AD%E8%A8%80/" rel="tag"># C语言</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <nav id="gobottom" class="pagination">
+        
+        <a class="prev-post" title="利用iPhone线性震动马达制作骨传导耳机" href="/blog/2020/12/23/%E5%88%A9%E7%94%A8iPhone%E7%BA%BF%E6%80%A7%E9%9C%87%E5%8A%A8%E9%A9%AC%E8%BE%BE%E5%88%B6%E4%BD%9C%E9%AA%A8%E4%BC%A0%E5%AF%BC%E8%80%B3%E6%9C%BA/">
+            ← 利用iPhone线性震动马达制作骨传导耳机
+        </a>
+        
+        <span class="prev-next-post">·</span>
+        
+        <a class="next-post" title="在stm32单片机上使用printf" href="/blog/2020/11/19/%E5%9C%A8stm32%E5%8D%95%E7%89%87%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8printf/">
+            在stm32单片机上使用printf →
+        </a>
+        
+    </nav>
+
+    
+</div>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"></path></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"></path></svg>
+            <svg class="toc-close hide" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"></path><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"></path></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"></path></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#FILE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-text">FILE文件类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fopen-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="toc-text">fopen() 打开文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fclose-%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="toc-text">fclose() 关闭文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fputc-%E5%B0%86%E5%AD%97%E7%AC%A6%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-text">fputc() 将字符写入文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fputs-%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-text">fputs() 将字符串写入文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fprintf-%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%86%99%E5%85%A5"><span class="toc-text">fprintf() 格式化写入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fgetc-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6"><span class="toc-text">fgetc() 从文件中读取字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fgets-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">fgets() 从文件中读取字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fscanf-%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%AF%BB%E5%8F%96"><span class="toc-text">fscanf() 格式化读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fwrite-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%86%99%E5%85%A5"><span class="toc-text">fwrite() 二进制写入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fread-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AF%BB%E5%8F%96"><span class="toc-text">fread() 二进制读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rewind-%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E6%96%87%E4%BB%B6%E5%A4%B4"><span class="toc-text">rewind() 位置指针指向文件头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fseek-%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88"><span class="toc-text">fseek() 改变文件位置指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ftell-%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E6%8C%87%E9%92%88%E7%9B%B8%E5%AF%B9%E4%BA%8E%E6%96%87%E4%BB%B6%E5%A4%B4%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-text">ftell() 获取文件位置指针相对于文件头的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fflush-%E5%88%B7%E6%96%B0%E6%B5%81-stream-%E7%9A%84%E8%BE%93%E5%87%BA%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-text">fflush() 刷新流 stream 的输出缓冲区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#feof-%E6%B5%8B%E8%AF%95%E7%BB%99%E5%AE%9A%E6%B5%81-stream-%E7%9A%84%E6%96%87%E4%BB%B6%E7%BB%93%E6%9D%9F%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-text">feof() 测试给定流 stream 的文件结束标识符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#freopen"><span class="toc-text">freopen()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#remove-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-text">remove() 删除文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rename-%E9%87%8D%E5%91%BD%E5%90%8D-%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6"><span class="toc-text">rename() 重命名/移动文件</span></a></li></ol>
+    </div>
+</div>
+
+
+
+
+
+
+	</div>
+	
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
+  <header class="read-next-card-header">
+    <small class="read-next-card-header-sitetitle">— Lakphy's Blog —</small>
+    <h3 class="read-next-card-header-title">Recent Posts</h3>
+  </header>
+  <div class="read-next-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path>
+    </svg>
+  </div>
+  <div class="read-next-card-content">
+    <ul>
+      
+      
+      
+      <li>
+        <a href="/blog/2021/10/16/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C-%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E7%A0%94%E7%A9%B6/">团队协作-代码规范研究</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/blog/2021/10/08/js-ts%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86/">js/ts中常用工具集</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/blog/2021/10/01/%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">你的第一个个人网站</a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+  <footer class="read-next-card-footer">
+    <a href="/blog/archives">  MORE  → </a>
+  </footer>
+</article>
+
+            
+            
+            
+
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
+	<header class="read-next-card-header tagcloud-card">
+		<h3 class="read-next-card-header-title">Tag Cloud</h3>
+	</header>
+	<div class="read-next-card-content-ext">
+		<a href="/blog/tags/Arduino/" style="font-size: 19px;">Arduino</a> <a href="/blog/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px;">C语言</a> <a href="/blog/tags/OI/" style="font-size: 14px;">OI</a> <a href="/blog/tags/Python/" style="font-size: 19px;">Python</a> <a href="/blog/tags/STM32%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 19px;">STM32单片机</a> <a href="/blog/tags/TensorFlow/" style="font-size: 14px;">TensorFlow</a> <a href="/blog/tags/bash/" style="font-size: 14px;">bash</a> <a href="/blog/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/blog/tags/%E4%B8%AD%E6%80%A7%E7%AC%94/" style="font-size: 14px;">中性笔</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" style="font-size: 14px;">代码规范</a> <a href="/blog/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 14px;">前端开发</a> <a href="/blog/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 14px;">哲学</a> <a href="/blog/tags/%E5%BC%80%E7%AE%B1%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">开箱评测</a> <a href="/blog/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" style="font-size: 14px;">技术杂谈</a> <a href="/blog/tags/%E6%95%B0%E7%A0%81/" style="font-size: 14px;">数码</a> <a href="/blog/tags/%E6%B0%B4%E5%8D%9A%E6%96%87/" style="font-size: 14px;">水博文</a> <a href="/blog/tags/%E7%94%B5%E5%AD%90/" style="font-size: 14px;">电子</a> <a href="/blog/tags/%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/" style="font-size: 14px;">精神食粮</a> <a href="/blog/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">评测</a> <a href="/blog/tags/%E8%B5%84%E6%BA%90%E5%BA%93/" style="font-size: 19px;">资源库</a> <a href="/blog/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" style="font-size: 24px;">踩坑记录</a>
+	</div>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+	
+
+
+
+
+<div id="search" class="search-overlay">
+    <div class="search-form">
+        
+        <div class="search-overlay-logo">
+        	<img src="https://lakphy.gitee.io/logo.jpg" alt="Lakphy's Blog">
+        </div>
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<div class="copyright">
+			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog © 2021</a>
+			
+				
+    		
+		</div>
+		<nav class="site-footer-nav">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br>
+			<span>如未特殊声明, 本站文章默认使用<a style="margin:0px;" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0 </a>协议</span>
+		</nav>
+	</div>
+</footer>
+
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }
+        })
+    }
+</script>
+
+
+<script id="scriptLoad" src="/blog/js/allinone.min.js" async=""></script>
+
+
+<script>
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        
+        
+            var bLazy = new Blazy();
+        
+
+        
+        
+
+        
+        
+        
+            searchFunc("/blog/");
+        
+        
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    });
+</script>
+
+
+
+
+</body></html>
