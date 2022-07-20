@@ -26,16 +26,16 @@ var _hmt = _hmt || [];
 </script>
 
 
-	<title>Github踩坑记录 | Lakphy's Blog</title>
+	<title>《编程之美》读书记录（一） | Lakphy's Blog</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Lakphy">
-	<meta name="description" content="我在第一次上传git过程中遇到的问题及解决方法">
+	<meta name="description" content="《编程之美》读书记录（一）">
 
 	
-	<meta name="keywords" content="Github,踩坑记录">
+	<meta name="keywords" content="编程之美,读书记录,微软面经">
 	
 
 	
@@ -54,14 +54,14 @@ var _hmt = _hmt || [];
 
 	<meta property="og:site_name" content="Lakphy's Blog">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Github踩坑记录 | Lakphy's Blog">
-	<meta property="og:description" content="我在第一次上传git过程中遇到的问题及解决方法">
-	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2019/06/09/Github%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">
+	<meta property="og:title" content="《编程之美》读书记录（一） | Lakphy's Blog">
+	<meta property="og:description" content="《编程之美》读书记录（一）">
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/">
 
 	
-	<meta property="article:published_time" content="2019-06-09T19:06:00+08:00"> 
+	<meta property="article:published_time" content="2022-07-20T23:07:00+08:00"> 
 	<meta property="article:author" content="Lakphy">
-	<meta property="article:published_first" content="Lakphy's Blog, /blog/2019/06/09/Github%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">
+	<meta property="article:published_first" content="Lakphy's Blog, /blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/">
 	
 
 	
@@ -160,75 +160,49 @@ var _hmt = _hmt || [];
     <div class="inner">
         <header class="post-full-header">
             <div class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-06-09T11:09:26.000Z">
-                    2019-06-9
+                <time class="post-full-meta-date" datetime="2022-07-20T15:43:08.000Z">
+                    2022-07-20
                 </time>
                 
                 <span class="date-divider">/</span>
                 
                 
             </div>
-            <h1 class="post-full-title">Github踩坑记录</h1>
+            <h1 class="post-full-title">《编程之美》读书记录（一）</h1>
         </header>
-        <div class="post-full no-image">
+        <div class="post-full ">
+            
+            <figure class="post-full-image" style="background-image: url(/blog/imgs/SKY_20220130_202736_.jpg)">
+            </figure>
             
             <div class="post-full-content">
                 <article id="photoswipe" class="markdown-body">
-                    <p>我在手机上使用github的时候遇到了不少坑，当然最后都使用搜索引擎解决了，为了免得自己遗忘，特作此博文。</p>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>我的手机没有root（主力机不敢root），所以我的git在sd卡目录中，并专门设立一个叫1024的文件夹放git，如果你们的目录不一样，可以随意修改。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install git</span><br><span class="line">apt install vim</span><br><span class="line">apt install openssh</span><br></pre></td></tr></tbody></table></figure>
-
-<p>以上代码用于安装所需基本工具。</p>
-<h2 id="建立git目录"><a href="#建立git目录" class="headerlink" title="建立git目录"></a>建立git目录</h2><p>首先要设置你的邮箱和名字，应该是要和GitHub上设置的相同。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "your name"</span><br><span class="line">git config --global user.email "email@example.com"</span><br></pre></td></tr></tbody></table></figure>
-
-<p>上面的命令引号内替换为自己的名字和邮箱 下一步建立git仓库的目录</p>
-<p>先cd到想要放git的目录</p>
-<p>我的目录是/sdcard/1024，所以要用命令：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /sdcard/1024</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使用下面的指令，让这个文件夹变为git可以管理的仓库（这个文件夹一定要是空的）</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这个指令使用成功后，文件夹下会多出来一个.git的文件夹</p>
-<h2 id="上传文件到仓库"><a href="#上传文件到仓库" class="headerlink" title="上传文件到仓库"></a>上传文件到仓库</h2><p>下面我们上传文件到仓库 第一步，</p>
-<p>使用git add 如果只添加某个文件，</p>
-<p>如example.txt，则使用：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add example.txt</span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果想把文件夹内文件全部添加（包括子文件夹），则使用：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></tbody></table></figure>
-
-<p>第二步，上传到本地仓库</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m "这里写日志"</span><br></pre></td></tr></tbody></table></figure>
-
-<p>引号内写日志，不可省略或不写！！！</p>
-<p>至此，关于git的大部分内容已讲完，如想了解更多git工作的教程，请访问网站：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743858312764dca7ad6d0754f76aa562e3789478044000">廖雪峰的网站</a>，这是我找到的介绍比较全的网站</p>
-<h2 id="上传到远程仓库"><a href="#上传到远程仓库" class="headerlink" title="上传到远程仓库"></a>上传到远程仓库</h2><p>首先通过ssh连接远程仓库，以GitHub为例。 </p>
-<p>我们已经安装了openssh，所以可以通过以下指令获取ssh代码：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C "email@example.com"</span><br></pre></td></tr></tbody></table></figure>
-
-<p>同样，引号内写邮箱 </p>
-<p>然后根据它的提示，找到id_rsa.pub文件所在目录，用vim打开</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim //后面加id_rsa.pub的文件地址</span><br></pre></td></tr></tbody></table></figure>
-
-<p>vim会打开这个文件，将里面所有代码复制出来即可。<br>退出vim：确保自己没瞎jb按，然后输:q退出。</p>
-<p>然后打开GitHub，新建仓库，进入设置，打开ssh keys，新建，然后随便写一个标题，复制代码进去，点确认，OK。</p>
-<p>然后使用指令：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/lakphy/text.git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中，lakphy是我的github名，text是仓库名，自己根据自己实际情况作修改。</p>
-<p>然后使用指令：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>打开github即可看到代码已经上传成功了！</p>
+                    <p>作为一个程序员，我个人对微软非常向往的，不论是技术环境、工作待遇等等方面看，而且看到一个又一个学长去微软实习，心里很是羡慕。</p>
+<p>记得去年年底微软招聘微信公众号发布了“<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/nAibjhSMvA6zfxcG32Sx6w">微软 2022 暑期实习研发提前批正式启动</a>”的文章，实在是让我感到很震撼，太卷了吧，暑期实习要提前半年开始面试，那我岂不是提前一年就要开始准备啊，一想到这里就感觉到强烈的紧迫感。</p>
+<p>前几天接触到了一个刚从 MS 北京毕业的高中校友，我顺便就问了一些关于去 MS 需要注意的事情，他就给我推荐了《编程之美》这本书。</p>
+<p>为了督促学习，尽管找到了 pdf 资源，我还是买了纸质版本，并且希望把今后在博客上记录一些读书时遇到的值得记忆的问题和知识点。</p>
+<p><img alt="book" class="post-img b-lazy" data-img="s34075059.jpeg" data-index="0" data-src="s34075059.jpeg"></p>
+<hr>
+<p>很明显这本书应该多数是算法题，看了一眼应该是 C 语言。作者也有写到 MS 很重视 C 语言基础，看来我要重新拾起将近四年没有碰的 C 语言和算法了（自 18 年 Noip 落榜后，我更专注于一些脚本语言了，可能因为他们可以更快速地给我带来快乐）</p>
+<p>我其实是本来就有重拾算法的计划的，只是不知道怎么重拾，买了一本紫皮书《算法竞赛入门经典》，但又感觉可能不太适合，毕竟我重拾算法也不大可能去打 ACM，看紫皮书完全是大材小用。</p>
+<p>我会在阅读过程中看到什么想记得，就记下来了，可能我的记录毫无规律，敬请谅解。</p>
+<p>希望这本书能够帮助我我重拾算法，带我走进 MS 🙏</p>
+<p>下面就是正文了，您有时候看到文章可能是没写完的，毕竟我目前除了学业外还需要承担很多前端项目开发工作和社团管理工作，另一边我还在读纯英文的 Redux 文档，我会尽可能高频率地去更新，更新进度即代表我的阅读进度</p>
+<hr>
+<h1 id="面试杂谈的一些记录"><a href="#面试杂谈的一些记录" class="headerlink" title="面试杂谈的一些记录"></a>面试杂谈的一些记录</h1><h2 id="面试注意问题"><a href="#面试注意问题" class="headerlink" title="面试注意问题"></a>面试注意问题</h2><ul>
+<li>面试前去多多了解对方企业的产品和业务，尤其是对自己要去的组要尽可能多地了解</li>
+</ul>
+<h2 id="下水道的井盖为什么是圆的？"><a href="#下水道的井盖为什么是圆的？" class="headerlink" title="下水道的井盖为什么是圆的？"></a>下水道的井盖为什么是圆的？</h2><h2 id="三盏灯问题"><a href="#三盏灯问题" class="headerlink" title="三盏灯问题"></a>三盏灯问题</h2><p>（这是一个 PM 问题）</p>
+<blockquote>
+<p>房间里有三盏灯，屋外有三个开关，分别控制这三盏灯，只有进入房间，才能看到哪一个电灯是亮的。请问如何只进入房间一次，就能指明哪一个开关控制哪一个灯？</p>
+</blockquote>
 
                 </article>
                 <div style="height:auto;width:100%;text-align:center;"><a href="/donate.html"><img src="/donate.png" style="height:50px;width:auto"><br>您的鼓励是我努力的动力，欢迎前来打赏<br>点击“赏”或文字打赏</a></div>
                 <ul class="tags-postTags">
                     
                     <li>
-                        <a href="/blog/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag"># 踩坑记录</a>
+                        <a href="/blog/tags/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B/" rel="tag"># 《编程之美》</a>
                     </li>
                     
                 </ul>
@@ -239,14 +213,10 @@ var _hmt = _hmt || [];
     
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="Hexo博客框架踩坑记录" href="/blog/2019/06/09/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">
-            ← Hexo博客框架踩坑记录
-        </a>
-        
         <span class="prev-next-post">·</span>
         
-        <a class="next-post" title="第一篇博文" href="/blog/2019/06/09/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">
-            第一篇博文 →
+        <a class="next-post" title="打印了一个2021 Github Contributions" href="/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/">
+            打印了一个2021 Github Contributions →
         </a>
         
     </nav>
@@ -268,7 +238,7 @@ var _hmt = _hmt || [];
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="toc-text">开始使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8Bgit%E7%9B%AE%E5%BD%95"><span class="toc-text">建立git目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0%E4%BB%93%E5%BA%93"><span class="toc-text">上传文件到仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">上传到远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-text">完成</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E6%9D%82%E8%B0%88%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95"><span class="toc-text">面试杂谈的一些记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98"><span class="toc-text">面试注意问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E6%B0%B4%E9%81%93%E7%9A%84%E4%BA%95%E7%9B%96%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%9C%86%E7%9A%84%EF%BC%9F"><span class="toc-text">下水道的井盖为什么是圆的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%9B%8F%E7%81%AF%E9%97%AE%E9%A2%98"><span class="toc-text">三盏灯问题</span></a></li></ol></li></ol>
     </div>
 </div>
 

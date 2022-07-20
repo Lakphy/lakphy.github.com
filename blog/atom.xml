@@ -6,7 +6,7 @@
   <link href="https://lakphy.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://lakphy.github.io/blog/"/>
-  <updated>2022-07-20T05:44:26.239Z</updated>
+  <updated>2022-07-20T16:34:53.129Z</updated>
   <id>https://lakphy.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《编程之美》读书记录（一）</title>
+    <link href="https://lakphy.github.io/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://lakphy.github.io/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2022-07-20T15:43:08.000Z</published>
+    <updated>2022-07-20T16:34:53.129Z</updated>
+    
+    <content type="html"><![CDATA[<p>作为一个程序员，我个人对微软非常向往的，不论是技术环境、工作待遇等等方面看，而且看到一个又一个学长去微软实习，心里很是羡慕。</p><p>记得去年年底微软招聘微信公众号发布了“<a href="https://mp.weixin.qq.com/s/nAibjhSMvA6zfxcG32Sx6w">微软 2022 暑期实习研发提前批正式启动</a>”的文章，实在是让我感到很震撼，太卷了吧，暑期实习要提前半年开始面试，那我岂不是提前一年就要开始准备啊，一想到这里就感觉到强烈的紧迫感。</p><p>前几天接触到了一个刚从 MS 北京毕业的高中校友，我顺便就问了一些关于去 MS 需要注意的事情，他就给我推荐了《编程之美》这本书。</p><p>为了督促学习，尽管找到了 pdf 资源，我还是买了纸质版本，并且希望把今后在博客上记录一些读书时遇到的值得记忆的问题和知识点。</p><p><img src="s34075059.jpeg" alt="book"></p><hr><p>很明显这本书应该多数是算法题，看了一眼应该是 C 语言。作者也有写到 MS 很重视 C 语言基础，看来我要重新拾起将近四年没有碰的 C 语言和算法了（自 18 年 Noip 落榜后，我更专注于一些脚本语言了，可能因为他们可以更快速地给我带来快乐）</p><p>我其实是本来就有重拾算法的计划的，只是不知道怎么重拾，买了一本紫皮书《算法竞赛入门经典》，但又感觉可能不太适合，毕竟我重拾算法也不大可能去打 ACM，看紫皮书完全是大材小用。</p><p>我会在阅读过程中看到什么想记得，就记下来了，可能我的记录毫无规律，敬请谅解。</p><p>希望这本书能够帮助我我重拾算法，带我走进 MS 🙏</p><p>下面就是正文了，您有时候看到文章可能是没写完的，毕竟我目前除了学业外还需要承担很多前端项目开发工作和社团管理工作，另一边我还在读纯英文的 Redux 文档，我会尽可能高频率地去更新，更新进度即代表我的阅读进度</p><hr><h1 id="面试杂谈的一些记录"><a href="#面试杂谈的一些记录" class="headerlink" title="面试杂谈的一些记录"></a>面试杂谈的一些记录</h1><h2 id="面试注意问题"><a href="#面试注意问题" class="headerlink" title="面试注意问题"></a>面试注意问题</h2><ul><li>面试前去多多了解对方企业的产品和业务，尤其是对自己要去的组要尽可能多地了解</li></ul><h2 id="下水道的井盖为什么是圆的？"><a href="#下水道的井盖为什么是圆的？" class="headerlink" title="下水道的井盖为什么是圆的？"></a>下水道的井盖为什么是圆的？</h2><h2 id="三盏灯问题"><a href="#三盏灯问题" class="headerlink" title="三盏灯问题"></a>三盏灯问题</h2><p>（这是一个 PM 问题）</p><blockquote><p>房间里有三盏灯，屋外有三个开关，分别控制这三盏灯，只有进入房间，才能看到哪一个电灯是亮的。请问如何只进入房间一次，就能指明哪一个开关控制哪一个灯？</p></blockquote>]]></content>
+    
+    
+    <summary type="html">《编程之美》读书记录（一）</summary>
+    
+    
+    
+    
+    <category term="《编程之美》" scheme="https://lakphy.github.io/blog/tags/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>打印了一个2021 Github Contributions</title>
@@ -443,30 +462,6 @@
     
     
     <category term="资源库" scheme="https://lakphy.github.io/blog/tags/%E8%B5%84%E6%BA%90%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>deepin长期使用评测</title>
-    <link href="https://lakphy.github.io/blog/2020/02/15/deepin%E9%95%BF%E6%9C%9F%E4%BD%BF%E7%94%A8%E8%AF%84%E6%B5%8B/"/>
-    <id>https://lakphy.github.io/blog/2020/02/15/deepin%E9%95%BF%E6%9C%9F%E4%BD%BF%E7%94%A8%E8%AF%84%E6%B5%8B/</id>
-    <published>2020-02-15T00:43:02.000Z</published>
-    <updated>2020-10-31T13:24:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于一些不可抗拒的原因（主板莫名不兼容win）不得不选择Linux，试过多种Linux，deepin(深度操作系统)可以说是众多linux最省心好用的了。</p><p><a href="https://deepin.org/">深度操作系统官网</a></p><p><a href="https://deepin.com/">深度官网</a></p><h1 id="如何发现这么好的系统的"><a href="#如何发现这么好的系统的" class="headerlink" title="如何发现这么好的系统的"></a>如何发现这么好的系统的</h1><h3 id="首先支持国产"><a href="#首先支持国产" class="headerlink" title="首先支持国产"></a>首先支持国产</h3><p>这个当然的，国产的好东西必须大力支持！</p><h3 id="国际排名高"><a href="#国际排名高" class="headerlink" title="国际排名高"></a>国际排名高</h3><p>这个不多说，大众的眼睛是雪亮的，看下排名就知道啦：</p><p><a href="https://distrowatch.com/dwres.php?resource=popularity">排名链接</a></p><p><img src="1.png"></p><p>可以看到的deepin基本稳定在第十名，注意现在时间2020年02月15日。</p><p>最近疫情原因很长时间没有维护了，排名有所下降属于正常现象。</p><p>记得最高排第六。</p><h3 id="软件生态"><a href="#软件生态" class="headerlink" title="软件生态"></a>软件生态</h3><p>其实我是冲软件生态来的</p><p>软件生态是一个操作系统的灵魂，没有软件生态，它就不配叫操作系统，那叫啥？可能叫嵌入式系统？功能机？（Lumia警告）</p><p>Microsoft，Google，Apple都为他们操作系统生态投入了大量资金和人员，包括学生组织开发活动，软件竞赛之类的活动，或是直接给钱，足以突显软件生态的重要性。</p><p>众所周知，Windows系统的整体操作逻辑已经十几年没变了，而且易用性越来越差，在众多现代操作系统中处于劣势，但为什么Windows用户永远不会降低呢，这也是软件生态的效果，Windows下的软件生态非常庞大，难以超越，这也表现了当初微软在中国地区容忍盗版泛滥现象的战略意义。</p><p>好了好了，有点偏题了。</p><p>下面说deepin的软件生态：</p><ol><li>Deepin基于Debian GNU/Linux，支持Linux软件，Debian特有的deb软件，以及Debian著名的apt包管理系统</li><li>预装wine，通过底层代码适配大量Windows软件</li><li>深度团队对于不支持wine的Windows软件进行专门适配，这个是其他发行版装了wine也比不上了的。像Windows QQ就是专门适配的，比QQ官方发布的Linux版好用</li><li>预装Chrome，支持webAPP，ChromeOS软件，安卓软件</li></ol><p>可见这软件生态真的是太强了</p><p>这是GNU/Linux里生态强的，据说还有个国产的ChromeOS生态也贼强（国产都喜欢玩全平台适配？），没用过，叫fydeOS，可以去尝试一下。</p><p>这个生态空口无凭，看下例子</p><p><img src="2.png"></p><p>上面这个是应用商店，很多是深度团队自己适配来的，很良心了。</p><p><img src="3.png"></p><p>上面这个是QQ官方的Linux版，可以看出来界面相当远古了，而且看那大小也不像好东西</p><p><img src="4.png"></p><p>这个是wine版QQ，深度团队专门适配过的，版本也比较新，但最近好像是疫情原因还没给适配下一版本。</p><p><img src="5.png"></p><p>上面这是应用商店里编程开发专区，可以看到这里特殊适配的就少了，毕竟开发用的软件还是给做Linux版的</p><p>这里说个有意思的，深度团队还把著名游戏平台steam整来了，如下图：</p><p><img src="6.png"></p><p>这就很厉害了，据说还能玩GTA呢</p><p>下面这个是下载排行榜：（偷偷说个事：Linux版百度云不限速！）</p><p><img src="7.png"></p><h1 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h1><p>整体使用体验不错，高斯模糊运用得当</p><h3 id="桌面"><a href="#桌面" class="headerlink" title="桌面"></a>桌面</h3><h5 id="桌面总览"><a href="#桌面总览" class="headerlink" title="桌面总览"></a>桌面总览<img src="8.png"></h5><p>请无视我桌面的文件谢谢（</p><h5 id="dock栏"><a href="#dock栏" class="headerlink" title="dock栏"></a>dock栏</h5><p>dock可以设置成MacOS样式或Windows样式，非常友好</p><p><img src="9.png"></p><p>上面这是仿win，即高效样式</p><p><img src="10.png"></p><p>上面这个是仿MacOS样式，即潮流样式</p><p>我使用的是高效样式，之后将使用高效样式演示，潮流样式类似</p><h5 id="硬盘管理器"><a href="#硬盘管理器" class="headerlink" title="硬盘管理器"></a>硬盘管理器</h5><p><img src="11.png" alt="11"></p><h5 id="WiFi"><a href="#WiFi" class="headerlink" title="WiFi"></a>WiFi</h5><p><img src="12.png"></p><h5 id="应用列表"><a href="#应用列表" class="headerlink" title="应用列表"></a>应用列表</h5><p><img src="13.png"></p><p>这个也有两种风格，这个是仿win的，下面这个是仿MacOS的</p><p><img src="14.png"></p><h5 id="工作区总览"><a href="#工作区总览" class="headerlink" title="工作区总览"></a>工作区总览</h5><p><img src="15.png"></p><h3 id="设置界面"><a href="#设置界面" class="headerlink" title="设置界面"></a>设置界面</h3><p>这里是通知界面，点右上角切换设置</p><p><img src="16.png"></p><p>设置总览：</p><p><img src="17.png" alt="17"></p><p>下面把整个设置截屏看看</p><p><img src="18.png" alt="18"></p><p><img src="19.png" alt="19"></p><p><img src="20.png" alt="20"></p><p><img src="21.png" alt="21"></p><p><img src="22.png" alt="22"></p><p><img src="23.png" alt="23"></p><p>值得一提的是，deepin自带一个开机引导选项，非常方便</p><p><img src="25.png" alt="25"></p><h3 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h3><p>这终端和普通GNU/Linux终端一样，没有区别</p><p><img src="26.png" alt="26"></p><h3 id="文件管理器"><a href="#文件管理器" class="headerlink" title="文件管理器"></a>文件管理器</h3><p><img src="27.png" alt="27"></p><h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p><img src="28.png" alt="28"></p><h3 id="电源选项"><a href="#电源选项" class="headerlink" title="电源选项"></a>电源选项</h3><p><img src="29.png" alt="29"></p><h3 id="资源管理器"><a href="#资源管理器" class="headerlink" title="资源管理器"></a>资源管理器</h3><p><img src="30.png" alt="30"></p><h1 id="其他软件"><a href="#其他软件" class="headerlink" title="其他软件"></a>其他软件</h1><p>这里推荐几个有用的软件</p><h3 id="连接手机"><a href="#连接手机" class="headerlink" title="连接手机"></a>连接手机</h3><p>我用kdeconnect连接手机，堪比airdrop，十分好用</p><p><img src="32.png" alt="32"></p><p><img src="31.png" alt="31"></p><h3 id="那些你懂的飞机"><a href="#那些你懂的飞机" class="headerlink" title="那些你懂的飞机"></a>那些你懂的飞机</h3><p>这个我用clash，github上有，配置有点复杂，但好用</p><h3 id="打代码"><a href="#打代码" class="headerlink" title="打代码"></a>打代码</h3><h5 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h5><p><img src="33.png" alt="33"></p><h5 id="sublime-text"><a href="#sublime-text" class="headerlink" title="sublime text"></a>sublime text</h5><p><img src="34.png" alt="34"></p><h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>以上是我简单对deepin的评测，十分好用，目前我已使用一年多了，没什么大问题（除了上次我不小心输错命令把软件全删了），希望这个国产操作系统可以越做越好。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;由于一些不可抗拒的原因（主板莫名不兼容win）不得不选择Linux，试过多种Linux，deepin(深度操作系统)可以说是众多linux最省心好用的了。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://deepin.org/&quot;&gt;深度操作系统官网&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-      
-    
-    
-    
-    
-    <category term="评测" scheme="https://lakphy.github.io/blog/tags/%E8%AF%84%E6%B5%8B/"/>
     
   </entry>
   
