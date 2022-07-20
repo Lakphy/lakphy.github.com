@@ -6,7 +6,7 @@
   <link href="https://lakphy.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://lakphy.github.io/blog/"/>
-  <updated>2022-07-19T14:09:38.632Z</updated>
+  <updated>2022-07-20T05:44:26.239Z</updated>
   <id>https://lakphy.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打印了一个2021 Github Contributions</title>
+    <link href="https://lakphy.github.io/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/"/>
+    <id>https://lakphy.github.io/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/</id>
+    <published>2022-07-20T04:59:28.000Z</published>
+    <updated>2022-07-20T05:44:26.239Z</updated>
+    
+    <content type="html"><![CDATA[<p>先看实物图：<br><img src="/blog/imgs/670ADD2B56444B2FDB90C54283180CF4.jpg" alt="Github Contributions"></p><p>这是一个 Github2021 年的年度 Contributions 小绿格的 3D 打印版本</p><p><img src="1.png" alt="screenshot"></p><p>如图是我 2021 年的“2D”版本 Github Contributions，点击右下角文字即可展示酷炫的 3D 效果图</p><p><img src="2.png" alt="screenshot"></p><p>还可以点击下载<code>stl</code>文件，然后 3D 打印出来</p><p>这个产品的名字叫<strong>Skyline</strong></p><p>太酷炫了，应该没有一个程序员能抗拒这么酷的东西</p><p>对于我来说，他不仅记录了我一年来的开发贡献，</p><p>2021 年是我开始深入进行前端开发的第一年，</p><p>我承认我之前没有深入前端开发是存在某些偏见，我片面以为前端开发就是三大件，没有什么东西</p><blockquote><p>（当然这个理解也让我在之前就积累了充足的切图经验）</p></blockquote><p>后来我才逐渐发现，在某种意义上讲，三大件可能只是运营同学的工具，而深入前端开发大有乾坤。</p><p>对着这个这个立体图，我仿佛看着我做的每一个项目，仿佛看到了每一个开发调试熬夜上线的夜晚，甚至指着每一个小山峰我都可以说出那是哪个项目（当然因为保密原因我这里就不细嗦了）</p><p>就像我在 2021 年度总结上面写的一样，一个一个项目，也是象征着我水平逐渐上涨，前端学习的逐渐深入。</p><p>其实 Github 的这个小玩意很早就上线了，但我一直忍住没打，主要是想 22 年努力做一个更好看的图再去打印。</p><p>最近实在忍不住了，毕竟是第一年深入前端，还是很有纪念意义的，虽然 22 年已经过半了，但还是有必要去打印一下的</p><p>我的这些 Contributions 质量倒是可以保证，而且都是实际上线的项目开发的成果，并且都有上万的用户量，对我个人来讲，项目经历是够用了，</p><p>但反思一下，</p><p>这一年我除了做项目，似乎什么都没做…</p><p>21 年开始，我的博客逐渐不更新了，我的 Contributions 里几乎没有更新博客相关的</p><p>也就是相当于除了项目必须技术，我几乎没学什么技术，我觉得对我来说影响是非常大的，</p><p>所以这次重新拾起博客也是想在未来多学习一些技术，提升自己，并通过博客督促自己</p><p>另外我也建立了前端开发相关 <del>但不限于前端开发</del> 的 Telegram 频道，欢迎订阅：<br><a href="https://t.me/lakphyFE">https://t.me/lakphyFE</a></p><blockquote><p>另外<code>Skyline</code>的 url 似乎有某种规律，应该可以用来看任意时间任意人的 3D 图，用心了</p></blockquote><p>End…<br><img src="SKY_20220522_012554_.jpg" alt="End"></p>]]></content>
+    
+    
+    <summary type="html">打印了一个3D的2021 Github Contributions</summary>
+    
+    
+    
+    
+    <category term="Github" scheme="https://lakphy.github.io/blog/tags/Github/"/>
+    
+    <category term="打工人" scheme="https://lakphy.github.io/blog/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/"/>
+    
+    <category term="杂谈" scheme="https://lakphy.github.io/blog/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次Hexo迁移踩坑</title>
@@ -444,25 +467,6 @@
     
     
     <category term="评测" scheme="https://lakphy.github.io/blog/tags/%E8%AF%84%E6%B5%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux如何快速备份</title>
-    <link href="https://lakphy.github.io/blog/2020/02/13/linux%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%A4%87%E4%BB%BD/"/>
-    <id>https://lakphy.github.io/blog/2020/02/13/linux%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%A4%87%E4%BB%BD/</id>
-    <published>2020-02-13T07:46:49.000Z</published>
-    <updated>2020-10-31T13:24:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我现在使用的是deepin linux，自带备份功能，但总感觉这个备份有点。。。。</p><blockquote><p>Talk is cheap,show me the screenshot。</p></blockquote><p>直接看图吧，备注现在时间2020-02-13（</p><p><img src="2.png" alt="看这时间多悠久"></p><p>好像从第一次注册完账号开启自动备份后就没开过。。。</p><p>我这还算好的，最起码有个界面，那些用其他发行版的大牛们怎么办啊，全盘备份？没这必要吧，只要备份重要配置文件就够了，再说全盘备份要是碰上Linus那种只用固态硬盘的硬盘就遭殃了。</p><p>突然想起来Linux有批处理功能，于是打开vim和Google，开工！</p><h1 id="编写程序"><a href="#编写程序" class="headerlink" title="编写程序"></a>编写程序</h1><h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><p>这里说一下备份思路</p><ol><li>把重要文件（夹）复制到临时目录（因为是机械硬盘无所谓寿命）</li><li>打包成zip</li><li>移动到u盘里</li></ol><h2 id="第一个功能：计时"><a href="#第一个功能：计时" class="headerlink" title="第一个功能：计时"></a>第一个功能：计时</h2><p>这功能真的是强迫症福音啊，废话少说放码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">start=$(date &quot;+%s&quot;)#记录开始时间</span><br><span class="line">#这里运行代码</span><br><span class="line">now=$(date &quot;+%s&quot;)#记录结束时间</span><br><span class="line">time=$((now-start))#计算用时</span><br><span class="line">echo &quot;time used:$time seconds&quot;#输出时间</span><br><span class="line">#echo $date</span><br></pre></td></tr></table></figure><p>就这样一个计时功能出来了，果然比某某些编程语言简单，像某语言还要引用time（逃</p><p>对了，科普一下，shell里输出是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;exampleString&quot;#输出文字</span><br><span class="line">echo $someVar#输出变量</span><br></pre></td></tr></table></figure><p>我测试了一下，没有代码时候输出0s，还是挺准的  :D</p><h2 id="建立备份临时文件夹"><a href="#建立备份临时文件夹" class="headerlink" title="建立备份临时文件夹"></a>建立备份临时文件夹</h2><p>此步在硬盘中建立临时备份文件夹，命名为当前时间</p><p>建立文件夹应该都会吧，所以直接上代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date=$(date +%Y%m%d%H%m%s)#获取时间</span><br><span class="line">mkdir /media/lakphy/DATA/baks/$date#建立文件夹</span><br></pre></td></tr></table></figure><h2 id="建立重要文件夹名单"><a href="#建立重要文件夹名单" class="headerlink" title="建立重要文件夹名单"></a>建立重要文件夹名单</h2><p>此步建立一个数组（我习惯将列表说成数组，意义相同，以后不做解释），里面放有重要文件（夹）通报（划掉）名单</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">copyPath=(#这是建立数组的代码</span><br><span class="line">&#x27;/home/lakphy/lakphy/golang&#x27;</span><br><span class="line">&#x27;/home/lakphy/lakphy/py&#x27;</span><br><span class="line">&#x27;/home/lakphy/lakphy/nodejs&#x27;</span><br><span class="line">&#x27;/home/lakphy/Downloads&#x27;</span><br><span class="line">&#x27;/media/lakphy/DATA/downloads&#x27;</span><br><span class="line">&#x27;/home/lakphy/Desktop&#x27;</span><br><span class="line">)#这是我的重要文件目录，仅示例使用</span><br></pre></td></tr></table></figure><h2 id="复制内容到临时备份文件夹"><a href="#复制内容到临时备份文件夹" class="headerlink" title="复制内容到临时备份文件夹"></a>复制内容到临时备份文件夹</h2><p>这里利用循环遍历重要文件（夹）名单复制，这个操作我们在学习Python时候应该都学过</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for p in $&#123;copyPath[@]&#125;#for循环</span><br><span class="line">do#循环开始符</span><br><span class="line">echo &#x27;copying &#x27;$p#输出复制信息</span><br><span class="line">cp -r $p /media/lakphy/DATA/baks/$date#Linux cp命令玄学复制，速度贼快</span><br><span class="line">done#循环结束符</span><br></pre></td></tr></table></figure><h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pathname=&#x27;/media/lakphy/DATA/baks/&#x27;$date#备份文件夹路径  date是我们之前定义的时间</span><br><span class="line">zipname=&#x27;/media/lakphy/DATA/baks/&#x27;$date#压缩文件路径和名字</span><br><span class="line">zip -r $zipname $pathname#压缩命令</span><br></pre></td></tr></table></figure><h2 id="移动到批处理程序所在目录"><a href="#移动到批处理程序所在目录" class="headerlink" title="移动到批处理程序所在目录"></a>移动到批处理程序所在目录</h2><p>mv命令，这个比较简单，不解释</p><h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p>来看下完整代码</p><h2 id="codes"><a href="#codes" class="headerlink" title="codes"></a>codes</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>保存为backup.sh</p><p>如果程序在电脑上的话，直接双击或者命令:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./backup.sh</span><br></pre></td></tr></table></figure><p>如果在外部存储器上，只能在命令行运行，命令只能是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash backup.sh</span><br></pre></td></tr></table></figure><p>bash意思是解释器为bash，至于为什么是bash不是shell，这个我也不懂，我谷歌的时候写的shell啊。。。但shell真的运行不了，不信试试：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell backup.sh</span><br></pre></td></tr></table></figure><p>至于内部外部存储器区别，我觉得可能是外部存储器文件系统不是ext4不能加可执行权限问题</p><p>我运行了一下，速度不错，比直接复制快，毕竟cp命令玄学复制，430s完成。</p>]]></content>
-    
-    
-    <summary type="html">linux备份方法</summary>
-    
-    
-    
-    
-    <category term="bash" scheme="https://lakphy.github.io/blog/tags/bash/"/>
     
   </entry>
   

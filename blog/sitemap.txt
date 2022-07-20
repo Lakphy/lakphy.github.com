@@ -1,3 +1,4 @@
+https://lakphy.github.io/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/
 https://lakphy.github.io/blog/2022/07/19/%E8%AE%B0%E4%B8%80%E6%AC%A1Hexo%E8%BF%81%E7%A7%BB%E8%B8%A9%E5%9D%91/
 https://lakphy.github.io/blog/2021/10/01/%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/
 https://lakphy.github.io/blog/2020/12/23/%E5%88%A9%E7%94%A8iPhone%E7%BA%BF%E6%80%A7%E9%9C%87%E5%8A%A8%E9%A9%AC%E8%BE%BE%E5%88%B6%E4%BD%9C%E9%AA%A8%E4%BC%A0%E5%AF%BC%E8%80%B3%E6%9C%BA/
@@ -44,3 +45,6 @@ https://lakphy.github.io/blog/tags/%E7%94%B5%E5%AD%90/
 https://lakphy.github.io/blog/tags/%E5%BC%80%E7%AE%B1%E8%AF%84%E6%B5%8B/
 https://lakphy.github.io/blog/tags/%E4%B8%AD%E6%80%A7%E7%AC%94/
 https://lakphy.github.io/blog/tags/%E6%B0%B4%E5%8D%9A%E6%96%87/
+https://lakphy.github.io/blog/tags/Github/
+https://lakphy.github.io/blog/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/
+https://lakphy.github.io/blog/tags/%E6%9D%82%E8%B0%88/
