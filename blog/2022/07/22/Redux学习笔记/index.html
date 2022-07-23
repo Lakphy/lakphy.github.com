@@ -1,0 +1,592 @@
+<!DOCTYPE html><html lang="Chinese"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn1.lncld.net">
+	<link rel="preconnect" href="//unpkg.com">
+	<link rel="preconnect" href="//app-router.leancloud.cn">
+	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
+	<link rel="preconnect" href="//gravatar.loli.net">
+	<style>
+	.toc-child{
+	margin-left:20px
+	}
+	</style>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?adb566a88b1a652452c595c7a93fd3c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+	<title>Redux学习笔记（React） | Lakphy's Blog</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="Lakphy">
+	<meta name="description" content="Redux学习笔记（React）">
+
+	
+	<meta name="keywords" content="Redux,React">
+	
+
+	
+	<link rel="shortcut icon" href="https://lakphy.github.io/logo.jpg">
+	<link rel="apple-touch-icon" href="https://lakphy.github.io/logo.jpg">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+
+	<meta property="og:site_name" content="Lakphy's Blog">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Redux学习笔记（React） | Lakphy's Blog">
+	<meta property="og:description" content="Redux学习笔记（React）">
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+	
+	<meta property="article:published_time" content="2022-07-22T21:07:00+08:00"> 
+	<meta property="article:author" content="Lakphy">
+	<meta property="article:published_first" content="Lakphy's Blog, /blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+	
+
+	
+	
+	
+<link rel="stylesheet" href="/blog/css/allinonecss.min.css">
+
+
+	
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-158678644-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-158678644-1');
+	</script>
+	
+	
+	
+<link rel="alternate" href="/blog/atom.xml" title="Lakphy's Blog" type="application/atom+xml">
+</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header post-site-header outer">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        <ul class="nav">
+            <li>
+                
+                
+                <a class="site-nav-logo" href="/blog/" title="Lakphy's Blog">
+                    <img src="https://lakphy.github.io/logo.jpg" alt="Lakphy's Blog">
+                </a>
+                
+                
+            </li>
+            
+            
+            <li>
+                <a href="https://lakphy.github.io/blog/" title="blog">blog</a>
+            </li>
+            
+            <li>
+                <a href="https://lakphy.github.io" title="Lakphy">Lakphy</a>
+            </li>
+            
+            
+        </ul> 
+    </div>
+    
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="search-button">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/lakphy" target="_blank" rel="noopener">
+        <svg viewBox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"></path></svg>
+    </a>
+    
+    
+    
+    <a class="social-link" title="twitter" href="https://twitter.com/lakphy?s=09" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+
+    </a>
+    
+    
+    <a class="social-link" title="telegram" href="https://t.me/lakphy" target="_blank" rel="noopener">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M679.428571 746.857143l84-396q5.142857-25.142857-6-36t-29.428571-4L234.285714 501.142857q-16.571429 6.285714-22.571428 14.285714t-1.428572 15.142858 18.285715 11.142857l126.285714 39.428571 293.142857-184.571428q12-8 18.285714-3.428572 4 2.857143-2.285714 8.571429l-237.142857 214.285714-9.142857 130.285714q13.142857 0 25.714285-12.571428l61.714286-59.428572 128 94.285715q36.571429 20.571429 46.285714-21.714286z m344.571429-234.857143q0 104-40.571429 198.857143t-109.142857 163.428571-163.428571 109.142857-198.857143 40.571429-198.857143-40.571429-163.428571-109.142857-109.142857-163.428571T0 512t40.571429-198.857143 109.142857-163.428571T313.142857 40.571429 512 0t198.857143 40.571429 163.428571 109.142857 109.142857 163.428571 40.571429 198.857143z"></path></svg>
+    </a>
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<div id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <div class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2022-07-22T13:23:36.000Z">
+                    2022-07-22
+                </time>
+                
+                <span class="date-divider">/</span>
+                
+                
+            </div>
+            <h1 class="post-full-title">Redux学习笔记（React）</h1>
+        </header>
+        <div class="post-full ">
+            
+            <figure class="post-full-image" style="background-image: url(/blog/imgs/SKY_20220604_133517_.jpg)">
+            </figure>
+            
+            <div class="post-full-content">
+                <article id="photoswipe" class="markdown-body">
+                    <p>最近在研究 Redux。看了中文文档翻的很烂，所以我在读英文文档，但我英文水平更烂，所以本文应该以中文为主写的，主要作为个人记忆用。</p>
+<p>感觉 Redux 这个入门文档有点杂，掺入了官方推荐工具<code>Redux-Toolkit</code>和<code>Redux-React</code>的内容。本篇介绍的 Redux 是借用这些工具使用的。</p>
+<h1 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h1><h2 id="创建store"><a href="#创建store" class="headerlink" title="创建store"></a>创建<code>store</code></h2><p>Redux 的 store 由 RTK（Redux Toolkit）的 <code>configureStore</code> api 创建。</p>
+<p>文档建议此段代码位置在 <code>/src/app/store.js</code> 中</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { configureStore } <span class="keyword">from</span> <span class="string">"@reduxjs/toolkit"</span>;</span><br><span class="line"><span class="keyword">import</span> counterReducer <span class="keyword">from</span> <span class="string">"../features/counter/counterSlice"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">configureStore</span>({</span><br><span class="line">  <span class="attr">reducer</span>: {</span><br><span class="line">    <span class="attr">counter</span>: counterReducer,</span><br><span class="line">  },</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从文档中的代码可以看出<code>configureStore</code>用法：</p>
+<ul>
+<li>输入 一个对象<ul>
+<li>reducer(object)<ul>
+<li>切片名:(createSlice()创建的切片.reducer)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>输出 一个 store 对象</li>
+</ul>
+<p>其中 store 对象会被<code>export default</code>，并且 store 对象<strong>只能用于</strong><code>Provider</code>中，即<code>index.js</code>中的<code>&lt;Provider store={store}&gt;</code></p>
+<p>一个 React App 建议（或者说 应当）只有一个 store</p>
+<h2 id="用Provider覆盖-React-根结点"><a href="#用Provider覆盖-React-根结点" class="headerlink" title="用Provider覆盖 React 根结点"></a>用<code>Provider</code>覆盖 React 根结点</h2><p>将 React 原本的<code>&lt;App /&gt;</code>修改为：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Provider</span> store={store}&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Provider</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在 React App 的入口文件<code>index.js</code>中使用由<code>Redux-React</code>提供的<code>Provider</code>将根节点覆盖住，并传入 store</p>
+<h2 id="创建-Redux-切片"><a href="#创建-Redux-切片" class="headerlink" title="创建 Redux 切片"></a>创建 Redux 切片</h2><p>创建一个 Redux 切片即为在 Redux store 树 🌲 创建一个分支</p>
+<p>文档将其写在<code>/src/feature/counter/counterSlice.js</code>中</p>
+<h3 id="createSlice"><a href="#createSlice" class="headerlink" title="createSlice()"></a>createSlice()</h3><p>首先使用 React Toolkit 提供的<code>createSlice()</code>创建一个 Redux 切片</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> counterSlice = <span class="title function_">createSlice</span>({</span><br><span class="line">  <span class="attr">name</span>: <span class="string">"counter"</span>,</span><br><span class="line">  <span class="attr">initialState</span>: {</span><br><span class="line">    <span class="attr">value</span>: <span class="number">0</span>,</span><br><span class="line">  },</span><br><span class="line">  <span class="attr">reducers</span>: {</span><br><span class="line">    <span class="attr">increment</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> {</span><br><span class="line">      <span class="comment">// Redux Toolkit allows us to write "mutating" logic in reducers. It</span></span><br><span class="line">      <span class="comment">// doesn't actually mutate the state because it uses the immer library,</span></span><br><span class="line">      <span class="comment">// which detects changes to a "draft state" and produces a brand new</span></span><br><span class="line">      <span class="comment">// immutable state based off those changes</span></span><br><span class="line">      state.<span class="property">value</span> += <span class="number">1</span>;</span><br><span class="line">    },</span><br><span class="line">    <span class="attr">decrement</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> {</span><br><span class="line">      state.<span class="property">value</span> -= <span class="number">1</span>;</span><br><span class="line">    },</span><br><span class="line">    <span class="attr">incrementByAmount</span>: <span class="function">(<span class="params">state, action</span>) =&gt;</span> {</span><br><span class="line">      state.<span class="property">value</span> += action.<span class="property">payload</span>;</span><br><span class="line">    },</span><br><span class="line">  },</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>由这段代码可以看出<code>createSlice</code>用法：</p>
+<ul>
+<li>输入 一个对象<ul>
+<li>name:切片名称</li>
+<li>initialState 初始值，文档建议为对象形式</li>
+<li>reducers 一个对象，包含处理更改的 reducer<ul>
+<li>reducer 名称:reducer 函数<ul>
+<li>函数输入<ul>
+<li>state：当前切片值</li>
+<li>action：包含 Redux dispatch 传入的原始 <a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#actions">Action 对象</a>，当使用 RTK 自动生成的<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#action-creators">Action Creator</a>进行 dispatch 时，<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#action-creators">Action Creator</a>函数的参数位于<code>action.payload</code>位置（同时这也是官方推荐的<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#actions">Action 对象</a>的标准写法）</li>
+</ul>
+</li>
+<li>函数特性<ul>
+<li>在 Redux 中，reducer 函数应当为<strong>纯函数</strong>，因为我注意到英文文档中并没有说过他是纯函数，只是在每次提到这个问题是列举一遍其特点，这里做一下摘抄<blockquote>
+<p>reducers <strong>must</strong> always follow some special rules:</p>
+<ul>
+<li>They should only calculate the new state value based on the state and action arguments</li>
+<li>They are not allowed to modify the existing state. Instead, they must make immutable updates, by copying the existing state and making changes to the copied values.</li>
+<li>They must not do any asynchronous logic or other “side effects”</li>
+</ul>
+<p>why are these rules important?</p>
+<ul>
+<li>One of the goals of Redux is to make your code predictable. When a function’s output is only calculated from the input arguments, it’s easier to understand how that code works, and to test it.</li>
+<li>On the other hand, if a function depends on variables outside itself, or behaves randomly, you never know what will happen when you run it.</li>
+<li>If a function modifies other values, including its arguments, that can change the way the application works unexpectedly. This can be a common source of bugs, such as “I updated my state, but now my UI isn’t updating when it should!”</li>
+<li>Some of the Redux DevTools capabilities depend on having your reducers follow these rules correctly.</li>
+</ul>
+</blockquote>
+</li>
+<li>尽管文档反复强调<strong>immutable</strong>，即不更改行参，但是由于 RTK 使用了<a target="_blank" rel="noopener" href="https://github.com/immerjs/immer">immerjs</a>辅助，你也可以在 RTK 的 reducer 中使用 mutating 的代码，但是请注意<strong>只能在 RTK 的 reducer 中这么写！！！</strong><blockquote>
+<p>引用原文<br>🔥WARNING<br>Remember: <strong>reducer functions must always create new state values immutably, by making copies!</strong> It’s safe to call mutating functions like <code>Array.push()</code> or modify object fields like <code>state.someField = someValue</code> inside of <code>createSlice()</code>, because it converts those mutations into safe immutable updates internally using the Immer library, but <strong>don’t try to mutate any data outside of <code>createSlice</code>!</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值 返回一个初始化好的 Redux 切片对象，我们可以从这个对象中获得我们有用的东西（见下文）</li>
+</ul>
+<h3 id="获取Action-Creator"><a href="#获取Action-Creator" class="headerlink" title="获取Action Creator"></a>获取<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#action-creators">Action Creator</a></h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> { increment, decrement, incrementByAmount } = counterSlice.<span class="property">actions</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此段代码用于从 Redux 切片中获取<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#action-creators">Action Creator</a>函数</p>
+<h3 id="导出切片的Selectors"><a href="#导出切片的Selectors" class="headerlink" title="导出切片的Selectors"></a>导出切片的<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts#selectors">Selectors</a></h3><p>如果我们可以直接获取到 Redux store 对象，可以直接使用<code>store.getState()</code>获取整个 store 树的存储，<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts#selectors">Selectors</a>就是负责从整个 store 数中拿到我们切片数据的</p>
+<p>或许我们可以直接把它（Selector）写成这样：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">selectCounterValue</span> = (<span class="params">state</span>) =&gt; state.<span class="property">counter</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>就是一个非常简单的把 store 树上一部分取出来的工具，可以在这里写好然后导出，也可以用的时候现写。</p>
+<blockquote>
+<p>刚说到“如果我们可以直接获取到 Redux store 对象”，这是一种理想情况，而 RTK 不允许我们随意引用和使用 store 对象，<del>而且这么做也不优雅</del>，这时候会需要用到 Redux-React 提供的<code>useSelector</code>工具，将会在后文解释</p>
+</blockquote>
+<h3 id="导出-reducer"><a href="#导出-reducer" class="headerlink" title="导出 reducer"></a>导出 reducer</h3><p>我们之前初始化 Redux 切片时传入的 Reducer 是一个一个独立的，还要经过 RTK 的合并和处理（其中有一项可能和之前说的 immerjs 有关），才能用于 Redux store，可以通过以下代码将 RTK 处理过的 reducer 导出</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> counterSlice.<span class="property">reducer</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="在-React-Component-中应用-Redux"><a href="#在-React-Component-中应用-Redux" class="headerlink" title="在 React Component 中应用 Redux"></a>在 React Component 中应用 Redux</h2><p>这部分内容主要由<code>Redux-React</code>提供，毕竟 Redux 并不是局限于某个 js 框架的状态管理工具，他是一个非常开放的工具。</p>
+<h3 id="获取-Redux-store-数据"><a href="#获取-Redux-store-数据" class="headerlink" title="获取 Redux store 数据"></a>获取 Redux store 数据</h3><p><code>Redux-React</code>提供了<code>useSelector</code>钩子用来获取 Redux store 中的数据，使用方法如下</p>
+<p>引入</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { useSelector } <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在 React Component 中调用</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count = <span class="title function_">useSelector</span>(selectCount);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中<code>selectCount</code>即为<a href="#%E5%AF%BC%E5%87%BA%E5%88%87%E7%89%87%E7%9A%84Selectors">上文中导出的 Selector</a>。</p>
+<p>当然也可以写为行内的 Selector：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count = <span class="title function_">useSelector</span>(<span class="function">(<span class="params">state</span>) =&gt;</span> state.<span class="property">count</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样可以得到 Selector 筛选后的 store 数据，并且得益于<code>Redux-React</code>对 React 的单独适配，当筛选后的 store 数据变化时，对应组件也会进行重新渲染。</p>
+<h3 id="dispatch-更改"><a href="#dispatch-更改" class="headerlink" title="dispatch 更改"></a>dispatch 更改</h3><p>由于 Redux 禁止直接获取 store，<code>Redux-React</code>提供了<code>useDispatch</code>钩子用来获取 <code>dispatch</code> 函数</p>
+<p>引入</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { useSelector } <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在 React Component 中调用</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dispatch = <span class="title function_">useDispatch</span>();</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后便可以直接使用<code>dispatch</code>函数去触发更改了，与<code>store.dispatch</code>用法相同，可以传入<a target="_blank" rel="noopener" href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts/#action-creators">Action Creator</a>（包括 RTK 生成的 Action Creator），也可以传入一个简单的 action 对象，下面这两种方法都是可以的，传入 payload 的类型也没有限制。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">dispatch</span>({ <span class="attr">type</span>: <span class="string">"counter/incrementByAmount"</span>, <span class="attr">payload</span>: <span class="number">2</span> });</span><br><span class="line"><span class="title function_">dispatch</span>(<span class="title function_">incrementByAmount</span>(<span class="number">2</span>));</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="使用-Thunk-函数"><a href="#使用-Thunk-函数" class="headerlink" title="使用 Thunk 函数"></a>使用 Thunk 函数</h1><p>thunk 是一种特定类型的 Redux 函数，可以包含异步逻辑。Thunk 是使用两个函数编写的：</p>
+<ul>
+<li>内部 thunk 函数，它以 <code>dispatch</code> 和 <code>getState</code> 作为参数</li>
+<li>外部 thunk creator 函数，它创建并返回 thunk 函数</li>
+</ul>
+<p>例如在<a target="_blank" rel="noopener" href="https://codesandbox.io/embed/github/reduxjs/redux-essentials-example-app/tree/master/">Redux Demo</a>中有一段异步 dispatch 的例子，这个例子写在<code>/src/feature/counter/counterSlice.js</code>中</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">incrementAsync</span> = (<span class="params">amount</span>) =&gt; <span class="function">(<span class="params">dispatch, getState</span>) =&gt;</span> {</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="title function_">dispatch</span>(<span class="title function_">incrementByAmount</span>(amount));</span><br><span class="line">  }, <span class="number">1000</span>);</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<p>thunk 函数可以这样 <code>dispatch</code></p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">dispatch</span>(<span class="title function_">incrementAsync</span>(<span class="number">5</span>));</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们可以将这个函数提高一下代码可读性来看</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">incrementAsync</span> = (<span class="params">amount</span>) =&gt; {</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">dispatch, getState</span>) =&gt;</span> {</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">      <span class="title function_">dispatch</span>(<span class="title function_">incrementByAmount</span>(amount));</span><br><span class="line">    }, <span class="number">1000</span>);</span><br><span class="line">  };</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<p>代入至 <code>dispatch</code></p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">dispatch</span>(<span class="function">(<span class="params">dispatch, getState</span>) =&gt;</span> {</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="title function_">dispatch</span>(<span class="title function_">incrementByAmount</span>(<span class="number">5</span>));</span><br><span class="line">  }, <span class="number">1000</span>);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>也就是相当于向<code>dispatch</code>传入一个函数 A，参数为<code>dispatch</code>和<code>getState</code>函数，在函数 A 内实现异步逻辑之后再去<code>dispatch</code>。</p>
+<blockquote>
+<p>使用 thunk 需要在创建时将 <code>redux-thunk</code> middleware（一种 Redux 插件）添加到 Redux store 中。幸运的是，RTK 的 configureStore 函数已经自动为我们配置好了，所以我们可以继续在这里使用 thunk。</p>
+</blockquote>
+<p>另外再提供一个改自文档的网络请求的例子</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchUserById</span> = (<span class="params">userId</span>) =&gt; {</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">async</span> (dispatch, getState) =&gt; {</span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">      <span class="keyword">const</span> user = <span class="keyword">await</span> <span class="title function_">fetchUser</span>(userId);</span><br><span class="line">      <span class="title function_">dispatch</span>(<span class="title function_">userLoaded</span>(user));</span><br><span class="line">    } <span class="keyword">catch</span> (err) {</span><br><span class="line">      <span class="comment">// do sth</span></span><br><span class="line">    }</span><br><span class="line">  };</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h1><h2 id="reduxjs-toolkit"><a href="#reduxjs-toolkit" class="headerlink" title="@reduxjs/toolkit"></a>@reduxjs/toolkit</h2><h3 id="nanoid"><a href="#nanoid" class="headerlink" title="nanoid"></a><code>nanoid</code></h3><p>基于<a target="_blank" rel="noopener" href="https://github.com/ai/nanoid">nanoid/nonsecure</a>，用于生成一个随机 id 字符串，在 Redux 内部主要用于管理<code>createAsyncThunk</code>的异步请求 id，也可以用于其他用途。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { nanoid } <span class="keyword">from</span> <span class="string">"@reduxjs/toolkit"</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">nanoid</span>());</span><br><span class="line"><span class="comment">// 'dgPXxUz_6fWIQBD8XmiSy'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
+                </article>
+                <div style="height:auto;width:100%;text-align:center;"><a href="/donate.html"><img src="/donate.png" style="height:50px;width:auto"><br>您的鼓励是我努力的动力，欢迎前来打赏<br>点击“赏”或文字打赏</a></div>
+                <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/blog/tags/Redux/" rel="tag"># Redux</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/tags/React/" rel="tag"># React</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <nav id="gobottom" class="pagination">
+        
+        <span class="prev-next-post">·</span>
+        
+        <a class="next-post" title="《编程之美》读书记录（一）" href="/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/">
+            《编程之美》读书记录（一） →
+        </a>
+        
+    </nav>
+
+    
+</div>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"></path></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"></path></svg>
+            <svg class="toc-close hide" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"></path><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"></path></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"></path></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-text">创建store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8Provider%E8%A6%86%E7%9B%96-React-%E6%A0%B9%E7%BB%93%E7%82%B9"><span class="toc-text">用Provider覆盖 React 根结点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Redux-%E5%88%87%E7%89%87"><span class="toc-text">创建 Redux 切片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#createSlice"><span class="toc-text">createSlice()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Action-Creator"><span class="toc-text">获取Action Creator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%88%87%E7%89%87%E7%9A%84Selectors"><span class="toc-text">导出切片的Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-reducer"><span class="toc-text">导出 reducer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-React-Component-%E4%B8%AD%E5%BA%94%E7%94%A8-Redux"><span class="toc-text">在 React Component 中应用 Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-Redux-store-%E6%95%B0%E6%8D%AE"><span class="toc-text">获取 Redux store 数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dispatch-%E6%9B%B4%E6%94%B9"><span class="toc-text">dispatch 更改</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Thunk-%E5%87%BD%E6%95%B0"><span class="toc-text">使用 Thunk 函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="toc-text">其他功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#reduxjs-toolkit"><span class="toc-text">@reduxjs/toolkit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nanoid"><span class="toc-text">nanoid</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="toc-text">未完待续</span></a></li></ol>
+    </div>
+</div>
+
+
+
+
+
+
+	</div>
+	
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
+  <header class="read-next-card-header">
+    <small class="read-next-card-header-sitetitle">— Lakphy's Blog —</small>
+    <h3 class="read-next-card-header-title">Recent Posts</h3>
+  </header>
+  <div class="read-next-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path>
+    </svg>
+  </div>
+  <div class="read-next-card-content">
+    <ul>
+      
+      
+      
+      <li>
+        <a href="/blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Redux学习笔记（React）</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/">《编程之美》读书记录（一）</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/">打印了一个2021 Github Contributions</a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+  <footer class="read-next-card-footer">
+    <a href="/blog/archives">  MORE  → </a>
+  </footer>
+</article>
+
+            
+            
+            
+
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(/blog/photoswipe/head.jpg)">
+	<header class="read-next-card-header tagcloud-card">
+		<h3 class="read-next-card-header-title">Tag Cloud</h3>
+	</header>
+	<div class="read-next-card-content-ext">
+		<a href="/blog/tags/Arduino/" style="font-size: 19px;">Arduino</a> <a href="/blog/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px;">C语言</a> <a href="/blog/tags/Github/" style="font-size: 14px;">Github</a> <a href="/blog/tags/OI/" style="font-size: 14px;">OI</a> <a href="/blog/tags/Python/" style="font-size: 19px;">Python</a> <a href="/blog/tags/React/" style="font-size: 14px;">React</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/STM32%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 19px;">STM32单片机</a> <a href="/blog/tags/TensorFlow/" style="font-size: 14px;">TensorFlow</a> <a href="/blog/tags/bash/" style="font-size: 14px;">bash</a> <a href="/blog/tags/hexo/" style="font-size: 19px;">hexo</a> <a href="/blog/tags/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B/" style="font-size: 14px;">《编程之美》</a> <a href="/blog/tags/%E4%B8%AD%E6%80%A7%E7%AC%94/" style="font-size: 14px;">中性笔</a> <a href="/blog/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 14px;">哲学</a> <a href="/blog/tags/%E5%BC%80%E7%AE%B1%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">开箱评测</a> <a href="/blog/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/" style="font-size: 14px;">打工人</a> <a href="/blog/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" style="font-size: 14px;">技术杂谈</a> <a href="/blog/tags/%E6%95%B0%E7%A0%81/" style="font-size: 14px;">数码</a> <a href="/blog/tags/%E6%9D%82%E8%B0%88/" style="font-size: 14px;">杂谈</a> <a href="/blog/tags/%E6%B0%B4%E5%8D%9A%E6%96%87/" style="font-size: 14px;">水博文</a> <a href="/blog/tags/%E7%94%B5%E5%AD%90/" style="font-size: 14px;">电子</a> <a href="/blog/tags/%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/" style="font-size: 14px;">精神食粮</a> <a href="/blog/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">评测</a> <a href="/blog/tags/%E8%B5%84%E6%BA%90%E5%BA%93/" style="font-size: 19px;">资源库</a> <a href="/blog/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" style="font-size: 24px;">踩坑记录</a>
+	</div>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+	
+
+
+
+
+<div id="search" class="search-overlay">
+    <div class="search-form">
+        
+        <div class="search-overlay-logo">
+        	<img src="https://lakphy.github.io/logo.jpg" alt="Lakphy's Blog">
+        </div>
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<div class="copyright">
+			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog © 2022</a>
+			
+				
+    		
+		</div>
+		<nav class="site-footer-nav">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br>
+			<span>如未特殊声明, 本站文章默认使用<a style="margin:0px;" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0 </a>协议</span>
+		</nav>
+	</div>
+</footer>
+
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }
+        })
+    }
+</script>
+
+
+<script id="scriptLoad" src="/blog/js/allinone.min.js" async=""></script>
+
+
+<script>
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        
+        
+            var bLazy = new Blazy();
+        
+
+        
+        
+
+        
+        
+        
+            searchFunc("/blog/");
+        
+        
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    });
+</script>
+
+
+
+
+</body></html>
