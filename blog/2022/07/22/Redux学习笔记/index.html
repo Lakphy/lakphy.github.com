@@ -302,7 +302,8 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>⚠️ 警告<br>Redux actions and state should only contain plain JS values like objects, arrays, and primitives. Don’t put class instances, functions, or other non-serializable <em>(不可序列化)</em> values into Redux!.</p>
 </blockquote>
-<h1 id="使用-Thunk-函数"><a href="#使用-Thunk-函数" class="headerlink" title="使用 Thunk 函数"></a>使用 Thunk 函数</h1><p>thunk 是一种特定类型的 Redux 函数，可以包含异步逻辑。Thunk 是使用两个函数编写的：</p>
+<h1 id="使用-Thunk-函数"><a href="#使用-Thunk-函数" class="headerlink" title="使用 Thunk 函数"></a>使用 Thunk 函数</h1><p>thunk 函数通常写在 slice 文件内，（与<code>createSlice</code>同文件），这样可以便于寻找代码。</p>
+<h2 id="使用简单的-Thunk"><a href="#使用简单的-Thunk" class="headerlink" title="使用简单的 Thunk"></a>使用简单的 Thunk</h2><p>thunk 是一种特定类型的 Redux 函数，可以包含异步逻辑。Thunk 是使用两个函数编写的：</p>
 <ul>
 <li>内部 thunk 函数，它以 <code>dispatch</code> 和 <code>getState</code> 作为参数</li>
 <li>外部 thunk creator 函数，它创建并返回 thunk 函数</li>
@@ -326,6 +327,7 @@ var _hmt = _hmt || [];
 <p>另外再提供一个改自文档的网络请求的例子</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchUserById</span> = (<span class="params">userId</span>) =&gt; {</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">async</span> (dispatch, getState) =&gt; {</span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">      <span class="keyword">const</span> user = <span class="keyword">await</span> <span class="title function_">fetchUser</span>(userId);</span><br><span class="line">      <span class="title function_">dispatch</span>(<span class="title function_">userLoaded</span>(user));</span><br><span class="line">    } <span class="keyword">catch</span> (err) {</span><br><span class="line">      <span class="comment">// do sth</span></span><br><span class="line">    }</span><br><span class="line">  };</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
 
+<p>可以看到外部 thunk creator 函数的作用是为了将我们的参数传入 thunk 内部函数，并且还能与 Action Creator 形式保持一致</p>
 <h1 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h1><h2 id="reduxjs-toolkit"><a href="#reduxjs-toolkit" class="headerlink" title="@reduxjs/toolkit"></a>@reduxjs/toolkit</h2><h3 id="nanoid"><a href="#nanoid" class="headerlink" title="nanoid"></a><code>nanoid</code></h3><p>基于<a target="_blank" rel="noopener" href="https://github.com/ai/nanoid">nanoid/nonsecure</a>，用于生成一个随机 id 字符串，在 Redux 内部主要用于管理<code>createAsyncThunk</code>的异步请求 id，也可以用于其他用途。</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { nanoid } <span class="keyword">from</span> <span class="string">"@reduxjs/toolkit"</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">nanoid</span>());</span><br><span class="line"><span class="comment">// 'dgPXxUz_6fWIQBD8XmiSy'</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -349,6 +351,10 @@ var _hmt = _hmt || [];
 
     
     <nav id="gobottom" class="pagination">
+        
+        <a class="prev-post" title="一段逆天的js代码" href="/blog/2022/08/01/%E4%B8%80%E6%AE%B5%E9%80%86%E5%A4%A9%E7%9A%84js%E4%BB%A3%E7%A0%81/">
+            ← 一段逆天的js代码
+        </a>
         
         <span class="prev-next-post">·</span>
         
@@ -375,7 +381,7 @@ var _hmt = _hmt || [];
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-text">创建store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8Provider%E8%A6%86%E7%9B%96-React-%E6%A0%B9%E7%BB%93%E7%82%B9"><span class="toc-text">用Provider覆盖 React 根结点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Redux-%E5%88%87%E7%89%87"><span class="toc-text">创建 Redux 切片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#createSlice"><span class="toc-text">createSlice()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Action-Creator"><span class="toc-text">获取Action Creator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%88%87%E7%89%87%E7%9A%84Selectors"><span class="toc-text">导出切片的Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-reducer"><span class="toc-text">导出 reducer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-React-Component-%E4%B8%AD%E5%BA%94%E7%94%A8-Redux"><span class="toc-text">在 React Component 中应用 Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-Redux-store-%E6%95%B0%E6%8D%AE"><span class="toc-text">获取 Redux store 数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dispatch-%E6%9B%B4%E6%94%B9"><span class="toc-text">dispatch 更改</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Thunk-%E5%87%BD%E6%95%B0"><span class="toc-text">使用 Thunk 函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="toc-text">其他功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#reduxjs-toolkit"><span class="toc-text">@reduxjs/toolkit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nanoid"><span class="toc-text">nanoid</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="toc-text">未完待续</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-text">创建store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8Provider%E8%A6%86%E7%9B%96-React-%E6%A0%B9%E7%BB%93%E7%82%B9"><span class="toc-text">用Provider覆盖 React 根结点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Redux-%E5%88%87%E7%89%87"><span class="toc-text">创建 Redux 切片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#createSlice"><span class="toc-text">createSlice()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Action-Creator"><span class="toc-text">获取Action Creator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%88%87%E7%89%87%E7%9A%84Selectors"><span class="toc-text">导出切片的Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-reducer"><span class="toc-text">导出 reducer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-React-Component-%E4%B8%AD%E5%BA%94%E7%94%A8-Redux"><span class="toc-text">在 React Component 中应用 Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-Redux-store-%E6%95%B0%E6%8D%AE"><span class="toc-text">获取 Redux store 数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dispatch-%E6%9B%B4%E6%94%B9"><span class="toc-text">dispatch 更改</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Thunk-%E5%87%BD%E6%95%B0"><span class="toc-text">使用 Thunk 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AE%80%E5%8D%95%E7%9A%84-Thunk"><span class="toc-text">使用简单的 Thunk</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="toc-text">其他功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#reduxjs-toolkit"><span class="toc-text">@reduxjs/toolkit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nanoid"><span class="toc-text">nanoid</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="toc-text">未完待续</span></a></li></ol>
     </div>
 </div>
 
@@ -410,6 +416,12 @@ var _hmt = _hmt || [];
       
       
       <li>
+        <a href="/blog/2022/08/01/%E4%B8%80%E6%AE%B5%E9%80%86%E5%A4%A9%E7%9A%84js%E4%BB%A3%E7%A0%81/">一段逆天的js代码</a>
+      </li>
+      
+      
+      
+      <li>
         <a href="/blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Redux学习笔记（React）</a>
       </li>
       
@@ -420,10 +432,6 @@ var _hmt = _hmt || [];
       </li>
       
       
-      
-      <li>
-        <a href="/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/">打印了一个2021 Github Contributions</a>
-      </li>
       
       
       
@@ -499,7 +507,7 @@ var _hmt = _hmt || [];
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
-		<a href="/blog/tags/Arduino/" style="font-size: 19px;">Arduino</a> <a href="/blog/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px;">C语言</a> <a href="/blog/tags/Github/" style="font-size: 14px;">Github</a> <a href="/blog/tags/OI/" style="font-size: 14px;">OI</a> <a href="/blog/tags/Python/" style="font-size: 19px;">Python</a> <a href="/blog/tags/React/" style="font-size: 14px;">React</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/STM32%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 19px;">STM32单片机</a> <a href="/blog/tags/TensorFlow/" style="font-size: 14px;">TensorFlow</a> <a href="/blog/tags/bash/" style="font-size: 14px;">bash</a> <a href="/blog/tags/hexo/" style="font-size: 19px;">hexo</a> <a href="/blog/tags/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B/" style="font-size: 14px;">《编程之美》</a> <a href="/blog/tags/%E4%B8%AD%E6%80%A7%E7%AC%94/" style="font-size: 14px;">中性笔</a> <a href="/blog/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 14px;">哲学</a> <a href="/blog/tags/%E5%BC%80%E7%AE%B1%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">开箱评测</a> <a href="/blog/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/" style="font-size: 14px;">打工人</a> <a href="/blog/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" style="font-size: 14px;">技术杂谈</a> <a href="/blog/tags/%E6%95%B0%E7%A0%81/" style="font-size: 14px;">数码</a> <a href="/blog/tags/%E6%9D%82%E8%B0%88/" style="font-size: 14px;">杂谈</a> <a href="/blog/tags/%E6%B0%B4%E5%8D%9A%E6%96%87/" style="font-size: 14px;">水博文</a> <a href="/blog/tags/%E7%94%B5%E5%AD%90/" style="font-size: 14px;">电子</a> <a href="/blog/tags/%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/" style="font-size: 14px;">精神食粮</a> <a href="/blog/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">评测</a> <a href="/blog/tags/%E8%B5%84%E6%BA%90%E5%BA%93/" style="font-size: 19px;">资源库</a> <a href="/blog/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" style="font-size: 24px;">踩坑记录</a>
+		<a href="/blog/tags/Arduino/" style="font-size: 19px;">Arduino</a> <a href="/blog/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px;">C语言</a> <a href="/blog/tags/Github/" style="font-size: 14px;">Github</a> <a href="/blog/tags/OI/" style="font-size: 14px;">OI</a> <a href="/blog/tags/Python/" style="font-size: 19px;">Python</a> <a href="/blog/tags/React/" style="font-size: 14px;">React</a> <a href="/blog/tags/Redux/" style="font-size: 14px;">Redux</a> <a href="/blog/tags/STM32%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 19px;">STM32单片机</a> <a href="/blog/tags/TensorFlow/" style="font-size: 14px;">TensorFlow</a> <a href="/blog/tags/bash/" style="font-size: 14px;">bash</a> <a href="/blog/tags/hexo/" style="font-size: 19px;">hexo</a> <a href="/blog/tags/js/" style="font-size: 14px;">js</a> <a href="/blog/tags/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B/" style="font-size: 14px;">《编程之美》</a> <a href="/blog/tags/%E4%B8%AD%E6%80%A7%E7%AC%94/" style="font-size: 14px;">中性笔</a> <a href="/blog/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 14px;">哲学</a> <a href="/blog/tags/%E5%BC%80%E7%AE%B1%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">开箱评测</a> <a href="/blog/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/" style="font-size: 14px;">打工人</a> <a href="/blog/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" style="font-size: 14px;">技术杂谈</a> <a href="/blog/tags/%E6%95%B0%E7%A0%81/" style="font-size: 14px;">数码</a> <a href="/blog/tags/%E6%9D%82%E8%B0%88/" style="font-size: 14px;">杂谈</a> <a href="/blog/tags/%E6%B0%B4%E5%8D%9A%E6%96%87/" style="font-size: 14px;">水博文</a> <a href="/blog/tags/%E7%94%B5%E5%AD%90/" style="font-size: 14px;">电子</a> <a href="/blog/tags/%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/" style="font-size: 14px;">精神食粮</a> <a href="/blog/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 14px;">评测</a> <a href="/blog/tags/%E8%B5%84%E6%BA%90%E5%BA%93/" style="font-size: 19px;">资源库</a> <a href="/blog/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" style="font-size: 24px;">踩坑记录</a>
 	</div>
 </article>
 
