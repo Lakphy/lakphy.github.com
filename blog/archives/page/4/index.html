@@ -26,16 +26,16 @@ var _hmt = _hmt || [];
 </script>
 
 
-	<title>Python实现微信接龙转换为表格 | Lakphy's Blog</title>
+	<title>Archives | Lakphy's Blog</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Lakphy">
-	<meta name="description" content="">
+	<meta name="description" content="Talk is cheap,show me your code.">
 
 	
-	<meta name="keywords" content="微信接龙">
+	<meta name="keywords" content="Lakphy,blog">
 	
 
 	
@@ -53,15 +53,11 @@ var _hmt = _hmt || [];
 	
 
 	<meta property="og:site_name" content="Lakphy's Blog">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Python实现微信接龙转换为表格 | Lakphy's Blog">
-	<meta property="og:description" content="">
-	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2020/02/19/Python%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E6%8E%A5%E9%BE%99%E8%BD%AC%E6%8D%A2%E4%B8%BA%E8%A1%A8%E6%A0%BC/">
+	<meta property="og:type" content="blog">
+	<meta property="og:title" content="Archives | Lakphy's Blog">
+	<meta property="og:description" content="Talk is cheap,show me your code.">
+	<meta property="og:url" content="https://lakphy.github.io/blog/blog/archives/page/4/index.html">
 
-	
-	<meta property="article:published_time" content="2020-02-19T08:02:00+08:00"> 
-	<meta property="article:author" content="Lakphy">
-	<meta property="article:published_first" content="Lakphy's Blog, /blog/2020/02/19/Python%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E6%8E%A5%E9%BE%99%E8%BD%AC%E6%8D%A2%E4%B8%BA%E8%A1%A8%E6%A0%BC/">
 	
 
 	
@@ -83,15 +79,17 @@ var _hmt = _hmt || [];
 	
 <link rel="alternate" href="/blog/atom.xml" title="Lakphy's Blog" type="application/atom+xml">
 </head>
-<body class="post-template">
+<body class="tag-template">
 	<div class="site-wrapper">
 		
 
 
 
 
-<header class="site-header post-site-header outer">
+<header class="site-header outer " style="background-image: url(/blog/photoswipe/head.jpg);background-position: top center;">
     <div class="inner">
+        
+        
         
 <nav class="site-nav"> 
     <div class="site-nav-left">
@@ -152,96 +150,132 @@ var _hmt = _hmt || [];
 </div>
     </div>
 </nav>
+        
+        <div class="site-header-content">
+            
+            <h1 class="site-title">
+                Archives
+            </h1>
+            <h2 class="site-description" id="zones"></h2>
+            <script>
+            function randomNum(minNum,maxNum){ 
+                switch(arguments.length){
+                    case 1: 
+                        return parseInt(Math.random()*minNum+1,10); 
+                        break; 
+                    case 2: 
+                        return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+                        break; 
+                    default: 
+                        return 0; 
+                        break; 
+                }
+            }
+            var a=randomNum(1,8);
+            if(a==1){
+                document.getElementById("zones").innerHTML="The people who are crazy enough to think that they can change the world, are the ones who do.&nbsp&nbsp&nbsp;-----Steve Jobs"
+            }
+            if(a==2){
+                document.getElementById("zones").innerHTML="Talk is cheap,show me your code.&nbsp&nbsp&nbsp;-----Linus"
+            }
+            if(a==3){
+                document.getElementById("zones").innerHTML="In order to understand recursion, one must first understand recursion.&nbsp&nbsp&nbsp;-----Author Unknown"
+            }
+            if(a==4){
+                document.getElementById("zones").innerHTML="Premature optimization is the root of all evil!&nbsp&nbsp&nbsp;-----Donald Knuth"
+            }
+            if(a==5){
+                document.getElementById("zones").innerHTML="When in doubt, use brute force.&nbsp&nbsp&nbsp;-----Ken Thompson"
+            }
+            if(a==6){
+                document.getElementById("zones").innerHTML="The fastest IO is no IO.&nbsp&nbsp&nbsp;-----Nils-Peter Nelson"
+            }
+            if(a==7){
+                document.getElementById("zones").innerHTML="Don't write a new program if one already does moie or less what you want. And if you must write a program, use existing code to do as much of the work as possible.&nbsp&nbsp&nbsp;-----Richard Hill"
+            }
+            if(a==8){
+                document.getElementById("zones").innerHTML="            never trust a computer you can’t throw out a window.&nbsp&nbsp&nbsp;-----Nils-Peter Nelson"
+            }
+            </script>
+        </div>
+        
+        
     </div>
 </header>
 
 
 <div id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-        <header class="post-full-header">
-            <div class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2020-02-19T00:58:19.000Z">
-                    2020-02-19
-                </time>
-                
-                <span class="date-divider">/</span>
-                
-                
-            </div>
-            <h1 class="post-full-title">Python实现微信接龙转换为表格</h1>
-        </header>
-        <div class="post-full no-image">
-            
-            <div class="post-full-content">
-                <article id="photoswipe" class="markdown-body">
-                    <p>近期在家中上网课，因为形式特殊，班群里经常通过接龙统计些信息，比如说错题、住址（用来寄学习资料）等等，有的统计成接龙还好说，但有的要改成表格，所以老师是接龙文字还是接龙表格呢？？？？</p>
-<p>接龙文字：微信接龙辅助，不会漏人，很不错，但改成表格麻烦</p>
-<p>接龙表格：这个直接，但经常漏人啊。。。</p>
-<p>于是开发了一个项目，名为 Solitaire，用于格式化文字接龙内容为表格</p>
-<p>基于pyforms的GUI框架</p>
-<p>pyforms是基于pyqt的GUI框架，有点臃肿。。。</p>
-<p>不建议打包，我打包了一下，环境 windows2016，工具pyinstaller</p>
-<p>打包完大小160mb左右。。。。。</p>
-<p>它估计把整个pyqt都放进去了</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>先安装依赖（我认为你已安装Python）</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install xlwt</span><br><span class="line">pip install pyforms</span><br></pre></td></tr></tbody></table></figure>
+	<div class="inner">
+		<div class="post-feed">
+			
+			<article class="post-card post ">
+				
+				<a class="post-card-image-link" title="第一篇博文" href="/blog/2019/06/09/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">
+					<div class="post-card-image b-lazy" data-src="https://lakphy.cf/logo.jpg"></div>
+				</a>
+				
+				<div class="post-card-content">
+					<a class="post-card-content-link" title="第一篇博文" href="/blog/2019/06/09/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">
+						<header class="post-card-header">
+							<span class="post-card-tags">
+								
+								| 
+								
+								<time datetime="2019-06-09T11:00:28.000Z">
+									2019-06-09
+								</time>
+							</span>
+							<h2 class="post-card-title">第一篇博文</h2>
+						</header>
+						<div class="post-card-excerpt">
+							<p>
+								
+								
+								
+								
+								
+								
+								
+								这里是第一篇博文
 
-<p>然后下面是代码：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyforms</span><br><span class="line"><span class="keyword">from</span>   pyforms.basewidget <span class="keyword">import</span> BaseWidget</span><br><span class="line"><span class="keyword">from</span>   pyforms.controls   <span class="keyword">import</span> ControlText</span><br><span class="line"><span class="keyword">from</span>   pyforms.controls   <span class="keyword">import</span> ControlLabel</span><br><span class="line"><span class="keyword">from</span>   pyforms.controls   <span class="keyword">import</span> ControlTextArea</span><br><span class="line"><span class="keyword">from</span>   pyforms.controls   <span class="keyword">import</span> ControlButton</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SimpleExample1</span>(<span class="title class_ inherited__">BaseWidget</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(SimpleExample1,self).__init__(<span class="string">'接龙格式化工具-----Lakphy'</span>)</span><br><span class="line">        self._fullname      = ControlTextArea(<span class="string">'接龙内容'</span>)</span><br><span class="line">        self._test          = ControlLabel(<span class="string">'请输入接龙内容后点击格式化，即可转换为表格\n请注意使用\'--\'即两个减号为每个数据分隔符，使用换行作为每个人的数据分隔符！\nCopyRight Lakphy 2020\n网站:lakphy.me'</span>)</span><br><span class="line">        self._button        = ControlButton(<span class="string">'格式化'</span>)</span><br><span class="line">        self._button.value  = self.__buttonAction</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__buttonAction</span>(<span class="params">self</span>):</span><br><span class="line">        self._test.value = <span class="built_in">str</span>(self._fullname.value.split(<span class="string">'\n'</span>))</span><br><span class="line">        a      = self._fullname.value.split(<span class="string">'\n'</span>)</span><br><span class="line">        wk     = xlwt.Workbook()</span><br><span class="line">        sheet1 = wk.add_sheet(<span class="string">"数据"</span>, cell_overwrite_ok=<span class="literal">True</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(a)):</span><br><span class="line">            b  = a[i].split(<span class="string">'--'</span>)</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(b)):</span><br><span class="line">                <span class="keyword">if</span> j == <span class="number">0</span>:</span><br><span class="line">                    d = b[j].split(<span class="string">'. '</span>,<span class="number">2</span>)</span><br><span class="line">                    <span class="keyword">if</span> <span class="built_in">len</span>(d) == <span class="number">2</span>:</span><br><span class="line">                        c = d[<span class="number">1</span>]</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        d = b[j].split(<span class="string">'.'</span>,<span class="number">2</span>)</span><br><span class="line">                        <span class="keyword">if</span> <span class="built_in">len</span>(d) == <span class="number">2</span>:</span><br><span class="line">                            c = d[<span class="number">1</span>]</span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            c = b[j]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    c = b[j]</span><br><span class="line">                sheet1.write(i+<span class="number">1</span>,j+<span class="number">1</span>,c)</span><br><span class="line">            sheet1.write(i+<span class="number">1</span>,<span class="number">0</span>,i+<span class="number">1</span>)</span><br><span class="line">        wk.save(<span class="string">'Solitaire.xls'</span>)</span><br><span class="line">        self._test.value = <span class="string">'接龙内容格式化成功！内容保存在Solitaire.xls，请及时备份该文件，防止下次使用该软件时覆盖内容！\nCopyRight Lakphy 2020\n网站:lakphy.me'</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>: pyforms.start_app( SimpleExample1 )</span><br></pre></td></tr></tbody></table></figure>
-
-<p>附文：<a target="_blank" rel="noopener" href="https://pyforms.readthedocs.io/projects/Pyforms-GUI/en/v4/getting-started/the-basic.html">pyforms文档</a></p>
-
-                </article>
-                <div style="height:auto;width:100%;text-align:center;"><a href="/donate.html"><img src="/donate.png" style="height:50px;width:auto"><br>您的鼓励是我努力的动力，欢迎前来打赏<br>点击“赏”或文字打赏</a></div>
-                <ul class="tags-postTags">
-                    
-                    <li>
-                        <a href="/blog/tags/Python/" rel="tag"># Python</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    
-    <nav id="gobottom" class="pagination">
-        
-        <a class="prev-post" title="用Arduino开发板演奏音乐" href="/blog/2020/02/21/%E7%94%A8Arduino%E5%BC%80%E5%8F%91%E6%9D%BF%E6%BC%94%E5%A5%8F%E9%9F%B3%E4%B9%90/">
-            ← 用Arduino开发板演奏音乐
-        </a>
-        
-        <span class="prev-next-post">·</span>
-        
-        <a class="next-post" title="SourLib" href="/blog/2020/02/18/SourLib/">
-            SourLib →
-        </a>
-        
-    </nav>
-
-    
-</div>
-
-<div class="toc-bar">
-    <div class="toc-btn-bar">
-        <a href="#site-main" class="toc-btn">
-            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"></path></svg>
-        </a>
-        <div class="toc-btn toc-switch">
-            <svg class="toc-open" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"></path></svg>
-            <svg class="toc-close hide" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"></path><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"></path></svg>
-        </div>
-        <a href="#gobottom" class="toc-btn">
-            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"></path></svg>
-        </a>
-    </div>
-    <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a></li></ol>
-    </div>
+								
+							</p>
+						</div>
+					</a>
+					<footer class="post-card-meta">
+						<div class="author-list">
+							<div class="author-list-item">
+								<div class="author-name-tooltip">Lakphy</div>
+								
+								<a href="/about" class="static-avatar">
+									<img class="author-profile-image" src="https://lakphy.github.io/logo.jpg" alt="Lakphy">Lakphy
+								</a>
+								
+							</div>
+						</div>
+						<span class="reading-time">
+							0
+							min read
+						</span>
+					</footer>
+				</div>
+			</article>
+			
+		</div>
+	</div>
 </div>
 
 
 
+<div class="outer">
+	<nav class="pagination">
+		
+		<nav class="page-nav">
+			<a class="extend prev" rel="prev" href="/blog/archives/page/3/">← PREV</a><a class="page-number" href="/blog/archives/">1</a><a class="page-number" href="/blog/archives/page/2/">2</a><a class="page-number" href="/blog/archives/page/3/">3</a><span class="page-number current">4</span>
+		</nav>
+		
+	</nav>
+</div>
 
 
 
@@ -396,8 +430,6 @@ var _hmt = _hmt || [];
 		<div class="copyright">
 			<a href="/blog/" title="Lakphy's Blog">Lakphy's Blog © 2022</a>
 			
-				
-    		
 		</div>
 		<nav class="site-footer-nav">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
