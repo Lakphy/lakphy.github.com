@@ -26,16 +26,16 @@ var _hmt = _hmt || [];
 </script>
 
 
-	<title>Redux学习笔记（React） | Lakphy's Blog</title>
+	<title>Redux Essentials 学习笔记 | Lakphy's Blog</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Lakphy">
-	<meta name="description" content="Redux学习笔记（React）">
+	<meta name="description" content="Redux Essentials 学习笔记">
 
 	
-	<meta name="keywords" content="Redux,React">
+	<meta name="keywords" content="Redux,React,RTK">
 	
 
 	
@@ -54,8 +54,8 @@ var _hmt = _hmt || [];
 
 	<meta property="og:site_name" content="Lakphy's Blog">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Redux学习笔记（React） | Lakphy's Blog">
-	<meta property="og:description" content="Redux学习笔记（React）">
+	<meta property="og:title" content="Redux Essentials 学习笔记 | Lakphy's Blog">
+	<meta property="og:description" content="Redux Essentials 学习笔记">
 	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 	
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
                 
                 
             </div>
-            <h1 class="post-full-title">Redux学习笔记（React）</h1>
+            <h1 class="post-full-title">Redux Essentials 学习笔记</h1>
         </header>
         <div class="post-full ">
             
@@ -258,6 +258,15 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 </li>
+<li><code>extraReducers</code>：一个函数，参数为一个<code>builder</code>对象，用于为外部定义的 actions 定义 reducers，build 对象的操作可以链式调用，下面是一些用法介绍：（其中 reducer 函数与之前定义相同<code>(state, action) =&gt; {}</code>）<ul>
+<li><code>builder.addCase(actionCreator, reducer)</code>：为一个 Action Creator 或者一个 Action 字符串添加 reducer</li>
+<li><code>builder.addMatcher(matcher, reducer)</code>：为 matter function 返回为 true 的所有 action 添加 reducer</li>
+<li><code>builder.addDefaultCase(reducer)</code>：当没有其他项匹配时的默认 reducer<blockquote>
+<p>样例：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">extraReducers</span>: <span class="function">(<span class="params">builder</span>) =&gt;</span> {</span><br><span class="line">  builder</span><br><span class="line">    .<span class="title function_">addCase</span>(<span class="string">"counter/decrement"</span>, <span class="function">(<span class="params">state, action</span>) =&gt;</span> {})</span><br><span class="line">    .<span class="title function_">addCase</span>(increment, <span class="function">(<span class="params">state, action</span>) =&gt;</span> {});</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure></blockquote>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>返回值 返回一个初始化好的 Redux 切片对象，我们可以从这个对象中获得我们有用的东西（见下文）</li>
@@ -289,6 +298,7 @@ var _hmt = _hmt || [];
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count = <span class="title function_">useSelector</span>(<span class="function">(<span class="params">state</span>) =&gt;</span> state.<span class="property">count</span>);</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样可以得到 Selector 筛选后的 store 数据，并且得益于<code>Redux-React</code>对 React 的单独适配，当筛选后的 store 数据变化时，对应组件也会进行重新渲染。</p>
+<p>但是需要注意的一点是，每次调用 dispatch 时，不管在哪里调用 dispatch，都会重新计算一遍<code>Selector</code>函数，如果计算结果发生变化，则会使对应组件重新渲染。这里发生的变化如果是对象，则比较的对象的<strong>引用</strong>是否发生变化，即<code>{}!=={}</code></p>
 <h3 id="dispatch-更改"><a href="#dispatch-更改" class="headerlink" title="dispatch 更改"></a>dispatch 更改</h3><p>由于 Redux 禁止直接获取 store，<code>Redux-React</code>提供了<code>useDispatch</code>钩子用来获取 <code>dispatch</code> 函数</p>
 <p>引入</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { useSelector } <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br></pre></td></tr></tbody></table></figure>
@@ -328,6 +338,108 @@ var _hmt = _hmt || [];
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchUserById</span> = (<span class="params">userId</span>) =&gt; {</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">async</span> (dispatch, getState) =&gt; {</span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">      <span class="keyword">const</span> user = <span class="keyword">await</span> <span class="title function_">fetchUser</span>(userId);</span><br><span class="line">      <span class="title function_">dispatch</span>(<span class="title function_">userLoaded</span>(user));</span><br><span class="line">    } <span class="keyword">catch</span> (err) {</span><br><span class="line">      <span class="comment">// do sth</span></span><br><span class="line">    }</span><br><span class="line">  };</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
 
 <p>可以看到外部 thunk creator 函数的作用是为了将我们的参数传入 thunk 内部函数，并且还能与 Action Creator 形式保持一致</p>
+<h2 id="使用createAsyncThunk创建异步-Thunk"><a href="#使用createAsyncThunk创建异步-Thunk" class="headerlink" title="使用createAsyncThunk创建异步 Thunk"></a>使用<code>createAsyncThunk</code>创建异步 Thunk</h2><p>RTK 提供了一个<code>createAsyncThunk</code>方法来创建异步的 Thunk，方便我们进行网络请求等操作</p>
+<p>直接看一个文档样例</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> fetchPosts = <span class="title function_">createAsyncThunk</span>(<span class="string">"posts/fetchPosts"</span>, <span class="keyword">async</span> () =&gt; {</span><br><span class="line">  <span class="keyword">const</span> response = <span class="keyword">await</span> client.<span class="title function_">get</span>(<span class="string">"/fakeApi/posts"</span>);</span><br><span class="line">  <span class="keyword">return</span> response.<span class="property">data</span>;</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在此例中，刚开始 fetch 数据时会 dispatch <code>posts/fetchPosts/pending</code> Action，fetch 完成后会 dispatch <code>posts/fetchPosts/fulfilled</code> Action，出现问题时则会 dispatch <code>posts/fetchPosts/rejected</code> Action</p>
+<p><strong>参数</strong></p>
+<ul>
+<li>Action 字符串</li>
+<li><code>payloadCreator</code>函数，其中包含我们的异步代码，参数如下：<ul>
+<li><code>arg</code>：dispatch 这个 Action Creator 时候传入的第一个参数，如果有多个参数，则应放在一个对象中传入</li>
+<li><code>thunkAPI</code>：一个对象<ul>
+<li><code>dispatch</code>：the Redux store dispatch method</li>
+<li><code>getState</code>：the Redux store getState method</li>
+<li><code>extra</code>：the “extra argument” that can be passed into the thunk middleware when creating the store. This is typically some kind of API wrapper, such as a set of functions that know how to make API calls to your application’s server and return data, so that your thunks don’t have to have all the URLs and query logic directly inside.</li>
+<li><code>requestId</code>：a unique string ID value that was automatically generated to identify this request sequence</li>
+<li><code>signal</code>：一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/signal"><code>AbortController.signal</code>对象</a>，可用于查看执行时是否已将此请求取消</li>
+<li><code>rejectWithValue(value, [meta])</code>：rejectWithValue is a utility function that you can <code>return</code> (or <code>throw</code>) in your action creator to return a rejected response with a defined payload and meta. It will pass whatever value you give it and return it in the payload of the rejected action. If you also pass in a <code>meta</code>, it will be merged with the existing <code>rejectedAction.meta</code>.</li>
+<li><code>fulfillWithValue(value, meta)</code>：fulfillWithValue is a utility function that you can <code>return</code> in your action creator to fulfill with a value while having the ability of adding to <code>fulfilledAction.meta</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>options</code>对象<ul>
+<li><code>condition(arg, { getState, extra } ): boolean | Promise&lt;boolean&gt;</code>：用于跳过执行<code>payloadCreator</code>，详细信息<a target="_blank" rel="noopener" href="https://redux-toolkit.js.org/api/createAsyncThunk#canceling-before-execution">Canceling Before Execution</a></li>
+<li><code>dispatchConditionRejection</code>：当上一个<code>condition</code>参数返回值为<code>false</code>时，不会 dispatch 任何 Action，如果想要 dispatch 一个 rejection 可以将这个参数置为<code>true</code>。</li>
+<li><code>idGenerator(arg): string</code>：用于生成随机<code>requestId</code>的函数。默认使用<a target="_blank" rel="noopener" href="https://redux-toolkit.js.org/api/other-exports/#nanoid">nanoid</a></li>
+<li><code>serializeError(error: unknown) =&gt; any</code>：to replace the internal miniSerializeError method with your own serialization logic.</li>
+<li><code>getPendingMeta({ arg, requestId }, { getState, extra }): any</code>：一个函数，用于创建一个对象最终会合入<code>pendingAction.meta</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>返回值</strong></p>
+<ul>
+<li>一个 thunk action creator，用于 dispatch 这个异步 thunk action，eg：<code>'users/fetchByIdStatus'</code></li>
+<li>还可以调用它其中包含的 action creator<ul>
+<li><code>pending</code>：待完成，eg：<code>'users/fetchByIdStatus/pending'</code></li>
+<li><code>fulfilled</code>：已完成，eg：<code>'users/fetchByIdStatus/fulfilled'</code></li>
+<li><code>rejected</code>：被拒绝，eg：<code>'users/fetchByIdStatus/rejected'</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>thunk action creator 的 dispatch 过程</strong></p>
+<ul>
+<li>dispatch the pending action</li>
+<li>call the payloadCreator callback and wait for the returned promise to settle</li>
+<li>when the promise settles:<ul>
+<li>if the promise resolved successfully, dispatch the fulfilled action with the promise value as action.payload</li>
+<li>if the promise resolved with a rejectWithValue(value) return value, dispatch the rejected action with the value passed into action.payload and ‘Rejected’ as action.error.message</li>
+<li>if the promise failed and was not handled with rejectWithValue, dispatch the rejected action with a serialized version of the error value as action.error</li>
+</ul>
+</li>
+<li>Return a fulfilled promise containing the final dispatched action (either the fulfilled or rejected action object)</li>
+</ul>
+<p>关于这个<code>createAsyncThunk</code>方法的具体细节可以查看<a target="_blank" rel="noopener" href="https://redux-toolkit.js.org/api/createAsyncThunk">https://redux-toolkit.js.org/api/createAsyncThunk</a></p>
+<h1 id="性能优化注意点"><a href="#性能优化注意点" class="headerlink" title="性能优化注意点"></a>性能优化注意点</h1><h2 id="useSelector重复渲染"><a href="#useSelector重复渲染" class="headerlink" title="useSelector重复渲染"></a><code>useSelector</code>重复渲染</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>每次调用 dispatch 时，不管在哪里调用 dispatch，都会重新计算一遍<code>Selector</code>函数，如果计算结果发生变化，则会使<code>useSelector</code>对应组件重新渲染。这里发生的变化如果是对象，则比较的对象的<strong>引用</strong>是否发生变化，即<code>{}!=={}</code>。</p>
+<p>观察下列代码</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> postsForUser = <span class="title function_">useSelector</span>(<span class="function">(<span class="params">state</span>) =&gt;</span> {</span><br><span class="line">  <span class="keyword">const</span> allPosts = <span class="title function_">selectAllPosts</span>(state);</span><br><span class="line">  <span class="keyword">return</span> allPosts.<span class="title function_">filter</span>(<span class="function">(<span class="params">post</span>) =&gt;</span> post.<span class="property">user</span> === userId);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>每次 dispatch 时计算得出的数组对象的引用是不相同的，所以会导致不管在哪里 dispatch，都会使这个组件重新渲染</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>可以使用<a target="_blank" rel="noopener" href="https://github.com/reduxjs/reselect">Redux Reselect</a>创建 memoized Selector 函数。</p>
+<p>RTK 已经帮我们加好了这个库，所以只需要在 RTK 中引出<a target="_blank" rel="noopener" href="https://redux-toolkit.js.org/api/createSelector"><code>createSelector</code>函数</a>即可使用它创建 Selector 函数。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { createSelector } <span class="keyword">from</span> <span class="string">"@reduxjs/toolkit"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> selectPostsByUser = <span class="title function_">createSelector</span>(</span><br><span class="line">  [selectAllPosts, <span class="function">(<span class="params">state, userId</span>) =&gt;</span> userId],</span><br><span class="line">  <span class="function">(<span class="params">posts, userId</span>) =&gt;</span> posts.<span class="title function_">filter</span>(<span class="function">(<span class="params">post</span>) =&gt;</span> post.<span class="property">user</span> === userId)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用法</span></span><br><span class="line"><span class="keyword">const</span> postsForUser = <span class="title function_">useSelector</span>(<span class="function">(<span class="params">state</span>) =&gt;</span> <span class="title function_">selectPostsByUser</span>(state, userId));</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里<code>createSelector</code>第二个参数函数仅在第一个列表中 Selector 返回值发生变化时执行并返回新值</p>
+<h2 id="数据范式化"><a href="#数据范式化" class="headerlink" title="数据范式化"></a>数据范式化</h2><p>为了便于查找数据，我们可以将数据范式化（Normalized），即：</p>
+<ul>
+<li>我们 state 中的每个特定数据只有一个副本，不存在重复。</li>
+<li>已范式化的数据保存在查找表中，其中项目 ID 是键，项本身是值。</li>
+<li>也可能有一个特定项用于保存所有 ID 的数组。</li>
+</ul>
+<p>JavaScript 对象可以用作查找表，类似于其他语言中的 “maps” 或 “dictionaries”。 以下是一组“用户”对象的范式化 state 可能如下所示：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">users</span>: {</span><br><span class="line">    <span class="attr">ids</span>: [<span class="string">"user1"</span>, <span class="string">"user2"</span>, <span class="string">"user3"</span>],</span><br><span class="line">    <span class="attr">entities</span>: {</span><br><span class="line">      <span class="string">"user1"</span>: {<span class="attr">id</span>: <span class="string">"user1"</span>, firstName, lastName},</span><br><span class="line">      <span class="string">"user2"</span>: {<span class="attr">id</span>: <span class="string">"user2"</span>, firstName, lastName},</span><br><span class="line">      <span class="string">"user3"</span>: {<span class="attr">id</span>: <span class="string">"user3"</span>, firstName, lastName},</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>For more details on why normalizing state is useful, see <a target="_blank" rel="noopener" href="https://redux.js.org/usage/structuring-reducers/normalizing-state-shape">Normalizing State Shape</a> and the Redux Toolkit Usage Guide section on <a target="_blank" rel="noopener" href="https://redux-toolkit.js.org/usage/usage-guide#managing-normalized-data">Managing Normalized Data</a>.</p>
+</blockquote>
+<h3 id="使用createEntityAdapter管理范式化数据"><a href="#使用createEntityAdapter管理范式化数据" class="headerlink" title="使用createEntityAdapter管理范式化数据"></a>使用<code>createEntityAdapter</code>管理范式化数据</h3><p>RTK 提供了<code>createEntityAdapter</code>API 来管理范式化数据，可以将数据以<code>{ ids: [], entities: {} }</code>形式存储，并且生成一系列 reducer 和 selector ，它有以下优点：</p>
+<ul>
+<li>不用自己手动维护序列化数据</li>
+<li>预先生成一系列 reducer：添加所有项、更新一个项、删除多项 等</li>
+<li>可以将项 ID 按一定顺序排列，并且仅当项增删改或者排序规则改变时会重新排列</li>
+</ul>
+<p><code>createEntityAdapter</code>：<br>接收参数（一个配置对象）：</p>
+<ul>
+<li><code>sortComparer</code>函数：ID 排序函数（排序函数写法类似<code>Array.sort()</code>）</li>
+</ul>
+<p>返回值（一个<code>adapter</code>对象）：</p>
+<ul>
+<li>包含一系列用于增删改的 reducer，具体 reducer 参见<a target="_blank" rel="noopener" href="https://redux-toolkit.js.org/api/createEntityAdapter#crud-functions">createEntityAdapter#crud-functions</a></li>
+<li><code>getSelectors</code>函数<ul>
+<li>接收一个 Selector 函数，用于从 store 中筛选出序列化数据所在位置<br>eg：<code>state =&gt; state.posts</code></li>
+<li>返回一个对象，包含一系列序列化数据选择器：<ul>
+<li><code>selectAll</code></li>
+<li><code>selectById</code></li>
+<li><code>selectIds</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>getInitialState</code>函数：将会返回这组序列化数据的 InitialState，用于填入 RTK<code>createSlice</code>中的<code>initialState</code>，除了序列化数据原有的值<code>{ ids: [], entities: {} }</code>外，如果想向里面加入其他键值，可以以对象形式传入这个函数：<code>const initialState = postsAdapter.getInitialState({ status: 'idle', error: null })</code></li>
+</ul>
+<p>经过<code>createEntityAdapter</code>生成的对应 state 形式为<code>{ ids: [], entities: {} }</code>，<code>ids</code>用于存键名列表，<code>entities</code>对象用于键值对应数据</p>
 <h1 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h1><h2 id="reduxjs-toolkit"><a href="#reduxjs-toolkit" class="headerlink" title="@reduxjs/toolkit"></a>@reduxjs/toolkit</h2><h3 id="nanoid"><a href="#nanoid" class="headerlink" title="nanoid"></a><code>nanoid</code></h3><p>基于<a target="_blank" rel="noopener" href="https://github.com/ai/nanoid">nanoid/nonsecure</a>，用于生成一个随机 id 字符串，在 Redux 内部主要用于管理<code>createAsyncThunk</code>的异步请求 id，也可以用于其他用途。</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { nanoid } <span class="keyword">from</span> <span class="string">"@reduxjs/toolkit"</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">nanoid</span>());</span><br><span class="line"><span class="comment">// 'dgPXxUz_6fWIQBD8XmiSy'</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -381,7 +493,7 @@ var _hmt = _hmt || [];
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-text">创建store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8Provider%E8%A6%86%E7%9B%96-React-%E6%A0%B9%E7%BB%93%E7%82%B9"><span class="toc-text">用Provider覆盖 React 根结点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Redux-%E5%88%87%E7%89%87"><span class="toc-text">创建 Redux 切片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#createSlice"><span class="toc-text">createSlice()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Action-Creator"><span class="toc-text">获取Action Creator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%88%87%E7%89%87%E7%9A%84Selectors"><span class="toc-text">导出切片的Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-reducer"><span class="toc-text">导出 reducer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-React-Component-%E4%B8%AD%E5%BA%94%E7%94%A8-Redux"><span class="toc-text">在 React Component 中应用 Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-Redux-store-%E6%95%B0%E6%8D%AE"><span class="toc-text">获取 Redux store 数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dispatch-%E6%9B%B4%E6%94%B9"><span class="toc-text">dispatch 更改</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Thunk-%E5%87%BD%E6%95%B0"><span class="toc-text">使用 Thunk 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AE%80%E5%8D%95%E7%9A%84-Thunk"><span class="toc-text">使用简单的 Thunk</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="toc-text">其他功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#reduxjs-toolkit"><span class="toc-text">@reduxjs/toolkit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nanoid"><span class="toc-text">nanoid</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="toc-text">未完待续</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAstore"><span class="toc-text">创建store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8Provider%E8%A6%86%E7%9B%96-React-%E6%A0%B9%E7%BB%93%E7%82%B9"><span class="toc-text">用Provider覆盖 React 根结点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Redux-%E5%88%87%E7%89%87"><span class="toc-text">创建 Redux 切片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#createSlice"><span class="toc-text">createSlice()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Action-Creator"><span class="toc-text">获取Action Creator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%88%87%E7%89%87%E7%9A%84Selectors"><span class="toc-text">导出切片的Selectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-reducer"><span class="toc-text">导出 reducer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-React-Component-%E4%B8%AD%E5%BA%94%E7%94%A8-Redux"><span class="toc-text">在 React Component 中应用 Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-Redux-store-%E6%95%B0%E6%8D%AE"><span class="toc-text">获取 Redux store 数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dispatch-%E6%9B%B4%E6%94%B9"><span class="toc-text">dispatch 更改</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Thunk-%E5%87%BD%E6%95%B0"><span class="toc-text">使用 Thunk 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AE%80%E5%8D%95%E7%9A%84-Thunk"><span class="toc-text">使用简单的 Thunk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8createAsyncThunk%E5%88%9B%E5%BB%BA%E5%BC%82%E6%AD%A5-Thunk"><span class="toc-text">使用createAsyncThunk创建异步 Thunk</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">性能优化注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#useSelector%E9%87%8D%E5%A4%8D%E6%B8%B2%E6%9F%93"><span class="toc-text">useSelector重复渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">解决方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%BC%8F%E5%8C%96"><span class="toc-text">数据范式化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8createEntityAdapter%E7%AE%A1%E7%90%86%E8%8C%83%E5%BC%8F%E5%8C%96%E6%95%B0%E6%8D%AE"><span class="toc-text">使用createEntityAdapter管理范式化数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="toc-text">其他功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#reduxjs-toolkit"><span class="toc-text">@reduxjs/toolkit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nanoid"><span class="toc-text">nanoid</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="toc-text">未完待续</span></a></li></ol>
     </div>
 </div>
 
@@ -428,7 +540,7 @@ var _hmt = _hmt || [];
       
       
       <li>
-        <a href="/blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Redux学习笔记（React）</a>
+        <a href="/blog/2022/07/22/Redux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Redux Essentials 学习笔记</a>
       </li>
       
       
