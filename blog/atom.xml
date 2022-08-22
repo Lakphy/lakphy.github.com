@@ -6,7 +6,7 @@
   <link href="https://lakphy.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://lakphy.github.io/blog/"/>
-  <updated>2022-08-07T14:56:57.396Z</updated>
+  <updated>2022-08-22T08:00:31.057Z</updated>
   <id>https://lakphy.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《SQL必知必会》学习笔记</title>
+    <link href="https://lakphy.github.io/blog/2022/08/22/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://lakphy.github.io/blog/2022/08/22/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-08-22T07:58:10.000Z</published>
+    <updated>2022-08-22T08:00:31.057Z</updated>
+    
+    
+    <summary type="html">《SQL必知必会》学习笔记</summary>
+    
+    
+    
+    
+    <category term="SQL" scheme="https://lakphy.github.io/blog/tags/SQL/"/>
+    
+    <category term="数据库" scheme="https://lakphy.github.io/blog/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redux Fundamentals 学习笔记</title>
+    <link href="https://lakphy.github.io/blog/2022/08/21/Redux-Fundamentals-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://lakphy.github.io/blog/2022/08/21/Redux-Fundamentals-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-08-20T16:41:24.000Z</published>
+    <updated>2022-08-22T16:46:11.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前读了 Redux Essentials 文档，感觉就是个大杂烩，遇事不决加个包，引用了一大堆 Redux 生态工具，虽说这么做没毛病，而且 RTK 都会帮我做好，但是这样使我们离 Redux 的核心越来越远，就像一个无情的调库调参侠，没有任何意义，如果都是调参的话，就远离了我学 Redux 的初衷：学习其中的编程思想。</p><p>所以接下来就是 Redux 对于纯 Redux 的文档 —— Redux Fundamentals 的学习笔记</p><h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="store对象"><a href="#store对象" class="headerlink" title="store对象"></a><code>store</code>对象</h2><p>store 是 Redux 存储对象，包含了一系列 Redux 数据和函数</p><p>特点：</p><ul><li>不可以直接更改其中数据</li><li>修改数据的唯一方法是创建一个<code>action</code>对象(用于表示发生的事件)，然后<code>dispatch</code>它，告诉<code>store</code>发生了什么</li><li>当<code>dispatch</code>一个<code>action</code>对象时，<code>store</code>会执行<code>reducer</code>函数，根据<code>action</code>对象和和<code>store</code>中存储的旧状态计算出新的状态</li><li><code>store</code>会被修改后会通知<code>subscribers</code>（订阅组件）状态发生改变，使其产生对应的 UI 重新渲染</li></ul><p>可以通过<a href="#createStore%E5%87%BD%E6%95%B0"><code>createStore</code>函数</a>来创建 store 对象</p><h3 id="store-getState-函数"><a href="#store-getState-函数" class="headerlink" title="store.getState()函数"></a><code>store.getState()</code>函数</h3><p>用于获取 store 中存储的状态对象</p><p><strong>参数</strong></p><p>无参数</p><p><strong>返回值</strong></p><p>store 中存储的状态对象</p><h3 id="store-subscribe-函数"><a href="#store-subscribe-函数" class="headerlink" title="store.subscribe()函数"></a><code>store.subscribe()</code>函数</h3><p>用于订阅数据更新</p><p><strong>参数</strong></p><p>需要订阅的函数，当状态更新时，订阅了的函数会被执行</p><p><strong>返回值</strong></p><p>无返回值</p><h3 id="store-dispatch-函数"><a href="#store-dispatch-函数" class="headerlink" title="store.dispatch()函数"></a><code>store.dispatch()</code>函数</h3><p>用于 dispatch action</p><p><strong>参数</strong></p><p><a href="#action%E5%AF%B9%E8%B1%A1">action 对象</a></p><p><strong>返回值</strong></p><p>无返回值</p><h2 id="reducer函数"><a href="#reducer函数" class="headerlink" title="reducer函数"></a><code>reducer</code>函数</h2><p><strong>参数</strong></p><ul><li><code>state</code>：store 中存储的前一个状态，使用时通常还会设置其默认值<code>state = initialState</code></li><li><code>action</code>：action 对象，用于表示发生的事件</li></ul><p><strong>返回值</strong></p><p>返回一个更新后新的状态，如果没有修改，可以直接返回原状态</p><blockquote><p>注意在 reducer 中我们应当返回一个新的状态，或者直接返回原状态，不可以尝试去修改原状态对象</p></blockquote><h2 id="action对象"><a href="#action对象" class="headerlink" title="action对象"></a><code>action</code>对象</h2><p>用于表示发生的事件，通常为以下格式：</p><ul><li><code>type</code>：发生事件类型，字符串，必须为可读性标志性较强的一串字符，通常为<code>xxx/xxx</code>格式来表示，前半部分表示某一状态，后半部分为这个状态发生的事件名</li></ul><h1 id="基本-API"><a href="#基本-API" class="headerlink" title="基本 API"></a>基本 API</h1><h2 id="createStore函数"><a href="#createStore函数" class="headerlink" title="createStore函数"></a><code>createStore</code>函数</h2><p>eg:</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(counterReducer);</span><br></pre></td></tr></table></figure><p><strong>参数</strong></p><ul><li>reducer 函数</li></ul><p><strong>返回值</strong></p><p><a href="#store%E5%AF%B9%E8%B1%A1">store 对象</a></p><h1 id="数据工作流"><a href="#数据工作流" class="headerlink" title="数据工作流"></a>数据工作流</h1><ul><li>dispatch action</li><li>reducer 根据 action 和先前的 state 计算出新的 state</li><li>UI 根据新的 state 重新渲染</li></ul><p>引用一个官方文档的图</p><p><img src="https://d33wubrfki0l68.cloudfront.net/01cc198232551a7e180f4e9e327b5ab22d9d14e7/b33f4/assets/images/reduxdataflowdiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" alt="Redux Data Flow"></p>]]></content>
+    
+    
+    <summary type="html">Redux Fundamentals 学习笔记</summary>
+    
+    
+    
+    
+    <category term="Redux" scheme="https://lakphy.github.io/blog/tags/Redux/"/>
+    
+  </entry>
   
   <entry>
     <title>使用一些CSS手段避免用户产生预期之外的操作</title>
@@ -414,51 +452,6 @@
     
     
     <category term="精神食粮" scheme="https://lakphy.github.io/blog/tags/%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手机市场究竟会不会消失</title>
-    <link href="https://lakphy.github.io/blog/2020/03/04/%E6%89%8B%E6%9C%BA%E5%B8%82%E5%9C%BA%E7%A9%B6%E7%AB%9F%E4%BC%9A%E4%B8%8D%E4%BC%9A%E6%B6%88%E5%A4%B1/"/>
-    <id>https://lakphy.github.io/blog/2020/03/04/%E6%89%8B%E6%9C%BA%E5%B8%82%E5%9C%BA%E7%A9%B6%E7%AB%9F%E4%BC%9A%E4%B8%8D%E4%BC%9A%E6%B6%88%E5%A4%B1/</id>
-    <published>2020-03-04T02:12:23.000Z</published>
-    <updated>2020-10-31T13:24:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>近期很火的这个新闻，华为余承东在2015年3月4日称手机市场将会在三到五年内消失，而今天正是余承东预言中的最后限期，手机公司不仅没有消失，还越做越好，以小米一加欧珀为首的国产手机更是扬名中外，越做越好<br>今天我们就来讨论一下手机市场究竟会不会消失<br><a href="https://tech.qq.com/a/20150304/049924.htm">余承东原新闻链接</a></p><h1 id="手机市场会不会消失"><a href="#手机市场会不会消失" class="headerlink" title="手机市场会不会消失"></a>手机市场会不会消失</h1><p>不会，不仅不会消失，甚至有可能长期存在<br>手机的发明让人们的生活更加便捷，经过数十年的发展，手机已经不只是一个通讯工具了，而是发展到稳定形态的智能工具，已经完全融入现代人们的生活当中，这种稳定将会持续相当一段时间</p><h1 id="什么样的产品最终会代替手机"><a href="#什么样的产品最终会代替手机" class="headerlink" title="什么样的产品最终会代替手机"></a>什么样的产品最终会代替手机</h1><p>现阶段无法预测什么样设备可以替代手机<br>有人可能会说可穿戴设备，但是，可穿戴设备为考虑便携性等等方面，使用低功耗芯片及小电池，这样的设计注定了可穿戴设备只能作为分终端使用，不能作为主终端<br>作为便携设备，云终端方案不可行，一方面云终端节约不了多大体积，另一方面云终端限制很多，没网就凉了。<br>有人可能会说使用华为的分布式方案，但分布式方案对分终端的性能需求比主终端方案更高，更耗电，想象一下，你不带手机，但是你的手表，耳机，眼镜，都要和你的手机一样重，保守点说，手机的一半重量，一半的体积，你能接受吗，光你的鼻托就受不了，当然谷歌glass通过夹紧头解决压力问题，但还是不够完美。<br>就目前看，最完美解决方案还是手机作为主终端，可穿戴设备分布在身体各处，他们只需要一个小型芯片和小型电池就可以运行，数据全部交给手机处理，由此可看出，手机现阶段无法被替代</p><h1 id="替代手机的设备应当有什么样的功能"><a href="#替代手机的设备应当有什么样的功能" class="headerlink" title="替代手机的设备应当有什么样的功能"></a>替代手机的设备应当有什么样的功能</h1><p>最低需求接受比手机功能多，使用场景更多<br>这也是可穿戴设备弊端，可穿戴设备功能少，使用场景少，手机使用场景非常多，毕竟一个屏幕，没有形态限制，配合生态变态的Linux，你想干什么都可以，甚至当电脑用都没有任何问题</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;近期很火的这个新闻，华为余承东在2015年3月4日称手机市场将会在三到五年内消失，而今天正是余承东预言中的最后限期，手机公司不仅没有消失，还越做越好，以小米一加欧珀为首的国产手机更是扬名中外，越做越好&lt;br&gt;今天我们就来讨论一下手机市场究竟会不会消失&lt;br&gt;&lt;a href=</summary>
-      
-    
-    
-    
-    
-    <category term="数码" scheme="https://lakphy.github.io/blog/tags/%E6%95%B0%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MarkDown语法使用</title>
-    <link href="https://lakphy.github.io/blog/2020/03/04/MarkDown%E8%AF%AD%E6%B3%95%E4%BD%BF%E7%94%A8/"/>
-    <id>https://lakphy.github.io/blog/2020/03/04/MarkDown%E8%AF%AD%E6%B3%95%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-03-04T01:20:53.000Z</published>
-    <updated>2020-07-13T09:08:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>`行内代码块`<br><code>这是行内代码块</code><br>代码块<br>```<br>这里是代码块<br>```</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这里是代码块</span><br></pre></td></tr></table></figure><p>*斜体*<br><em>这是斜体字</em><br>**粗体字**<br><strong>这是粗体</strong><br>标题<br>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题<br>######六级标题<br>分隔线<br>*** 或者 ---</p><hr><hr><p>~~删除线~~<br><del>这个文本被划去</del><br>链接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接文字](链接地址 &quot;链接标题&quot;)</span><br></pre></td></tr></table></figure><p>插入图片</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片说明](图片链接 &quot;图片标题&quot;)</span><br></pre></td></tr></table></figure><p>插入视频</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/js/youtube-autoresizer.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;640&quot;</span> <span class="attr">height</span>=<span class="string">&quot;360&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/HfElOZSEqn4&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>插入音频，使用插件hexo-tag-aplayer，语法如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xx%, lrc:xxx] %&#125;</span><br></pre></td></tr></table></figure><p>转义符<br>\<br>引用<br>&gt;</p><blockquote><p>引用了一句话</p></blockquote><p>使用 [^\1] [^\1]: 的脚注对来表示</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Here is a footnote reference,[^1] and another.[^longnote]</span><br><span class="line"></span><br><span class="line">[^1]: Here is the footnote.</span><br><span class="line"></span><br><span class="line">[^longnote]: Here&#x27;s one with multiple blocks.</span><br><span class="line">    Subsequent paragraphs are indented to show that they</span><br><span class="line">    belong to the previous footnote.</span><br></pre></td></tr></table></figure><p>Here is a footnote reference,[^1] and another.[^longnote]</p><p>[^1]: Here is the footnote.</p><p>[^longnote]: Here’s one with multiple blocks.<br>    Subsequent paragraphs are indented to show that they<br>    belong to the previous footnote.<br>无序列表</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+ 无序列表项 一</span><br><span class="line">- 子无序列表 一</span><br><span class="line">- 子无序列表 二</span><br><span class="line">* 子无序列表 三</span><br><span class="line">+ 无序列表项 二</span><br><span class="line">+ 无序列表项 三</span><br></pre></td></tr></table></figure><ul><li>无序列表项 一<ul><li>子无序列表 一</li><li>子无序列表 二<ul><li>子无序列表 三</li></ul></li></ul></li><li>无序列表项 二</li><li>无序列表项 三</li></ul><p>有序列表</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表项 一</span><br><span class="line">1. 子有序列表项 一</span><br><span class="line">2. 子有序列表项 二</span><br><span class="line">2. 有序列表项 二</span><br><span class="line">3. 有序列表项 三</span><br></pre></td></tr></table></figure><ol><li>有序列表项 一<ol><li>子有序列表项 一</li><li>子有序列表项 二</li></ol></li><li>有序列表项 二</li><li>有序列表项 三</li></ol><p>绘制表格格式如下，| 控制分列，- 控制分行，: 控制对齐方式。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| Item     | Value     | Qty   |</span><br><span class="line">| :------- | --------: | :---: |</span><br><span class="line">| Computer | 1600 USD  | 5     |</span><br><span class="line">| Phone    | 12 USD    | 12    |</span><br><span class="line">| Pipe     | 1 USD     | 234   |</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">Item</th><th align="right">Value</th><th align="center">Qty</th></tr></thead><tbody><tr><td align="left">Computer</td><td align="right">1600 USD</td><td align="center">5</td></tr><tr><td align="left">Phone</td><td align="right">12 USD</td><td align="center">12</td></tr><tr><td align="left">Pipe</td><td align="right">1 USD</td><td align="center">234</td></tr></tbody></table><p>关于LaTeX公式，这个比较复杂，不解释，搜索引擎解决</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;`行内代码块`&lt;br&gt;&lt;code&gt;这是行内代码块&lt;/code&gt;&lt;br&gt;代码块&lt;br&gt;```&lt;br&gt;这里是代码块&lt;br&gt;```&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre</summary>
-      
-    
-    
-    
-    
-    <category term="踩坑记录" scheme="https://lakphy.github.io/blog/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
