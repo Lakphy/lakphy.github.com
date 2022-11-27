@@ -26,13 +26,13 @@ var _hmt = _hmt || [];
 </script>
 
 
-	<title>《SQL必知必会》学习笔记 | Lakphy's Blog</title>
+	<title>《SQL必知必会（第四版）》学习笔记 | Lakphy's Blog</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Lakphy">
-	<meta name="description" content="《SQL必知必会》学习笔记">
+	<meta name="description" content="《SQL必知必会（第四版）》学习笔记">
 
 	
 	<meta name="keywords" content="SQL,数据库,SQL必知必会">
@@ -54,8 +54,8 @@ var _hmt = _hmt || [];
 
 	<meta property="og:site_name" content="Lakphy's Blog">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="《SQL必知必会》学习笔记 | Lakphy's Blog">
-	<meta property="og:description" content="《SQL必知必会》学习笔记">
+	<meta property="og:title" content="《SQL必知必会（第四版）》学习笔记 | Lakphy's Blog">
+	<meta property="og:description" content="《SQL必知必会（第四版）》学习笔记">
 	<meta property="og:url" content="https://lakphy.github.io/blog/blog/2022/08/22/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 	
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
                 
                 
             </div>
-            <h1 class="post-full-title">《SQL必知必会》学习笔记</h1>
+            <h1 class="post-full-title">《SQL必知必会（第四版）》学习笔记</h1>
         </header>
         <div class="post-full ">
             
@@ -177,7 +177,10 @@ var _hmt = _hmt || [];
             
             <div class="post-full-content">
                 <article id="photoswipe" class="markdown-body">
-                    <h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><p><strong>数据库</strong>：保存有组织的数据的容器(通常是一个文件或一组文件)。</p>
+                    <blockquote>
+<p>本来是看第五版的，结果拿错书了，等发现时候已经看了好多了就没再换书</p>
+</blockquote>
+<h1 id="数据库基本概念"><a href="#数据库基本概念" class="headerlink" title="数据库基本概念"></a>数据库基本概念</h1><p><strong>数据库</strong>：保存有组织的数据的容器(通常是一个文件或一组文件)。</p>
 <blockquote>
 <p>我们常说的数据库软件是“数据库管理系统（DBMS）”，而非数据库，数据库是通过 DBMS 创建和操纵的容器，而具体它究竟是什么，形式如何，各种数据库都不一样。</p>
 </blockquote>
@@ -608,9 +611,137 @@ var _hmt = _hmt || [];
 <p><strong><code>ALL</code>子句</strong></p>
 <p>MS SQL Server 等 SQL 实现 在<code>GROUP BY</code>中支持可选<code>ALL</code>子句，这个子句可用来返回所有分组，即使没有匹配行的分组也返回 NULL。</p>
 </blockquote>
-<h2 id="过滤分组"><a href="#过滤分组" class="headerlink" title="过滤分组"></a>过滤分组</h2>
+<h2 id="过滤分组"><a href="#过滤分组" class="headerlink" title="过滤分组"></a>过滤分组</h2><p>使用<code>HAVING</code>子句过滤分组，它与<code>WHERE</code>类似，但是<code>WHERE</code>不能过滤分组。</p>
+<blockquote>
+<p>所有类型的<code>WHERE</code>子句都可以用<code>HAVING</code>来替代，句法也相同。</p>
+</blockquote>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_id, <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> orders</span><br><span class="line"><span class="keyword">FROM</span> Orders</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> cust_id</span><br><span class="line"><span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="operator">&gt;=</span> <span class="number">2</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面这段代码筛选所有分组中行数大于 2 的分组。</p>
+<blockquote>
+<p><code>WHERE</code>和<code>HAVING</code>之间的区别<br>有一种说法，<code>WHERE</code>是在分组前过滤，<code>HAVING</code>是在分组后过滤</p>
+</blockquote>
+<h2 id="SELECT-子句顺序"><a href="#SELECT-子句顺序" class="headerlink" title="SELECT 子句顺序"></a>SELECT 子句顺序</h2><table>
+<thead>
+<tr>
+<th>子句</th>
+<th>说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SELECT</code></td>
+<td>要返回的列或表达式</td>
+<td>是</td>
+</tr>
+<tr>
+<td><code>FROM</code></td>
+<td>从中检索数据的表</td>
+<td>仅在从表选择数据时使用</td>
+</tr>
+<tr>
+<td><code>WHERE</code></td>
+<td>行级过滤</td>
+<td>否</td>
+</tr>
+<tr>
+<td><code>GROUP BY</code></td>
+<td>分组说明</td>
+<td>仅在按组计算聚集时使用</td>
+</tr>
+<tr>
+<td><code>HAVING</code></td>
+<td>组级过滤</td>
+<td>否</td>
+</tr>
+<tr>
+<td><code>ORDER BY</code></td>
+<td>输出排序顺序</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<h1 id="使用子查询"><a href="#使用子查询" class="headerlink" title="使用子查询"></a>使用子查询</h1><h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><p><strong>查询</strong>（query）：任何 SQL 语句都是查询，但此属于一般指 SELECT 语句。</p>
+<p>子查询（subquery）：嵌套在其他查询中的查询。</p>
+<h2 id="利用子查询过滤"><a href="#利用子查询过滤" class="headerlink" title="利用子查询过滤"></a>利用子查询过滤</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_id</span><br><span class="line"><span class="keyword">FROM</span> Orders</span><br><span class="line"><span class="keyword">WHERE</span> order_num <span class="keyword">IN</span> (</span><br><span class="line">  <span class="keyword">SELECT</span> order_num</span><br><span class="line">  <span class="keyword">FROM</span> OrderItems</span><br><span class="line">  <span class="keyword">WHERE</span> prod_id <span class="operator">=</span> <span class="string">'RGAN01'</span></span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段代码的意思是：<br>从 OrderItems 找到 prod_id = ‘RGAN01’对应的 order_num，并在 Orders 里面找其对应的 cust_id</p>
+<p><strong>子查询限制</strong></p>
+<ul>
+<li>子查询只能查询单列</li>
+<li>性能方面，使用子查询并不总是执行这类数据检索的最有效方法</li>
+</ul>
+<h2 id="作为计算字段使用子查询"><a href="#作为计算字段使用子查询" class="headerlink" title="作为计算字段使用子查询"></a>作为计算字段使用子查询</h2><p>子查询语句可以放在计算字段使用：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_name,</span><br><span class="line">       cust_state,</span><br><span class="line">       (</span><br><span class="line">        <span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>)</span><br><span class="line">        <span class="keyword">FROM</span> Orders</span><br><span class="line">        <span class="keyword">WHERE</span> Orders.cust_id <span class="operator">=</span> Customers.cust_id</span><br><span class="line">       ) <span class="keyword">AS</span> orders</span><br><span class="line"><span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> cust_name;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段代码意思是从 Customers 表中输出三个字段，并按 cust_name 排序，其中 orders 字段使用子查询从 Orders 表中查询 Orders.cust_id = Customers.cust_id 得到。</p>
+<p>这里的 WHERE 子句不同的是：它使用了<em>完全限定别名</em>，而不是别名（cust_id），它指定表名和列名（Orders.cust_id）。用一个句点分隔表名和列名，在有可能混淆列名时必须使用这种语法。</p>
+<p><strong>完全限定列名</strong>：指定表名和列名（Orders.cust_id），避免出现冲突列名而导致的歧义性，不这样写会导致 DBMS 抛出错误信息。 好的做法是，如果在 SELECT 语句中操作多个表，就应使用完全限定列名来避免歧义。</p>
+<h1 id="联结表"><a href="#联结表" class="headerlink" title="联结表"></a>联结表</h1><h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><p>SQL 最强大的功能之一就是能在数据查询的执行中联结(join)表。</p>
+<h2 id="关系表"><a href="#关系表" class="headerlink" title="关系表"></a>关系表</h2><p>关系表将数据分解为多个表能更有效地存储，更方便地处理，并且可伸缩性更好。但是有代价的。</p>
+<p>使用联结可以在一条 SELECT 语句中导出关联数据。</p>
+<blockquote>
+<p>使用交互式 DBMS 工具<br>要先理解<em>联结</em>在数据库中并不是实际存在的，DBMS 会根据需要建立联结，它在查询执行期间一直存在。<br>有的 DBMS 会提供图形界面来交互式定义表关系，以及管理联结关系的合法性。</p>
+</blockquote>
+<h2 id="创建联结"><a href="#创建联结" class="headerlink" title="创建联结"></a>创建联结</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> vend_name, prod_name, prod_price</span><br><span class="line"><span class="keyword">FROM</span> Vendors, Products</span><br><span class="line"><span class="keyword">WHERE</span> Vendors.vend_id <span class="operator">=</span> Products.vend_id;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>通过 vend_id 字段创建 Vendors 和 Products 两个表的联结关系。</p>
+<p>WHERE 子句重要性：用于给定联结条件来联结两个表。所以一定要有 WHERE 语句，并保证其准确性。</p>
+<blockquote>
+<p>笛卡尔积<br>由没有联结条件的表关系返回的结果为笛卡尔积，即检索出的行的数目将是两表行数乘积。</p>
+</blockquote>
+<p><strong>联结多个表</strong></p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> prod_name, vend_name, prod_price, quantity</span><br><span class="line"><span class="keyword">FROM</span> OrderItems, Products, Vendors</span><br><span class="line"><span class="keyword">WHERE</span> Products.vend_id <span class="operator">=</span> Vendors</span><br><span class="line">  <span class="keyword">AND</span> OrderItems.prod_id <span class="operator">=</span> Products.prod_id</span><br><span class="line">  <span class="keyword">AND</span> order_num <span class="operator">=</span> <span class="number">20007</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="使用-JOIN-子句创建联结"><a href="#使用-JOIN-子句创建联结" class="headerlink" title="使用 JOIN 子句创建联结"></a>使用 JOIN 子句创建联结</h2><p>之前的联结都基于两个表之间的相等测试，称为<strong>等值联结（equijoin）</strong>，也称<strong>内联结（inner join）</strong></p>
+<p>内联结也可以使用<code>INNER JOIN``ON</code>创建：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> vend_name, prod_name, prod_price</span><br><span class="line"><span class="keyword">FROM</span> Vendors <span class="keyword">INNER</span> <span class="keyword">JOIN</span> Products</span><br><span class="line">  <span class="keyword">ON</span> Vendors.vend_id <span class="operator">=</span> Product.vend_id;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="联结注意"><a href="#联结注意" class="headerlink" title="联结注意"></a>联结注意</h2><p><strong>性能考虑</strong>：DBMS 在运行时关联指定的每个表，以处理联结。这种处理可能非常耗费资源，因此应该注意，不要联结不必要的表。联结的表越多，性能下降越厉害。</p>
+<p>许多 DBMS 都有联结中表最大数目限制。</p>
+<h2 id="联结替代子查询"><a href="#联结替代子查询" class="headerlink" title="联结替代子查询"></a>联结替代子查询</h2><p>子查询并不总是执行复杂 SELECT 操作的最有效方法，使用联结会更有效。</p>
+<p>子查询：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_name, cust_contact</span><br><span class="line"><span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> cust_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> cust_id</span><br><span class="line">                  <span class="keyword">FROM</span> Orders</span><br><span class="line">                  <span class="keyword">WHERE</span> order_num <span class="keyword">IN</span> (<span class="keyword">SELECT</span> order_num</span><br><span class="line">                                      <span class="keyword">FROM</span> OrderItems</span><br><span class="line">                                      <span class="keyword">WHERE</span> prod_id <span class="operator">=</span> <span class="string">'RGAN01'</span>));</span><br></pre></td></tr></tbody></table></figure>
+
+<p>联结：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_name, cust_contact</span><br><span class="line"><span class="keyword">FROM</span> Customers, Orders, OrderItems</span><br><span class="line"><span class="keyword">WHERE</span> Customers.cust_id <span class="operator">=</span> Orders.cust_id</span><br><span class="line"><span class="keyword">AND</span> OrderItems.order_num <span class="operator">=</span> Orders.order_num <span class="keyword">AND</span> prod_id <span class="operator">=</span> <span class="string">'RGAN01'</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="创建高级联结"><a href="#创建高级联结" class="headerlink" title="创建高级联结"></a>创建高级联结</h1><h2 id="为表起别名"><a href="#为表起别名" class="headerlink" title="为表起别名"></a>为表起别名</h2><p>SQL 除了可以对列名起别名（ AS XXX ），还可以给表名起别名</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_name, cust_contact</span><br><span class="line"><span class="keyword">FROM</span> Customers <span class="keyword">AS</span> C, Orders <span class="keyword">AS</span> O, OrderItems <span class="keyword">AS</span> OI</span><br><span class="line"><span class="keyword">WHERE</span> C.cust_id <span class="operator">=</span> O.cust_id</span><br><span class="line">  <span class="keyword">AND</span> OI.order_num <span class="operator">=</span> O.order_num</span><br><span class="line">  <span class="keyword">AND</span> prod_id <span class="operator">=</span> ‘RGAN01’</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>Oracle 中使用<em>别名</em>不可以使用<code>AS</code>，直接省略<code>AS</code>即可，例如<code>Customers AS C</code>写为<code>Customers C</code></p>
+</blockquote>
+<h2 id="自联结"><a href="#自联结" class="headerlink" title="自联结"></a>自联结</h2><p>在同一个表中查询两次</p>
+<p>子查询写法：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> cust_id, cust_name, cust_contact</span><br><span class="line"><span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> cust_name <span class="operator">=</span> (</span><br><span class="line">                    <span class="keyword">SELECT</span> cust_name</span><br><span class="line">                    <span class="keyword">FROM</span> Customers</span><br><span class="line">                    <span class="keyword">WHERE</span> cust_contact <span class="operator">=</span> <span class="string">'Jim'</span></span><br><span class="line">                  )</span><br></pre></td></tr></tbody></table></figure>
+
+<p>自联结写法：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> c1.cust_id, c1.cust_name, c1.cust_contact</span><br><span class="line"><span class="keyword">FROM</span> Customers <span class="keyword">AS</span> c1, Customers <span class="keyword">AS</span> c2</span><br><span class="line"><span class="keyword">WHERE</span> c1.cust_name <span class="operator">=</span> c2.cust_name</span><br><span class="line">  <span class="keyword">AND</span> c2.cust_contact <span class="operator">=</span> <span class="string">'Jim'</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>必须将 Customers 表分别起 c1 和 c2 别名来使用</p>
+<p>在很多 DBMS 中，自联结比子查询快得多</p>
+<h2 id="自然联结"><a href="#自然联结" class="headerlink" title="自然联结"></a>自然联结</h2><p>自然联结排除多次出现，使每一列只返回一次。</p>
+<p>我们迄今为止建立的每个内联结都是自然联结，很可能永远都不会用到不是自然联结的内联结。</p>
+<h2 id="外联结"><a href="#外联结" class="headerlink" title="外联结"></a>外联结</h2><p>即内联结包括没有匹配的数据，但要选择一个表展示所有数据</p>
+<p>内联结（不包含没有匹配的数据）：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Customers.cust_id, Orders.order_num</span><br><span class="line"><span class="keyword">FROM</span> Customers <span class="keyword">INNER</span> <span class="keyword">JOIN</span> Orders</span><br><span class="line">  <span class="keyword">ON</span> Customers.cust_id <span class="operator">=</span> Orders.cust_id;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>外联结（包含没有匹配的数据）：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Customers.cust_id, Orders.order_num</span><br><span class="line"><span class="keyword">FROM</span> Customers <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> Orders</span><br><span class="line">  <span class="keyword">ON</span> Customers.cust_id <span class="operator">=</span> Orders.cust_id;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在这个代码中，没匹配的数据 order_num 表示为 NULL</p>
+<p>外联结的关键字有<code>LEFT OUTER JOIN</code>和<code>RIGHT OUTER JOIN</code>两种（左外联结和右外联结），通过左右选择展示哪个表的全部数据（包含没有匹配的数据）</p>
+<blockquote>
+<p>SQLite 中：<br>SQLite 仅支持<code>LEFT OUTER JOIN</code>一个方向</p>
+</blockquote>
+<p>还有一种外联结是“全外联结”<code>FULL OUTER JOIN</code>包含两个表的全部数据。</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Customers.cust_id, Orders.order_num</span><br><span class="line"><span class="keyword">FROM</span> Orders <span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> Customers</span><br><span class="line">  <span class="keyword">ON</span> Orders.cust_id <span class="operator">=</span> Customers.cust_id;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>全外联结支持性很差：<br>Access、MariaDB、MySQL、Open Office Base 和 SQLite 不支持 FULL OUTER JOIN 语法。</p>
+</blockquote>
+<h2 id="使用带聚集函数的联结"><a href="#使用带聚集函数的联结" class="headerlink" title="使用带聚集函数的联结"></a>使用带聚集函数的联结</h2>
                 </article>
-                <div style="height:auto;width:100%;text-align:center;"><a href="/donate.html"><img src="/donate.png" style="height:50px;width:auto"><br>您的鼓励是我努力的动力，欢迎前来打赏<br>点击“赏”或文字打赏</a></div>
                 <ul class="tags-postTags">
                     
                     <li>
@@ -658,7 +789,7 @@ var _hmt = _hmt || [];
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">数据库基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE"><span class="toc-text">检索数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E5%8D%95%E5%88%97"><span class="toc-text">检索单列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E5%A4%9A%E5%88%97"><span class="toc-text">检索多列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E6%89%80%E6%9C%89%E5%88%97"><span class="toc-text">检索所有列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E4%B8%8D%E5%90%8C%E7%9A%84%E5%80%BC"><span class="toc-text">检索不同的值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%88%B6%E5%89%8D-n-%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">限制前 n 行结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%88%B6%E7%AC%AC-m-%E8%A1%8C%E5%BC%80%E5%A7%8B%E8%BE%93%E5%87%BA-n-%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">限制第 m 行开始输出 n 行结果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A"><span class="toc-text">使用注释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%B0%BE%E6%B3%A8%E9%87%8A"><span class="toc-text">行尾注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E6%B3%A8%E9%87%8A"><span class="toc-text">行内注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-text">多行注释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE"><span class="toc-text">过滤数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">操作符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4"><span class="toc-text">高级数据过滤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AND%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">AND操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OR%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">OR操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">操作符优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IN%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">IN操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NOT%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">NOT操作符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6%E8%BF%9B%E8%A1%8C%E8%BF%87%E6%BB%A4"><span class="toc-text">用通配符进行过滤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LIKE%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">LIKE操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-text">%通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6-1"><span class="toc-text">_通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6-2"><span class="toc-text">[]通配符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%AE%A1%E7%AE%97%E5%AD%97%E6%AE%B5"><span class="toc-text">创建计算字段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%BC%E6%8E%A5%E5%AD%97%E6%AE%B5"><span class="toc-text">拼接字段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D"><span class="toc-text">使用别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%AE%97%E6%9C%AF%E8%AE%A1%E7%AE%97"><span class="toc-text">执行算术计算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="toc-text">使用函数处理数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">文本处理函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">日期和时间处理函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">数值处理函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%87%E6%80%BB%E6%95%B0%E6%8D%AE"><span class="toc-text">汇总数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E9%9B%86%E5%87%BD%E6%95%B0"><span class="toc-text">聚集函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AVG"><span class="toc-text">AVG()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#COUNT"><span class="toc-text">COUNT()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MAX"><span class="toc-text">MAX()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MIN"><span class="toc-text">MIN()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SUM"><span class="toc-text">SUM()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E9%9B%86%E4%B8%8D%E5%90%8C%E5%80%BC"><span class="toc-text">聚集不同值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%81%9A%E9%9B%86%E5%87%BD%E6%95%B0"><span class="toc-text">组合聚集函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E6%95%B0%E6%8D%AE"><span class="toc-text">分组数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E7%BB%84"><span class="toc-text">创建分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%88%86%E7%BB%84"><span class="toc-text">过滤分组</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">数据库基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE"><span class="toc-text">检索数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E5%8D%95%E5%88%97"><span class="toc-text">检索单列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E5%A4%9A%E5%88%97"><span class="toc-text">检索多列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E6%89%80%E6%9C%89%E5%88%97"><span class="toc-text">检索所有列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E4%B8%8D%E5%90%8C%E7%9A%84%E5%80%BC"><span class="toc-text">检索不同的值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%88%B6%E5%89%8D-n-%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">限制前 n 行结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%88%B6%E7%AC%AC-m-%E8%A1%8C%E5%BC%80%E5%A7%8B%E8%BE%93%E5%87%BA-n-%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">限制第 m 行开始输出 n 行结果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E9%87%8A"><span class="toc-text">使用注释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%B0%BE%E6%B3%A8%E9%87%8A"><span class="toc-text">行尾注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E6%B3%A8%E9%87%8A"><span class="toc-text">行内注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-text">多行注释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE"><span class="toc-text">过滤数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">操作符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4"><span class="toc-text">高级数据过滤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AND%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">AND操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OR%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">OR操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">操作符优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IN%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">IN操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NOT%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">NOT操作符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6%E8%BF%9B%E8%A1%8C%E8%BF%87%E6%BB%A4"><span class="toc-text">用通配符进行过滤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LIKE%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">LIKE操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-text">%通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6-1"><span class="toc-text">_通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6-2"><span class="toc-text">[]通配符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%AE%A1%E7%AE%97%E5%AD%97%E6%AE%B5"><span class="toc-text">创建计算字段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%BC%E6%8E%A5%E5%AD%97%E6%AE%B5"><span class="toc-text">拼接字段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D"><span class="toc-text">使用别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%AE%97%E6%9C%AF%E8%AE%A1%E7%AE%97"><span class="toc-text">执行算术计算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="toc-text">使用函数处理数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">文本处理函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">日期和时间处理函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">数值处理函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%87%E6%80%BB%E6%95%B0%E6%8D%AE"><span class="toc-text">汇总数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E9%9B%86%E5%87%BD%E6%95%B0"><span class="toc-text">聚集函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AVG"><span class="toc-text">AVG()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#COUNT"><span class="toc-text">COUNT()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MAX"><span class="toc-text">MAX()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MIN"><span class="toc-text">MIN()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SUM"><span class="toc-text">SUM()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E9%9B%86%E4%B8%8D%E5%90%8C%E5%80%BC"><span class="toc-text">聚集不同值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%81%9A%E9%9B%86%E5%87%BD%E6%95%B0"><span class="toc-text">组合聚集函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E6%95%B0%E6%8D%AE"><span class="toc-text">分组数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E7%BB%84"><span class="toc-text">创建分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%88%86%E7%BB%84"><span class="toc-text">过滤分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SELECT-%E5%AD%90%E5%8F%A5%E9%A1%BA%E5%BA%8F"><span class="toc-text">SELECT 子句顺序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">使用子查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">子查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E5%AD%90%E6%9F%A5%E8%AF%A2%E8%BF%87%E6%BB%A4"><span class="toc-text">利用子查询过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%BA%E8%AE%A1%E7%AE%97%E5%AD%97%E6%AE%B5%E4%BD%BF%E7%94%A8%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">作为计算字段使用子查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%BB%93%E8%A1%A8"><span class="toc-text">联结表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E7%BB%93"><span class="toc-text">联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%A1%A8"><span class="toc-text">关系表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%81%94%E7%BB%93"><span class="toc-text">创建联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-JOIN-%E5%AD%90%E5%8F%A5%E5%88%9B%E5%BB%BA%E8%81%94%E7%BB%93"><span class="toc-text">使用 JOIN 子句创建联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E7%BB%93%E6%B3%A8%E6%84%8F"><span class="toc-text">联结注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E7%BB%93%E6%9B%BF%E4%BB%A3%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">联结替代子查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%AB%98%E7%BA%A7%E8%81%94%E7%BB%93"><span class="toc-text">创建高级联结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E8%A1%A8%E8%B5%B7%E5%88%AB%E5%90%8D"><span class="toc-text">为表起别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E8%81%94%E7%BB%93"><span class="toc-text">自联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E8%81%94%E7%BB%93"><span class="toc-text">自然联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E8%81%94%E7%BB%93"><span class="toc-text">外联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%B8%A6%E8%81%9A%E9%9B%86%E5%87%BD%E6%95%B0%E7%9A%84%E8%81%94%E7%BB%93"><span class="toc-text">使用带聚集函数的联结</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -699,7 +830,7 @@ var _hmt = _hmt || [];
       
       
       <li>
-        <a href="/blog/2022/08/22/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">《SQL必知必会》学习笔记</a>
+        <a href="/blog/2022/08/22/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">《SQL必知必会（第四版）》学习笔记</a>
       </li>
       
       
