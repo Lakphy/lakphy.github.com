@@ -135,6 +135,25 @@
   </entry>
   
   <entry>
+    <title>《编程之美》读书记录（一）</title>
+    <link href="https://lakphy.github.io/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://lakphy.github.io/blog/2022/07/20/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2022-07-20T15:43:08.000Z</published>
+    <updated>2023-03-18T08:44:50.809Z</updated>
+    
+    <content type="html"><![CDATA[<p>作为一个程序员，我个人对微软非常向往的，不论是技术环境、工作待遇等等方面看，而且看到一个又一个学长去微软实习，心里很是羡慕。</p><p>记得去年年底微软招聘微信公众号发布了“<a href="https://mp.weixin.qq.com/s/nAibjhSMvA6zfxcG32Sx6w">微软 2022 暑期实习研发提前批正式启动</a>”的文章，实在是让我感到很震撼，太卷了吧，暑期实习要提前半年开始面试，那我岂不是提前一年就要开始准备啊，一想到这里就感觉到强烈的紧迫感。</p><p>前几天接触到了一个刚从 MS 北京毕业的高中校友，我顺便就问了一些关于去 MS 需要注意的事情，他就给我推荐了《编程之美》这本书。</p><p>为了督促学习，尽管找到了 pdf 资源，我还是买了纸质版本，并且希望把今后在博客上记录一些读书时遇到的值得记忆的问题和知识点。</p><p><img src="s34075059.jpeg" alt="book"></p><hr><p>很明显这本书应该多数是算法题，看了一眼应该是 C 语言。作者也有写到 MS 很重视 C 语言基础，看来我要重新拾起将近四年没有碰的 C 语言和算法了（自 18 年 Noip 落榜后，我更专注于一些脚本语言了，可能因为他们可以更快速地给我带来快乐）</p><p>我其实是本来就有重拾算法的计划的，只是不知道怎么重拾，买了一本紫皮书《算法竞赛入门经典》，但又感觉可能不太适合，毕竟我重拾算法也不大可能去打 ACM，看紫皮书完全是大材小用。</p><p>我会在阅读过程中看到什么想记的，就记下来了，可能我的记录毫无规律，敬请谅解。</p><p>希望这本书能够帮助我我重拾算法，带我走进 MS 🙏</p><p>下面就是正文了，您有时候看到文章可能是没写完的，毕竟我目前除了学业外还需要承担很多前端项目开发工作和社团管理工作，另一边我还在读纯英文的 Redux 文档，我会尽可能高频率地去更新，更新进度即代表我的阅读进度</p><hr><h1 id="面试杂谈的一些记录"><a href="#面试杂谈的一些记录" class="headerlink" title="面试杂谈的一些记录"></a>面试杂谈的一些记录</h1><h2 id="随便记点"><a href="#随便记点" class="headerlink" title="随便记点"></a>随便记点</h2><ul><li>面试前去多多了解对方企业的产品和业务，尤其是对自己要去的组要尽可能多地了解</li><li><blockquote><p>对于微软的工程师来说，C 语言是基本功。</p></blockquote></li><li><a href="https://www.msra.cn/">微软亚洲研究院官网</a></li></ul><h2 id="下水道的井盖为什么是圆的？"><a href="#下水道的井盖为什么是圆的？" class="headerlink" title="下水道的井盖为什么是圆的？"></a>下水道的井盖为什么是圆的？</h2><p>（这是一个 PM 问题）</p><p>emmmm 这题就是考察思维能力，没有正确答案，主要是看你思考的过程，可以看看知乎上的各种答案：<a href="https://www.zhihu.com/question/19678960">井盖为什么是圆的 - 知乎</a></p><h2 id="三盏灯问题"><a href="#三盏灯问题" class="headerlink" title="三盏灯问题"></a>三盏灯问题</h2><p>（这是一个 PM 问题）</p><blockquote><p>房间里有三盏灯，屋外有三个开关，分别控制这三盏灯，只有进入房间，才能看到哪一个电灯是亮的。请问如何只进入房间一次，就能指明哪一个开关控制哪一个灯？</p></blockquote><h3 id="答案一"><a href="#答案一" class="headerlink" title="答案一"></a>答案一</h3><p>开 A 开关 10 分钟，关掉，再开 B 开关，进屋，两者的是 B，热的是 A，剩下一个是 C</p><h3 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h3><h1 id="第一章-游戏之乐"><a href="#第一章-游戏之乐" class="headerlink" title="第一章-游戏之乐"></a>第一章-游戏之乐</h1><h2 id="1-1-让-CPU-占用率听你指挥"><a href="#1-1-让-CPU-占用率听你指挥" class="headerlink" title="1.1-让 CPU 占用率听你指挥"></a>1.1-让 CPU 占用率听你指挥</h2>]]></content>
+    
+    
+    <summary type="html">《编程之美》读书记录（一）</summary>
+    
+    
+    
+    
+    <category term="《编程之美》" scheme="https://lakphy.github.io/blog/tags/%E3%80%8A%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E3%80%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打印了一个2021 Github Contributions</title>
     <link href="https://lakphy.github.io/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/"/>
     <id>https://lakphy.github.io/blog/2022/07/20/%E6%89%93%E5%8D%B0%E4%BA%86%E4%B8%80%E4%B8%AA2021-Github-Contributions/</id>
@@ -428,32 +447,6 @@
     
     
     <category term="Python" scheme="https://lakphy.github.io/blog/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>生活可以被疫情影响，但我们绝不能被疫情打败。</title>
-    <link href="https://lakphy.github.io/blog/2020/03/20/%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%96%AB%E6%83%85%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%BD%86%E6%88%91%E4%BB%AC%E7%BB%9D%E4%B8%8D%E8%83%BD%E8%A2%AB%E7%96%AB%E6%83%85%E6%89%93%E8%B4%A5%E3%80%82/"/>
-    <id>https://lakphy.github.io/blog/2020/03/20/%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%96%AB%E6%83%85%E5%BD%B1%E5%93%8D%EF%BC%8C%E4%BD%86%E6%88%91%E4%BB%AC%E7%BB%9D%E4%B8%8D%E8%83%BD%E8%A2%AB%E7%96%AB%E6%83%85%E6%89%93%E8%B4%A5%E3%80%82/</id>
-    <published>2020-03-20T10:15:41.000Z</published>
-    <updated>2023-03-18T08:44:50.924Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>生活可以被疫情影响，但我们绝不能被疫情打败。      —–雷军__2020年小米10发布会</p></blockquote><p>随着国内疫情的逐渐好转，也快到该上学的时间了，此时正是我需要倍加努力的时间。</p><p>由于疫情影响，高三的开学延期了一个多月，虽有网络教学，但效果始终不理想，刚开始第一周可能效果还行，但第二周效果下降就很严重了，有个经常给电脑刷机的同学说第二周有三个同学在问他怎么给电脑刷机。。。。这效果我觉得不必说了吧。</p><p>距离高考还有78天，此时我对于未来充满恐慌，本应该刻苦奋斗都一个月因为疫情耽误白白荒废，我该如何应对接下来的学习。</p><p>距离全市第一次统一模拟考试还有20天左右的时间，这是第一次高考前大型考试，但由于疫情推迟，这可能也是最后一次。这二十天里我应该加倍努力学习，尽管暂时还不能开学。耽误了这么长时间，该奋斗一波了，欠的总是要还的，只有更大倍数的努力，才能填平之前耽搁下的坑。</p><p>疫情是病魔，但不是心魔，它是用来磨砺内心的，不是用来摧毁内心的</p><p>正如文题，雷军所说</p><blockquote><p>生活可以被疫情影响，但我们绝不能被疫情打败。</p></blockquote><p><img src="1.jpg" alt="小米10发布会"></p><p>我不会被疫情打败，我愿在疫情环境下磨砺自己！</p><p>希望我下次再看这篇博文时我的成绩能有不小的提升！</p><p>也希望其他小伙伴们不管你是否高考，都不要被疫情打败，希望疫情过后能看到更强大的你我！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;生活可以被疫情影响，但我们绝不能被疫情打败。      —–雷军__2020年小米10发布会&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;随着国内疫情的逐渐好转，也快到该上学的时间了，此时正是我需要倍加努力的时间。&lt;/p&gt;
-&lt;p&gt;由于疫情影响，高三的</summary>
-      
-    
-    
-    
-    
-    <category term="精神食粮" scheme="https://lakphy.github.io/blog/tags/%E7%B2%BE%E7%A5%9E%E9%A3%9F%E7%B2%AE/"/>
     
   </entry>
   
