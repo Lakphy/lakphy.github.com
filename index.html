@@ -1,690 +1,223 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Lakphy's Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="auther" content="Lakphy">
-    <link rel="stylesheet" href="css/mdui.min.css">
-    <meta name="description" itemprop="description" content="Lakphy,主要研究前端开发,热爱电子/计算机/科技,退役OIer,喜欢Linux,精通C/C++,Python,JavaScript,React,Vite等技术名字的拼写,经常玩玩电子小玩意.目前在读TE学生">
-    <meta name="Keywords" content="Lakphy">
-    <link rel="shortcut icon" href="avatar.webp">
-    <link rel="apple-touch-icon" href="avatar.webp">
-    <!--link rel="preconnect" href="https://api.dujin.org/bing/1366.php"-->
-    <link rel="preconnect" href="https://lakphy.me/bg.webp">
-    <link rel="preconnect" href="https://lakphy.me/icons/material-icons/MaterialIcons-Regular.woff2">
-    <link rel="preconnect" href="https://lakphy.me/fonts/roboto/Roboto-RegularItalic.woff2">
-    <link rel="preconnect" href="https://lakphy.me/fonts/roboto/Roboto-Regular.woff2">
-    <link rel="preconnect" href="https://lakphy.me/fonts/roboto/Roboto-Medium.woff2">
-    <link rel="preconnect" href="https://lakphy.me/fonts/fontawesome-webfont.woff2?v=4.7.0">
-    <style>
-        .roll {
-            -webkit-transition: -webkit-transform 1s ease-out;
-            -moz-transition: -moz-transform 1.5s ease-out;
-            -o-transition: -o-transform 1.5s ease-out;
-            -ms-transition: -ms-transform 1.5s ease-out;
-        }
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Lakphy Home Next</title><script defer src="/dist/main.a61f9505e8a4c43f3ed0.js"></script><link href="/dist/main.11382cbbec997d03310f.css" rel="stylesheet"></head><body><div id="root"><div class="relative bg-gray-100 min-h-[100vh] lg:h-[100vh] lg:overflow-hidden"><div class="w-full max-w-[500px] lg:max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center"><div class="relative w-full lg:min-w-[500px] lg:top-0 lg:left-0 lg:bottom-0 lg:overflow-y-auto lg:w-2/5 lg:max-w-[500px] "><div class="p-4"><div><div class="flex flex-col w-full items-start gap-4"><div class="flex gap-2 items-stretch w-full"><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        .roll:hover {
-            -webkit-transform: rotateZ(720deg);
-            -moz-transform: rotateZ(720deg);
-            -o-transform: rotateZ(720deg);
-            -ms-transform: rotateZ(720deg);
-            transform: rotateZ(720deg);
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        .box {
-            position: fixed;
-            overflow: hidden;
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden;
-            z-index: -99;
-        }
+        cursor-pointer
+        undefined
+      "><div class="w-[140px] h-[140px] bg-cover rounded-3xl" style="background-image:url(fde4ba7958a119a65522.jpg)"></div></div><div class="flex flex-col flex-1 gap-1 justify-end p-2"><p class="text-xl text-gray-500">Hi, I&#x27;m</p><h1 class="text-3xl font-bold">Harry Li</h1><p class="text-lg text-gray-500">@Lakphy <span class="text-gray-300">/&#x27;la:kfi/</span></p></div></div><div class="w-full flex justify-start items-center gap-2"><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        .box img {
-            position: relative;
-            width: 100%;
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        .box .bg {
-            /*缩略图*/
-            display: block;
-            filter: blur(15px);
-            transform: scale(1);
-        }
+        cursor-pointer
+        h-[40px] bg-red-500 flex items-center pr-4 transition-all duration-300
+      "><div class="w-[40px] h-[40px] flex items-center justify-center"><span class="i-icon i-icon-mail"><svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path d="M4 39H44V24V9H24H4V24V39Z" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round"></path><path d="M4 9L24 24L44 9" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24 9H4V24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44 24V9H24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><div class="text-sm text-white whitespace-nowrap overflow-hidden"><p>Mail me</p></div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        .box .show_img {
-            /*加载完成显示的实际图*/
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            left: 0;
-            transition: opacity 2s linear;
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        #main {
-            border: none;
-            background: none;
-        }
+        cursor-pointer
+        h-[40px] bg-blue-500 flex items-center  transition-all duration-300
+      "><div class="w-[40px] h-[40px] flex items-center justify-center"><span class="i-icon i-icon-telegram"><svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="white"></path></svg></span></div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        .blog:hover {
-            color: red;
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        #tagscloud {
-            width: 100%;
-            height: 160px;
-            position: absolute;
-            font-size: 18px;
-            color: #333;
-            margin: 20px auto 0;
-            text-align: center;
-        }
+        cursor-pointer
+        h-[40px] bg-black flex items-center  transition-all duration-300
+      "><div class="w-[40px] h-[40px] flex items-center justify-center"><span class="i-icon i-icon-github"><svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4ZM0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M19.1833 45.4716C18.9898 45.2219 18.9898 42.9973 19.1833 38.798C17.1114 38.8696 15.8024 38.7258 15.2563 38.3667C14.437 37.828 13.6169 36.1667 12.8891 34.9959C12.1614 33.8251 10.5463 33.64 9.89405 33.3783C9.24182 33.1165 9.07809 32.0496 11.6913 32.8565C14.3044 33.6634 14.4319 35.8607 15.2563 36.3745C16.0806 36.8883 18.0515 36.6635 18.9448 36.2519C19.8382 35.8403 19.7724 34.3078 19.9317 33.7007C20.1331 33.134 19.4233 33.0083 19.4077 33.0037C18.5355 33.0037 13.9539 32.0073 12.6955 27.5706C11.437 23.134 13.0581 20.2341 13.9229 18.9875C14.4995 18.1564 14.4485 16.3852 13.7699 13.6737C16.2335 13.3589 18.1347 14.1343 19.4734 16.0001C19.4747 16.0108 21.2285 14.9572 24.0003 14.9572C26.772 14.9572 27.7553 15.8154 28.5142 16.0001C29.2731 16.1848 29.88 12.7341 34.5668 13.6737C33.5883 15.5969 32.7689 18.0001 33.3943 18.9875C34.0198 19.9749 36.4745 23.1147 34.9666 27.5706C33.9614 30.5413 31.9853 32.3523 29.0384 33.0037C28.7005 33.1115 28.5315 33.2855 28.5315 33.5255C28.5315 33.8856 28.9884 33.9249 29.6465 35.6117C30.0853 36.7362 30.117 39.948 29.7416 45.247C28.7906 45.4891 28.0508 45.6516 27.5221 45.7347C26.5847 45.882 25.5669 45.9646 24.5669 45.9965C23.5669 46.0284 23.2196 46.0248 21.837 45.8961C20.9154 45.8103 20.0308 45.6688 19.1833 45.4716Z" fill="white"></path></svg></span></div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        #tagscloud a {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            color: #333;
-            font-family: Arial;
-            text-decoration: none;
-            margin: 0 10px 15px 0;
-            line-height: 18px;
-            text-align: center;
-            font-size: 12px;
-            padding: 1px 5px;
-            display: inline-block;
-            border-radius: 3px;
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        #tagscloud a.tagc1 {
-            background: #666;
-            color: #fff;
-        }
+        cursor-pointer
+        h-[40px] bg-blue-500 flex items-center  transition-all duration-300
+      "><div class="w-[40px] h-[40px] flex items-center justify-center"><span class="i-icon i-icon-twitter"><svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path d="M5 35.7622C6.92886 36.8286 20.8914 44.8773 30.8199 38.674C40.7483 32.4707 40.2006 21.7833 40.2006 16.886C41.1 15.0018 43 14.0439 43 8.9438C41.1337 10.6678 39.2787 11.2544 37.435 10.7036C35.6287 7.94957 33.1435 6.73147 29.9794 7.04934C25.2333 7.52614 23.4969 12.1825 24.0079 18.2067C16.6899 21.9074 10.9515 15.524 7.99418 10.7036C7.00607 14.4999 6.0533 19.0576 7.99418 24.0995C9.2881 27.4607 12.3985 30.3024 17.3254 32.6246C12.3323 35.3308 8.22382 36.3766 5 35.7622Z" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round"></path></svg></span></div></div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        #tagscloud a.tagc2 {
-            background: #F16E50;
-            color: #fff;
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        #tagscloud a.tagc3 {
-            background: red;
-            color: #fff;
-        }
+        cursor-pointer
+        w-full p-4 bg-white 
+      "><div class="w-full flex flex-col items-center gap-2 lg:text-base text-sm"><h2 class="text-xl lg:text-2xl font-bold w-full">Who am I?</h2><p class="text-gray-500">我是一名虽然很年轻但已经老了的技术热爱者，从高中接触 OI 起开始接触技术。 focus on Web 开发技术，喜欢研究新技术，同时也关注前沿科技数码，拥抱 AIGC 技术。</p><p class="text-gray-500">平时也会玩一玩 Magisk、软路由、NAS 等，经常、刷手机、刷电脑、刷手表、刷手环、刷路由器、烧单片机、焊板子。同时也是充电头、数据线、充电宝、键盘玩家。</p></div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        #tagscloud a.tagc4 {
-            background: #F60;
-            color: #fff;
-        }
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
         
-        #tagscloud a.tagc5 {
-            background: #006633;
-            color: #fff;
-        }
+        cursor-pointer
+        w-full p-4 bg-white 
+      "><div class="w-full flex flex-col items-center gap-2 lg:text-base text-sm"><h2 class="text-xl lg:text-2xl font-bold w-full">Work with...</h2><div class="flex flex-col w-full text-gray-500"><p class="flex items-center gap-2"><span class="i-icon i-icon-code"><svg width="16" height="16" viewBox="0 0 48 48" fill="none"><path d="M16 13L4 25.4322L16 37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M32 13L44 25.4322L32 37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28 4L21 44" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path></svg></span> TypeScript, Rust, React, Vue</p><p class="flex items-center gap-2"><span class="i-icon i-icon-code-computer"><svg width="16" height="16" viewBox="0 0 48 48" fill="none"><path d="M21 6H9C7.34315 6 6 7.34315 6 9V31C6 32.6569 7.34315 34 9 34H39C40.6569 34 42 32.6569 42 31V21" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24 34V42" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M32 6L28 10L32 14" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M38 6L42 10L38 14" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 42L34 42" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> Cursor, VSCode</p><p class="flex items-center gap-2"><span class="i-icon i-icon-mac-finder"><svg width="16" height="16" viewBox="0 0 48 48" fill="none"><path d="M44 38V10C44 8.89543 43.1046 8 42 8H6C4.89543 8 4 8.89543 4 10V38C4 39.1046 4.89543 40 6 40H42C43.1046 40 44 39.1046 44 38Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24.9999 8C24.9999 8 19.9999 18 20.9999 25H26.9999L27.9999 40" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M34 40H22" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M30 8H18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M34 16V18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 16V18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 29C13 29 17.1905 32 24 32C30.8095 32 35 29 35 29" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> MacBook Pro 14inch M3 Pro, M1 Pro</p><p class="flex items-center gap-2"><span class="i-icon i-icon-keyboard-one"><svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="4" y="18" width="40" height="24" rx="2" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></rect><circle cx="14" cy="24" r="2" fill="currentColor"></circle><circle cx="16" cy="30" r="2" fill="currentColor"></circle><circle cx="10" cy="30" r="2" fill="currentColor"></circle><circle cx="20" cy="24" r="2" fill="currentColor"></circle><circle cx="22" cy="30" r="2" fill="currentColor"></circle><circle cx="26" cy="24" r="2" fill="currentColor"></circle><circle cx="28" cy="30" r="2" fill="currentColor"></circle><circle cx="32" cy="24" r="2" fill="currentColor"></circle><circle cx="34" cy="30" r="2" fill="currentColor"></circle><circle cx="38" cy="24" r="2" fill="currentColor"></circle><path d="M17 36H31" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M33 18V13.125C33 12.5727 33.4477 12.125 34 12.125H39C39.5523 12.125 40 11.6773 40 11.125V6" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> Keychron K1Pro, Aula F87</p><p class="flex items-center gap-2"><span class="i-icon i-icon-iphone"><svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="11" y="4" width="26" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="4"></rect><path d="M22 10L26 10" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M20 38H28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> iPhone 16, Xiaomi 13</p><p class="flex items-center gap-2"><span class="i-icon i-icon-ipad-one"><svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="5" y="10" width="38" height="30" rx="2" fill="none" stroke="currentColor" stroke-width="4"></rect><path d="M11 27V23" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> iPad mini 6 (Great tool for reading)</p></div></div></div></div></div></div></div><div class="w-full lg:w-3/5 lg:overflow-y-auto lg:h-[100vh] border-t-2 border-gray-200 border-dashed lg:border-t-0"><div class="p-4"><div><div class="w-full h-full relative grid gap-y-2 lg:gap-4 lg:grid-cols-2 grid-cols-1"><div style="grid-column:span 1;grid-row:span 1" class="
+        rounded-3xl
+        transition-all duration-300 ease-out
         
-        #tagscloud a:hover {
-            color: #fff;
-            background: #0099ff;
-        }
-    </style>
-    <script>
-        function ani() {
-            var radius = 90;
-            var d = 200;
-            var dtr = Math.PI / 180;
-            var mcList = [];
-            var lasta = 1;
-            var lastb = 1;
-            var distr = true;
-            var tspeed = 11;
-            var size = 200;
-            var mouseX = 0;
-            var mouseY = 10;
-            var howElliptical = 1;
-            var aA = null;
-            var oDiv = null;
-            window.onload = function() {
-                var b = 0;
-                var a = null;
-                oDiv = document.getElementById("tagscloud");
-                aA = oDiv.getElementsByTagName("a");
-                for (b = 0; b < aA.length; b++) {
-                    a = {};
-                    aA[b].onmouseover = (function(c) {
-                        return function() {
-                            c.on = true;
-                            this.style.zIndex = 9999;
-                            this.style.color = "#fff";
-                            this.style.padding = "5px 5px";
-                            this.style.filter = "alpha(opacity=100)";
-                            this.style.opacity = 1
-                        }
-                    })(a);
-                    aA[b].onmouseout = (function(c) {
-                        return function() {
-                            c.on = false;
-                            this.style.zIndex = c.zIndex;
-                            this.style.color = "#fff";
-                            this.style.padding = "5px";
-                            this.style.filter = "alpha(opacity=" + 100 * c.alpha + ")";
-                            this.style.opacity = c.alpha;
-                            this.style.zIndex = c.zIndex
-                        }
-                    })(a);
-                    a.offsetWidth = aA[b].offsetWidth;
-                    a.offsetHeight = aA[b].offsetHeight;
-                    mcList.push(a)
-                }
-                sineCosine(0, 0, 0);
-                positionAll();
-                (function() {
-                    update();
-                    setTimeout(arguments.callee, 40)
-                })()
-            };
-
-            function update() {
-                var p, o, n = 0;
-                p = (Math.min(Math.max(-mouseY, -size), size) / radius) * tspeed;
-                o = (-Math.min(Math.max(-mouseX, -size), size) / radius) * tspeed;
-                lasta = p;
-                lastb = o;
-                if (Math.abs(p) <= 0.01 && Math.abs(o) <= 0.01) {
-                    return
-                }
-                sineCosine(p, o, n);
-                for (var j = 0; j < mcList.length; j++) {
-                    if (mcList[j].on) {
-                        continue
-                    }
-                    var s = mcList[j].cx;
-                    var m = mcList[j].cy * ca + mcList[j].cz * (-sa);
-                    var g = mcList[j].cy * sa + mcList[j].cz * ca;
-                    var r = s * cb + g * sb;
-                    var l = m;
-                    var f = s * (-sb) + g * cb;
-                    var q = r * cc + l * (-sc);
-                    var k = r * sc + l * cc;
-                    var e = f;
-                    mcList[j].cx = q;
-                    mcList[j].cy = k;
-                    mcList[j].cz = e;
-                    per = d / (d + e);
-                    mcList[j].x = (howElliptical * q * per) - (howElliptical * 2);
-                    mcList[j].y = k * per;
-                    mcList[j].scale = per;
-                    var h = per;
-                    h = (h - 0.6) * (10 / 6);
-                    mcList[j].alpha = h * h * h - 0.2;
-                    mcList[j].zIndex = Math.ceil(100 - Math.floor(mcList[j].cz))
-                }
-                doPosition()
-            }
-
-            function positionAll() {
-                var e = 0;
-                var c = 0;
-                var a = mcList.length;
-                for (var b = 0; b < a; b++) {
-                    if (distr) {
-                        e = Math.acos(-1 + (2 * (b + 1) - 1) / a);
-                        c = Math.sqrt(a * Math.PI) * e
-                    } else {
-                        e = Math.random() * (Math.PI);
-                        c = Math.random() * (2 * Math.PI)
-                    }
-                    mcList[b].cx = radius * Math.cos(c) * Math.sin(e);
-                    mcList[b].cy = radius * Math.sin(c) * Math.sin(e);
-                    mcList[b].cz = radius * Math.cos(e);
-                    aA[b].style.left = mcList[b].cx + oDiv.offsetWidth / 2 - mcList[b].offsetWidth / 2 + "px";
-                    aA[b].style.top = mcList[b].cy + oDiv.offsetHeight / 2 - mcList[b].offsetHeight / 2 + "px"
-                }
-            }
-
-            function doPosition() {
-                var b = oDiv.offsetWidth / 2;
-                var e = oDiv.offsetHeight / 2;
-                for (var c = 0; c < mcList.length; c++) {
-                    if (mcList[c].on) {
-                        continue
-                    }
-                    var a = aA[c].style;
-                    if (mcList[c].alpha > 0.1) {
-                        if (a.display != "") {
-                            a.display = ""
-                        }
-                    } else {
-                        if (a.display != "none") {
-                            a.display = "none"
-                        }
-                        continue
-                    }
-                    a.left = mcList[c].cx + b - mcList[c].offsetWidth / 2 + "px";
-                    a.top = mcList[c].cy + e - mcList[c].offsetHeight / 2 + "px";
-                    a.filter = "alpha(opacity=" + 100 * mcList[c].alpha + ")";
-                    a.zIndex = mcList[c].zIndex;
-                    a.opacity = mcList[c].alpha
-                }
-            }
-
-            function sineCosine(f, e, g) {
-                sa = Math.sin(f * dtr);
-                ca = Math.cos(f * dtr);
-                sb = Math.sin(e * dtr);
-                cb = Math.cos(e * dtr);
-                sc = Math.sin(g * dtr);
-                cc = Math.cos(g * dtr)
-            };
-        }
-        ani();
-    </script>
-    <link rel="stylesheet" href="https://lakphy.me/css/font-awesome.min.css">
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?adb566a88b1a652452c595c7a93fd3c1";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <script>
-        function skill() {
-            var inst = new mdui.Dialog('#skillShower');
-            inst.open();
-        }
-    </script>
-
-</head>
-
-<!--body style="background-color:black;background:#FFF url(https://api.dujin.org/bing/1920.php) repeat-x 0;background-size:cover;background-position:center top;background-attachment:fixed"-->
-
-<body>
-    <div class="box" id="bg_box">
-        <img src="bg_min.webp" class="bg" id="bg_min" />
-    </div>
-    <noscript>
-        <div
-            style="box-shadow:0px 0px 100px #000000;z-index:999;padding:10px;color:white;font-size:20px;background-color:red;position: fixed;height:auto;width:100%">
-            为了保证您的使用体验，本站必须使用JavaScript，我们不会盗取您的隐私，不会浪费CPU和内存资源。请您打开浏览器的JavaScript以获得更好的服务，如果您无法启用JavaScript，请前往<a
-                href="https://www.google.cn/chrome/">chrome官网</a>下载chrome浏览器打开本站
-        </div>
-    </noscript>
-    <div class="mdui-container" style="text-align:center;">
-        <div style="height:50px"></div>
-        <div class="mdui-row" style="text-align:center;">
-            <div class="mdui-col-offset-xs-1 mdui-col-xs-10 mdui-col-sm-6 mdui-col-offset-sm-3 mdui-col-md-4 mdui-col-offset-md-4">
-                <div style="background-color:rgba(255,255,255,0.9);height:auto;width:100%;border-radius:20px;box-shadow:0px 0px 10px #FFFFFF;">
-                    <div style="transform: translate(0px,-40px);-ms-transform: translate(0px,-40px);-webkit-transform: translate(0px,-40px);/* Safari and Chrome */" class="">
-                        <div class="roll" id="count" style="height:85px;width:85px;background: -webkit-linear-gradient(left top, #03e1f6 , #fb1eff); /* Safari 5.1 - 6.0 */  background: -o-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Opera 11.1 - 12.0 */  background: -moz-linear-gradient(bottom right, #03e1f6, #fb1eff); /* Firefox 3.6 - 15 */  background: linear-gradient(to bottom right, #03e1f6 , #fb1eff);;margin-left:auto;margin-right:auto;border-radius:85px;line-height:85px"
-                            onclick="count()">
-                            <img class="mdui-img-circle" src="avatar.webp" style="width:80px;vertical-align:middle;" />
-                        </div>
-                        <div class="mdui-typo-title">Lakphy</div>
-                        <div class="mdui-typo-subheading-opacity">/'la:kfi/&nbsp;&nbsp;(nickname)&nbsp;&nbsp;<i class="fa fa-mars mdui-text-color-blue"></i></div>
-                        <br>
-                        <div class="mdui-typo-body-1">China&nbsp;<i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Age:22<br><br> Focus on Front-End
-                            <br><br>爱好软件技术/电子技术/前沿科技<br><br><a href="https://en.wikipedia.org/wiki/Telecommunications_engineering" style="color: rgba(0,0,0,.87) !important;">TE</a>学生但热爱<a href="https://en.wikipedia.org/wiki/Computer_science" style="color: rgba(0,0,0,.87) !important;">CS</a><br><br>
-                            <i class="fa fa-laptop" aria-hidden="true"></i>&nbsp;&nbsp;M1 Pro Macbook Pro 14<br><br>
-                            <!-- <i class="fa fa-windows" aria-hidden="true"></i>&nbsp;&nbsp;11390H MX450<br><br></div> -->
-                            <i class="fa fa-gamepad" aria-hidden="true"></i>&nbsp;&nbsp;Intel Ultra 5 RTX4050<br><br></div>
-                        <div style="width: 100%;height:175px;position: relative">
-                            <div id="tagscloud" style="">
-
-                                <a class="tagc4" onclick="mdui.snackbar({message: 'js是万能的！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">JavaScript</a>
-
-                                <a class="tagc3" onclick="mdui.snackbar({message: '性能即是生命！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">C/C++</a>
-
-                                <a class="tagc5" onclick="mdui.snackbar({message: '动态规划瞎爆搜，数论只会GCD（拓展欧几里得）',buttonText: '了解水平',onButtonClick: function(){skill()}});">NOIp退役选手</a>
-
-                                <a class="tagc2" onclick="mdui.snackbar({message: '人生苦短,我用Python',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Python<a>
-
-                                        <a class="tagc4"
-                                            onclick="mdui.snackbar({message: 'Talk is cheap,show me your code!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Linux</a>
-
-                                <a class="tagc1" onclick="mdui.snackbar({message: '我知道HTML不是编程语言，，，',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">HTML
-                                            5</a>
-
-                                <a class="tagc2" onclick="mdui.snackbar({message: '听说这个能替代js？反正我不会',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">CSS
-                                            3</a>
-
-                                <a class="tagc5" onclick="mdui.snackbar({message: '请问您说的这个东西叫网页吗',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">微信小程序</a>
-
-                                <a class="tagc2" onclick="mdui.snackbar({message: '自动化你的手机，犹如开挂',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Auto.js</a>
-
-                                <a class="tagc2" onclick="mdui.snackbar({message: '物联网',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Arduino</a>
-
-                                <a class="tagc3" onclick="mdui.snackbar({message: '物联网！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">单片机</a>
-
-                                <a class="tagc2" onclick="mdui.snackbar({message: 'Where there is a shell, there is the world!',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">shell</a>
-
-                                <a class="tagc1" onclick="mdui.snackbar({message: '当服务器玩',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">树莓派</a>
-
-                                <a class="tagc2" onclick="mdui.snackbar({message: 'React真香！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">React</a>
-
-                                <a class="tagc5" onclick="mdui.snackbar({message: 'Redux.store',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Redux</a>
-
-                                <a class="tagc4" onclick="mdui.snackbar({message: '类型限定，好！',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">TypeScript</a>
-
-                                <a class="tagc4" onclick="mdui.snackbar({message: '万物皆可炼丹',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Tensorflow</a>
-                                <a class="tagc4" onclick="mdui.snackbar({message: '函数式真香',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Lambda</a>
-
-                                <a class="tagc3" onclick="mdui.snackbar({message: '“这个特性真的真的很难实现啊”',buttonText: '了解我的水平',onButtonClick: function(){skill()}});">Programmer</a>
-                            </div>
-                            <div style="height:175px;width:100%;position:relative;line-height: 175px;font-size:100px;color:rgba(0,0,0,0.2)" id="skills"></div>
-                        </div>
-                        <script>
-                            ani()
-                        </script>
-                        <br><br>
-                        <div>
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-red-600" mdui-dialog="{target: '#exampleDialog'}"><i class="fa fa-envelope"
-                                    style="position:relative;left:0px;top:3px"></i></a>
-
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://t.me/lakphy"><i class="fa fa-paper-plane"
-                                    style="position:relative;left:-2px;top:3px"></i></a>
-
-                            <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-black" href="https://github.com/lakphy"><i class="fa fa-github"
-                                    style="position:relative;left:0.5px;top:4px"></i></a>
-
-                            <!-- <a class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple mdui-color-blue-700" href="https://twitter.com/lakphy?s=09"><i class="fa fa-twitter"
-                                    style="position:relative;left:0.5px;top:4px"></i></a> -->
-                        </div>
-                        <br>
-                        <a class="mdui-btn mdui-btn-raised mdui-ripple blog" href="blog/index.html" style="border-radius:20px">Lakphy's Blog <i
-                                class="mdui-icon material-icons">&#xe5c8;</i></a>
-                        <br>
-                        <div class="mdui-collapse" mdui-collapse style="height:auto;width:100%;">
-                            <div class="mdui-collapse-item" style="transform: translate(0px,8px);-ms-transform: translate(0px,8px);-webkit-transform: translate(0px,8px);/* Safari and Chrome */">
-                                <div class="mdui-collapse-item-header">
-                                    <p><a href="javascript:;" class="mdui-text-color-black">Support&nbsp;Lakphy</a></p>
-                                </div>
-                                <div class="mdui-collapse-item-body">
-                                  感谢您的好意，您可以选择通过联系 Telegram @lakphy 与我线下击剑！
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="mdui-typo-caption-opacity">by Lakphy<br><br>Since 2017
-                        </div>
-                    </div>
-                </div>
-                <!-- <br>
-                <div style="background-color:rgba(255,255,255,0.9);height:auto;width:100%;border-radius:20px;box-shadow:0px 0px 10px #FFFFFF;color:black">
-                    <br>Lakphy's Projects<br>
-                    <a href='res/index.html' style="color: black" class="mdui-text-color-black">
-                        <li class="mdui-list-item mdui-ripple" style="text-align: left">
-                            <div class="mdui-list-item-avatar"><img class="roll" src="res/logo.webp" /></div>
-                            <div class="mdui-list-item-content">
-                                <div class="mdui-list-item-title">SourLib</div>
-                                <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text">优酸乳味的资源库</span>--the best resource library
-                                </div>
-                            </div>
-                        </li>
-                    </a>
-                </div> -->
-                <br>
-                <div id="friends" style="background-color:rgba(255,255,255,0.9);height:auto;width:100%;border-radius:20px;box-shadow:0px 0px 10px #FFFFFF;color:black">
-                    <br>Lakphy's Friends<br>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mdui-dialog" id="exampleDialog">
-        <div class="mdui-dialog-title">My emails</div>
-        <div class="mdui-dialog-content mdui-table-fluid mdui-shadow-0">
-            <table class="mdui-table mdui-table-hoverable mdui-shadow-0">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>MailBox</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Outlook (preferred)</td>
-                        <td>lakphy@outlook.com</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Lakphy</td>
-                        <td>i@lakphy.me</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Gmail</td>
-                        <td>lakphycn@gmail.com</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
-        </div>
-    </div>
-    <div class="mdui-dialog" id="skillShower">
-        <div class="mdui-dialog-title">我的技术栈</div>
-        <div class="mdui-dialog-content mdui-table-fluid mdui-shadow-0">
-            <table class="mdui-table mdui-table-hoverable mdui-shadow-0">
-                <thead>
-                    <tr>
-                        <th>技术</th>
-                        <th>初学时间</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>HTML & CSS</td>
-                        <td>2016_age.14</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>2017_age.15</td>
-                    </tr>
-                    <tr>
-                        <td>C/C++</td>
-                        <td>2018_age.15</td>
-                    </tr>
-                    <tr>
-                        <td>算法竞赛（OI）</td>
-                        <td>2018_age.15</td>
-                    </tr>
-                    <tr>
-                        <td>Linux</td>
-                        <td>2018_age.16</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>2019_age.16</td>
-                    </tr>
-                    <tr>
-                        <td>Arduino/STM32等电子小技术</td>
-                        <td>2020_age.17</td>
-                    </tr>
-                    <tr>
-                        <td>TypeScript</td>
-                        <td>2021_age.18</td>
-                    </tr>
-                    <tr>
-                        <td>React</td>
-                        <td>2021_age.18</td>
-                    </tr>
-                    <tr>
-                        <td>Taro</td>
-                        <td>2021_age.18</td>
-                    </tr>
-                    <tr>
-                        <td>Antd</td>
-                        <td>2021_age.19</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
-        </div>
-    </div>
-    <br><br><br><br>
-    <script src="js/mdui.min.js"></script>
-    <script type="text/javascript">
-        var $$ = mdui.JQ;
-        $$('#count').on('click', function() {
-            mdui.snackbar({
-                message: '+1s'
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        function insertFunc() {
-            links = [
-                "https://twznow.com/",
-                "https://blog.npofsi.pro/",
-                "https://zcmimi.top",
-                "https://xiaoyou66.com/",
-                "https://equiinoiw.github.io/",
-                "https://blog.yuuta.moe/",
-                "https://huangx607087.online/",
-                "http://picpo.top/",
-                "https://xjzsq.ren/",
-                "https://www.punkginger.top",
-                "https://fengye404.github.io/",
-                "https://sun482.github.io",
-                "https://yiling.xyz",
-                "https://lenjon.top",
-                "https://whz11.github.io",
-                "https://magren.cc/"
-            ]
-            names = [
-                "Jimmy T",
-                "NPofSi",
-                "zcmimi",
-                "小游",
-                "PhantoGype",
-                "Yuuta",
-                "huangx607087",
-                "PiCpo",
-                "青い記憶",
-                "punkginger",
-                "風楪fy",
-                "SunBoy482",
-                "Zero Huang",
-                "Len",
-                "whz11",
-                "Margen"
-            ]
-            avas = [
-                "./friends/JimmyT.webp",
-                "./friends/NPofSi.webp",
-                "./friends/zcmimi.webp",
-                "./friends/xiaoyou.webp",
-                "./friends/PhantoGype.webp",
-                "./friends/Yuuta.webp",
-                "./friends/huangx.webp",
-                "./friends/PiCpo.webp",
-                "https://xjzsq.gitee.io/blog/xjzsq.png",
-                "./spike.jpg",
-                "./fengye404.jpg",
-                "./sunboy482.jpg",
-                "https://yiling.xyz/images/tree_small.png",
-                "https://lenjon.top/images/avatar.gif",
-                "https://whz11.github.io/images/avatar1.png",
-                "./Magren.webp"
-            ]
-            introductions = [
-                "肥宅",
-                "东方铃奈庵",
-                "一个菜鸡OIer,是archlinuxer",
-                "二次元技术宅",
-                "一般通过死宅 / 音游狗 / CS 专业就读",
-                "Yuuta的折腾",
-                "密码学废物(dalao)",
-                "不务正业的屑",
-                "珂学家的代码日常",
-                "后端开发",
-                "正在学java",
-                "编曲、前端、吉他、头发护理专家、养生大师",
-                "Life is like a see of bitterness.",
-                "头发收集屋",
-                "后端开发",
-                "Margen 的博客"
-            ]
-            inserts = "<br>Lakphy's Friends<br>";
-            for (i = 0; i < names.length; i++) {
-                repeatBody = "<a href='" + links[i] +
-                    "' style=\"color: black\" class=\"mdui-text-color-black\"><li class=\"mdui-list-item mdui-ripple\" style=\"text-align: left\"><div class=\"mdui-list-item-avatar\"><img class=\"roll\" src=\"" +
-                    avas[i] + "\" /></div><div class=\"mdui-list-item-content\"><div class=\"mdui-list-item-title\">" +
-                    names[i] + "</div><div class=\"mdui-list-item-text mdui-list-item-one-line\">" + introductions[i] +
-                    "</div></div></li></a>";
-                inserts += repeatBody;
-            }
-            document.getElementById("friends").innerHTML = inserts;
-        }
-        insertFunc();
-        document.getElementById("skills").innerHTML = "<i>Skills</i>";
-        //window.setTimeout(insertFunc, 1000);
-    </script>
-    <script>
-        document.getElementById("bg_box").innerHTML =
-            "<img src=\"bg_min.webp\" class=\"bg\" id=\"bg_min\" /><img src=\"bg.webp\" class=\"show_img\" id=\"bg\" />";
-
-        var show_img = document.querySelector('.show_img');
-        var show_img = document.getElementsByClassName('show_img')[0];
-
-        function refreshWindows() {
-            var device_width, device_height;
-            if (window.innerHeight) device_height = window.innerHeight;
-            else if ((document.body) && (document.body.clientHeight)) device_height = document.body.clientHeight;
-            if (window.innerWidth) device_width = window.innerWidth;
-            else if ((document.body) && (document.body.clientWidth)) device_width = document.body.clientWidth;
-            if (device_height / device_width > 3810 / 2176) {
-                bg_obj = document.getElementById("bg").style;
-                bg_obj.width = "auto";
-                bg_obj.height = "100vh";
-                bg_obj.top = "0px";
-                bg_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
-                bg_min_obj = document.getElementById("bg_min").style;
-                bg_min_obj.width = "auto";
-                bg_min_obj.height = "100vh";
-                bg_min_obj.top = "0px";
-                bg_min_obj.left = "-" + (device_height * 2176 / 3810 - device_width) * 50 / device_width + "vw";
-            } else {
-                bg_obj = document.getElementById("bg").style;
-                bg_obj.width = "100vw";
-                bg_obj.height = "auto";
-                bg_obj.left = "0px";
-                bg_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
-                bg_min_obj = document.getElementById("bg_min").style;
-                bg_min_obj.width = "100vw";
-                bg_min_obj.height = "auto";
-                bg_min_obj.left = "0px";
-                bg_min_obj.top = "-" + (device_width * 3810 / 2176 - device_height) * 100 / 3 / device_height + "vh";
-            }
-            show_img.onload = function() {
-                show_img.style.opacity = "1";
-            };
-        }
-        refreshWindows();
-        setInterval(refreshWindows, 100);
-        /*图片加载完成
-        show_img.onload = function() {
-            show_img.style.opacity = "1";
-        };*/
-        function imgLoad(img, callback) {
-            var timer = setInterval(function() {
-                if (img.complete) {
-                    callback(img);
-                    clearInterval(timer);
-                }
-            }, 50)
-        }
-        imgLoad(show_img, function() {
-            show_img.style.opacity = "1";
-        })
-    </script>
-</body>
-
-</html>
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        w-full h-full bg-white cursor-pointer overflow-hidden
+      "><div class="w-full bg-blue-500 p-4 text-blue-100 relative flex flex-col justify-between cursor-pointer"><span class="i-icon i-icon-telegram text-blue-400 absolute left-28 top-0 z-0 animate-fly"><svg width="130" height="130" viewBox="0 0 48 48" fill="none"><path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="currentColor"></path></svg></span><div class="overflow-hidden z-10"><p class="text-xl font-bold w-full whitespace-nowrap text-ellipsis overflow-hidden">Lakphy&#x27;s Front End Channel</p><p class="text-base w-full whitespace-nowrap text-blue-200">@lakphyFE</p><div class="flex justify-end"><span class="i-icon i-icon-arrow-circle-right text-blue-100 cursor-pointer"><svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M14.4917 24.5H32.4917" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M23.4917 15.5L32.4917 24.5L23.4917 33.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div></div></div><div style="grid-column:span 1;grid-row:span 1" class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        w-full h-full bg-white cursor-pointer overflow-hidden
+      "><div class="w-full bg-yellow-500 p-4 text-yellow-100 relative flex flex-col justify-between"><span class="i-icon i-icon-book-open text-yellow-400 absolute left-16 bottom-[-30px] z-0 rotate-12"><svg width="130" height="130" viewBox="0 0 48 48" fill="none"><path d="M5 7H16C20.4183 7 24 10.5817 24 15V42C24 38.6863 21.3137 36 18 36H5V7Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M43 7H32C27.5817 7 24 10.5817 24 15V42C24 38.6863 26.6863 36 30 36H43V7Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path></svg></span><span class="i-icon i-icon-pencil text-yellow-400 absolute right-10 top-2 z-0 animate-spin-full"><svg width="80" height="80" viewBox="0 0 48 48" fill="none"><g clip-path="url(#icon-766d08efae6fdc45)"><path d="M30.9995 8.99902L38.9995 16.999" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.99953 31.999L35.9994 4L43.9995 11.999L15.9995 39.999L5.99951 41.999L7.99953 31.999Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M30.9995 8.99902L38.9995 16.999" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.99951 31.999L15.9995 38.999" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.9995 34.999L34.9995 12.999" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="icon-766d08efae6fdc45"><rect width="48" height="48" fill="currentColor"></rect></clipPath></defs></svg></span><div class="overflow-hidden z-10"><p class="text-xl font-bold w-full whitespace-nowrap text-ellipsis overflow-hidden">Lakphy&#x27;s Web Blog Garden</p><p class="text-base w-full whitespace-nowrap text-yellow-200">build with rspress</p><p class="text-yellow-600 flex flex-col items-end"><p class="bg-yellow-100 rounded-md w-fit px-2">coming soon 🚧</p></p></div></div></div><div style="grid-column:span 1;grid-row:span 1" class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        w-full h-full bg-white cursor-pointer overflow-hidden
+      "><div class="w-full bg-purple-500 p-4 text-purple-100 relative flex flex-col justify-between cursor-pointer"><span class="i-icon i-icon-code text-purple-400 absolute left-28 bottom-[-40px] z-0"><svg width="130" height="130" viewBox="0 0 48 48" fill="none"><path d="M16 13L4 25.4322L16 37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M32 13L44 25.4322L32 37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28 4L21 44" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path></svg></span><div class="overflow-hidden z-10"><p class="text-xl font-bold w-full whitespace-nowrap text-ellipsis overflow-hidden">Lakphy&#x27;s Coding Style</p><p class="text-base w-full whitespace-nowrap text-purple-200 space-x-3"><span>Maintainable</span><span>Immutable</span><span>Stateless</span></p><div class="flex justify-end"><span class="i-icon i-icon-arrow-circle-right text-purple-100 cursor-pointer"><svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M14.4917 24.5H32.4917" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M23.4917 15.5L32.4917 24.5L23.4917 33.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div></div></div><div style="grid-column:span 1;grid-row:span 1" class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        w-full h-full bg-white cursor-pointer overflow-hidden
+      "><div class="w-full h-full min-h-[100px] bg-gray-500 p-4 text-gray-100 relative flex flex-col justify-between cursor-pointer"><span class="i-icon i-icon-ad-product text-gray-400 absolute left-28 top-0 z-0"><svg width="130" height="130" viewBox="0 0 48 48" fill="none"><path d="M44 14L24 4L4 14V34L24 44L44 34V14Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M4 14L24 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24 44V24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44 14L24 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M34 9L14 19" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div class="overflow-hidden z-10"><p class="text-xl font-bold w-full whitespace-nowrap text-ellipsis overflow-hidden">广告位招租</p></div></div></div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+        cursor-pointer
+        p-4 w-full text-black
+      "><div class="w-full flex flex-col items-center gap-2"><h2 class="text-xl lg:text-2xl font-bold w-full">My Friends</h2><div class="flex flex-wrap gap-2 lg:gap-3"><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-green-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="Jimmy T的头像"/><div class="lg:text-base text-sm text-black">Jimmy T</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-red-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="NPofSi的头像"/><div class="lg:text-base text-sm text-black">NPofSi</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-red-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="huangx607087的头像"/><div class="lg:text-base text-sm text-black">huangx607087</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-teal-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="Yuuta的头像"/><div class="lg:text-base text-sm text-black">Yuuta</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-blue-400
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="SunBoy482的头像"/><div class="lg:text-base text-sm text-black">SunBoy482</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-blue-400
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="PhantoGype的头像"/><div class="lg:text-base text-sm text-black">PhantoGype</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-green-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="風楪fy的头像"/><div class="lg:text-base text-sm text-black">風楪fy</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-indigo-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="Margen的头像"/><div class="lg:text-base text-sm text-black">Margen</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-pink-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="小游的头像"/><div class="lg:text-base text-sm text-black">小游</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-teal-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="Zero Huang的头像"/><div class="lg:text-base text-sm text-black">Zero Huang</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-blue-400
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="punkginger的头像"/><div class="lg:text-base text-sm text-black">punkginger</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-red-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="whz11的头像"/><div class="lg:text-base text-sm text-black">whz11</div></div><div class="
+        rounded-3xl
+        transition-all duration-300 ease-out
+        
+          lg:hover:scale-[1.03] lg:hover:shadow-lg
+          active:scale-95 active:brightness-90
+        
+        cursor-pointer
+        bg-slate-100 flex items-center gap-2 rounded-full p-1 pr-2 lg:p-2 lg:pr-4 border-2 border-indigo-600
+      "><img class="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] rounded-full" alt="PiCpo的头像"/><div class="lg:text-base text-sm text-black">PiCpo</div></div></div></div></div><div class="w-full h-full text-gray-400 p-4"><p class="font-bold mb-2 border-b border-gray-200">Links</p><div class="flex flex-row gap-2 text-sm"><a href="https://lakphy.me/blog" target="_blank">旧版博客</a></div></div></div></div></div></div></div></div></body></html>
